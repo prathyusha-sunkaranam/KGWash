@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:layout_margin="30dp"
     tools:context="com.mansopresk.mansopresk01.kgwash.MainActivity">
 
     <TextView
@@ -14,14 +15,14 @@
         android:text="KG Wash Services"
         android:textSize="20sp"
         android:textStyle="bold"
-        android:layout_marginTop="60dp"/>
+        android:layout_marginTop="30dp"/>
 
     <ImageView
         android:id="@+id/indicator_image"
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:src="@drawable/mens"
-        android:layout_marginTop="80dp"/>
+        android:layout_marginTop="60dp"/>
 
     <TextView
         android:id="@+id/service_text"

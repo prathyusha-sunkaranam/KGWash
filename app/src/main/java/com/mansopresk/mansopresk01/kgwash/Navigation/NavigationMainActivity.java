@@ -1,6 +1,7 @@
 package com.mansopresk.mansopresk01.kgwash.Navigation;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -15,6 +16,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.RadioButton;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.mansopresk.mansopresk01.kgwash.MainActivity;
 import com.mansopresk.mansopresk01.kgwash.PlaceOrderActivity;
@@ -24,6 +27,8 @@ public class NavigationMainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     RadioButton washfold,washiron,iron;
     Button order;
+    TextView nav_text;
+    SharedPreferences sharedPreferences;
 
 
     @Override
@@ -31,9 +36,9 @@ public class NavigationMainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_navigation_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        washfold = (RadioButton)findViewById(R.id.washfold_button);
-        washiron = (RadioButton)findViewById(R.id.washiron_button);
-        iron = (RadioButton)findViewById(R.id.iron_button);
+        washfold = (RadioButton) findViewById(R.id.washfold_button);
+        washiron = (RadioButton) findViewById(R.id.washiron_button);
+        iron = (RadioButton) findViewById(R.id.iron_button);
         order = (Button) findViewById(R.id.placeorder);
 
 
@@ -45,6 +50,32 @@ public class NavigationMainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        View header = navigationView.getHeaderView(0);
+        nav_text = (TextView) header.findViewById(R.id.nav_text);
+
+        nav_text.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i3 = new Intent(NavigationMainActivity.this,MainActivity.class);
+                startActivity(i3);
+
+            }
+        });
+
+
+        sharedPreferences = getSharedPreferences("userdetails", MODE_PRIVATE);
+        String uname = sharedPreferences.getString("email", null);
+        if(sharedPreferences!=null) {
+            if (uname != null || uname != "") {
+                nav_text.setText(uname);
+            } else {
+                Intent i = new Intent(this, MainActivity.class);
+                Toast.makeText(this, "Logout completely", Toast.LENGTH_SHORT).show();
+                startActivity(i);
+
+            }
+        }
+
     }
     public void  order(View v){
         Intent i = new Intent(NavigationMainActivity.this,PlaceOrderActivity.class);
@@ -98,12 +129,14 @@ public class NavigationMainActivity extends AppCompatActivity
             startActivity(i);
 
         } else if (id == R.id.nav_faq) {
-            Intent i2 = new Intent(NavigationMainActivity.this,AboutUsActivity.class);
+            Intent i2 = new Intent(NavigationMainActivity.this,FaqActivity.class);
             startActivity(i2);
 
         } else if (id == R.id.nav_share) {
 
-        } else if (id == R.id.nav_send) {
+        } else if (id == R.id.nav_logout) {
+            getApplicationContext().getSharedPreferences("userdetails", 0).edit().clear().commit();
+            nav_text.setText("Login/Sign Up");
 
         }
 
