@@ -1,4 +1,4 @@
-package com.mansopresk.mansopresk01.kgwash;
+package com.mansopresk.mansopresk01.kgwash.Navigation;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -12,6 +12,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import com.mansopresk.mansopresk01.kgwash.R;
 
 public class NavigationMainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
