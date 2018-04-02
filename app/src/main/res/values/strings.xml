@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">KG Wash</string>
+
+
+    <string name="washiron">Wash + Iron</string>
+    <string name="washfold">Wash + Fold</string>
+    <string name="iron">Iron</string>
+    <string name="title_activity_navigation_main">NavigationMainActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
 </resources>
