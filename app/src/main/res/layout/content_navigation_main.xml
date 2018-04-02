@@ -1,11 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.mansopresk.mansopresk01.kgwash.Navigation.NavigationMainActivity"
-    tools:showIn="@layout/app_bar_navigation_main">
+    android:orientation="vertical"
+    tools:context="com.mansopresk.mansopresk01.kgwash.MainActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="KG Wash Services"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="60dp"/>
+
+    <ImageView
+        android:id="@+id/indicator_image"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:src="@drawable/mens"
+        android:layout_marginTop="80dp"/>
+
+    <TextView
+        android:id="@+id/service_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select below Services:"
+        android:layout_below="@id/indicator_image"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/indicator_image"
+        android:layout_marginTop="60dp">
+
+        <RadioGroup
+            android:id="@+id/radiogroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/service_text">
+
+            <RadioButton
+                android:id="@+id/washfold_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingEnd="5dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingStart="5dp"
+                android:text="Wash and Fold"
+                android:checked="true"/>
+
+            <RadioButton
+                android:id="@+id/washiron_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingEnd="5dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingStart="5dp"
+                android:text="Wash and Iron"/>
+
+            <RadioButton
+                android:id="@+id/iron_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingEnd="5dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingStart="5dp"
+                android:text="Iron"/>
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/placeorder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Place Order"
+            android:onClick="order"
+            android:layout_marginTop="30dp"/>
+    </LinearLayout>
+
+
+</RelativeLayout>

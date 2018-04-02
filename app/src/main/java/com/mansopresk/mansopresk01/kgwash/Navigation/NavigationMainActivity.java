@@ -1,5 +1,6 @@
 package com.mansopresk.mansopresk01.kgwash.Navigation;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -12,27 +13,29 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.RadioButton;
 
+import com.mansopresk.mansopresk01.kgwash.MainActivity;
+import com.mansopresk.mansopresk01.kgwash.PlaceOrderActivity;
 import com.mansopresk.mansopresk01.kgwash.R;
 
 public class NavigationMainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+    RadioButton washfold,washiron,iron;
+    Button order;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_navigation_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        washfold = (RadioButton)findViewById(R.id.washfold_button);
+        washiron = (RadioButton)findViewById(R.id.washiron_button);
+        iron = (RadioButton)findViewById(R.id.iron_button);
+        order = (Button) findViewById(R.id.placeorder);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -42,6 +45,10 @@ public class NavigationMainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+    }
+    public void  order(View v){
+        Intent i = new Intent(NavigationMainActivity.this,PlaceOrderActivity.class);
+        startActivity(i);
     }
 
     @Override
@@ -87,8 +94,12 @@ public class NavigationMainActivity extends AppCompatActivity
         } else if (id == R.id.nav_orders) {
 
         } else if (id == R.id.nav_aboutus) {
+            Intent i = new Intent(NavigationMainActivity.this,AboutUsActivity.class);
+            startActivity(i);
 
         } else if (id == R.id.nav_faq) {
+            Intent i2 = new Intent(NavigationMainActivity.this,AboutUsActivity.class);
+            startActivity(i2);
 
         } else if (id == R.id.nav_share) {
 
