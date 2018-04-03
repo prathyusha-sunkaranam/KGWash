@@ -23,8 +23,7 @@ import com.mansopresk.mansopresk01.kgwash.ScheduleActivity;
 
 public class NavigationMainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-    RadioButton washfold,washiron,iron;
-    Button order;
+
     TextView nav_text;
     SharedPreferences sharedPreferences;
     Button placeorder;
@@ -35,10 +34,6 @@ public class NavigationMainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_navigation_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        washfold = (RadioButton) findViewById(R.id.washfold_button);
-        washiron = (RadioButton) findViewById(R.id.washiron_button);
-        iron = (RadioButton) findViewById(R.id.iron_button);
-        order = (Button) findViewById(R.id.placeorder);
 
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -50,8 +45,6 @@ public class NavigationMainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
         View header = navigationView.getHeaderView(0);
-
-        placeorder = (Button) header.findViewById(R.id.placeorder);
         nav_text = (TextView) header.findViewById(R.id.nav_text);
         nav_text.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -77,10 +70,7 @@ public class NavigationMainActivity extends AppCompatActivity
         }
 
     }
-    public void  order(View v){
-        Intent i = new Intent(NavigationMainActivity.this,ScheduleActivity.class);
-        startActivity(i);
-    }
+
 
     @Override
     public void onBackPressed() {

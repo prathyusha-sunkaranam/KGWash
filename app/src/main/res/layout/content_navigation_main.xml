@@ -1,94 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:layout_margin="30dp"
-    tools:context="com.mansopresk.mansopresk01.kgwash.MainActivity">
+    android:gravity="center"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="KG Wash Services"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:layout_marginTop="30dp"/>
-
-    <android.support.v4.view.ViewPager
-        android:id="@+id/indicator_image"
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:src="@drawable/mens"
-        android:layout_marginTop="60dp"/>
-
-    <TextView
-        android:id="@+id/service_text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Select below Services:"
-        android:layout_below="@id/indicator_image"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:layout_marginTop="20dp"/>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="250dp"
         android:orientation="vertical"
-        android:layout_below="@id/indicator_image"
-        android:layout_marginTop="60dp">
+        android:background="#0e9bef">
 
-        <RadioGroup
-            android:id="@+id/radiogroup"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_below="@id/service_text">
-
-            <RadioButton
-                android:id="@+id/washfold_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingEnd="5dp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:paddingStart="5dp"
-                android:text="Wash and Fold"
-                android:checked="true"/>
-
-            <RadioButton
-                android:id="@+id/washiron_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingEnd="5dp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:paddingStart="5dp"
-                android:text="Wash and Iron"/>
-
-            <RadioButton
-                android:id="@+id/iron_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingEnd="5dp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:paddingStart="5dp"
-                android:text="Iron"/>
-        </RadioGroup>
-
-
-
-        <Button
-            android:id="@+id/placeorder"
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Place Order"
-            android:onClick="order"
-            android:layout_marginTop="30dp"/>
+            android:text="KG Wash"
+            android:textSize="35sp"
+            android:gravity="center"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="wash with free hands"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textStyle="italic"
+            android:layout_marginTop="16dp"
+            android:textColor="#fff"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="minimum order Rs.200"
+            android:gravity="center"
+            android:textColor="#fff"
+            android:layout_marginTop="20dp" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Book Now"
+            android:layout_marginLeft="100dp"/>
+
     </LinearLayout>
 
 
-</RelativeLayout>
+
+
+
+</LinearLayout>
