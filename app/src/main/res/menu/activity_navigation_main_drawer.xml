@@ -21,23 +21,19 @@
             android:id="@+id/nav_faq"
             android:icon="@drawable/ic_menu_manage"
             android:title="FAQ'S" />
+        <item
+            android:id="@+id/nav_share"
+            android:icon="@drawable/ic_menu_share"
+            android:title="Share" />
+        <item
+            android:id="@+id/nav_tcapply"
+            android:icon="@drawable/ic_brush_black_24dp"
+            android:title="@string/TCapply" />
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_menu_send"
+            android:title="LogOut" />
     </group>
 
-    <item android:title="Communicate">
-        <menu>
-            <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
-                android:title="Share" />
-            <item
-                android:id="@+id/nav_tcapply"
-                android:icon="@drawable/ic_menu_share"
-                android:title="@string/TCapply" />
-            <item
-                android:id="@+id/nav_logout"
-                android:icon="@drawable/ic_menu_send"
-                android:title="LogOut" />
-        </menu>
-    </item>
 
 </menu>

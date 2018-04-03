@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
 
-import com.mansopresk.mansopresk01.kgwash.Navigation.NavigationMainActivity;
+
 
 public class BookNowActivity extends AppCompatActivity {
     RadioButton washfold,washiron,iron;
@@ -20,12 +20,18 @@ public class BookNowActivity extends AppCompatActivity {
         washfold = (RadioButton) findViewById(R.id.washfold_button);
         washiron = (RadioButton) findViewById(R.id.washiron_button);
         iron = (RadioButton) findViewById(R.id.iron_button);
-        order = (Button) findViewById(R.id.placeorder);
+       findViewById(R.id.placeorder).setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               Intent i = new Intent(BookNowActivity.this,ScheduleActivity.class);
+         startActivity(i);
+           }
+       });
 
     }
-
-    public void  porder(View v){
-        Intent i = new Intent(BookNowActivity.this,ScheduleActivity.class);
-        startActivity(i);
-    }
+//
+//    public void click(View v){
+//        Intent i = new Intent(BookNowActivity.this,ScheduleActivity.class);
+//        startActivity(i);
+//    }
 }

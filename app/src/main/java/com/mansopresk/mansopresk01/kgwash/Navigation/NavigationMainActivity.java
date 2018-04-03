@@ -17,6 +17,7 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.mansopresk.mansopresk01.kgwash.BookNowActivity;
 import com.mansopresk.mansopresk01.kgwash.MainActivity;
 import com.mansopresk.mansopresk01.kgwash.R;
 import com.mansopresk.mansopresk01.kgwash.ScheduleActivity;
@@ -26,7 +27,7 @@ public class NavigationMainActivity extends AppCompatActivity
 
     TextView nav_text;
     SharedPreferences sharedPreferences;
-    Button placeorder;
+    Button odernow;
 
 
     @Override
@@ -34,6 +35,7 @@ public class NavigationMainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_navigation_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        odernow = (Button)findViewById(R.id.ordernow);
 
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -70,7 +72,10 @@ public class NavigationMainActivity extends AppCompatActivity
         }
 
     }
-
+public void ordernow(View v){
+    Intent ip = new Intent(this, BookNowActivity.class);
+    startActivity(ip);
+}
 
     @Override
     public void onBackPressed() {
@@ -86,6 +91,7 @@ public class NavigationMainActivity extends AppCompatActivity
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.navigation_main, menu);
+
         return true;
     }
 
@@ -115,8 +121,12 @@ public class NavigationMainActivity extends AppCompatActivity
         } else if (id == R.id.nav_orders) {
 
         } else if (id == R.id.nav_aboutus) {
-            Intent i = new Intent(NavigationMainActivity.this,AboutUsActivity.class);
+            Intent i = new Intent(NavigationMainActivity.this, AboutUsActivity.class);
             startActivity(i);
+
+        } else if (id == R.id.nav_tcapply) {
+                Intent i = new Intent(NavigationMainActivity.this,TermsConditionsActivity.class);
+                startActivity(i);
 
         } else if (id == R.id.nav_faq) {
             Intent i2 = new Intent(NavigationMainActivity.this,FaqActivity.class);
