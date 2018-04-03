@@ -17,7 +17,7 @@
         android:textStyle="bold"
         android:layout_marginTop="30dp"/>
 
-    <ImageView
+    <android.support.v4.view.ViewPager
         android:id="@+id/indicator_image"
         android:layout_width="match_parent"
         android:layout_height="150dp"
@@ -78,6 +78,8 @@
                 android:paddingStart="5dp"
                 android:text="Iron"/>
         </RadioGroup>
+
+
 
         <Button
             android:id="@+id/placeorder"

@@ -60,7 +60,7 @@ public class ScheduleActivity extends AppCompatActivity {
         alternatenum_sch.setText(alernum);
         emailregister_sch.setText(emailid);
         address_sch.setText(adreesdetails);
-        landmark_sch.setText(landmarkdetails );
+        landmark_sch.setText(landmarkdetails);
 
     }
 

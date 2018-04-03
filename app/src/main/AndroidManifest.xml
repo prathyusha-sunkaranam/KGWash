@@ -11,7 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-        <activity android:name=".Navigation.NavigationMainActivity">
+        <activity android:name=".Indicator.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,13 +20,14 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:label="@string/title_activity_navigation_main"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Navigation.AboutUsActivity" />
         <activity android:name=".Navigation.FaqActivity" />
         <activity android:name=".YourOrdersActivity" />
         <activity android:name=".RegistrationActivity" />
         <activity android:name=".ScheduleActivity" />
+        <activity android:name=".Indicator.WelcomeActivity"/>
+        <activity android:name=".Navigation.NavigationMainActivity"/>
         <activity android:name=".Navigation.TermsConditionsActivity"></activity>
     </application>
 
