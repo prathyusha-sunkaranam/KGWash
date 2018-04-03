@@ -13,6 +13,7 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.mansopresk.mansopresk01.kgwash.Navigation.NavigationMainActivity;
 
@@ -72,6 +73,7 @@ public class MainActivity extends AppCompatActivity {
 
                 Intent i = new Intent(MainActivity.this,NavigationMainActivity.class);
                 startActivity(i);
+                //Toast.makeText(this, "run", Toast.LENGTH_SHORT).show();
             }
         }}
     public void signup(View v){
