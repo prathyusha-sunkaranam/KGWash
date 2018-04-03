@@ -1,10 +1,510 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.mansopresk.mansopresk01.kgwash.Navigation.FaqActivity">
+<!--<LinearLayout-->
+    <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--xmlns:tools="http://schemas.android.com/tools"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:orientation="vertical"-->
+    <!--tools:context="com.mansopresk.mansopresk01.kgwash.Navigation.FaqActivity">-->
+    <!--<android.support.v7.widget.Toolbar-->
+        <!--android:id="@+id/toolbar_aboutus"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="?attr/actionBarSize"-->
+        <!--app:layout_scrollFlags="scroll|enterAlways"-->
+        <!--android:titleTextColor="#fff"-->
+        <!--app:title="FAQ's"-->
+        <!--android:background="?attr/colorPrimary"/>-->
 
-</android.support.constraint.ConstraintLayout>
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_aboutus"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_scrollFlags="scroll|enterAlways"
+            android:titleTextColor="#fff"
+            app:title="FAQ's"
+
+            android:background="?attr/colorPrimary"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <!--<android.support.v7.widget.Toolbar-->
+            <!--android:id="@+id/toolbar_aboutus"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="?attr/actionBarSize"-->
+            <!--app:layout_scrollFlags="scroll|enterAlways"-->
+            <!--android:titleTextColor="#fff"-->
+            <!--app:title="FAQ's"-->
+            <!--android:background="?attr/colorPrimary"/>-->
+    <LinearLayout android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+                <TextView android:text="@string/start"
+                  android:id="@+id/text1"
+                  android:padding="5dip"
+                  android:background="#0e9bef"
+                  android:drawablePadding="10dp"
+                  android:textColor="#ffffff"
+                  android:textStyle="bold"
+                  android:textSize="18dp"
+                  android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" />
+
+        <LinearLayout android:id="@+id/panel1"
+            android:visibility="gone"
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_margin="2dip"
+                android:text="@string/start1"
+                android:padding="5dip"
+                android:background="#fff"
+                android:textSize="16dp"
+                android:textColor="#000"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout android:layout_marginTop="5dip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+
+
+        <TextView
+            android:id="@+id/text2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#0e9bef"
+
+            android:drawablePadding="10dp"
+
+            android:padding="5dip"
+            android:text="@string/second"
+            android:textColor="#ffffff"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+        <LinearLayout android:id="@+id/panel2"
+            android:visibility="gone"
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_margin="2dip"
+                android:text="@string/second1"
+
+                android:padding="5dip"
+                android:background="#fff"
+                android:textSize="15dp"
+                android:textColor="#000"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout android:layout_marginTop="5dip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+        <TextView
+            android:text="@string/third"
+            android:drawablePadding="10dp"
+            android:id="@+id/text3"
+            android:padding="5dip"
+            android:background="#0e9bef"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:id="@+id/panel3"
+            android:visibility="gone"
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_margin="2dip"
+                android:text="@string/third1"
+                android:padding="5dip"
+                android:background="#fff"
+                android:textSize="16dp"
+                android:textColor="#000"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+          android:layout_marginTop="5dp"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center">
+                <TextView
+                    android:text="@string/fourth"
+                    android:id="@+id/text4"
+                    android:padding="5dip"
+                    android:background="#0e9bef"
+                    android:drawablePadding="10dp"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"
+                    android:textSize="18dp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" />
+                <LinearLayout
+                    android:id="@+id/panel4"
+                    android:visibility="gone"
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_margin="2dip"
+                        android:text="@string/fourth1"
+                        android:padding="5dip"
+                        android:background="#fff"
+                        android:textSize="16dp"
+                        android:textColor="#000"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_marginTop="5dip"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center">
+                <TextView
+                    android:id="@+id/text5"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#0e9bef"
+
+                    android:drawablePadding="10dp"
+
+                    android:padding="5dip"
+                    android:text="Do you do dry cleaning?"
+                    android:textColor="#ffffff"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+                <LinearLayout
+                    android:id="@+id/panel5"
+                    android:visibility="gone"
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_margin="2dip"
+                        android:text="@string/fifth1"
+                        android:padding="5dip"
+                        android:background="#fff"
+                        android:textSize="15dp"
+                        android:textColor="#000"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="5dip"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center">
+                <TextView
+                    android:text="How do I schedule a laundry pick-up (who?)"
+                    android:drawablePadding="10dp"
+                    android:id="@+id/text6"
+                    android:padding="5dip"
+                    android:background="#0e9bef"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"
+                    android:textSize="18dp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" />
+                <LinearLayout
+                    android:id="@+id/panel6"
+                    android:visibility="gone"
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_margin="2dip"
+                        android:text="@string/six1"
+                        android:padding="5dip"
+                        android:background="#fff"
+                        android:textSize="16dp"
+                        android:textColor="#000"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" />
+
+
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center">
+                    <TextView
+                        android:text="Are my clothes washed with other people’s clothes?"
+                        android:id="@+id/text7"
+                        android:padding="5dip"
+                        android:background="#0e9bef"
+                        android:drawablePadding="10dp"
+                        android:textColor="#ffffff"
+                        android:textStyle="bold"
+                        android:textSize="18dp"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" />
+                    <LinearLayout
+                        android:id="@+id/panel7"
+                        android:visibility="gone"
+                        android:orientation="vertical"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+
+                            android:layout_margin="2dip"
+                            android:text="@string/seven1"
+                            android:padding="5dip"
+                            android:background="#fff"
+                            android:textSize="16dp"
+                            android:textColor="#000"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_marginTop="5dip"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center">
+                    <TextView
+                        android:id="@+id/text8"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#0e9bef"
+                        android:drawablePadding="10dp"
+                        android:padding="5dip"
+                        android:text="What if I miss my pick-up/drop-off time?"
+                        android:textColor="#ffffff"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+                    <LinearLayout
+                        android:id="@+id/panel8"
+                        android:visibility="gone"
+                        android:orientation="vertical"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_margin="2dip"
+                            android:text="@string/eight1"
+                            android:padding="5dip"
+                            android:background="#fff"
+                            android:textSize="15dp"
+                            android:textColor="#000"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="5dip"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        android:text="What happens if I leave personal items in my pockets?"
+                        android:drawablePadding="10dp"
+                        android:id="@+id/text9"
+                        android:padding="5dip"
+                        android:background="#0e9bef"
+                        android:textColor="#ffffff"
+                        android:textStyle="bold"
+                        android:textSize="18dp"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" />
+
+
+                    <LinearLayout
+                        android:id="@+id/panel9"
+                        android:visibility="gone"
+                        android:orientation="vertical"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_margin="2dip"
+                            android:text="@string/nine1"
+                            android:padding="5dip"
+                            android:background="#fff"
+                            android:textSize="16dp"
+                            android:textColor="#000"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" />
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+
+
+
+            </LinearLayout>
+    </LinearLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical">
+
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center">
+                <TextView android:text="Is there a charge for the laundry bag?"
+                    android:id="@+id/text10"
+                    android:padding="5dip"
+                    android:background="#0e9bef"
+                    android:drawablePadding="10dp"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"
+                    android:textSize="18dp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" />
+                <LinearLayout
+                    android:id="@+id/panel10"
+                    android:visibility="gone"
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_margin="2dip"
+                        android:text="@string/ten1"
+                        android:padding="5dip"
+                        android:background="#fff"
+                        android:textSize="16dp"
+                        android:textColor="#000"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_marginTop="5dip"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center">
+                <TextView
+                    android:id="@+id/text11"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#0e9bef"
+
+                    android:drawablePadding="10dp"
+
+                    android:padding="5dip"
+                    android:text="What areas do you currently service?
+"
+                    android:textColor="#ffffff"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <LinearLayout android:id="@+id/panel11"
+                    android:visibility="gone"
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_margin="2dip"
+                        android:text=" To find out if Laundry Care service is available in your area, use our zip code locator.
+"
+                        android:padding="5dip"
+                        android:background="#fff"
+                        android:textSize="15dp"
+                        android:textColor="#000"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <!--<LinearLayout android:layout_marginTop="5dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" android:layout_gravity="center">-->
+                <!--<TextView android:text="Note"   android:drawablePadding="10dp"  android:id="@+id/text12" android:padding="5dip"  android:background="#9C0002" android:textColor="#ffffff" android:textStyle="bold" android:textSize="18dp"  android:layout_width="fill_parent" android:layout_height="wrap_content" />-->
+                <!--<LinearLayout android:id="@+id/panel12" android:visibility="gone" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">-->
+                    <!--<TextView-->
+                        <!--android:layout_margin="2dip"-->
+                        <!--android:text=" Address :\n\n LIG-630, KPHB Road No - 5,\n Dharma Reddy Colony Phase I,\n Kukatpally,\n Hyderabad, Telangana 500072.\n\n Phone: +91-90109 90285.\n"-->
+                        <!--android:padding="5dip"-->
+                        <!--android:background="#9C0002"-->
+                        <!--android:textSize="16dp"-->
+                        <!--android:textColor="#ffffff"-->
+                        <!--android:layout_width="fill_parent"-->
+                        <!--android:layout_height="wrap_content" />-->
+
+
+                <!--</LinearLayout>-->
+            <!--</LinearLayout>-->
+
+        </LinearLayout>
+
+</LinearLayout>
+    </LinearLayout>
+    </ScrollView>
+<!--</LinearLayout>-->
