@@ -1,19 +1,27 @@
 package com.mansopresk.mansopresk01.kgwash;
 
+import android.app.DatePickerDialog;
+import android.app.Dialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.Spinner;
+import android.widget.TextView;
 
 import com.mansopresk.mansopresk01.kgwash.Navigation.NavigationMainActivity;
 
+import java.util.Calendar;
+
 public class MainActivity extends AppCompatActivity {
-    EditText email,password;
+    EditText email,password,dateview;
     Button signin,signup;
+
 
     public static final String MyPREFERENCES = "MyPrefs" ;
     public static final String Name = "nameKey";
@@ -31,6 +39,8 @@ public class MainActivity extends AppCompatActivity {
         email = (EditText)findViewById(R.id.emailid);
         password = (EditText)findViewById(R.id.password);
 
+
+
         sharedpreferences = getSharedPreferences("userdetails",MODE_PRIVATE);
         String uname = sharedpreferences.getString("email",null);
         if(uname!=null){
@@ -42,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void valid(View v){
-        if(email.getText().toString().isEmpty()){
+        if(email.getText().toString().trim().isEmpty()){
             email.requestFocus();
             email.setError("");
         }

@@ -22,6 +22,7 @@ import android.widget.Toast;
 import com.mansopresk.mansopresk01.kgwash.MainActivity;
 import com.mansopresk.mansopresk01.kgwash.PlaceOrderActivity;
 import com.mansopresk.mansopresk01.kgwash.R;
+import com.mansopresk.mansopresk01.kgwash.ScheduleActivity;
 
 public class NavigationMainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -29,6 +30,7 @@ public class NavigationMainActivity extends AppCompatActivity
     Button order;
     TextView nav_text;
     SharedPreferences sharedPreferences;
+    Button placeorder;
 
 
     @Override
@@ -51,8 +53,9 @@ public class NavigationMainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
         View header = navigationView.getHeaderView(0);
-        nav_text = (TextView) header.findViewById(R.id.nav_text);
 
+        placeorder = (Button) header.findViewById(R.id.placeorder);
+        nav_text = (TextView) header.findViewById(R.id.nav_text);
         nav_text.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -78,7 +81,7 @@ public class NavigationMainActivity extends AppCompatActivity
 
     }
     public void  order(View v){
-        Intent i = new Intent(NavigationMainActivity.this,PlaceOrderActivity.class);
+        Intent i = new Intent(NavigationMainActivity.this,ScheduleActivity.class);
         startActivity(i);
     }
 
