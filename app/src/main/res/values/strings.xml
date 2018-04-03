@@ -25,4 +25,33 @@
 
     </string-array>
 
+    <string name="start">How do I get started?</string>
+    <string name="start1">Once you complete our online sign-up form, your local area Laundry Care Provider will contact you via phone to schedule your first laundry pick-up. Click here to get started now!</string>
+
+    <string name="second">When will I get my clothes back?</string>
+    <string name="second1">Turnaround time is 48 Hours from pick-up to drop off (except weekends).</string>
+    <string name="third">What if I need my laundry done faster?</string>
+    <string name="third1">24 Hour Rush Service is available in most locations for an extra charge.  Ask your local Laundry Care Provider for details or call 800-429-4332 to confirm rush service is available for your order.</string>
+<string name="fourth">What if I can’t be home for my scheduled pick-up or drop off?</string>
+    <string name="fourth1">You can leave your bag in secure location outside your home (doorstep, porch, patio, reception desk etc.) or reschedule a day/time with your Provider.</string>
+
+<string name="fifth1">Along with your laundry bag, your Provider can take your dry clean only items to our preferred dry cleaner and pick them back up. They’ll be delivered right to your door with your wash and fold laundry.</string>
+    <string name="six1"> All scheduling is handled by your local Laundry Care Provider. Refer to your sign-up confirmation email email for your Provider’s contact information.  You can also contact Laundry Care Home Office via email at info@laundrycare.biz or by calling 800-429-4332, OPT 1</string>
+    <string name="seven1">Absolutely not! Each bag is processed by itself. We will never clean your clothes with another customer’s clothing.</string>
+<string name="eight1">If you miss your pick-up or drop off timeframe, a missed pick-up or missed drop off fee may be assessed.  Avoid these additional fees by notifying and rescheduling your pick-up/ drop off directly with your local Laundry Care Provider.</string>
+    <string name="nine1">We ask that you ensure all items have been removed from your pockets prior to pick-up. In the event that we do find items in your pockets, we’ll return them inside a sealed bag along with your laundry.</string>
+    <string name="ten1">Recurring clients are provided with a reusable nylon Laundry Care bag at a charge of $3.92/bag. This charge will appear on your initial service invoice or at any time you request a new/replacement bag</string>
+<string name="main"> we try to connect the people with Laundry Care Provider through this app.\n\n      The main motive of our app is to provide Laundry Services at your door step at reasonable cost with user friendly enviornment through our app.</string>
+
+
+    <string name="aboutus"> About Team :\n\n      We developed this application with team ,who are always passinate to learn new things and believes in action rather than voice.\n\n      We believed that CREATIVITY can solve almost any problem. In this belief, we try to connect the customer with blood and Laundry Care Provider through this app.\n\n       The main motive of our app is to provide Laundry Services at your door step at reasonable cost with user friendly enviornment through our app.
+	\n\n About Company :\n\n      Mansopresk is the fastest growing software developement company.The motto has always been timely service, best quality and optimum cost.\n\n      Always keep in touch with the customers through quality, performance, service and assistance. We value the trust and beliefs vested in us by our clients and professional contacts and provide a dedicated service with an honest and direct approach in all our dealings.\n\n      Our Company always encourage the new thoughts and creativity in developing applications to get the better solutions which meet new requirements, unarticulated needs, or existing market needs.</string>
+
+    <string name="how">
+HOW IT WORKS?\n\n
+PLACE ORDER\n\n
+Go to our laundry app or website and schedule your wash as per your convenience. We will take it from there. Hassel free, fast and simple!
+</string>
+    <string name="contact"> Address :\n\n Flat No.401, Plot No 545B, 2nd street,\n Sri Ramnagar Block B,\n Kondapur,\n Hyderabad, Telangana 500084.\n\n Phone: +91-9000379005.\n"</string>
+
 </resources>
