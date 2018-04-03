@@ -10,18 +10,22 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
 
 import java.util.Calendar;
+import java.util.Date;
 
 public class ScheduleActivity extends AppCompatActivity {
     Spinner spinner;
     Calendar calendar;
     private int year, month, day;
-    EditText  name_sch,mobile_sch,alternatenum_sch,emailregister_sch,address_sch,landmark_sch,dateview;
-    Button Schedule;
+    EditText  name_sch,mobile_sch,alternatenum_sch,emailregister_sch,address_sch,landmark_sch,dateview,etcalendar;
+    Button Schedule,calendarbtn;
     SharedPreferences sharedpreferences;
     SharedPreferences.Editor editor;
+    LinearLayout calendarll;
+    static final int DATE_PICKER_ID = 1111;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,10 +38,23 @@ public class ScheduleActivity extends AppCompatActivity {
         address_sch = findViewById(R.id.address_register);
         landmark_sch = findViewById(R.id.landmark_register);
         spinner=(Spinner)findViewById(R.id.spinner);
-        dateview = (EditText) findViewById(R.id.textView3);
-        calendar = Calendar.getInstance();
+        //dateview = (EditText) findViewById(R.id.textView3);
+        etcalendar=findViewById(R.id.etcalender);
+        //calendarbtn.findViewById(R.id.calendarbtn);
 
+        //calendar = Calendar.getInstance();
+        calendarll=findViewById(R.id.calendarll);
         Schedule = findViewById(R.id.schedule);
+        etcalendar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                calendar = Calendar.getInstance();
+                day = calendar.get(Calendar.DAY_OF_MONTH);
+                month = calendar.get(Calendar.MONTH);
+                year = calendar.get(Calendar.YEAR);
+                showDialog(DATE_PICKER_ID);
+            }
+        });
         Schedule.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -69,39 +86,61 @@ public class ScheduleActivity extends AppCompatActivity {
 
 
 
-    public void setDate(View view) {
-        showDialog(999);
-//
-    }
+//    public void setDate(View view) {
+//        showDialog(999);
+////
+//    }
 
-    @Override
-    protected Dialog onCreateDialog(int id) {
-        // TODO Auto-generated method stub
-        if (id == 999) {
-            return new DatePickerDialog(this,
-                    myDateListener, year, month, day);
+//    @Override
+//    protected Dialog onCreateDialog(int id) {
+//        // TODO Auto-generated method stub
+//        if (id == 999) {
+//            return new DatePickerDialog(this,myDateListener, year, month, day);
+//        }
+//        return null;
+//    }
+@Override
+protected Dialog onCreateDialog(int id) {
+    switch (id) {
+        case DATE_PICKER_ID:
+            // create a new DatePickerDialog with values you want to show
+
+            DatePickerDialog datePickerDialog = new DatePickerDialog(this, datePickerListener, year, month, day);
+            calendar = Calendar.getInstance();
+            calendar.add(Calendar.DATE, +1); // Add 0 days to Calendar
+            Date newDate = calendar.getTime();
+            datePickerDialog.getDatePicker().setMinDate(newDate.getTime()-(newDate.getTime()%(24*60*60*1000)));
+            return datePickerDialog;
+    }
+    return null;
+}
+    private DatePickerDialog.OnDateSetListener datePickerListener = new DatePickerDialog.OnDateSetListener() {
+        // the callback received when the user "sets" the Date in the
+        // DatePickerDialog
+        public void onDateSet(DatePicker view, int selectedYear, int selectedMonth, int selectedDay) {
+
+            etcalendar.setText(selectedDay + "/" + (selectedMonth + 1) + "/" + selectedYear);
         }
-        return null;
-    }
+    };
 
-    private DatePickerDialog.OnDateSetListener myDateListener = new
-            DatePickerDialog.OnDateSetListener() {
-                @Override
-                public void onDateSet(DatePicker arg0,
-                                      int arg1, int arg2, int arg3) {
+//    private DatePickerDialog.OnDateSetListener myDateListener = new
+//            DatePickerDialog.OnDateSetListener() {
+//                @Override
+//                public void onDateSet(DatePicker arg0,
+//                                      int arg1, int arg2, int arg3) {
+//
+//                    // TODO Auto-generated method stub
+//                    // arg1 = year
+//                    // arg2 = month
+//                    // arg3 = day
+//                    showDate(arg1, arg2+1, arg3);
+//
+//                }
+//            };
 
-                    // TODO Auto-generated method stub
-                    // arg1 = year
-                    // arg2 = month
-                    // arg3 = day
-                    showDate(arg1, arg2+1, arg3);
-
-                }
-            };
-
-    private void showDate(int year, int month, int day) {
-        dateview.setText(new StringBuilder().append(day).append("/")
-                .append(month).append("/").append(year));
-
-    }
+//    private void showDate(int year, int month, int day) {
+//        dateview.setText(new StringBuilder().append(day).append("/")
+//                .append(month).append("/").append(year));
+//
+//    }
 }

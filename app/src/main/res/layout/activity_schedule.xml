@@ -116,6 +116,7 @@
                 android:weightSum="1">
 
                 <LinearLayout
+                    android:id="@+id/calendarll"
                     xmlns:android="http://schemas.android.com/apk/res/android"
                     xmlns:tools="http://schemas.android.com/tools"
                     android:layout_width="0dp"
@@ -128,15 +129,14 @@
                     android:weightSum="1">
 
                     <Button
-                        android:id="@+id/button1"
+                        android:id="@+id/calendarbtn"
                         android:layout_width="0dp"
                         android:layout_height="20dp"
-                        android:onClick="setDate"
                         android:layout_weight="0.2"
                         android:background="@drawable/ic_arrow_drop_down_black_24dp" />
 
                     <EditText
-                        android:id="@+id/textView3"
+                        android:id="@+id/etcalender"
                         android:layout_width="0dp"
                         android:layout_height="40dp"
                         android:layout_weight="0.8"
