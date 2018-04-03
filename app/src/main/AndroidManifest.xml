@@ -24,7 +24,7 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Navigation.AboutUsActivity" />
         <activity android:name=".Navigation.FaqActivity" />
-        <activity android:name=".PlaceOrderActivity" />
+        <activity android:name=".YourOrdersActivity" />
         <activity android:name=".RegistrationActivity" />
         <activity android:name=".ScheduleActivity" />
         <activity android:name=".Navigation.TermsConditionsActivity"></activity>

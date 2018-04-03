@@ -3,7 +3,7 @@ package com.mansopresk.mansopresk01.kgwash;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class PlaceOrderActivity extends AppCompatActivity {
+public class YourOrdersActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

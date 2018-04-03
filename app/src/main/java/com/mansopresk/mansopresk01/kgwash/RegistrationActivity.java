@@ -69,16 +69,33 @@ public class RegistrationActivity extends AppCompatActivity {
         }
         else{
 
+           // String usrname = name.getText().toString();
+            String username = name.getText().toString();
+            String mobilenum = mobile.getText().toString();
+            String alternatenumregister = alternatenum.getText().toString();
+            String email = emailregister.getText().toString();
+            String addressregister = address.getText().toString();
+            String landmarkregister = landmark.getText().toString();
 
-            String uname = name.getText().toString().trim();
-            String lastname = mobile.getText().toString().trim();
-            String mail = alternatenum.getText().toString().trim();
-            String mobile = emailregister.getText().toString().trim();
-            String password = address.getText().toString().trim();
-            String cnfrmpasword = landmark.getText().toString().trim();
-
+            editor = getSharedPreferences("userdetails",MODE_PRIVATE).edit();
+            editor.putString("username",username);
+            editor.putString("mobile",mobilenum);
+            editor.putString("alternatenum",alternatenumregister);
+            editor.putString("emailregister",email);
+            editor.putString("address",addressregister);
+            editor.putString("landmark",landmarkregister);
+            editor.commit();
+//            String uname = name.getText().toString().trim();
+//            String lastname = mobile.getText().toString().trim();
+//            String mail = alternatenum.getText().toString().trim();
+//            String mobile = emailregister.getText().toString().trim();
+//            String password = address.getText().toString().trim();
+//            String cnfrmpasword = landmark.getText().toString().trim();
             Intent i = new Intent(RegistrationActivity.this,MainActivity.class);
             startActivity(i);
+
+
+
         }
     
     
