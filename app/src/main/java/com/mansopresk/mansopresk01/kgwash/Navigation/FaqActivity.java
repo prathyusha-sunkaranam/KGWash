@@ -32,12 +32,25 @@ public class FaqActivity extends AppCompatActivity  implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_faq);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_aboutus);
-        setSupportActionBar(toolbar);
+
+//        setSupportActionBar(toolbar);
 
 //        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 //        getSupportActionBar().setDisplayShowHomeEnabled(false);
-        toolbar.setTitleTextColor(getResources().getColor(android.R.color.white));
+//        toolbar.setTitleTextColor(getResources().getColor(android.R.color.white));
+        Toolbar mToolbar = (Toolbar) findViewById(R.id.toolbar);
+
+        mToolbar.setLogo(R.drawable.ic_arrow_back_black_24dp);
+
+        mToolbar.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+
+
+                finish();
+            }
+        });
 
         amail = (ImageView) findViewById(R.id.aemail);
         acall = (ImageView) findViewById(R.id.acall);

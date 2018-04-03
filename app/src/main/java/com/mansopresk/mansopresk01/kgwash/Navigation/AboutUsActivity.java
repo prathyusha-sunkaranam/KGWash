@@ -24,8 +24,9 @@ import com.mansopresk.mansopresk01.kgwash.R;
 public class AboutUsActivity extends AppCompatActivity implements View.OnClickListener {
     ImageView amail,acall,aweb;
     LinearLayout panel1,panel2,panel3;
-    TextView text1,text2,text3;
+    TextView text1,text2,text3,textView;
     View openLayout;
+
 
 
     //String YOUR_API_KEY="AIzaSyDxBBCTnbdc_-7x2gYolw2UD9-k0difgQ8";
@@ -35,27 +36,45 @@ public class AboutUsActivity extends AppCompatActivity implements View.OnClickLi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about_us);
-//
-//        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_aboutus);
-//        setSupportActionBar(toolbar);
+
+//       Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_aboutus);
+//       setSupportActionBar(toolbar);
 
 //        setTitle(getString(R.string.AboutUs));
 
-//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
 //        getSupportActionBar().setDisplayShowHomeEnabled(true);
-//        toolbar.setTitleTextColor(getResources().getColor(android.R.color.white));
+
+//
+//
+       Toolbar mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        mToolbar.setNavigationIcon(R.drawable.ic_arrow_back_black_24dp);
+        mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+
+                // Your code
+                finish();
+            }
+        });
+
+  mToolbar.setTitleTextColor(getResources().getColor(android.R.color.white));
         amail=(ImageView)findViewById(R.id.aemail);
         acall=(ImageView)findViewById(R.id.acall);
         aweb=(ImageView)findViewById(R.id.awebsite);
+
         panel1 = (LinearLayout) findViewById(R.id.panel1);
         panel2 = (LinearLayout) findViewById(R.id.panel2);
         panel3 = (LinearLayout) findViewById(R.id.panel3);
         text1 = (TextView) findViewById(R.id.text1);
         text2 = (TextView) findViewById(R.id.text2);
         text3 = (TextView) findViewById(R.id.text3);
+
         text1.setOnClickListener(this);
         text2.setOnClickListener(this);
         text3.setOnClickListener(this);
+
         amail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -72,6 +91,7 @@ public class AboutUsActivity extends AppCompatActivity implements View.OnClickLi
                 }
             }
         });
+
         acall.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -80,6 +100,7 @@ public class AboutUsActivity extends AppCompatActivity implements View.OnClickLi
                 }
             }
         });
+
         aweb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -112,6 +133,7 @@ public class AboutUsActivity extends AppCompatActivity implements View.OnClickLi
         if (openLayout == panel3)
             panel3.startAnimation(new ScaleAnimToHide(1.0f, 1.0f, 1.0f, 0.0f, 500, panel3, true));
     }
+
     private void hideOthers(View layoutView) {
         {
             int v;

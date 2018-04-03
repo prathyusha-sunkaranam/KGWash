@@ -54,8 +54,38 @@
     <string name="how">
 HOW IT WORKS?\n\n
 PLACE ORDER\n\n
-Go to our laundry app or website and schedule your wash as per your convenience. We will take it from there. Hassel free, fast and simple!
+Go to our laundry app or website and schedule your wash as per your convenience. We will take it from there. Hassel free, fast and simple!\n\n
+
+PICK UP\n\n
+Just be ready with your Laundry, we will be right there with our eco-friendly laundry cart. We will grab away all the dirty clothes from your home.\n\n
+
+
+WASH and IRON\n\n
+We take dirt very seriously. Our experts, with the help of our state of art machinery ensure that your clothes come back looking clean, tidier and fresh every time.\n\n
+
+DELIVERY\n\n
+Your clothes will be delivered at your doorstep on time and as fresh as daisy. Now getting your laundry done is that convenient. Didn't we tell you laundry is so easy with LaundroKart?\n\n
+
+
+
+Why choose us?\n
+doorstep service\n
+
+clean and hygenic\n
+Expert Fabric Care\n
+affordable convenient\n
+green concept\n
+Money Saving Combo Packages\n
+neat wrinkle package\n
+Neat and Wrinkle Free Packaging\n
 </string>
     <string name="contact"> Address :\n\n Flat No.401, Plot No 545B, 2nd street,\n Sri Ramnagar Block B,\n Kondapur,\n Hyderabad, Telangana 500084.\n\n Phone: +91-9000379005.\n"</string>
-
+<string name="terms1">* Your items will ONLY be given with a designated person or dropped off in a predetermined place with your prior approval.  Please refer to our Terms of Service for more information.
+</string>
+    <string name="terms2">* A courier fee will apply. Ask your Laundry Care Provider for details.
+</string>
+    <string name="terms3">* if you’ve pre-paid for service, you will not be refunded for missed pick-ups.
+</string>
+    <string name="terms4">* Laundry Care bag at a charge of $3.92/bag. This fee only applies to accounts with as-needed or recurring frequency and does NOT apply to one-time service clients. If you are needing service only one or two times you will place your items in 13 gallon sized trash bags.
+ </string>
 </resources>

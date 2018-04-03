@@ -9,23 +9,22 @@
     android:background="#fff">
 
 
-    <!--<android.support.v7.widget.Toolbar-->
-    <!--android:id="@+id/toolbar_aboutus"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="?attr/actionBarSize"-->
-    <!--app:layout_scrollFlags="scroll|enterAlways"-->
-    <!--android:titleTextColor="#fff"-->
-
-        <!--android:background="?attr/colorPrimary"/>-->
-
-    <ScrollView
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fillViewport="true">
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        xmlns:android="http://schemas.android.com/apk/res/android" >
+
+
+    </android.support.v7.widget.Toolbar>
+
+
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:orientation="vertical">
 
@@ -33,8 +32,15 @@
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_gravity="center"
-                android:src="@drawable/wash" />
-
+                android:src="@drawable/wash" /></LinearLayout>
+       <ScrollView
+           android:layout_width="match_parent"
+           android:layout_height="match_parent">
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp">
             <TextView
                 android:id="@+id/textView14"
                 android:layout_width="match_parent"
@@ -42,7 +48,7 @@
                 android:layout_marginTop="10dp"
                 android:gravity="center"
                 android:text="Welcome to Kg Wash App"
-                android:textColor="#A4D8EB"
+                android:textColor="#0e9bef"
                 android:textSize="20dp"
                 android:textStyle="bold" />
 
@@ -125,9 +131,9 @@
                             android:layout_margin="2dip"
                             android:text="@string/how"
                             android:padding="5dip"
-                            android:background="#9C0002"
+                            android:background="#fff"
                             android:textSize="15dp"
-                            android:textColor="#ffffff"
+                            android:textColor="#000"
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content" />
                     </LinearLayout>
@@ -158,11 +164,11 @@
                         android:layout_height="wrap_content">
                         <TextView
                             android:layout_margin="2dip"
-                            android:text=" Address :\n\n LIG-630, KPHB Road No - 5,\n Dharma Reddy Colony Phase I,\n Kukatpally,\n Hyderabad, Telangana 500072.\n\n Phone: +91-90109 90285.\n"
+                            android:text="@string/contact"
                             android:padding="5dip"
-                            android:background="#9C0002"
+                            android:background="#fff"
                             android:textSize="16dp"
-                            android:textColor="#ffffff"
+                            android:textColor="#000"
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content" />
 
@@ -177,7 +183,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:gravity="end"
-                android:text="Regards" />
+                android:text="Regards"
+                android:textColor="#000"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -186,8 +193,8 @@
                 android:gravity="end"
                 android:textSize="14dp"
                 android:textStyle="bold"
-                android:text="Fratello InnoTech"
-                android:textColor="#ac1c1c" />
+                android:text="Mansopresk"
+                android:textColor="#0e9bef" />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -195,8 +202,8 @@
                 android:gravity="end"
                 android:textStyle="bold"
                 android:textSize="14dp"
-                android:text="+91-9010990285"
-                android:textColor="#ac1c1c" />
+                android:text="+91-9000379005"
+                android:textColor="#000" />
 
 
             <LinearLayout
@@ -209,30 +216,32 @@
 
                 <ImageView
                     android:id="@+id/acall"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/wash"
+                    android:src="@drawable/phonecontact"
                     android:gravity="center" />
 
                 <ImageView
                     android:id="@+id/aemail"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:src="@drawable/email"
                     android:gravity="center" />
 
                 <ImageView
                     android:id="@+id/awebsite"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/internet"
+                    android:src="@drawable/www"
                     android:gravity="center" />
 
             </LinearLayout>
         </LinearLayout>
-    </ScrollView>
+       </ScrollView>
+
 </LinearLayout>
+
 
