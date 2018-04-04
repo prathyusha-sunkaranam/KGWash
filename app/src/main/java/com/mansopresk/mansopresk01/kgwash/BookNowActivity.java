@@ -1,33 +1,61 @@
 package com.mansopresk.mansopresk01.kgwash;
 
-import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.support.v4.view.PagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.RadioButton;
-import android.widget.TextView;
+
+import com.mansopresk.mansopresk01.kgwash.Indicator.WelcomeActivity;
+
+import java.util.Timer;
+import java.util.TimerTask;
 
 
-public class BookNowActivity extends Activity {
+public class BookNowActivity extends AppCompatActivity {
     RadioButton washfold,washiron,iron;
     Button order;
-    TextView textViewbook;
+    ViewPager viewPager;
+    private BookPageAdapter myViewPagerAdapter;
+    private int[] layouts;
+    Timer timer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_book_now);
+        viewPager = (ViewPager) findViewById(R.id.indicator_image);
         washfold = (RadioButton) findViewById(R.id.washfold_button);
         washiron = (RadioButton) findViewById(R.id.washiron_button);
         iron = (RadioButton) findViewById(R.id.iron_button);
-//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-//        getSupportActionBar().setDisplayShowHomeEnabled(true);
-        textViewbook = (TextView) findViewById(R.id.toolbartextbook);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        layouts = new int[]{
+                R.layout.wash_fold,
+                R.layout.wash_iron,
+                R.layout.iron};
+        myViewPagerAdapter = new BookPageAdapter();
+        viewPager.setAdapter(myViewPagerAdapter);
+        TimerTask timerTask = new TimerTask() {
+            @Override
+            public void run() {
+                viewPager.post(new Runnable(){
 
-        textViewbook.setText("Place Order");
+                    @Override
+                    public void run() {
+                        viewPager.setCurrentItem((viewPager.getCurrentItem()+1)%layouts.length);
+                    }
+                });
+            }
+        };
+        timer = new Timer();
+        timer.schedule(timerTask, 3000, 3000);
 
        findViewById(R.id.placeorder).setOnClickListener(new View.OnClickListener() {
            @Override
@@ -37,22 +65,43 @@ public class BookNowActivity extends Activity {
            }
        });
 
-        Toolbar mToolbar = (Toolbar) findViewById(R.id.toolbarbook);
-        mToolbar.setNavigationIcon(R.drawable.ic_arrow_back_black);
-        mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View view) {
-
-                // Your code
-                finish();
-            }
-        });
-
     }
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
+    }
+    public class BookPageAdapter extends PagerAdapter {
+        private LayoutInflater layoutInflater;
 
-//    public void click(View v){
-//        Intent i = new Intent(BookNowActivity.this,ScheduleActivity.class);
-//        startActivity(i);
-//    }
+        public BookPageAdapter() {
+        }
+
+        @Override
+        public Object instantiateItem(ViewGroup container, int position) {
+            layoutInflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+
+            View view = layoutInflater.inflate(layouts[position], container, false);
+            container.addView(view);
+
+            return view;
+        }
+
+        @Override
+        public int getCount() {
+            return layouts.length;
+        }
+
+        @Override
+        public boolean isViewFromObject(View view, Object obj) {
+            return view == obj;
+        }
+
+
+        @Override
+        public void destroyItem(ViewGroup container, int position, Object object) {
+            View view = (View) object;
+            container.removeView(view);
+        }
+    }
 }

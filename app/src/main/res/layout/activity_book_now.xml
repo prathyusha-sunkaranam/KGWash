@@ -37,6 +37,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="KG Wash Services"
+        android:fontFamily=""
         android:textSize="20sp"
         android:textStyle="bold"
         android:layout_marginTop="50dp"/>
