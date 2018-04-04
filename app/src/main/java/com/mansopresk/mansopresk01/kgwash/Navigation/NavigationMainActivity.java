@@ -25,7 +25,7 @@ import com.mansopresk.mansopresk01.kgwash.ScheduleActivity;
 public class NavigationMainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    TextView nav_text;
+    TextView nav_text,textView;
     SharedPreferences sharedPreferences;
     Button odernow;
 
@@ -37,7 +37,9 @@ public class NavigationMainActivity extends AppCompatActivity
         setTitle("KG Wash");
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         odernow = (Button)findViewById(R.id.ordernow);
+        textView = (TextView) findViewById(R.id.toolbartext);
 
+        textView.setText("KG Wash");
 
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

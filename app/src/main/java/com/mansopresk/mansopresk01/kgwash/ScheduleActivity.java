@@ -118,7 +118,7 @@ protected Dialog onCreateDialog(int id) {
 
             DatePickerDialog datePickerDialog = new DatePickerDialog(this, datePickerListener, year, month, day);
             calendar = Calendar.getInstance();
-            calendar.add(Calendar.DATE, +1); // Add 0 days to Calendar
+            calendar.add(Calendar.DATE, 0); // Add 0 days to Calendar
             Date newDate = calendar.getTime();
             datePickerDialog.getDatePicker().setMinDate(newDate.getTime()-(newDate.getTime()%(24*60*60*1000)));
             return datePickerDialog;

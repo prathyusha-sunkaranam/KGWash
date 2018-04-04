@@ -1,5 +1,6 @@
 package com.mansopresk.mansopresk01.kgwash;
 
+import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.content.Intent;
@@ -20,7 +21,7 @@ import com.mansopresk.mansopresk01.kgwash.Navigation.NavigationMainActivity;
 
 import java.util.Calendar;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends Activity {
     EditText email,password,dateview;
     Button signin,signup;
 

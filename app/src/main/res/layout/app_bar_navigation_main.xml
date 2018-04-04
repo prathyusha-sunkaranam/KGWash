@@ -14,11 +14,19 @@
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="#fff"
-            app:titleTextColor="#4b9ac9"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
+            android:layout_height="60dp"
+            android:background="#f5f5f1"
+            xmlns:android="http://schemas.android.com/apk/res/android" >
 
+            <TextView
+                android:id="@+id/toolbartext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#4b9ac9"
+                android:layout_marginBottom="20dp"
+                android:textSize="18sp"/>
+
+        </android.support.v7.widget.Toolbar>
     </android.support.design.widget.AppBarLayout>
 
     <include layout="@layout/content_navigation_main" />
