@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class RegistrationActivity extends Activity {
     
@@ -77,9 +78,10 @@ public class RegistrationActivity extends Activity {
             landmark.setError("");
 
         }
-        else{
 
-           // String usrname = name.getText().toString();
+        else {
+
+            // String usrname = name.getText().toString();
             String username = name.getText().toString();
             String mobilenum = mobile.getText().toString();
             String alternatenumregister = alternatenum.getText().toString();
@@ -87,27 +89,32 @@ public class RegistrationActivity extends Activity {
             String addressregister = address.getText().toString();
             String landmarkregister = landmark.getText().toString();
 
-            editor = getSharedPreferences("userdetails",MODE_PRIVATE).edit();
-            editor.putString("username",username);
-            editor.putString("mobile",mobilenum);
-            editor.putString("alternatenum",alternatenumregister);
-            editor.putString("emailregister",email);
-            editor.putString("address",addressregister);
-            editor.putString("landmark",landmarkregister);
-            editor.commit();
+            if (email.contains("@") && email.contains(".com")) {
+
+
+//        {
+                editor = getSharedPreferences("userdetails", MODE_PRIVATE).edit();
+                editor.putString("username", username);
+                editor.putString("mobile", mobilenum);
+                editor.putString("alternatenum", alternatenumregister);
+                editor.putString("emailregister", email);
+                editor.putString("address", addressregister);
+                editor.putString("landmark", landmarkregister);
+                editor.commit();
 //            String uname = name.getText().toString().trim();
 //            String lastname = mobile.getText().toString().trim();
 //            String mail = alternatenum.getText().toString().trim();
 //            String mobile = emailregister.getText().toString().trim();
 //            String password = address.getText().toString().trim();
 //            String cnfrmpasword = landmark.getText().toString().trim();
-            Intent i = new Intent(RegistrationActivity.this,MainActivity.class);
-            startActivity(i);
+                Intent i = new Intent(RegistrationActivity.this, MainActivity.class);
+                startActivity(i);
 
 
+            } else {
+                Toast.makeText(this, "provide proper email id", Toast.LENGTH_SHORT).show();
+            }
 
         }
-    
-    
 }}
 

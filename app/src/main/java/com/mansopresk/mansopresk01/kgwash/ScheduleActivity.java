@@ -1,22 +1,26 @@
 package com.mansopresk.mansopresk01.kgwash;
 
+import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import java.util.Calendar;
 import java.util.Date;
 
-public class ScheduleActivity extends AppCompatActivity {
+public class ScheduleActivity extends Activity {
+    TextView textViewsch;
     Spinner spinner;
     Calendar calendar;
     private int year, month, day;
@@ -38,16 +42,31 @@ public class ScheduleActivity extends AppCompatActivity {
         address_sch = findViewById(R.id.address_register);
         landmark_sch = findViewById(R.id.landmark_register);
         spinner=(Spinner)findViewById(R.id.spinner);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
+
         //dateview = (EditText) findViewById(R.id.textView3);
         etcalendar=findViewById(R.id.etcalender);
         calendarbtn = findViewById(R.id.calendarbtn);
+        textViewsch = (TextView) findViewById(R.id.toolbartextsch);
+
+        textViewsch.setText("Schedule Now");
         //calendarbtn.findViewById(R.id.calendarbtn);
 
         //calendar = Calendar.getInstance();
         calendarll=findViewById(R.id.calendarll);
         Schedule = findViewById(R.id.schedule);
+
+        Toolbar mToolbar = findViewById(R.id.toolbarsch);
+        mToolbar.setNavigationIcon(R.drawable.ic_arrow_back_black);
+        mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+
+                // Your code
+                finish();
+            }
+        });
+
 
 
 //        etcalendar.setOnClickListener(new View.OnClickListener() {
@@ -93,18 +112,6 @@ public class ScheduleActivity extends AppCompatActivity {
                 showDialog(DATE_PICKER_ID);
 
     }
-    @Override
-    public boolean onSupportNavigateUp() {
-        onBackPressed();
-        Intent ip = new Intent(ScheduleActivity.this,BookNowActivity.class);
-        startActivity(ip);
-        return true;
-    }
-
-
-
-
-
 
 //    public void setDate(View view) {
 //        showDialog(999);
