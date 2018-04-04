@@ -13,10 +13,10 @@
     <color name="bg_screen4">#20d2bb</color>
 
     <!-- dots inactive colors -->
-    <color name="dot_dark_screen1">#fff</color>
-    <color name="dot_dark_screen2">#fff</color>
-    <color name="dot_dark_screen3">#fff</color>
-    <color name="dot_dark_screen4">#fff</color>
+    <color name="dot_dark_screen1">#85b6d2</color>
+    <color name="dot_dark_screen2">#85b6d2</color>
+    <color name="dot_dark_screen3">#85b6d2</color>
+    <color name="dot_dark_screen4">#85b6d2</color>
 
     <!-- dots active colors -->
     <color name="dot_light_screen1">#fff</color>
