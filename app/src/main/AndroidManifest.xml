@@ -20,20 +20,25 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:theme="@style/AppTheme.ActionBar"/>
-        <activity android:name=".Navigation.AboutUsActivity"
-            android:theme="@style/AppTheme.ActionBar"/>
+            android:theme="@style/AppTheme.ActionBar" />
+        <activity
+            android:name=".Navigation.AboutUsActivity"
+            android:theme="@style/AppTheme.ActionBar" />
         <activity android:name=".Navigation.FaqActivity" />
         <activity android:name=".YourOrdersActivity" />
         <activity android:name=".RegistrationActivity" />
-        <activity android:name=".ScheduleActivity"
-            android:theme="@style/AppTheme.ActionBar"/>
+        <activity
+            android:name=".ScheduleActivity"
+            android:theme="@style/AppTheme.ActionBar" />
         <activity android:name=".Indicator.WelcomeActivity" />
-        <activity android:name=".Navigation.NavigationMainActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".Navigation.NavigationMainActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Navigation.TermsConditionsActivity" />
-        <activity android:name=".BookNowActivity"
-            android:theme="@style/AppTheme.ActionBar"></activity>
+        <activity
+            android:name=".BookNowActivity"
+            android:theme="@style/AppTheme.ActionBar" />
+
     </application>
 
 </manifest>

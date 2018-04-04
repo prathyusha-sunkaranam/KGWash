@@ -123,8 +123,8 @@
                     android:layout_height="40dp"
                     android:orientation="horizontal"
                     android:layout_marginTop="20dp"
-                    android:background="@drawable/border"
                     android:layout_marginRight="10dp"
+                    android:background="@drawable/borders"
                     android:layout_weight="0.5"
                     android:weightSum="1">
 
@@ -134,7 +134,7 @@
                         android:layout_height="20dp"
                         android:layout_weight="0.2"
                         android:onClick="calender"
-                        android:background="@drawable/ic_arrow_drop_down_black_24dp" />
+                        />
 
                     <EditText
                         android:id="@+id/etcalender"
@@ -154,8 +154,8 @@
                 android:layout_width="0dp"
                 android:layout_height="40dp"
                 android:entries="@array/TimeSlots"
-                android:background="@drawable/border"
                 android:layout_weight="0.5"
+                    android:background="@drawable/borders"
                     android:paddingStart="20dp"
                 android:layout_marginTop="20dp">
 
@@ -166,6 +166,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/ScheduleNow"
+                android:background="@drawable/buttonbg"
                 android:layout_marginTop="20dp"/>
 
         </LinearLayout>

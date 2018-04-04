@@ -120,6 +120,7 @@
                 android:text="Register"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="#000"
+                android:background="@drawable/buttonbg"
                 android:textStyle="bold" />
 
         </LinearLayout>
