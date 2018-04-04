@@ -47,6 +47,7 @@ public class MainActivity extends Activity {
 
         sharedpreferences = getSharedPreferences("userdetails",MODE_PRIVATE);
         String uname = sharedpreferences.getString("email",null);
+
         if(uname!=null){
             Intent i=new Intent(this,NavigationMainActivity.class);
             startActivity(i);

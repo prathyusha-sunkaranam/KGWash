@@ -25,7 +25,7 @@ import com.mansopresk.mansopresk01.kgwash.ScheduleActivity;
 public class NavigationMainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    TextView nav_text,textView;
+    TextView nav_text,textView,textViewname;
     SharedPreferences sharedPreferences;
     Button odernow;
 
@@ -36,7 +36,7 @@ public class NavigationMainActivity extends AppCompatActivity
         setContentView(R.layout.activity_navigation_main);
         setTitle("KG Wash");
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        odernow = (Button)findViewById(R.id.ordernow);
+        odernow = (Button) findViewById(R.id.ordernow);
         textView = (TextView) findViewById(R.id.toolbartext);
 
         textView.setText("KG Wash");
@@ -51,11 +51,14 @@ public class NavigationMainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
         View header = navigationView.getHeaderView(0);
+
+        textViewname = (TextView) header.findViewById(R.id.textViewname);
+
         nav_text = (TextView) header.findViewById(R.id.nav_text);
         nav_text.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i3 = new Intent(NavigationMainActivity.this,MainActivity.class);
+                Intent i3 = new Intent(NavigationMainActivity.this, MainActivity.class);
                 startActivity(i3);
 
             }
@@ -63,19 +66,28 @@ public class NavigationMainActivity extends AppCompatActivity
 
 
         sharedPreferences = getSharedPreferences("userdetails", MODE_PRIVATE);
+
         String uname = sharedPreferences.getString("email", null);
-        if(sharedPreferences!=null) {
-            if (uname != null || uname != "") {
-                nav_text.setText(uname);
-            } else {
-                Intent i = new Intent(this, MainActivity.class);
-                Toast.makeText(this, "Logout completely", Toast.LENGTH_SHORT).show();
-                startActivity(i);
 
+       String mname = sharedPreferences.getString("username", null);
+        textViewname.setText(mname);
+
+            if (sharedPreferences != null) {
+                if (uname != null || uname != "") {
+                    nav_text.setText(uname);
+                }
+
+
+                } else {
+                    Intent i = new Intent(this, MainActivity.class);
+                    Toast.makeText(this, "Logout completely", Toast.LENGTH_SHORT).show();
+                    startActivity(i);
+
+                }
             }
-        }
 
-    }
+
+
 public void ordernow(View v){
     Intent ip = new Intent(this, BookNowActivity.class);
     startActivity(ip);
