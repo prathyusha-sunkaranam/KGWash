@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -22,6 +23,7 @@ import java.util.Calendar;
 public class MainActivity extends AppCompatActivity {
     EditText email,password,dateview;
     Button signin,signup;
+    ImageView close;
 
 
     public static final String MyPREFERENCES = "MyPrefs" ;
@@ -39,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
         signin = (Button)findViewById(R.id.signin);
         email = (EditText)findViewById(R.id.emailid);
         password = (EditText)findViewById(R.id.password);
+        close = (ImageView)findViewById(R.id.close);
 
 
 
