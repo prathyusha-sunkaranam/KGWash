@@ -26,7 +26,8 @@
             android:theme="@style/AppTheme.ActionBar" />
         <activity android:name=".Navigation.FaqActivity" />
         <activity android:name=".YourOrdersActivity" />
-        <activity android:name=".RegistrationActivity" />
+        <activity android:name=".RegistrationActivity"
+            android:theme="@style/AppTheme.ActionBar"/>
         <activity
             android:name=".ScheduleActivity"
             android:theme="@style/AppTheme.ActionBar" />

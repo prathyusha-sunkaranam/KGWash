@@ -1,5 +1,6 @@
 package com.mansopresk.mansopresk01.kgwash;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.design.widget.Snackbar;
@@ -9,7 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class RegistrationActivity extends AppCompatActivity {
+public class RegistrationActivity extends Activity {
     
     EditText name,mobile,alternatenum,emailregister,address,landmark;
     Button register;

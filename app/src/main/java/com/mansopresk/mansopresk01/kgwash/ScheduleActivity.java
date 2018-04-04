@@ -38,6 +38,8 @@ public class ScheduleActivity extends AppCompatActivity {
         address_sch = findViewById(R.id.address_register);
         landmark_sch = findViewById(R.id.landmark_register);
         spinner=(Spinner)findViewById(R.id.spinner);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
         //dateview = (EditText) findViewById(R.id.textView3);
         etcalendar=findViewById(R.id.etcalender);
         calendarbtn = findViewById(R.id.calendarbtn);
@@ -90,6 +92,13 @@ public class ScheduleActivity extends AppCompatActivity {
                 year = calendar.get(Calendar.YEAR);
                 showDialog(DATE_PICKER_ID);
 
+    }
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        Intent ip = new Intent(ScheduleActivity.this,BookNowActivity.class);
+        startActivity(ip);
+        return true;
     }
 
 

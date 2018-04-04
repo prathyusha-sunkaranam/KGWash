@@ -20,6 +20,8 @@ public class BookNowActivity extends AppCompatActivity {
         washfold = (RadioButton) findViewById(R.id.washfold_button);
         washiron = (RadioButton) findViewById(R.id.washiron_button);
         iron = (RadioButton) findViewById(R.id.iron_button);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
        findViewById(R.id.placeorder).setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {
@@ -28,6 +30,11 @@ public class BookNowActivity extends AppCompatActivity {
            }
        });
 
+    }
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
     }
 //
 //    public void click(View v){
