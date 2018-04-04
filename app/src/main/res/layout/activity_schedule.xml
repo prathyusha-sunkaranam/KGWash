@@ -133,6 +133,7 @@
                         android:layout_width="0dp"
                         android:layout_height="20dp"
                         android:layout_weight="0.2"
+                        android:onClick="calender"
                         android:background="@drawable/ic_arrow_drop_down_black_24dp" />
 
                     <EditText
@@ -142,6 +143,7 @@
                         android:layout_weight="0.8"
                         android:paddingLeft="10dp"
                         android:hint="mm/dd/yyyy"
+                        android:onClick="calender"
                         android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 </LinearLayout>

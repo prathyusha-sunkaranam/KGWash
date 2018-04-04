@@ -6,14 +6,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-    <ImageView
-        android:id="@+id/close"
-        android:layout_width="50dp"
-        android:layout_height="30dp"
-        android:src="@drawable/ic_close"
-        android:layout_marginTop="10dp"
-        android:onClick="close"/>
 
+    <LinearLayout
+        android:id="@+id/first"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
     <TextView
         android:id="@+id/welcome_label"
         android:layout_width="wrap_content"
@@ -21,18 +20,19 @@
         android:text="Welcome to KG Wash !"
         android:textStyle="italic"
         android:textSize="20sp"
-        android:layout_marginLeft="30dp"
+        android:gravity="center"
         android:layout_marginTop="70dp"
         android:textColor="#000"/>
     <TextView
         android:id="@+id/fashion_label"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
         android:layout_marginTop="5dp"
+        android:gravity="center"
         android:text="Wash With Free Hands."
         android:layout_below="@+id/welcome_label"
         android:textColor="#000"/>
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/details"
@@ -41,17 +41,18 @@
         android:orientation="vertical"
         android:layout_marginTop="20dp"
         android:layout_margin="20dp"
-        android:layout_below="@id/close">
+        android:layout_below="@id/first">
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="70dp">
+            android:layout_marginTop="30dp">
         <EditText
             android:id="@+id/emailid"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Email Id"
-            android:layout_marginTop="10dp" />
+            android:layout_marginTop="20dp"
+            />
         </android.support.design.widget.TextInputLayout>
 
 
@@ -76,10 +77,11 @@
             android:textColor="#000"/>
         <Button
             android:id="@+id/signin"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="sign in"
             android:onClick="valid"
+            android:background="@drawable/button"
             android:layout_marginTop="30dp"/>
     </LinearLayout>
 

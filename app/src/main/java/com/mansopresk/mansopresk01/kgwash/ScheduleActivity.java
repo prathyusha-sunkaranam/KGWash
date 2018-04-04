@@ -40,21 +40,24 @@ public class ScheduleActivity extends AppCompatActivity {
         spinner=(Spinner)findViewById(R.id.spinner);
         //dateview = (EditText) findViewById(R.id.textView3);
         etcalendar=findViewById(R.id.etcalender);
+        calendarbtn = findViewById(R.id.calendarbtn);
         //calendarbtn.findViewById(R.id.calendarbtn);
 
         //calendar = Calendar.getInstance();
         calendarll=findViewById(R.id.calendarll);
         Schedule = findViewById(R.id.schedule);
-        etcalendar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                calendar = Calendar.getInstance();
-                day = calendar.get(Calendar.DAY_OF_MONTH);
-                month = calendar.get(Calendar.MONTH);
-                year = calendar.get(Calendar.YEAR);
-                showDialog(DATE_PICKER_ID);
-            }
-        });
+
+
+//        etcalendar.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                calendar = Calendar.getInstance();
+//                day = calendar.get(Calendar.DAY_OF_MONTH);
+//                month = calendar.get(Calendar.MONTH);
+//                year = calendar.get(Calendar.YEAR);
+//                showDialog(DATE_PICKER_ID);
+//            }
+//        });
         Schedule.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -78,6 +81,14 @@ public class ScheduleActivity extends AppCompatActivity {
         emailregister_sch.setText(emailid);
         address_sch.setText(adreesdetails);
         landmark_sch.setText(landmarkdetails);
+
+    }
+    public void calender(View v){
+        calendar = Calendar.getInstance();
+                day = calendar.get(Calendar.DAY_OF_MONTH);
+                month = calendar.get(Calendar.MONTH);
+                year = calendar.get(Calendar.YEAR);
+                showDialog(DATE_PICKER_ID);
 
     }
 

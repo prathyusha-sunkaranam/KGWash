@@ -13,7 +13,7 @@
         android:layout_height="300dp"
         android:orientation="vertical"
         android:background="#4b9ac9"
-        android:layout_marginTop="54dp">
+        android:layout_marginTop="46dp">
 
         <TextView
             android:layout_width="match_parent"

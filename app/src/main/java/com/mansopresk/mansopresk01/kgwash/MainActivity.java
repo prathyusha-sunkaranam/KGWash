@@ -23,7 +23,7 @@ import java.util.Calendar;
 public class MainActivity extends AppCompatActivity {
     EditText email,password,dateview;
     Button signin,signup;
-    ImageView close;
+
 
 
     public static final String MyPREFERENCES = "MyPrefs" ;
@@ -41,7 +41,6 @@ public class MainActivity extends AppCompatActivity {
         signin = (Button)findViewById(R.id.signin);
         email = (EditText)findViewById(R.id.emailid);
         password = (EditText)findViewById(R.id.password);
-        close = (ImageView)findViewById(R.id.close);
 
 
 
@@ -82,11 +81,5 @@ public class MainActivity extends AppCompatActivity {
         Intent i3 = new Intent(MainActivity.this,RegistrationActivity.class);
         startActivity(i3);
     }
-
-    public void close(View v){
-        Intent i2 = new Intent(MainActivity.this,NavigationMainActivity.class);
-        startActivity(i2);
-    }
-
 
 }
