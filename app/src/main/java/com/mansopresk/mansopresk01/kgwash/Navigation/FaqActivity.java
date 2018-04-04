@@ -21,7 +21,7 @@ import android.widget.TextView;
 import com.mansopresk.mansopresk01.kgwash.R;
 
 public class FaqActivity extends AppCompatActivity  implements View.OnClickListener {
-    ImageView amail, acall, aweb;
+    ImageView amail, acall, aweb,backimage;
     LinearLayout panel1, panel2, panel3, panel4, panel5, panel6, panel7, panel8, panel9,panel10,panel11;
     TextView text1, text2, text3, text4, text5, text6, text7, text8, text9,text10,text11;
     View openLayout;
@@ -38,19 +38,19 @@ public class FaqActivity extends AppCompatActivity  implements View.OnClickListe
 //        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 //        getSupportActionBar().setDisplayShowHomeEnabled(false);
 //        toolbar.setTitleTextColor(getResources().getColor(android.R.color.white));
-        Toolbar mToolbar = (Toolbar) findViewById(R.id.toolbar);
+//        Toolbar mToolbar = (Toolbar) findViewById(R.id.toolbar);
+//
+//        mToolbar.setLogo(R.drawable.ic_arrow_back_black_24dp);
 
-        mToolbar.setLogo(R.drawable.ic_arrow_back_black_24dp);
-
-        mToolbar.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View view) {
-
-
-                finish();
-            }
-        });
+//        mToolbar.setOnClickListener(new View.OnClickListener() {
+//
+//            @Override
+//            public void onClick(View view) {
+//
+//
+//                finish();
+//            }
+//        });
 
         amail = (ImageView) findViewById(R.id.aemail);
         acall = (ImageView) findViewById(R.id.acall);
@@ -77,6 +77,7 @@ public class FaqActivity extends AppCompatActivity  implements View.OnClickListe
         text9 = (TextView) findViewById(R.id.text9);
         text10 = (TextView) findViewById(R.id.text10);
         text11 = (TextView) findViewById(R.id.text11);
+        backimage=(ImageView)findViewById(R.id.backimage);
         text1.setOnClickListener(this);
         text2.setOnClickListener(this);
         text3.setOnClickListener(this);
@@ -88,6 +89,12 @@ public class FaqActivity extends AppCompatActivity  implements View.OnClickListe
         text9.setOnClickListener(this);
         text10.setOnClickListener(this);
         text11.setOnClickListener(this);
+        backimage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
 
     }
 
