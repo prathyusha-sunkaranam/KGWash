@@ -21,11 +21,12 @@ import android.widget.TextView;
 import com.mansopresk.mansopresk01.kgwash.R;
 
 
-public class AboutUsActivity extends AppCompatActivity implements View.OnClickListener {
-    ImageView amail,acall,aweb;
+public class AboutUsActivity extends Activity implements View.OnClickListener {
+    ImageView amail,acall,aweb,backab;
     LinearLayout panel1,panel2,panel3;
     TextView text1,text2,text3,textView;
     View openLayout;
+
 
 
 
@@ -46,20 +47,23 @@ public class AboutUsActivity extends AppCompatActivity implements View.OnClickLi
 //        getSupportActionBar().setDisplayShowHomeEnabled(true);
 
 //
+////
+//       Toolbar mToolbar = (Toolbar) findViewById(R.id.toolbar);
+//        mToolbar.setNavigationIcon(R.drawable.ic_arrow_back_black_24dp);
+//        mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
 //
-       Toolbar mToolbar = (Toolbar) findViewById(R.id.toolbar);
-        mToolbar.setNavigationIcon(R.drawable.ic_arrow_back_black_24dp);
-        mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//
+//                // Your code
+//                finish();
+//            }
+//        });
+//        android.support.v7.app.ActionBar actionBar = getSupportActionBar();
+//        actionBar.setHomeButtonEnabled(true);
+//        actionBar.setDisplayHomeAsUpEnabled(true);
 
-            @Override
-            public void onClick(View view) {
-
-                // Your code
-                finish();
-            }
-        });
-
-  mToolbar.setTitleTextColor(getResources().getColor(android.R.color.white));
+//  mToolbar.setTitleTextColor(getResources().getColor(android.R.color.white));
         amail=(ImageView)findViewById(R.id.aemail);
         acall=(ImageView)findViewById(R.id.acall);
         aweb=(ImageView)findViewById(R.id.awebsite);
@@ -70,10 +74,18 @@ public class AboutUsActivity extends AppCompatActivity implements View.OnClickLi
         text1 = (TextView) findViewById(R.id.text1);
         text2 = (TextView) findViewById(R.id.text2);
         text3 = (TextView) findViewById(R.id.text3);
+        backab=(ImageView)findViewById(R.id.backab);
 
         text1.setOnClickListener(this);
         text2.setOnClickListener(this);
         text3.setOnClickListener(this);
+
+        backab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
 
         amail.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -243,11 +255,11 @@ public class AboutUsActivity extends AppCompatActivity implements View.OnClickLi
         }
     }
 
-    @Override
-    public boolean onSupportNavigateUp() {
-        onBackPressed();
-        return true;
-    }
+//    @Override
+//    public boolean onSupportNavigateUp() {
+//        onBackPressed();
+//        return true;
+//    }
 
     public  boolean isPermissionGranted() {
         if (Build.VERSION.SDK_INT >= 23) {
