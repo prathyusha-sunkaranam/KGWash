@@ -45,7 +45,7 @@
             android:textAlignment="center"
             android:textColor="@android:color/white"
             android:textSize="@dimen/slide_desc"
-            android:text="You can place your order online,through APP ,via callor direct to our outlet"/>
+            android:text="You can place your order online,through APP ,via call or direct to our outlet"/>
 
     </LinearLayout>
 
