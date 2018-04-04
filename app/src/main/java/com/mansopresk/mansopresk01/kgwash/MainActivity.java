@@ -73,7 +73,6 @@ public class MainActivity extends AppCompatActivity {
 
                 Intent i = new Intent(MainActivity.this,NavigationMainActivity.class);
                 startActivity(i);
-                //Toast.makeText(this, "run", Toast.LENGTH_SHORT).show();
             }
         }}
     public void signup(View v){

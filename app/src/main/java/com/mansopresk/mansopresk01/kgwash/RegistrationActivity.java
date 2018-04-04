@@ -2,6 +2,7 @@ package com.mansopresk.mansopresk01.kgwash;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -29,6 +30,11 @@ public class RegistrationActivity extends AppCompatActivity {
         register = findViewById(R.id.register);
     }
 
+    public void showSnackbar(View view, String message, int duration) {
+        Snackbar.make(view, message, duration).show();
+    }
+
+
     public void register(View v)
     {
 
@@ -42,6 +48,9 @@ public class RegistrationActivity extends AppCompatActivity {
         {
             mobile.requestFocus();
             mobile.setError("");
+        }else if (mobile.length() != 10) {
+            showSnackbar(mobile, "Please enter 10 digit mobile number", 4000);
+
         }
         else if( alternatenum.getText().toString().isEmpty())
         {

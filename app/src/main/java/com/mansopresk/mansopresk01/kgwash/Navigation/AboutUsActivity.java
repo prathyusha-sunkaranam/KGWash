@@ -112,13 +112,6 @@ public class AboutUsActivity extends AppCompatActivity implements View.OnClickLi
 
 
     }
-
-
-
-
-
-
-
     @Override
     public void onClick(View v)
     {
