@@ -14,7 +14,7 @@
             android:orientation="vertical">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="220dp"
         android:orientation="vertical"
         android:background="#4b9ac9"
         android:layout_marginTop="46dp">
@@ -27,6 +27,7 @@
             android:gravity="center"
             android:textColor="#fff"
             android:textStyle="bold"
+            android:layout_marginTop="10dp"
            />
         <TextView
             android:layout_width="match_parent"
@@ -35,7 +36,7 @@
             android:gravity="center"
             android:textSize="20sp"
             android:textStyle="italic"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="5dp"
             android:textColor="#fff"/>
         <TextView
             android:layout_width="match_parent"
@@ -43,7 +44,7 @@
             android:text="minimum order Rs.200"
             android:gravity="center"
             android:textColor="#fff"
-            android:layout_marginTop="20dp" />
+            android:layout_marginTop="5dp" />
         <Button
             android:id="@+id/ordernow"
             android:layout_width="wrap_content"
@@ -51,9 +52,9 @@
             android:text="Order Now"
             android:onClick="ordernow"
             android:background="@drawable/bordersxm"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="5dp"
             android:textColor="#fff"
-            android:layout_marginStart="200dp"/>
+            android:layout_marginLeft="250dp"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -62,7 +63,7 @@
             android:textColor="#fff"
             android:drawableLeft="@drawable/call"
             android:drawablePadding="14dp"
-            android:layout_marginTop="14dp"
+            android:layout_marginTop="5dp"
             android:layout_marginLeft="80sp"/>
 
     </LinearLayout>
@@ -70,16 +71,17 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:text="KG Wash Services with premium laundry care"
+        android:layout_marginTop="15dp"
+        android:text="KG Wash Services"
         android:gravity="center"
         android:textSize="24sp"
+        android:layout_marginBottom="5dp"
         android:textStyle="bold"/>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="150dp"
         android:orientation="vertical"
-        android:layout_marginTop="20dp">
+       >
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -89,10 +91,10 @@
 
     <LinearLayout
         android:layout_width="0dp"
-        android:layout_height="250dp"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         android:gravity="center"
-        android:layout_marginTop="20dp"
+
         android:layout_weight="0.5">
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/circularImagewashf"
@@ -102,16 +104,16 @@
             android:src="@drawable/washfold" />
         <TextView
             android:layout_width="90dp"
-            android:layout_height="90dp"
+            android:layout_height="wrap_content"
             android:text="wash and fold"/>
 
     </LinearLayout>
         <LinearLayout
             android:layout_width="0dp"
-            android:layout_height="250dp"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
             android:gravity="center"
-            android:layout_marginTop="20dp"
+
             android:layout_weight="0.5">
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/washiron"
@@ -121,7 +123,7 @@
                 android:src="@drawable/washiron" />
             <TextView
                 android:layout_width="90dp"
-                android:layout_height="90dp"
+                android:layout_height="wrap_content"
                 android:text="wash and iron"/>
 
         </LinearLayout>
@@ -139,7 +141,7 @@
             android:id="@+id/circularImageId"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:layout_marginTop="20dp"
+
             android:src="@drawable/iron" />
         <TextView
             android:layout_width="90dp"

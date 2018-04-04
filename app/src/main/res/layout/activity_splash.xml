@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/gifimage"
+    <pl.droidsonroids.gif.GifImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/iconservice"/>
+        android:id="@+id/gifimage"
+        android:scaleType="centerCrop"
+        android:background="@null"
+        android:alpha="0.7"
+        android:src="@drawable/kgsplash"/>
 
-</RelativeLayout>
+</LinearLayout>

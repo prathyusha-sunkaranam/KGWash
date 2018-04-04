@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#c146b5df"
+    android:background="#fff"
     tools:context="com.mansopresk.mansopresk01.kgwash.Navigation.TermsConditionsActivity">
 <LinearLayout
     android:layout_width="wrap_content"
@@ -30,26 +30,26 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:text="@string/terms1"
-        android:textColor="#000"/>
+        android:textColor="#4b9ac9"/>
 
     <TextView
         android:padding="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/terms2"
-        android:textColor="#000"/>
+        android:textColor="#4b9ac9"/>
     <TextView
         android:padding="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/terms3"
-        android:textColor="#000"/>
+        android:textColor="#4b9ac9"/>
     <TextView
         android:padding="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/terms4"
-        android:textColor="#000"/>
+        android:textColor="#4b9ac9"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
