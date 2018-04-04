@@ -7,21 +7,23 @@
     android:gravity="center"
     android:orientation="vertical"
     android:background="#fff">
-
-
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_marginTop="10dp"
-        android:layout_width="match_parent"
+<android.support.v7.widget.Toolbar
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="#4b9ac9">
+    <ImageView
+        android:id="@+id/backab"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#fff"
-        xmlns:android="http://schemas.android.com/apk/res/android" >
-
-
-    </android.support.v7.widget.Toolbar>
-
-
-
+        android:src="@drawable/ic_arrow_back_black_24dp"/>
+    <TextView
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kg Wash"
+        android:textSize="@dimen/slide_title"
+        android:textColor="#fff"/>
+</android.support.v7.widget.Toolbar>
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
