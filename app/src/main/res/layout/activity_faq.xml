@@ -16,50 +16,36 @@
         <!--app:title="FAQ's"-->
         <!--android:background="?attr/colorPrimary"/>-->
 
-<ScrollView android:layout_width="match_parent"
+<LinearLayout android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:fillViewport="true"
+    android:orientation="vertical"
     xmlns:android="http://schemas.android.com/apk/res/android">
-
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbarfaq"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="top"
+        android:minHeight="50dp"
+        app:titleMarginTop="@dimen/margin_to_center"
+        android:background="#fff">
+        <TextView
+            android:id="@+id/tooltextabt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kg Wash"
+            android:textSize="18sp"
+            android:textColor="#4b9ac9"/>
+    </android.support.v7.widget.Toolbar>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        >
-
-        <!--<android.support.v7.widget.Toolbar-->
-            <!--android:id="@+id/toolbar"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="?attr/actionBarSize"-->
-            <!--android:background="#fff"-->
-            <!--app:layout_scrollFlags="scroll|enterAlways"-->
-            <!--app:popupTheme="@style/ThemeOverlay.AppCompat.Light" >-->
-
-        <LinearLayout
+        android:orientation="vertical">
+        <ScrollView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            >
-            <ImageView
-               android:id="@+id/backimage"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-              android:layout_marginStart="5dp"
-
-                android:src="@drawable/ic_arrow_back_black_24dp"/>
-
-            <TextView
-                android:layout_marginLeft="110dp"
-               android:layout_weight="9"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="FAQ's"
-                android:textSize="20dp"
-                android:textColor="#000"/>
-        </LinearLayout>
-        <!--</android.support.v7.widget.Toolbar>-->
+            android:layout_height="wrap_content">
 
 
         <LinearLayout
@@ -528,6 +514,7 @@
         </LinearLayout>
 
 </LinearLayout>
+        </ScrollView>
     </LinearLayout>
-    </ScrollView>
+    </LinearLayout>
 <!--</LinearLayout>-->

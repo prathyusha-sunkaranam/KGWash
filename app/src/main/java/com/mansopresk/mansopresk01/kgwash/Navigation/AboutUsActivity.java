@@ -48,17 +48,17 @@ public class AboutUsActivity extends Activity implements View.OnClickListener {
 
 //
 ////
-//       Toolbar mToolbar = (Toolbar) findViewById(R.id.toolbar);
-//        mToolbar.setNavigationIcon(R.drawable.ic_arrow_back_black_24dp);
-//        mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
-//
-//            @Override
-//            public void onClick(View view) {
-//
-//                // Your code
-//                finish();
-//            }
-//        });
+       Toolbar mToolbar = (Toolbar) findViewById(R.id.toolbarabt);
+        mToolbar.setNavigationIcon(R.drawable.ic_arrow_back_black_24dp);
+        mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+
+                // Your code
+                finish();
+            }
+        });
 //        android.support.v7.app.ActionBar actionBar = getSupportActionBar();
 //        actionBar.setHomeButtonEnabled(true);
 //        actionBar.setDisplayHomeAsUpEnabled(true);
@@ -74,18 +74,13 @@ public class AboutUsActivity extends Activity implements View.OnClickListener {
         text1 = (TextView) findViewById(R.id.text1);
         text2 = (TextView) findViewById(R.id.text2);
         text3 = (TextView) findViewById(R.id.text3);
-        backab=(ImageView)findViewById(R.id.backab);
+
 
         text1.setOnClickListener(this);
         text2.setOnClickListener(this);
         text3.setOnClickListener(this);
 
-        backab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                finish();
-            }
-        });
+
 
         amail.setOnClickListener(new View.OnClickListener() {
             @Override
