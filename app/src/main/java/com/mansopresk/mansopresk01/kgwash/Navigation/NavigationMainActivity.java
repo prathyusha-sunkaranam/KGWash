@@ -137,6 +137,14 @@ public void ordernow(View v){
             startActivity(i2);
 
         } else if (id == R.id.nav_share) {
+            Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
+            sharingIntent.setType("text/plain");
+            String shareBody = "Your body here";
+            String shareSub = "Your subject here";
+            sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, shareSub);
+            sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
+            startActivity(Intent.createChooser(sharingIntent, "Share using"));
+
 
         } else if (id == R.id.nav_logout) {
             getApplicationContext().getSharedPreferences("userdetails", 0).edit().clear().commit();
