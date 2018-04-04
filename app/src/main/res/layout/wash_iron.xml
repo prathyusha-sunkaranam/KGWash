@@ -23,7 +23,8 @@
             android:layout_marginTop="15dp"
             android:gravity="center"
             android:text="@string/washiron"
-            android:textColor="#000"
+            android:textStyle="bold"
+            android:textColor="#831c25"
             android:textSize="40dp" />
 
         <TextView
@@ -33,7 +34,8 @@
             android:layout_marginTop="10dp"
             android:gravity="center"
             android:text="@string/wfold_descrp"
-            android:textColor="#000"
+            android:textColor="#831c25"
+            android:textStyle="bold"
             android:textSize="18dp" />
 
     </LinearLayout>

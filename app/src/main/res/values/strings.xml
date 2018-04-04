@@ -3,12 +3,12 @@
 
 
     <string name="washiron">Wash + Iron</string>
-    <string name="wiron_desc">17 Rs per piece [min 10 pieces]-59 Rs per kg</string>
+    <string name="wiron_desc">17 Rs per piece </string>
 
     <string name="washfold">Wash + Fold</string>
-    <string name="wfold_descrp">10 Rs per piece [min 20 pieces]-39 Rs per kg</string>
+    <string name="wfold_descrp">10 Rs per piece </string>
     <string name="iron">Iron</string>
-    <string name="iron_desc">8 Rs per piece [min 20 pieces]</string>
+    <string name="iron_desc">8 Rs per piece</string>
     <string name="title_activity_navigation_main">NavigationMainActivity</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>

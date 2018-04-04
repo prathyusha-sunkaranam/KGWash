@@ -21,6 +21,7 @@ import com.mansopresk.mansopresk01.kgwash.BookNowActivity;
 import com.mansopresk.mansopresk01.kgwash.MainActivity;
 import com.mansopresk.mansopresk01.kgwash.R;
 import com.mansopresk.mansopresk01.kgwash.ScheduleActivity;
+import com.mansopresk.mansopresk01.kgwash.YourOrdersActivity;
 
 public class NavigationMainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -135,7 +136,8 @@ public void ordernow(View v){
         if (id == R.id.nav_home) {
             // Handle the camera action
         } else if (id == R.id.nav_orders) {
-
+            Intent i = new Intent(NavigationMainActivity.this, YourOrdersActivity.class);
+            startActivity(i);
         } else if (id == R.id.nav_aboutus) {
             Intent i = new Intent(NavigationMainActivity.this, AboutUsActivity.class);
             startActivity(i);

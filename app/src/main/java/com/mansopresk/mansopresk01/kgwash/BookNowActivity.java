@@ -1,11 +1,13 @@
 package com.mansopresk.mansopresk01.kgwash;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +15,7 @@ import android.widget.Button;
 import android.widget.RadioButton;
 
 import com.mansopresk.mansopresk01.kgwash.Indicator.WelcomeActivity;
+import com.mansopresk.mansopresk01.kgwash.Navigation.NavigationMainActivity;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -34,8 +37,22 @@ public class BookNowActivity extends AppCompatActivity {
         washfold = (RadioButton) findViewById(R.id.washfold_button);
         washiron = (RadioButton) findViewById(R.id.washiron_button);
         iron = (RadioButton) findViewById(R.id.iron_button);
+//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        //getSupportActionBar().setMinimumHeight(0);
+        Toolbar mToolbar = (Toolbar) findViewById(R.id.toolbarbook);
+        setSupportActionBar(mToolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
+        mToolbar.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                Intent i=new Intent(BookNowActivity.this, NavigationMainActivity.class);
+                startActivity(i);
+            }
+        });
+
         layouts = new int[]{
                 R.layout.wash_fold,
                 R.layout.wash_iron,

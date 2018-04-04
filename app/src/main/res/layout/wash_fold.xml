@@ -24,7 +24,8 @@
         android:layout_marginTop="15dp"
         android:gravity="center"
         android:text="Wash + Fold"
-        android:textColor="#1b1919"
+        android:textStyle="bold"
+        android:textColor="#831c25"
         android:textSize="40dp" />
 
     <TextView
@@ -33,8 +34,9 @@
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
         android:gravity="center"
+        android:textStyle="bold"
         android:text="@string/wfold_descrp"
-        android:textColor="#222525"
+        android:textColor="#831c25"
         android:textSize="18dp" />
 
 
