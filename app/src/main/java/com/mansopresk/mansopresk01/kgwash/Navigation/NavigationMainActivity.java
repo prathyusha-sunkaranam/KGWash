@@ -14,6 +14,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -28,7 +29,7 @@ import com.mansopresk.mansopresk01.kgwash.YourOrdersActivity;
 public class NavigationMainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    TextView nav_text,textView,textViewname;
+    TextView navsignin,navsignup,navuname,toolbartext,textviewname;
     SharedPreferences sharedPreferences;
     Button odernow;
 
@@ -40,9 +41,9 @@ public class NavigationMainActivity extends AppCompatActivity
         setTitle("KG Wash");
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         odernow = (Button) findViewById(R.id.ordernow);
-        textView = (TextView) findViewById(R.id.toolbartext);
+        toolbartext = (TextView) findViewById(R.id.toolbartext);
 
-        textView.setText("KG Wash");
+        toolbartext.setText("KG Wash");
 
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -55,46 +56,51 @@ public class NavigationMainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
         View header = navigationView.getHeaderView(0);
 
-        textViewname = (TextView) header.findViewById(R.id.textViewname);
-
-        nav_text = (TextView) header.findViewById(R.id.nav_text);
-        nav_text.setOnClickListener(new View.OnClickListener() {
+        navuname = header.findViewById(R.id.uname);
+        navsignin = header.findViewById(R.id.nav_signin);
+        navsignup = header.findViewById(R.id.nav_signup);
+        navsignin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i3 = new Intent(NavigationMainActivity.this, MainActivity.class);
-                startActivity(i3);
-
+                Intent i=new Intent(NavigationMainActivity.this,MainActivity.class);
+                startActivity(i);
             }
         });
+        navsignup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(NavigationMainActivity.this,RegistrationActivity.class);
+                startActivity(i);
+            }
+        });
+
 
 
         sharedPreferences = getSharedPreferences("userdetails", MODE_PRIVATE);
 
         String uname = sharedPreferences.getString("email", null);
+        //String mname = sharedPreferences.getString("username", null);
+        navuname.setText(uname);
+//
+            if (sharedPreferences != null) {
 
-        String mname = sharedPreferences.getString("username", null);
-        textViewname.setText(mname);
-
-        if (sharedPreferences != null) {
-            if (uname != null || uname != "") {
-                nav_text.setText(uname);
-            }
-
-
-        } else {
-            Intent i = new Intent(this, MainActivity.class);
-            Toast.makeText(this, "Logout completely", Toast.LENGTH_SHORT).show();
-            startActivity(i);
-
-        }
+                }
+//
+//
+//                } else {
+//                    Intent i = new Intent(this, MainActivity.class);
+//                    Toast.makeText(this, "Logout completely", Toast.LENGTH_SHORT).show();
+//                    startActivity(i);
+//
+//                }
+//            }
     }
 
 
-
-    public void ordernow(View v){
-        Intent ip = new Intent(this, BookNowActivity.class);
-        startActivity(ip);
-    }
+public void ordernow(View v){
+    Intent ip = new Intent(this, BookNowActivity.class);
+    startActivity(ip);
+}
 
     @Override
     public void onBackPressed() {
@@ -138,14 +144,15 @@ public class NavigationMainActivity extends AppCompatActivity
         if (id == R.id.nav_home) {
             // Handle the camera action
         } else if (id == R.id.nav_orders) {
-
+            Intent i = new Intent(NavigationMainActivity.this, YourOrdersActivity.class);
+            startActivity(i);
         } else if (id == R.id.nav_aboutus) {
             Intent i = new Intent(NavigationMainActivity.this, AboutUsActivity.class);
             startActivity(i);
 
         } else if (id == R.id.nav_tcapply) {
-            Intent i = new Intent(NavigationMainActivity.this,TermsConditionsActivity.class);
-            startActivity(i);
+                Intent i = new Intent(NavigationMainActivity.this,TermsConditionsActivity.class);
+                startActivity(i);
 
         } else if (id == R.id.nav_faq) {
             Intent i2 = new Intent(NavigationMainActivity.this,FaqActivity.class);
@@ -160,10 +167,14 @@ public class NavigationMainActivity extends AppCompatActivity
             sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
             startActivity(Intent.createChooser(sharingIntent, "Share using"));
 
+            }
 
-        } else if (id == R.id.nav_logout) {
-            getApplicationContext().getSharedPreferences("userdetails", 0).edit().clear().commit();
-            nav_text.setText("Login/Sign Up");
+         else if (id == R.id.nav_logout) {
+
+//         getApplicationContext().getSharedPreferences("userdetails", 0).edit().clear().commit();
+//
+//
+//            nav_text.setText("Login | Signup");
 
         }
 
