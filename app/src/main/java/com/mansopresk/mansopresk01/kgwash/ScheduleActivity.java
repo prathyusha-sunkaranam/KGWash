@@ -98,9 +98,9 @@ public class ScheduleActivity extends Activity {
                 emailregister_sch.requestFocus();
                 emailregister_sch.setError("");
         }
-        else if (emailid.contains("@") && emailid.contains(".com")){
-            showSnackbar(emailregister_sch, "Please enter 10 digit mobile number", 4000);
-        }
+//        else if (emailid.contains("@") && emailid.contains(".com")){
+//            showSnackbar(emailregister_sch, "Please enter 10 digit mobile number", 4000);
+//        }
         else if (address_sch.getText().toString().isEmpty())
         {
             address_sch.requestFocus();
@@ -115,9 +115,6 @@ public class ScheduleActivity extends Activity {
         }
 
         else {
-
-            if(emailid.contains("@")&& emailid.contains(".com")) {
-
 
                 sharedpreferences = getSharedPreferences("userdetails", MODE_PRIVATE);
                 String uname = sharedpreferences.getString("username", null);
@@ -138,9 +135,8 @@ public class ScheduleActivity extends Activity {
                 startActivity(i);
 
 
-            }else {
-                showSnackbar(emailregister_sch, "Please enter 10 digit mobile number", 4000);
-            }
+
+
 
         }
 
