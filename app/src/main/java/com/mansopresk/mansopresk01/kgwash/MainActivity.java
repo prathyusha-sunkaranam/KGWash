@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -33,6 +34,8 @@ public class MainActivity extends Activity {
     SharedPreferences sharedpreferences;
     SharedPreferences.Editor editor;
 
+    LinearLayout linearLayout;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +45,8 @@ public class MainActivity extends Activity {
         signin = (Button)findViewById(R.id.signin);
         email = (EditText)findViewById(R.id.emailid);
         password = (EditText)findViewById(R.id.password);
+
+        linearLayout=(LinearLayout)findViewById(R.id.nav_loginll);
 
 
 
@@ -79,12 +84,17 @@ public class MainActivity extends Activity {
 
          }
                 if (usrname.equals("admin") && pswrd.equals("admin")) {
+
+
+             linearLayout.setVisibility(View.GONE);
                     Toast.makeText(this, "Login Success", Toast.LENGTH_SHORT).show();
                     Intent i = new Intent(this, AdminOrder.class);
 //                    email.setText("");
 //                    password.setText("");
                     startActivity(i);
                 } else {
+
+
 
                     Intent i = new Intent(MainActivity.this, NavigationMainActivity.class);
                     startActivity(i);

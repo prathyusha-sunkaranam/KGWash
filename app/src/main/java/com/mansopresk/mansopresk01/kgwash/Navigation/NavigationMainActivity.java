@@ -32,17 +32,20 @@ public class NavigationMainActivity extends AppCompatActivity
     TextView navsignin,navsignup,navuname,toolbartext,textviewname;
     SharedPreferences sharedPreferences;
     Button odernow;
+    LinearLayout linearLayout;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_navigation_main);
+
+
         setTitle("KG Wash");
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         odernow = (Button) findViewById(R.id.ordernow);
         toolbartext = (TextView) findViewById(R.id.toolbartext);
-
+        linearLayout=(LinearLayout)findViewById(R.id.nav_loginll);
         toolbartext.setText("KG Wash");
 
 
@@ -59,6 +62,7 @@ public class NavigationMainActivity extends AppCompatActivity
         navuname = header.findViewById(R.id.uname);
         navsignin = header.findViewById(R.id.nav_signin);
         navsignup = header.findViewById(R.id.nav_signup);
+
         navsignin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
