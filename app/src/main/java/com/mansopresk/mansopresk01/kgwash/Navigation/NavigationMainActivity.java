@@ -3,6 +3,7 @@ package com.mansopresk.mansopresk01.kgwash.Navigation;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.support.design.internal.NavigationMenu;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -20,6 +21,7 @@ import android.widget.Toast;
 import com.mansopresk.mansopresk01.kgwash.BookNowActivity;
 import com.mansopresk.mansopresk01.kgwash.MainActivity;
 import com.mansopresk.mansopresk01.kgwash.R;
+import com.mansopresk.mansopresk01.kgwash.RegistrationActivity;
 import com.mansopresk.mansopresk01.kgwash.ScheduleActivity;
 import com.mansopresk.mansopresk01.kgwash.YourOrdersActivity;
 
@@ -54,16 +56,20 @@ public class NavigationMainActivity extends AppCompatActivity
         View header = navigationView.getHeaderView(0);
 
         textViewname = (TextView) header.findViewById(R.id.textViewname);
+        nav_text=header.findViewById(R.id.nav_register);
+//        nav_text = (TextView) header.findViewById(R.id.nav_login);
+//        nav_text.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent i3 = new Intent(NavigationMainActivity.this, MainActivity.class);
+//                startActivity(i3);
+//
+//              //  findViewById(R.id.nav_logout).setVisibility(View.INVISIBLE);
+//
+//            }
+//        });
 
-        nav_text = (TextView) header.findViewById(R.id.nav_text);
-        nav_text.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i3 = new Intent(NavigationMainActivity.this, MainActivity.class);
-                startActivity(i3);
 
-            }
-        });
 
 
         sharedPreferences = getSharedPreferences("userdetails", MODE_PRIVATE);
@@ -159,10 +165,14 @@ public void ordernow(View v){
             sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
             startActivity(Intent.createChooser(sharingIntent, "Share using"));
 
+            }
 
-        } else if (id == R.id.nav_logout) {
-            getApplicationContext().getSharedPreferences("userdetails", 0).edit().clear().commit();
-            nav_text.setText("Login/Sign Up");
+         else if (id == R.id.nav_logout) {
+
+//         getApplicationContext().getSharedPreferences("userdetails", 0).edit().clear().commit();
+//
+//
+//            nav_text.setText("Login | Signup");
 
         }
 
