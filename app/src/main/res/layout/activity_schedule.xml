@@ -66,6 +66,7 @@
             android:layout_marginTop="10dp">
 
             <EditText
+                android:maxLength="10"
                 android:id="@+id/mobile_register"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -80,6 +81,7 @@
             android:layout_marginTop="10dp">
 
             <EditText
+                android:maxLength="10"
                 android:id="@+id/alternate_mob_register"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

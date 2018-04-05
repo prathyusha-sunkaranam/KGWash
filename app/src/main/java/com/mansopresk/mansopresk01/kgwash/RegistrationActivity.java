@@ -112,7 +112,8 @@ public class RegistrationActivity extends Activity {
 
 
             } else {
-                Toast.makeText(this, "provide proper email id", Toast.LENGTH_SHORT).show();
+                showSnackbar(emailregister, "Please enter 10 digit mobile number", 4000);
+
             }
 
         }

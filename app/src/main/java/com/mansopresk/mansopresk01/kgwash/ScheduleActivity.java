@@ -5,6 +5,7 @@ import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -20,6 +21,7 @@ import java.util.Calendar;
 import java.util.Date;
 
 public class ScheduleActivity extends Activity {
+    String emailid;
     TextView textViewsch;
     Spinner spinner;
     Calendar calendar;
@@ -41,12 +43,12 @@ public class ScheduleActivity extends Activity {
         emailregister_sch = findViewById(R.id.email_register);
         address_sch = findViewById(R.id.address_register);
         landmark_sch = findViewById(R.id.landmark_register);
-        spinner=(Spinner)findViewById(R.id.spinner);
-        etcalendar=findViewById(R.id.etcalender);
+        spinner = (Spinner) findViewById(R.id.spinner);
+        etcalendar = findViewById(R.id.etcalender);
         calendarbtn = findViewById(R.id.calendarbtn);
         textViewsch = (TextView) findViewById(R.id.toolbartextsch);
         textViewsch.setText("Schedule Now");
-        calendarll=findViewById(R.id.calendarll);
+        calendarll = findViewById(R.id.calendarll);
         Schedule = findViewById(R.id.schedule);
 
         Toolbar mToolbar = findViewById(R.id.toolbarsch);
@@ -55,29 +57,92 @@ public class ScheduleActivity extends Activity {
 
             @Override
             public void onClick(View view) {
-                Intent i2 = new Intent(ScheduleActivity.this,BookNowActivity.class);
+                Intent i2 = new Intent(ScheduleActivity.this, BookNowActivity.class);
                 startActivity(i2);
                 finish();
             }
         });
+    }
+
+    public void showSnackbar(View view, String message, int duration) {
+        Snackbar.make(view, message, duration).show();
+    }
 
 
+    public void schedule(View v)
+    {
+
+        if (name_sch.getText().toString().isEmpty())
+        {
+            name_sch.requestFocus();
+            name_sch.setError("");
+        }
+
+        else if (mobile_sch.getText().toString().isEmpty())
+        {
+            mobile_sch.requestFocus();
+            mobile_sch.setError("");
+        }else if (mobile_sch.length() != 10) {
+            showSnackbar(mobile_sch, "Please enter 10 digit mobile number", 4000);
+
+        }
+        else if( alternatenum_sch.getText().toString().isEmpty())
+        {
+            alternatenum_sch.requestFocus();
+            alternatenum_sch.setError("");
+        } else if (alternatenum_sch.length() != 10) {
+            showSnackbar(alternatenum_sch, "Please enter 10 digit mobile number", 4000);
+        }
+        else if (emailregister_sch.getText().toString().isEmpty())
+        {
+                emailregister_sch.requestFocus();
+                emailregister_sch.setError("");
+        }
+        else if (emailid.contains("@") && emailid.contains(".com")){
+            showSnackbar(emailregister_sch, "Please enter 10 digit mobile number", 4000);
+        }
+        else if (address_sch.getText().toString().isEmpty())
+        {
+            address_sch.requestFocus();
+            address_sch.setError("");
+
+        }
+        else if (landmark_sch.getText().toString().isEmpty())
+        {
+            landmark_sch.requestFocus();
+            landmark_sch.setError("");
+
+        }
+
+        else {
+
+            if(emailid.contains("@")&& emailid.contains(".com")) {
 
 
-        sharedpreferences = getSharedPreferences("userdetails",MODE_PRIVATE);
-        String uname = sharedpreferences.getString("username",null);
-        String mobilenum = sharedpreferences.getString("mobile",null);
-        String alernum = sharedpreferences.getString("alternatenum",null);
-        String emailid = sharedpreferences.getString("emailregister",null);
-        String adreesdetails = sharedpreferences.getString("address",null);
-        String landmarkdetails = sharedpreferences.getString("landmark",null);
+                sharedpreferences = getSharedPreferences("userdetails", MODE_PRIVATE);
+                String uname = sharedpreferences.getString("username", null);
+                String mobilenum = sharedpreferences.getString("mobile", null);
+                String alernum = sharedpreferences.getString("alternatenum", null);
+                String emailid = sharedpreferences.getString("emailregister", null);
+                String adreesdetails = sharedpreferences.getString("address", null);
+                String landmarkdetails = sharedpreferences.getString("landmark", null);
 
-        name_sch.setText(uname);
-        mobile_sch.setText(mobilenum);
-        alternatenum_sch.setText(alernum);
-        emailregister_sch.setText(emailid);
-        address_sch.setText(adreesdetails);
-        landmark_sch.setText(landmarkdetails);
+                name_sch.setText(uname);
+                mobile_sch.setText(mobilenum);
+                alternatenum_sch.setText(alernum);
+                emailregister_sch.setText(emailid);
+                address_sch.setText(adreesdetails);
+                landmark_sch.setText(landmarkdetails);
+
+                Intent i = new Intent(ScheduleActivity.this, YourOrdersActivity.class);
+                startActivity(i);
+
+
+            }else {
+                showSnackbar(emailregister_sch, "Please enter 10 digit mobile number", 4000);
+            }
+
+        }
 
     }
     public void calender(View v){
