@@ -56,29 +56,37 @@ public class MainActivity extends Activity {
 
     }
 
-    public void valid(View v){
-        if(email.getText().toString().trim().isEmpty()){
+    public void valid(View v) {
+        if (email.getText().toString().trim().isEmpty()) {
             email.requestFocus();
             email.setError("");
-        }
-        else if (password.getText().toString().isEmpty()){
+        } else if (password.getText().toString().isEmpty()) {
             password.requestFocus();
             password.setError("");
-        }
-        else {
+        } else {
             String usrname = email.getText().toString();
             String pswrd = password.getText().toString();
 //            sharedpreferences = getSharedPreferences("email",MODE_PRIVATE);
-            editor = getSharedPreferences("userdetails",MODE_PRIVATE).edit();
-            editor.putString("email",usrname);
-            editor.putString("password",pswrd);
+            editor = getSharedPreferences("userdetails", MODE_PRIVATE).edit();
+            editor.putString("email", usrname);
+            editor.putString("password", pswrd);
             editor.commit();
-            if(sharedpreferences!=null) {
 
-                Intent i = new Intent(MainActivity.this,NavigationMainActivity.class);
-                startActivity(i);
+//            if (sharedpreferences != null) {
+                if (usrname.equals("admin") && pswrd.equals("admin")) {
+                    Toast.makeText(this, "Login Success", Toast.LENGTH_SHORT).show();
+                    Intent i = new Intent(this, AdminOrder.class);
+//                    email.setText("");
+//                    password.setText("");
+                    startActivity(i);
+                } else {
+
+                    Intent i = new Intent(MainActivity.this, NavigationMainActivity.class);
+                    startActivity(i);
+                }
             }
-        }}
+        }
+//    }
     public void signup(View v){
         Intent i3 = new Intent(MainActivity.this,RegistrationActivity.class);
         startActivity(i3);

@@ -56,49 +56,45 @@ public class NavigationMainActivity extends AppCompatActivity
         View header = navigationView.getHeaderView(0);
 
         textViewname = (TextView) header.findViewById(R.id.textViewname);
-        nav_text=header.findViewById(R.id.nav_register);
-//        nav_text = (TextView) header.findViewById(R.id.nav_login);
-//        nav_text.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent i3 = new Intent(NavigationMainActivity.this, MainActivity.class);
-//                startActivity(i3);
-//
-//              //  findViewById(R.id.nav_logout).setVisibility(View.INVISIBLE);
-//
-//            }
-//        });
 
+        nav_text = (TextView) header.findViewById(R.id.nav_text);
+        nav_text.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i3 = new Intent(NavigationMainActivity.this, MainActivity.class);
+                startActivity(i3);
 
+            }
+        });
 
 
         sharedPreferences = getSharedPreferences("userdetails", MODE_PRIVATE);
 
         String uname = sharedPreferences.getString("email", null);
 
-       String mname = sharedPreferences.getString("username", null);
+        String mname = sharedPreferences.getString("username", null);
         textViewname.setText(mname);
 
-            if (sharedPreferences != null) {
-                if (uname != null || uname != "") {
-                    nav_text.setText(uname);
-                }
-
-
-                } else {
-                    Intent i = new Intent(this, MainActivity.class);
-                    Toast.makeText(this, "Logout completely", Toast.LENGTH_SHORT).show();
-                    startActivity(i);
-
-                }
+        if (sharedPreferences != null) {
+            if (uname != null || uname != "") {
+                nav_text.setText(uname);
             }
 
 
+        } else {
+            Intent i = new Intent(this, MainActivity.class);
+            Toast.makeText(this, "Logout completely", Toast.LENGTH_SHORT).show();
+            startActivity(i);
 
-public void ordernow(View v){
-    Intent ip = new Intent(this, BookNowActivity.class);
-    startActivity(ip);
-}
+        }
+    }
+
+
+
+    public void ordernow(View v){
+        Intent ip = new Intent(this, BookNowActivity.class);
+        startActivity(ip);
+    }
 
     @Override
     public void onBackPressed() {
@@ -142,15 +138,14 @@ public void ordernow(View v){
         if (id == R.id.nav_home) {
             // Handle the camera action
         } else if (id == R.id.nav_orders) {
-            Intent i = new Intent(NavigationMainActivity.this, YourOrdersActivity.class);
-            startActivity(i);
+
         } else if (id == R.id.nav_aboutus) {
             Intent i = new Intent(NavigationMainActivity.this, AboutUsActivity.class);
             startActivity(i);
 
         } else if (id == R.id.nav_tcapply) {
-                Intent i = new Intent(NavigationMainActivity.this,TermsConditionsActivity.class);
-                startActivity(i);
+            Intent i = new Intent(NavigationMainActivity.this,TermsConditionsActivity.class);
+            startActivity(i);
 
         } else if (id == R.id.nav_faq) {
             Intent i2 = new Intent(NavigationMainActivity.this,FaqActivity.class);
@@ -165,14 +160,10 @@ public void ordernow(View v){
             sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
             startActivity(Intent.createChooser(sharingIntent, "Share using"));
 
-            }
 
-         else if (id == R.id.nav_logout) {
-
-//         getApplicationContext().getSharedPreferences("userdetails", 0).edit().clear().commit();
-//
-//
-//            nav_text.setText("Login | Signup");
+        } else if (id == R.id.nav_logout) {
+            getApplicationContext().getSharedPreferences("userdetails", 0).edit().clear().commit();
+            nav_text.setText("Login/Sign Up");
 
         }
 
