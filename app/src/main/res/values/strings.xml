@@ -21,7 +21,7 @@
 
     <string-array name="TimeSlots">
         <item>-- Time Slote --</item>
-        <item>Morning 8 to 10</item>
+        <item>Morning 6Am to 11</item>
         <item>Morning 10 to 12</item>
         <item>Afternoon 12 to 2</item>
         <item>Afternoon 2 to 4</item>

@@ -11,6 +11,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.ScaleAnimation;
 import android.view.animation.Transformation;
@@ -21,34 +24,18 @@ import android.widget.TextView;
 import com.mansopresk.mansopresk01.kgwash.R;
 
 
-public class AboutUsActivity extends Activity implements View.OnClickListener {
+public class AboutUsActivity extends AppCompatActivity implements View.OnClickListener {
     ImageView amail,acall,aweb,backab;
     LinearLayout panel1,panel2,panel3;
     TextView text1,text2,text3,textView;
     View openLayout;
 
-
-
-
-    //String YOUR_API_KEY="AIzaSyDxBBCTnbdc_-7x2gYolw2UD9-k0difgQ8";
-    //protected static final String STATIC_MAP_API_ENDPOINT = "http://maps.google.com/maps/api/staticmap?/center=17.49,78.39&maptype=roadmap&zoom=15&size=600x400";
-    //http://maps.google.com/maps/api/staticmap?center=53,51&maptype=satellite&zoom=17&size=640x300&sensor=false
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about_us);
 
-//       Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_aboutus);
-//       setSupportActionBar(toolbar);
-
-//        setTitle(getString(R.string.AboutUs));
-
-//        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
-//        getSupportActionBar().setDisplayShowHomeEnabled(true);
-
-//
-////
-       Toolbar mToolbar = (Toolbar) findViewById(R.id.toolbarabt);
+        Toolbar mToolbar = (Toolbar) findViewById(R.id.toolbarabt);
         mToolbar.setNavigationIcon(R.drawable.ic_arrow_back_black_24dp);
         mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
 
@@ -60,11 +47,6 @@ public class AboutUsActivity extends Activity implements View.OnClickListener {
                 finish();
             }
         });
-//        android.support.v7.app.ActionBar actionBar = getSupportActionBar();
-//        actionBar.setHomeButtonEnabled(true);
-//        actionBar.setDisplayHomeAsUpEnabled(true);
-
-//  mToolbar.setTitleTextColor(getResources().getColor(android.R.color.white));
         amail=(ImageView)findViewById(R.id.aemail);
         acall=(ImageView)findViewById(R.id.acall);
         aweb=(ImageView)findViewById(R.id.awebsite);
@@ -120,6 +102,28 @@ public class AboutUsActivity extends Activity implements View.OnClickListener {
 
 
     }
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+        getMenuInflater().inflate(R.menu.home, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+//        int id = item.getItemId();
+//        if (id == R.id.action_home) {
+            Intent i = new Intent(AboutUsActivity.this,NavigationMainActivity.class);
+            startActivity(i);
+//            return true;
+
+//        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
     @Override
     public void onClick(View v)
     {

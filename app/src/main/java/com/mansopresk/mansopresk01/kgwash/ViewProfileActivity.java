@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import com.mansopresk.mansopresk01.kgwash.Navigation.NavigationMainActivity;
@@ -13,7 +14,8 @@ import com.mansopresk.mansopresk01.kgwash.Navigation.NavigationMainActivity;
 public class ViewProfileActivity extends AppCompatActivity {
 
 
-    TextView name,mobile,altermobile,email,landmark,date,timeslot,adress;
+    EditText name,mobile,altermobile,landmark,date,timeslot,adress;
+    TextView email;
     String sname,smobile,saltermobile,semail,slandmark,sdate,stimeslot,sadress;
 
     @Override

@@ -91,8 +91,6 @@ public class RegistrationActivity extends Activity {
 
             if (email.contains("@") && email.contains(".com")) {
 
-
-//        {
                 editor = getSharedPreferences("userdetails", MODE_PRIVATE).edit();
                 editor.putString("username", username);
                 editor.putString("mobile", mobilenum);

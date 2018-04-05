@@ -7,6 +7,9 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.mansopresk.mansopresk01.kgwash.ViewProfileActivity">
+
+
+
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbarprofile"
         android:layout_width="match_parent"
@@ -33,9 +36,8 @@
         xmlns:card_view="http://schemas.android.com/apk/res-auto"
         android:id="@+id/card_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
-
         card_view:cardCornerRadius="4dp"
         card_view:cardElevation="5dp"
         card_view:cardUseCompatPadding="true">
@@ -43,9 +45,9 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_margin="10dp">
             <LinearLayout
-                android:layout_marginTop="20dp"
                 android:weightSum="1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -53,18 +55,17 @@
 
                 <TextView
                     android:layout_weight="0.5"
-
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:textSize="15dp"
+                    android:textSize="18dp"
                     android:text="Name :"
                     android:inputType="text" />
 
-                <TextView
-
+                <EditText
                     android:layout_weight="0.5"
                     android:id="@+id/name_place"
                     android:layout_width="0dp"
+                    android:textSize="18dp"
                     android:layout_height="wrap_content"
                     android:inputType="text" />
             </LinearLayout>
@@ -75,14 +76,15 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
                 <TextView
-                    android:textSize="15dp"
+                    android:textSize="18dp"
                     android:layout_weight="0.5"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:text="Mobile Number :"/>
-                <TextView
+                <EditText
                     android:id="@+id/mobile_place"
                     android:layout_weight="0.5"
+                    android:textSize="18dp"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     />
@@ -95,15 +97,16 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
                 <TextView
-                    android:textSize="15dp"
+                    android:textSize="18dp"
                     android:layout_weight="0.5"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="Altr Mobile Number :"/>
-                <TextView
+                    android:text="Alternate Number :"/>
+                <EditText
                     android:id="@+id/alter_place"
                     android:layout_weight="0.5"
                     android:layout_width="0dp"
+                    android:textSize="18dp"
                     android:layout_height="wrap_content"
                     />
 
@@ -115,7 +118,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
                 <TextView
-                    android:textSize="15dp"
+                    android:textSize="18dp"
                     android:layout_weight="0.5"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -124,6 +127,7 @@
                     android:id="@+id/email_place"
                     android:layout_weight="0.5"
                     android:layout_width="0dp"
+                    android:textSize="18dp"
                     android:layout_height="wrap_content"
                     />
 
@@ -135,15 +139,16 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
                 <TextView
-                    android:textSize="15dp"
                     android:layout_weight="0.5"
                     android:layout_width="0dp"
+                    android:textSize="18dp"
                     android:layout_height="wrap_content"
                     android:text="Adress :"/>
-                <TextView
+                <EditText
                     android:id="@+id/adress_place"
                     android:layout_weight="0.5"
                     android:layout_width="0dp"
+                    android:textSize="18dp"
                     android:layout_height="wrap_content"
                     />
 
@@ -155,15 +160,16 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
                 <TextView
-                    android:textSize="15dp"
+                    android:textSize="18dp"
                     android:layout_weight="0.5"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:text="LandMark :"/>
-                <TextView
+                <EditText
                     android:id="@+id/landmarl_place"
                     android:layout_weight="0.5"
                     android:layout_width="0dp"
+                    android:textSize="18dp"
                     android:layout_height="wrap_content"
                     />
 
@@ -175,15 +181,16 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
                 <TextView
-                    android:textSize="15dp"
+                    android:textSize="18dp"
                     android:layout_weight="0.5"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:text="Date :"/>
-                <TextView
+                <EditText
                     android:id="@+id/date_place"
                     android:layout_weight="0.5"
                     android:layout_width="0dp"
+                    android:textSize="18dp"
                     android:layout_height="wrap_content"
                     />
 
@@ -195,25 +202,27 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
                 <TextView
-                    android:textSize="15dp"
+                    android:textSize="18dp"
                     android:layout_weight="0.5"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:text="Time Slote :"/>
-                <TextView
+                <EditText
                     android:id="@+id/timeslote_place"
                     android:layout_weight="0.5"
                     android:layout_width="0dp"
+                    android:textSize="18dp"
                     android:layout_height="wrap_content"
                     />
 
             </LinearLayout>
-
-
-
-
-
         </LinearLayout>
     </android.support.v7.widget.CardView>
 
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:layout_gravity="center"
+        android:background="@drawable/buttonbg"/>
 </LinearLayout>

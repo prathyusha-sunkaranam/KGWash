@@ -9,12 +9,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.RadioButton;
 
 import com.mansopresk.mansopresk01.kgwash.Indicator.WelcomeActivity;
+import com.mansopresk.mansopresk01.kgwash.Navigation.AboutUsActivity;
 import com.mansopresk.mansopresk01.kgwash.Navigation.NavigationMainActivity;
 
 import java.util.Timer;
@@ -82,6 +85,29 @@ public class BookNowActivity extends AppCompatActivity {
            }
        });
 
+
+
+    }
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+        getMenuInflater().inflate(R.menu.home, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+//        int id = item.getItemId();
+//        if (id == R.id.action_home) {
+        Intent i = new Intent(BookNowActivity.this,NavigationMainActivity.class);
+        startActivity(i);
+//            return true;
+
+//        }
+
+        return super.onOptionsItemSelected(item);
     }
     @Override
     public boolean onSupportNavigateUp() {

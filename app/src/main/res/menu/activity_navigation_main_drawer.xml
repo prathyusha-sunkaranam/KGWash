@@ -9,17 +9,21 @@
             android:icon="@drawable/ic_home_black_24dp"
             android:title="Home" />
         <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_person_black_24dp"
+            android:title="View Profile" />
+        <item
             android:id="@+id/nav_orders"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/ic_format_list_bulleted_black"
             android:title="Your Orders" />
         <item
             android:id="@+id/nav_aboutus"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/ic_forum_black"
             android:title="About Us" />
 
         <item
             android:id="@+id/nav_faq"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@drawable/ic_help_outline_black"
             android:title="FAQ'S" />
         <item
             android:id="@+id/nav_share"
