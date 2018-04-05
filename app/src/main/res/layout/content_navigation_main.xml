@@ -14,7 +14,7 @@
             android:orientation="vertical">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="230dp"
+        android:layout_height="250dp"
         android:orientation="vertical"
         android:background="#4b9ac9"
         android:layout_marginTop="46dp">
@@ -38,6 +38,15 @@
             android:textStyle="italic"
             android:layout_marginTop="5dp"
             android:textColor="#fff"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="place your order before one day"
+            android:gravity="center"
+            android:textColor="#fff"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -45,6 +54,7 @@
             android:gravity="center"
             android:textColor="#fff"
             android:layout_marginTop="10dp" />
+
         <Button
             android:id="@+id/ordernow"
             android:layout_width="wrap_content"
@@ -52,7 +62,7 @@
             android:text="Order Now"
             android:onClick="ordernow"
             android:background="@drawable/bordersxm"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="8dp"
             android:textColor="#fff"
             android:layout_marginLeft="250dp"/>
         <TextView

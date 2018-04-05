@@ -24,8 +24,9 @@
         android:layout_marginTop="15dp"
         android:gravity="center"
         android:text="Wash + Fold"
+        android:fontFamily="cursive"
         android:textStyle="bold"
-        android:textColor="#831c25"
+        android:textColor="#f26703"
         android:textSize="40dp" />
 
     <TextView
@@ -36,8 +37,9 @@
         android:gravity="center"
         android:textStyle="bold"
         android:text="@string/wfold_descrp"
-        android:textColor="#831c25"
-        android:textSize="18dp" />
+       android:fontFamily="cursive"
+        android:textColor="#d76918"
+        android:textSize="24dp" />
 
 
 </LinearLayout>

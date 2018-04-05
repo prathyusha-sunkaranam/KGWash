@@ -25,8 +25,9 @@
             android:name=".Navigation.AboutUsActivity"
             android:theme="@style/AppTheme.ActionBar" />
         <activity android:name=".Navigation.FaqActivity"
-            android:theme="@style/AppTheme.ActionBar" />
-        <activity android:name=".YourOrdersActivity" />
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".YourOrdersActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".RegistrationActivity"
             android:theme="@style/AppTheme.ActionBar"/>
         <activity
@@ -36,7 +37,8 @@
         <activity
             android:name=".Navigation.NavigationMainActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Navigation.TermsConditionsActivity" />
+        <activity android:name=".Navigation.TermsConditionsActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".BookNowActivity"
             android:theme="@style/AppTheme.NoActionBar" />

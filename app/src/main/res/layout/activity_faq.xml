@@ -1,46 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--<LinearLayout-->
-    <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
-    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
-    <!--xmlns:tools="http://schemas.android.com/tools"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="match_parent"-->
-    <!--android:orientation="vertical"-->
-    <!--tools:context="com.mansopresk.mansopresk01.kgwash.Navigation.FaqActivity">-->
-    <!--<android.support.v7.widget.Toolbar-->
-        <!--android:id="@+id/toolbar_aboutus"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="?attr/actionBarSize"-->
-        <!--app:layout_scrollFlags="scroll|enterAlways"-->
-        <!--android:titleTextColor="#fff"-->
-        <!--app:title="FAQ's"-->
-        <!--android:background="?attr/colorPrimary"/>-->
 
-<LinearLayout
-    android:layout_width="match_parent"
+<LinearLayout android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:fillViewport="true"
-
     android:orientation="vertical"
+    android:background="#f5f5f0"
     xmlns:android="http://schemas.android.com/apk/res/android">
-    <android.support.v7.widget.Toolbar
 
+    <android.support.v7.widget.Toolbar
         android:id="@+id/toolbarfaq"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:background="#eaeae5"
         android:gravity="top"
         android:minHeight="50dp"
+        app:theme="@style/ToolbarStyleview"
         app:titleMarginTop="@dimen/margin_to_center"
-        android:background="#4b9ac9">
+        xmlns:android="http://schemas.android.com/apk/res/android" >
+
         <TextView
-            android:id="@+id/tooltextabt"
+            android:id="@+id/toolbartextfaq"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Kg Wash"
+            android:text="KG Wash"
+            android:textColor="#4b9ac9"
             android:textSize="18sp"
-            android:textColor="#fff"/>
+            android:textStyle="bold"/>
+
     </android.support.v7.widget.Toolbar>
+
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -54,18 +43,8 @@
         <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
         android:orientation="vertical"
         android:padding="5dp">
-
-        <!--<android.support.v7.widget.Toolbar-->
-            <!--android:id="@+id/toolbar_aboutus"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="?attr/actionBarSize"-->
-            <!--app:layout_scrollFlags="scroll|enterAlways"-->
-            <!--android:titleTextColor="#fff"-->
-            <!--app:title="FAQ's"-->
-            <!--android:background="?attr/colorPrimary"/>-->
     <LinearLayout android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"

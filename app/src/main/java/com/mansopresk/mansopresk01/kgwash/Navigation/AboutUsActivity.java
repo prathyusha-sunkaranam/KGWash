@@ -55,7 +55,8 @@ public class AboutUsActivity extends Activity implements View.OnClickListener {
             @Override
             public void onClick(View view) {
 
-                // Your code
+                Intent i2 = new Intent(AboutUsActivity.this,NavigationMainActivity.class);
+                startActivity(i2);
                 finish();
             }
         });

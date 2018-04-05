@@ -22,8 +22,9 @@
             android:layout_marginTop="15dp"
             android:gravity="center"
             android:text="@string/iron"
+            android:fontFamily="cursive"
             android:textStyle="bold"
-            android:textColor="#831c25"
+            android:textColor="#f26703"
             android:textSize="40dp" />
 
         <TextView
@@ -34,8 +35,9 @@
             android:gravity="center"
             android:textStyle="bold"
             android:text="@string/iron_desc"
-            android:textColor="#831c25"
-            android:textSize="20dp" />
+            android:fontFamily="cursive"
+            android:textColor="#d76918"
+            android:textSize="24dp" />
 
     </LinearLayout>
 

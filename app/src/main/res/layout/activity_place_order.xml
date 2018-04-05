@@ -6,6 +6,27 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.mansopresk.mansopresk01.kgwash.YourOrdersActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbarorder"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#4b9ac9"
+        android:gravity="top"
+        android:minHeight="50dp"
+        app:theme="@style/ToolbarStyle"
+        app:titleMarginTop="@dimen/margin_to_center"
+        xmlns:android="http://schemas.android.com/apk/res/android" >
+
+        <TextView
+            android:id="@+id/toolbartextorder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Place Order"
+            android:textColor="#fff"
+            android:textSize="18sp"/>
+
+    </android.support.v7.widget.Toolbar>
 <TextView
     android:layout_width="match_parent"
     android:layout_height="match_parent"

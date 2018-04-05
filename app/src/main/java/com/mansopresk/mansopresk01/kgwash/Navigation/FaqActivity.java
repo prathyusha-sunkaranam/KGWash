@@ -20,7 +20,7 @@ import android.widget.TextView;
 
 import com.mansopresk.mansopresk01.kgwash.R;
 
-public class FaqActivity extends Activity  implements View.OnClickListener {
+public class FaqActivity extends AppCompatActivity implements View.OnClickListener {
     ImageView amail, acall, aweb,backimage;
     LinearLayout panel1, panel2, panel3, panel4, panel5, panel6, panel7, panel8, panel9,panel10,panel11;
     TextView text1, text2, text3, text4, text5, text6, text7, text8, text9,text10,text11;
@@ -31,26 +31,6 @@ public class FaqActivity extends Activity  implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_faq);
-
-
-//        setSupportActionBar(toolbar);
-
-//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-//        getSupportActionBar().setDisplayShowHomeEnabled(false);
-//        toolbar.setTitleTextColor(getResources().getColor(android.R.color.white));
-        Toolbar mToolbar = (Toolbar) findViewById(R.id.toolbarfaq);
-
-        mToolbar.setLogo(R.drawable.ic_arrow_back_black);
-
-        mToolbar.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View view) {
-
-
-                finish();
-            }
-        });
 
         amail = (ImageView) findViewById(R.id.aemail);
         acall = (ImageView) findViewById(R.id.acall);
@@ -89,17 +69,21 @@ public class FaqActivity extends Activity  implements View.OnClickListener {
         text9.setOnClickListener(this);
         text10.setOnClickListener(this);
         text11.setOnClickListener(this);
-//        backimage.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                finish();
-//            }
-//        });
-//
-//
-//}
-    }
 
+
+        Toolbar mToolbar = (Toolbar) findViewById(R.id.toolbarfaq);
+        setSupportActionBar(mToolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+}
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        Intent i = new Intent(FaqActivity.this,NavigationMainActivity.class);
+        startActivity(i);
+        return true;
+    }
     @Override
     public void onClick(View v) {
         hideOthers(v);

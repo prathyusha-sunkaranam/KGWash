@@ -42,16 +42,10 @@ public class ScheduleActivity extends Activity {
         address_sch = findViewById(R.id.address_register);
         landmark_sch = findViewById(R.id.landmark_register);
         spinner=(Spinner)findViewById(R.id.spinner);
-
-        //dateview = (EditText) findViewById(R.id.textView3);
         etcalendar=findViewById(R.id.etcalender);
         calendarbtn = findViewById(R.id.calendarbtn);
         textViewsch = (TextView) findViewById(R.id.toolbartextsch);
-
         textViewsch.setText("Schedule Now");
-        //calendarbtn.findViewById(R.id.calendarbtn);
-
-        //calendar = Calendar.getInstance();
         calendarll=findViewById(R.id.calendarll);
         Schedule = findViewById(R.id.schedule);
 
@@ -61,35 +55,17 @@ public class ScheduleActivity extends Activity {
 
             @Override
             public void onClick(View view) {
-
-                // Your code
+                Intent i2 = new Intent(ScheduleActivity.this,BookNowActivity.class);
+                startActivity(i2);
                 finish();
             }
         });
 
 
 
-//        etcalendar.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                calendar = Calendar.getInstance();
-//                day = calendar.get(Calendar.DAY_OF_MONTH);
-//                month = calendar.get(Calendar.MONTH);
-//                year = calendar.get(Calendar.YEAR);
-//                showDialog(DATE_PICKER_ID);
-//            }
-//        });
-        Schedule.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(ScheduleActivity.this,YourOrdersActivity.class);
-                startActivity(i);
-            }
-        });
-
 
         sharedpreferences = getSharedPreferences("userdetails",MODE_PRIVATE);
-       String uname = sharedpreferences.getString("username",null);
+        String uname = sharedpreferences.getString("username",null);
         String mobilenum = sharedpreferences.getString("mobile",null);
         String alernum = sharedpreferences.getString("alternatenum",null);
         String emailid = sharedpreferences.getString("emailregister",null);
@@ -113,19 +89,7 @@ public class ScheduleActivity extends Activity {
 
     }
 
-//    public void setDate(View view) {
-//        showDialog(999);
-////
-//    }
 
-//    @Override
-//    protected Dialog onCreateDialog(int id) {
-//        // TODO Auto-generated method stub
-//        if (id == 999) {
-//            return new DatePickerDialog(this,myDateListener, year, month, day);
-//        }
-//        return null;
-//    }
 @Override
 protected Dialog onCreateDialog(int id) {
     switch (id) {
@@ -134,7 +98,7 @@ protected Dialog onCreateDialog(int id) {
 
             DatePickerDialog datePickerDialog = new DatePickerDialog(this, datePickerListener, year, month, day);
             calendar = Calendar.getInstance();
-            calendar.add(Calendar.DATE, 0); // Add 0 days to Calendar
+            calendar.add(Calendar.DATE, +1); // Add 0 days to Calendar
             Date newDate = calendar.getTime();
             datePickerDialog.getDatePicker().setMinDate(newDate.getTime()-(newDate.getTime()%(24*60*60*1000)));
             return datePickerDialog;
@@ -150,24 +114,5 @@ protected Dialog onCreateDialog(int id) {
         }
     };
 
-//    private DatePickerDialog.OnDateSetListener myDateListener = new
-//            DatePickerDialog.OnDateSetListener() {
-//                @Override
-//                public void onDateSet(DatePicker arg0,
-//                                      int arg1, int arg2, int arg3) {
-//
-//                    // TODO Auto-generated method stub
-//                    // arg1 = year
-//                    // arg2 = month
-//                    // arg3 = day
-//                    showDate(arg1, arg2+1, arg3);
-//
-//                }
-//            };
 
-//    private void showDate(int year, int month, int day) {
-//        dateview.setText(new StringBuilder().append(day).append("/")
-//                .append(month).append("/").append(year));
-//
-//    }
 }
