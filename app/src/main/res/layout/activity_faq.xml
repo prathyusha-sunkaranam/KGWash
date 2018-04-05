@@ -29,14 +29,14 @@
         android:gravity="top"
         android:minHeight="50dp"
         app:titleMarginTop="@dimen/margin_to_center"
-        android:background="#fff">
+        android:background="#4b9ac9">
         <TextView
             android:id="@+id/tooltextabt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Kg Wash"
             android:textSize="18sp"
-            android:textColor="#4b9ac9"/>
+            android:textColor="#fff"/>
     </android.support.v7.widget.Toolbar>
 
     <LinearLayout

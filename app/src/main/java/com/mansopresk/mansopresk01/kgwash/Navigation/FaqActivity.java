@@ -40,7 +40,7 @@ public class FaqActivity extends Activity  implements View.OnClickListener {
 //        toolbar.setTitleTextColor(getResources().getColor(android.R.color.white));
         Toolbar mToolbar = (Toolbar) findViewById(R.id.toolbarfaq);
 
-        mToolbar.setLogo(R.drawable.ic_arrow_back_blue);
+        mToolbar.setLogo(R.drawable.ic_arrow_back_black);
 
         mToolbar.setOnClickListener(new View.OnClickListener() {
 
