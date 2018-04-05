@@ -72,7 +72,12 @@ public class MainActivity extends Activity {
             editor.putString("password", pswrd);
             editor.commit();
 
-//            if (sharedpreferences != null) {
+         if (sharedpreferences != null) {
+
+
+
+
+         }
                 if (usrname.equals("admin") && pswrd.equals("admin")) {
                     Toast.makeText(this, "Login Success", Toast.LENGTH_SHORT).show();
                     Intent i = new Intent(this, AdminOrder.class);

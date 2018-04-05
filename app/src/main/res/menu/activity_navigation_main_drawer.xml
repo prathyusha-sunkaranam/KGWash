@@ -30,10 +30,9 @@
             android:icon="@drawable/ic_brush_black_24dp"
             android:title="@string/TCapply" />
         <item
-
             android:id="@+id/nav_logout"
             android:icon="@drawable/ic_menu_send"
-            android:visible="false"
+            android:enabled="false"
             android:title="LogOut" />
     </group>
 

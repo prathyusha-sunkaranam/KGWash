@@ -48,6 +48,9 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".ViewProfileActivity"
             android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".AdminOrder"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+
     </application>
 
 </manifest>
