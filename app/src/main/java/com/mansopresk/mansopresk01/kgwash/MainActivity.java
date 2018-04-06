@@ -50,7 +50,7 @@ public class MainActivity extends  Activity {
         email = (EditText)findViewById(R.id.emailid);
         password = (EditText)findViewById(R.id.password);
 
-        linearLayout=(LinearLayout)findViewById(R.id.nav_loginll);
+
 
 
 
