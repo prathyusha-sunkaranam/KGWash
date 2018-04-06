@@ -7,6 +7,8 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -22,7 +24,7 @@ import com.mansopresk.mansopresk01.kgwash.Navigation.NavigationMainActivity;
 
 import java.util.Calendar;
 
-public class MainActivity extends Activity {
+public class MainActivity extends  Activity {
     EditText email,password,dateview;
     Button signin,signup;
     int id;
@@ -62,6 +64,7 @@ public class MainActivity extends Activity {
 
 
     }
+
 
     public void valid(View v) {
         if (email.getText().toString().trim().isEmpty()) {

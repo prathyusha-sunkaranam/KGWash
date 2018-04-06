@@ -40,6 +40,7 @@ public class NavigationMainActivity extends AppCompatActivity
         setContentView(R.layout.activity_navigation_main);
         setTitle("KG Wash");
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
         odernow = (Button) findViewById(R.id.ordernow);
         textView = (TextView) findViewById(R.id.toolbartext);
 
@@ -77,6 +78,8 @@ public class NavigationMainActivity extends AppCompatActivity
 
             }
         });
+
+
 
 
         sharedPreferences = getSharedPreferences("userdetails", MODE_PRIVATE);
@@ -122,6 +125,7 @@ public class NavigationMainActivity extends AppCompatActivity
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.navigation_main, menu);
 
+
         return true;
     }
 
@@ -132,6 +136,8 @@ public class NavigationMainActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            getApplicationContext().getSharedPreferences("userdetails", 0).edit().clear().commit();
+
             return true;
         }
 
@@ -191,4 +197,24 @@ public class NavigationMainActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu)
+//    {
+//        getMenuInflater().inflate(R.menu.settings, menu);
+//
+//        return true;
+//    }
+
+//    @Override
+//    public boolean onOptionsItemSelected(MenuItem item)
+//    {
+//
+////        Intent i = new Intent(this,ImagesActivity.class);
+////        startActivity(i);
+//
+//        return super.onOptionsItemSelected(item);
+//
+//    }
+
 }
