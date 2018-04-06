@@ -24,23 +24,23 @@ public class AdminOrder extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_order);
-        phcall= findViewById(R.id.phcall);
+//        phcall= findViewById(R.id.phcall);
         altrphcall=findViewById(R.id.phcall2);
         oname=findViewById(R.id.oname);
 //        mobile=findViewById(R.id.mobile_admin);
 //        //Performing action on button click
-        phcall.setOnClickListener(new View.OnClickListener(){
-
-            @Override
-            public void onClick(View arg0) {
-                String number=mobile.getText().toString();
-                Intent callIntent = new Intent(Intent.ACTION_CALL);
-                callIntent.setData(Uri.parse("tel:"+number));
-                startActivity(callIntent);
-
-            }
-
-        });
+//        phcall.setOnClickListener(new View.OnClickListener(){
+//
+//            @Override
+//            public void onClick(View arg0) {
+//                String number=mobile.getText().toString();
+//                Intent callIntent = new Intent(Intent.ACTION_CALL);
+//                callIntent.setData(Uri.parse("tel:"+number));
+//                startActivity(callIntent);
+//
+//            }
+//
+//        });
 
         sharedpreferences = getSharedPreferences("userdetails", MODE_PRIVATE);
         String ordername = sharedpreferences.getString("oname",null);
