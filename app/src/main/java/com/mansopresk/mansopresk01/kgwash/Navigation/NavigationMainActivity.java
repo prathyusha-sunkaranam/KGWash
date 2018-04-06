@@ -29,7 +29,7 @@ import com.mansopresk.mansopresk01.kgwash.YourOrdersActivity;
 public class NavigationMainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    TextView nav_text,textView,textViewname;
+    TextView nav_signin,nav_signup, textView,nav_email;
     SharedPreferences sharedPreferences;
     Button odernow;
 
@@ -56,9 +56,9 @@ public class NavigationMainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
         View header = navigationView.getHeaderView(0);
 
-        textViewname = (TextView) header.findViewById(R.id.textViewname);
-        nav_text=header.findViewById(R.id.nav_register);
-
+        nav_signin = (TextView) header.findViewById(R.id.nav_signin);
+        nav_signup=header.findViewById(R.id.nav_signup);
+        nav_email=header.findViewById(R.id.nav_email);
 
 
         sharedPreferences = getSharedPreferences("userdetails", MODE_PRIVATE);
@@ -66,11 +66,11 @@ public class NavigationMainActivity extends AppCompatActivity
         String uname = sharedPreferences.getString("email", null);
 
        String mname = sharedPreferences.getString("username", null);
-        textViewname.setText(mname);
+        nav_email.setText(mname);
 
             if (sharedPreferences != null) {
                 if (uname != null || uname != "") {
-                    nav_text.setText(uname);
+                    nav_signin.setText(uname);
                 }
 
 

@@ -41,6 +41,7 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         signup = (Button)findViewById(R.id.signup);
         signin = (Button)findViewById(R.id.signin);
         email = (EditText)findViewById(R.id.emailid);
@@ -81,20 +82,18 @@ public class MainActivity extends Activity {
 
 
 
-
          }
                 if (usrname.equals("admin") && pswrd.equals("admin")) {
 
 
-             linearLayout.setVisibility(View.GONE);
+
+//             linearLayout.setVisibility(View.GONE);
                     Toast.makeText(this, "Login Success", Toast.LENGTH_SHORT).show();
                     Intent i = new Intent(this, AdminOrder.class);
 //                    email.setText("");
 //                    password.setText("");
                     startActivity(i);
                 } else {
-
-
 
                     Intent i = new Intent(MainActivity.this, NavigationMainActivity.class);
                     startActivity(i);

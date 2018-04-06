@@ -52,7 +52,7 @@
 </LinearLayout>
 
     <TextView
-        android:id="@+id/uname"
+        android:id="@+id/nav_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Email Address"
