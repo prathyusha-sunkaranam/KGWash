@@ -53,44 +53,153 @@
         card_view:cardElevation="5dp"
         card_view:cardUseCompatPadding="true">
         <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
             android:orientation="vertical"
             android:gravity="center"
-
-            android:background="#4b9ac9">
+            android:background="#4B9AC9">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Name"
                 />
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"></LinearLayout>
-
-
         </LinearLayout>
-
-
-
-
-    </android.support.v7.widget.CardView>
-    <android.support.v7.widget.CardView
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:card_view="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/card_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="center"
-
-        card_view:cardCornerRadius="4dp"
-        card_view:cardElevation="5dp"
-        card_view:cardUseCompatPadding="true">
-
-        <LinearLayout
+            <LinearLayout
+            android:layout_marginTop="20dp"
+            android:weightSum="1"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+            android:layout_weight="0.4"
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:text="Mobile Number :"
+            android:inputType="text" />
+
+
+            <TextView
+
+
+            android:layout_weight="0.4"
+            android:id="@+id/mobile_admin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="text" />
+                <ImageView
+                    android:id="@+id/phcall"
+                    android:layout_weight="0.2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/phcall"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:weightSum="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_weight="0.4"
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:text=" Altr Mobile Number :"
+                    android:inputType="text" />
+
+                <TextView
+                    android:layout_weight="0.4"
+                    android:id="@+id/altr_admin"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="text" />
+                <ImageView
+                    android:id="@+id/phcall2"
+                    android:layout_weight="0.2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/phcall"/>
+
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:weightSum="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_weight="0.4"
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:text=" Email :"
+                    android:inputType="text" />
+
+                <TextView
+
+                    android:layout_weight="0.4"
+                    android:id="@+id/email_admin"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="text" />
+                <ImageView
+                    android:layout_weight="0.2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/emailadmin"/>
+
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:weightSum="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_weight="0.4"
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:text=" Adress :"
+                    android:inputType="text" />
+
+                <TextView
+
+
+                    android:layout_weight="0.4"
+                    android:id="@+id/adress_admin"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="text" />
+                <ImageView
+                    android:layout_weight="0.2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/mapsadmin"/>
+
+
+
+
+            </LinearLayout>
             <LinearLayout
                 android:layout_marginTop="20dp"
                 android:weightSum="1"
@@ -104,164 +213,246 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:textSize="15dp"
-                    android:text="Name :"
+                    android:text=" LandMark :"
                     android:inputType="text" />
 
                 <TextView
 
                     android:layout_weight="0.5"
-                    android:id="@+id/name_place"
+                    android:id="@+id/landmark_admin"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:inputType="text" />
+
+
             </LinearLayout>
             <LinearLayout
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="20dp"
                 android:weightSum="1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
+
                 <TextView
+
+                    android:layout_weight="0.5"
+                    android:id="@+id/date_admin"
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
                     android:textSize="15dp"
-                    android:layout_weight="0.5"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="Mobile Number :"/>
+                    android:text=" Date :"
+                    android:inputType="text" />
+
                 <TextView
-                    android:id="@+id/mobile_place"
+                    android:text="TimeSlot"
+
                     android:layout_weight="0.5"
+                    android:id="@+id/timeslot_admin"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    />
+                    android:inputType="text" />
+
 
             </LinearLayout>
-            <LinearLayout
-                android:layout_marginTop="10dp"
-                android:weightSum="1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:textSize="15dp"
-                    android:layout_weight="0.5"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="Altr Mobile Number :"/>
-                <TextView
-                    android:id="@+id/alter_place"
-                    android:layout_weight="0.5"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    />
-
-            </LinearLayout>
-            <LinearLayout
-                android:layout_marginTop="10dp"
-                android:weightSum="1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:textSize="15dp"
-                    android:layout_weight="0.5"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="Email :"/>
-                <TextView
-                    android:id="@+id/email_place"
-                    android:layout_weight="0.5"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    />
-
-            </LinearLayout>
-            <LinearLayout
-                android:layout_marginTop="10dp"
-                android:weightSum="1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:textSize="15dp"
-                    android:layout_weight="0.5"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="Adress :"/>
-                <TextView
-                    android:id="@+id/adress_place"
-                    android:layout_weight="0.5"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    />
-
-            </LinearLayout>
-            <LinearLayout
-                android:layout_marginTop="10dp"
-                android:weightSum="1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:textSize="15dp"
-                    android:layout_weight="0.5"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="LandMark :"/>
-                <TextView
-                    android:id="@+id/landmarl_place"
-                    android:layout_weight="0.5"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    />
-
-            </LinearLayout>
-            <LinearLayout
-                android:layout_marginTop="10dp"
-                android:weightSum="1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:textSize="15dp"
-                    android:layout_weight="0.5"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="Date :"/>
-                <TextView
-                    android:id="@+id/date_place"
-                    android:layout_weight="0.5"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    />
-
-            </LinearLayout>
-            <LinearLayout
-                android:layout_marginTop="10dp"
-                android:weightSum="1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:textSize="15dp"
-                    android:layout_weight="0.5"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="Time Slote :"/>
-                <TextView
-                    android:id="@+id/timeslote_place"
-                    android:layout_weight="0.5"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    />
-
-            </LinearLayout>
-
-
-
-
-
         </LinearLayout>
+
+
+
+
+
+
+
+
     </android.support.v7.widget.CardView>
+    <!--<android.support.v7.widget.CardView-->
+        <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+        <!--xmlns:card_view="http://schemas.android.com/apk/res-auto"-->
+        <!--android:id="@+id/card_view"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_gravity="center"-->
+
+        <!--card_view:cardCornerRadius="4dp"-->
+        <!--card_view:cardElevation="5dp"-->
+        <!--card_view:cardUseCompatPadding="true">-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:orientation="vertical">-->
+            <!--<LinearLayout-->
+                <!--android:layout_marginTop="20dp"-->
+                <!--android:weightSum="1"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="horizontal">-->
+
+                <!--<TextView-->
+                    <!--android:layout_weight="0.5"-->
+
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:textSize="15dp"-->
+                    <!--android:text="Name :"-->
+                    <!--android:inputType="text" />-->
+
+                <!--<TextView-->
+
+                    <!--android:layout_weight="0.5"-->
+                    <!--android:id="@+id/name_place"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:inputType="text" />-->
+            <!--</LinearLayout>-->
+            <!--<LinearLayout-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:weightSum="1"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="horizontal">-->
+                <!--<TextView-->
+                    <!--android:textSize="15dp"-->
+                    <!--android:layout_weight="0.5"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="Mobile Number :"/>-->
+
+                <!--<TextView-->
+                    <!--android:drawableRight="@drawable/phcall"-->
+                    <!--android:id="@+id/mobile_place"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="0.5" />-->
+
+            <!--</LinearLayout>-->
+            <!--<LinearLayout-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:weightSum="1"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="horizontal">-->
+                <!--<TextView-->
+                    <!--android:textSize="15dp"-->
+                    <!--android:layout_weight="0.5"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="Altr Mobile Number :"/>-->
+                <!--<TextView-->
+                    <!--android:id="@+id/alter_place"-->
+                    <!--android:layout_weight="0.5"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--/>-->
+
+            <!--</LinearLayout>-->
+            <!--<LinearLayout-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:weightSum="1"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="horizontal">-->
+                <!--<TextView-->
+                    <!--android:textSize="15dp"-->
+                    <!--android:layout_weight="0.5"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="Email :"/>-->
+                <!--<TextView-->
+                    <!--android:id="@+id/email_place"-->
+                    <!--android:layout_weight="0.5"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--/>-->
+
+            <!--</LinearLayout>-->
+            <!--<LinearLayout-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:weightSum="1"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="horizontal">-->
+                <!--<TextView-->
+                    <!--android:textSize="15dp"-->
+                    <!--android:layout_weight="0.5"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="Adress :"/>-->
+                <!--<TextView-->
+                    <!--android:id="@+id/adress_place"-->
+                    <!--android:layout_weight="0.5"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--/>-->
+
+            <!--</LinearLayout>-->
+            <!--<LinearLayout-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:weightSum="1"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="horizontal">-->
+                <!--<TextView-->
+                    <!--android:textSize="15dp"-->
+                    <!--android:layout_weight="0.5"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="LandMark :"/>-->
+                <!--<TextView-->
+                    <!--android:id="@+id/landmarl_place"-->
+                    <!--android:layout_weight="0.5"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--/>-->
+
+            <!--</LinearLayout>-->
+            <!--<LinearLayout-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:weightSum="1"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="horizontal">-->
+                <!--<TextView-->
+                    <!--android:textSize="15dp"-->
+                    <!--android:layout_weight="0.5"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="Date :"/>-->
+                <!--<TextView-->
+                    <!--android:id="@+id/date_place"-->
+                    <!--android:layout_weight="0.5"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--/>-->
+
+            <!--</LinearLayout>-->
+            <!--<LinearLayout-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:weightSum="1"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="horizontal">-->
+                <!--<TextView-->
+                    <!--android:textSize="15dp"-->
+                    <!--android:layout_weight="0.5"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="Time Slote :"/>-->
+                <!--<TextView-->
+                    <!--android:id="@+id/timeslote_place"-->
+                    <!--android:layout_weight="0.5"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--/>-->
+
+            <!--</LinearLayout>-->
+
+
+
+
+
+        <!--</LinearLayout>-->
+    <!--</android.support.v7.widget.CardView>-->
 </LinearLayout>
 </LinearLayout>
 
