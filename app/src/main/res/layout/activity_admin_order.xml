@@ -63,6 +63,7 @@
             android:gravity="center"
             android:background="#4B9AC9">
             <TextView
+                android:id="@+id/oname"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Name"

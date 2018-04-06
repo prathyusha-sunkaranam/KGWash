@@ -38,6 +38,7 @@ public class ScheduleActivity extends Activity {
     LinearLayout calendarll;
     static final int DATE_PICKER_ID = 1111;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -122,12 +123,19 @@ public class ScheduleActivity extends Activity {
         else {
 
                 sharedpreferences = getSharedPreferences("userdetails", MODE_PRIVATE);
+
                 String uname = sharedpreferences.getString("username", null);
                 String mobilenum = sharedpreferences.getString("mobile", null);
                 String alernum = sharedpreferences.getString("alternatenum", null);
                 String emailid = sharedpreferences.getString("emailregister", null);
                 String adreesdetails = sharedpreferences.getString("address", null);
                 String landmarkdetails = sharedpreferences.getString("landmark", null);
+
+                editor=getSharedPreferences("userdetails", MODE_PRIVATE).edit();
+                String ordername =  name_sch.getText().toString();
+
+                editor.putString("oname",ordername);
+
 
                 name_sch.setText(uname);
                 mobile_sch.setText(mobilenum);
@@ -146,7 +154,9 @@ public class ScheduleActivity extends Activity {
         }
 
 
+
     }
+
 
 
     @Override

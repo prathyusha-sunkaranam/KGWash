@@ -27,7 +27,7 @@ import java.util.Calendar;
 public class MainActivity extends  Activity {
     EditText email,password,dateview;
     Button signin,signup;
-    int id;
+
 
 
 
@@ -83,7 +83,7 @@ public class MainActivity extends  Activity {
             editor.putString("email", usrname);
             editor.putString("password", pswrd);
             editor.commit();
-            id=R.id.nav_logout;
+
          if (sharedpreferences != null) {
 
 

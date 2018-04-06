@@ -109,11 +109,10 @@ public class RegistrationActivity extends Activity {
                 startActivity(i);
 
 
-            } else {
-                showSnackbar(emailregister, "Please enter 10 digit mobile number", 4000);
 
             }
 
         }
-}}
+}
+}
 
