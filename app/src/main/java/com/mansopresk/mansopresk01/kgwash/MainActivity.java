@@ -25,6 +25,7 @@ import java.util.Calendar;
 public class MainActivity extends Activity {
     EditText email,password,dateview;
     Button signin,signup;
+    int id;
 
 
 
@@ -72,14 +73,15 @@ public class MainActivity extends Activity {
         } else {
             String usrname = email.getText().toString();
             String pswrd = password.getText().toString();
+
 //            sharedpreferences = getSharedPreferences("email",MODE_PRIVATE);
+
             editor = getSharedPreferences("userdetails", MODE_PRIVATE).edit();
             editor.putString("email", usrname);
             editor.putString("password", pswrd);
             editor.commit();
-
+            id=R.id.nav_logout;
          if (sharedpreferences != null) {
-
 
 
          }
@@ -87,7 +89,7 @@ public class MainActivity extends Activity {
 
 
 
-//             linearLayout.setVisibility(View.GONE);
+
                     Toast.makeText(this, "Login Success", Toast.LENGTH_SHORT).show();
                     Intent i = new Intent(this, AdminOrder.class);
 //                    email.setText("");

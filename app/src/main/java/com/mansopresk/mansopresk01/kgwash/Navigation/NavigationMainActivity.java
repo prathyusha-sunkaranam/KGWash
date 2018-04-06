@@ -29,7 +29,7 @@ import com.mansopresk.mansopresk01.kgwash.YourOrdersActivity;
 public class NavigationMainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    TextView nav_signin,nav_signup, textView,nav_email;
+    TextView nav_signin1,nav_signup, textView,nav_email;
     SharedPreferences sharedPreferences;
     Button odernow;
 
@@ -56,9 +56,27 @@ public class NavigationMainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
         View header = navigationView.getHeaderView(0);
 
-        nav_signin = (TextView) header.findViewById(R.id.nav_signin);
+        nav_signin1 =header.findViewById(R.id.nav_signin1);
         nav_signup=header.findViewById(R.id.nav_signup);
         nav_email=header.findViewById(R.id.nav_email);
+
+        nav_signin1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent it = new Intent(NavigationMainActivity.this,MainActivity.class);
+                startActivity(it);
+
+            }
+        });
+
+        nav_signup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent it = new Intent(NavigationMainActivity.this,RegistrationActivity.class);
+                startActivity(it);
+
+            }
+        });
 
 
         sharedPreferences = getSharedPreferences("userdetails", MODE_PRIVATE);
@@ -70,7 +88,7 @@ public class NavigationMainActivity extends AppCompatActivity
 
             if (sharedPreferences != null) {
                 if (uname != null || uname != "") {
-                    nav_signin.setText(uname);
+//                 nav_signin1.setText(uname);
                 }
 
 
@@ -84,7 +102,7 @@ public class NavigationMainActivity extends AppCompatActivity
 
 
 
-public void ordernow(View v){
+   public void ordernow(View v){
     Intent ip = new Intent(this, BookNowActivity.class);
     startActivity(ip);
 }
