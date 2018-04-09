@@ -5,7 +5,7 @@
         android:id="@+id/action_"
         android:title="home"
         android:orderInCategory="1"
-        android:icon="@drawable/home"
+        android:icon="@drawable/ic_home_black_white"
         app:showAsAction="always" />
 
 

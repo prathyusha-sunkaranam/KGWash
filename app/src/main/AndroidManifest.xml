@@ -31,13 +31,13 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".YourOrdersActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"  />
         <activity
             android:name=".RegistrationActivity"
             android:theme="@style/AppTheme.ActionBar" />
         <activity
             android:name=".ScheduleActivity"
-            android:theme="@style/AppTheme.ActionBar" />
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Indicator.WelcomeActivity" />
         <activity
             android:name=".Navigation.NavigationMainActivity"
@@ -53,7 +53,7 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".AdminOrder"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.ActionBar"  />
         <activity
             android:name=".DeliveryActivity"
             android:theme="@style/AppTheme.ActionBar" />

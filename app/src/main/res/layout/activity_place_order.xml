@@ -22,16 +22,9 @@
             android:id="@+id/toolbartextprofile"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Your Profile"
+            android:text="Your Order's"
             android:textColor="#fff"
             android:textSize="18sp"/>
-        <!---->
-        <!--<ImageView-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:src="@drawable/dots"-->
-        <!--/>-->
-
 
     </android.support.v7.widget.Toolbar>
 

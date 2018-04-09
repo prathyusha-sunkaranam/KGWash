@@ -7,15 +7,14 @@
     android:paddingBottom="4dp"
     android:paddingTop="4dp"
     android:weightSum="1"
-    android:layout_margin="10dp"
+    android:layout_margin="20dp"
     android:orientation="horizontal">
 
 
     <TextView
         android:layout_marginLeft="15dp"
-
         android:textColor="#000"
-        android:layout_weight="0.5"
+        android:layout_weight="0.6"
         android:id="@+id/country_name"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -23,10 +22,12 @@
         android:textSize="15sp" />
     <Spinner
         android:id="@+id/spinner"
-        android:layout_weight="0.3"
+        android:layout_weight="0.4"
         android:entries="@array/spinner_item"
         android:layout_width="0dp"
         android:layout_height="wrap_content">
     </Spinner>
+
+
 
 </LinearLayout>

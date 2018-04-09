@@ -26,7 +26,7 @@ import com.mansopresk.mansopresk01.kgwash.Navigation.NavigationMainActivity;
 import java.util.Calendar;
 import java.util.Date;
 
-public class ScheduleActivity extends Activity {
+public class ScheduleActivity extends AppCompatActivity {
     String emailid;
     TextView textViewsch;
     Spinner spinner;
@@ -59,6 +59,9 @@ public class ScheduleActivity extends Activity {
         Schedule = findViewById(R.id.schedule);
 
         Toolbar mToolbar = findViewById(R.id.toolbarsch);
+        setSupportActionBar(mToolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
         mToolbar.setNavigationIcon(R.drawable.ic_arrow_back_black);
         mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
 
@@ -177,6 +180,7 @@ public class ScheduleActivity extends Activity {
 
 
 
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
 
@@ -186,8 +190,6 @@ public class ScheduleActivity extends Activity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-//        int id = item.getItemId();
-//        if (id == R.id.action_home) {
         Intent i = new Intent(ScheduleActivity.this,NavigationMainActivity.class);
         startActivity(i);
 //            return true;
@@ -196,6 +198,7 @@ public class ScheduleActivity extends Activity {
 
         return super.onOptionsItemSelected(item);
     }
+
     public void calender(View v){
         calendar = Calendar.getInstance();
                 day = calendar.get(Calendar.DAY_OF_MONTH);

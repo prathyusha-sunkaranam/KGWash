@@ -8,34 +8,6 @@
     android:orientation="vertical"
     tools:context="com.mansopresk.mansopresk01.kgwash.AdminOrder">
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbarprofile"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="#4b9ac9"
-        android:gravity="top"
-        android:minHeight="50dp"
-        app:theme="@style/ToolbarStyle"
-        app:titleMarginTop="@dimen/margin_to_center"
-        xmlns:android="http://schemas.android.com/apk/res/android" >
-
-        <TextView
-            android:id="@+id/toolbartextprofile"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="User Orders"
-            android:textColor="#fff"
-            android:textSize="20sp"/>
-        <!---->
-        <!--<ImageView-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:src="@drawable/dots"-->
-        <!--/>-->
-
-
-    </android.support.v7.widget.Toolbar>
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">

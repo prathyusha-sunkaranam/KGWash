@@ -20,6 +20,9 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.mansopresk.mansopresk01.kgwash.Navigation.NavigationMainActivity;
+import com.mansopresk.mansopresk01.kgwash.Order.PriceOrderActivity;
+
 import pl.droidsonroids.gif.GifImageView;
 
 public class AdminOrder extends AppCompatActivity {
@@ -44,6 +47,8 @@ public class AdminOrder extends AppCompatActivity {
 
 //        altrphcall=findViewById(R.id.phcall2);
         oname = findViewById(R.id.oname);
+
+        setTitle("Admin Profile");
 //        mobile=findViewById(R.id.mobile_admin);
 //        //Performing action on button click
 //        phcall.setOnClickListener(new View.OnClickListener(){
@@ -90,6 +95,29 @@ public class AdminOrder extends AppCompatActivity {
 
 
 }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.navigation_main, menu);
+
+
+        return true;
+    }
+
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        int id = item.getItemId();
+
+
+            getApplicationContext().getSharedPreferences("userdetails", 0).edit().clear().commit();
+            Intent i2 = new Intent(AdminOrder.this, MainActivity.class);
+            startActivity(i2);
+
+
+        return super.onOptionsItemSelected(item);
+    }
 //
 //        sharedpreferences = getSharedPreferences("userdetails", MODE_PRIVATE);
 //        String ordername = sharedpreferences.getString("oname",null);
