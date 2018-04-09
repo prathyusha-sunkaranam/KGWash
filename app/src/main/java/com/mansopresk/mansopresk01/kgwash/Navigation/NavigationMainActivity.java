@@ -233,11 +233,6 @@ public class NavigationMainActivity extends AppCompatActivity
 
          else if (id == R.id.nav_logout) {
 
-//         getApplicationContext().getSharedPreferences("userdetails", 0).edit().clear().commit();
-//
-//
-//            nav_text.setText("Login | Signup");
-
         }
         else if (id == R.id.nav_profile){
             Intent i3 = new Intent(NavigationMainActivity.this,ViewProfileActivity.class);

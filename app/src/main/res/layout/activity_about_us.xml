@@ -55,8 +55,9 @@
                 android:layout_marginTop="10dp"
                 android:gravity="center"
                 android:text="Welcome to Kg Wash App"
-                android:textColor="#0e9bef"
+                android:textColor="#4b9ac9"
                 android:textSize="20dp"
+                android:fontFamily="sans-serif"
                 android:textStyle="bold" />
 
             <TextView
@@ -65,7 +66,7 @@
                 android:layout_marginTop="20dp"
                 android:textSize="16dp"
                 android:textStyle="italic"
-                android:textColor="#0e9bef"
+                android:textColor="#292929"
                 android:text="@string/main"/>
 
 
@@ -83,7 +84,7 @@
                         android:text="About Us"
                         android:id="@+id/text1"
                         android:padding="5dip"
-                        android:background="#0e9bef"
+                        android:background="#3c7fa7"
                         android:drawablePadding="10dp"
                         android:textColor="#ffffff"
                         android:textStyle="bold"
@@ -120,7 +121,7 @@
                         android:id="@+id/text2"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
-                        android:background="#0e9bef"
+                        android:background="#3c7fa7"
 
                         android:drawablePadding="10dp"
 
@@ -154,11 +155,12 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:layout_gravity="center">
-                    <TextView android:text="Contact Us"
+                    <TextView
+                        android:text="Contact Us"
                         android:drawablePadding="10dp"
                         android:id="@+id/text3"
                         android:padding="5dip"
-                        android:background="#0e9bef"
+                        android:background="#3c7fa7"
                         android:textColor="#ffffff"
                         android:textStyle="bold"
                         android:textSize="18dp"
