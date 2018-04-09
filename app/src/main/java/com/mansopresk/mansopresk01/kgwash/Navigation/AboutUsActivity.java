@@ -59,7 +59,7 @@ public class AboutUsActivity extends AppCompatActivity implements View.OnClickLi
         text3 = (TextView) findViewById(R.id.text3);
 
 
-        text1.setOnClickListener(this);
+//        text1.setOnClickListener(this);
         text2.setOnClickListener(this);
         text3.setOnClickListener(this);
 
@@ -281,7 +281,7 @@ public class AboutUsActivity extends AppCompatActivity implements View.OnClickLi
     }
     public void call_action(){
         Intent intent = new Intent(Intent.ACTION_DIAL);
-        intent.setData(Uri.parse("tel:9010990285"));
+        intent.setData(Uri.parse("tel:9000379005"));
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         Intent chooser  = Intent.createChooser(intent, "Complete Action using..");
         startActivity(chooser);

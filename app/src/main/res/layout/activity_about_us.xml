@@ -41,7 +41,7 @@
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_gravity="center"
-                android:src="@drawable/wash" />
+                android:src="@drawable/aboutimage" />
 
 <LinearLayout
     android:layout_width="wrap_content"
@@ -59,15 +59,39 @@
                 android:textSize="20dp"
                 android:fontFamily="sans-serif"
                 android:textStyle="bold" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="About us :"
+        android:textColor="#000"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_marginTop="10dp"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:textSize="16dp"
-                android:textStyle="italic"
+
                 android:textColor="#292929"
-                android:text="@string/main"/>
+                android:text="@string/aboutus"/>
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="About Company :"
+        android:textColor="#000"
+        android:textStyle="bold"
+        android:textSize="20dp"/>
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textSize="16dp"
+        android:textColor="#292929"
+        android:text="@string/aboutmansopresk"/>
 
 
             <LinearLayout
@@ -75,40 +99,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:orientation="vertical">
-                <LinearLayout
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_gravity="center">
-                    <TextView
-                        android:text="About Us"
-                        android:id="@+id/text1"
-                        android:padding="5dip"
-                        android:background="#3c7fa7"
-                        android:drawablePadding="10dp"
-                        android:textColor="#ffffff"
-                        android:textStyle="bold"
-                        android:textSize="18dp"
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content" />
 
-
-                    <LinearLayout android:id="@+id/panel1"
-                        android:visibility="gone"
-                        android:orientation="vertical"
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content">
-                        <TextView
-                            android:layout_margin="2dip"
-                            android:text="@string/aboutus"
-                            android:padding="5dip"
-                            android:background="#fff"
-                            android:textSize="16dp"
-                            android:textColor="#000"
-                            android:layout_width="fill_parent"
-                            android:layout_height="wrap_content" />
-                    </LinearLayout>
-                </LinearLayout>
 
 
                     <LinearLayout

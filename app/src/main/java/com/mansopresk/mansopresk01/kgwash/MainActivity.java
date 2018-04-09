@@ -4,16 +4,16 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
-import com.mansopresk.mansopresk01.kgwash.AdminOrder;
 import com.mansopresk.mansopresk01.kgwash.Navigation.NavigationMainActivity;
-import com.mansopresk.mansopresk01.kgwash.R;
-import com.mansopresk.mansopresk01.kgwash.RegistrationActivity;
 
 public class MainActivity extends Activity {
     EditText email,password,dateview;
@@ -29,6 +29,7 @@ public class MainActivity extends Activity {
     SharedPreferences.Editor editor;
 
     LinearLayout linearLayout;
+   Menu menu;
 
 
     @Override
@@ -44,7 +45,6 @@ public class MainActivity extends Activity {
 
 
 
-
         sharedpreferences = getSharedPreferences("userdetails",MODE_PRIVATE);
         String uname = sharedpreferences.getString("email",null);
 
@@ -55,6 +55,8 @@ public class MainActivity extends Activity {
 
 
     }
+
+
 
 
     public void valid(View v) {
@@ -76,6 +78,7 @@ public class MainActivity extends Activity {
             editor.commit();
 
             if (sharedpreferences != null) {
+                onCreateOptionsMenu(menu);
 
 
             }
@@ -111,5 +114,6 @@ public class MainActivity extends Activity {
         Intent i3 = new Intent(MainActivity.this,RegistrationActivity.class);
         startActivity(i3);
     }
+
 
 }
