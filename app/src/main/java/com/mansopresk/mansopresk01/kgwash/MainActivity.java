@@ -1,30 +1,21 @@
 package com.mansopresk.mansopresk01.kgwash;
 
 import android.app.Activity;
-import android.app.DatePickerDialog;
-import android.app.Dialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.DatePicker;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.RadioButton;
-import android.widget.Spinner;
-import android.widget.TextView;
 import android.widget.Toast;
 
+import com.mansopresk.mansopresk01.kgwash.AdminOrder;
 import com.mansopresk.mansopresk01.kgwash.Navigation.NavigationMainActivity;
+import com.mansopresk.mansopresk01.kgwash.R;
+import com.mansopresk.mansopresk01.kgwash.RegistrationActivity;
 
-import java.util.Calendar;
-
-public class MainActivity extends  Activity {
+public class MainActivity extends Activity {
     EditText email,password,dateview;
     Button signin,signup;
 
@@ -84,28 +75,38 @@ public class MainActivity extends  Activity {
             editor.putString("password", pswrd);
             editor.commit();
 
-         if (sharedpreferences != null) {
+            if (sharedpreferences != null) {
 
 
-         }
-                if (usrname.equals("admin") && pswrd.equals("admin")) {
+            }
+            if (usrname.equals("admin") && pswrd.equals("admin")) {
 
 
 
 
-                    Toast.makeText(this, "Login Success", Toast.LENGTH_SHORT).show();
-                    Intent i = new Intent(this, AdminOrder.class);
+                Toast.makeText(this, "Login Success", Toast.LENGTH_SHORT).show();
+                Intent i = new Intent(this, AdminOrder.class);
 //                    email.setText("");
 //                    password.setText("");
-                    startActivity(i);
-                } else {
+                startActivity(i);
+            }
 
-                    Intent i = new Intent(MainActivity.this, NavigationMainActivity.class);
-                    startActivity(i);
-                }
+            else if (usrname.equals("delivery") && pswrd.equals("delivery")){
+
+                Toast.makeText(this, "Login Success", Toast.LENGTH_SHORT).show();
+                Intent i2 = new Intent(this, DeliveryActivity.class);
+
+                startActivity(i2);
+
+
+            }else {
+
+                Intent i = new Intent(MainActivity.this, NavigationMainActivity.class);
+                startActivity(i);
             }
         }
-//    }
+    }
+    //    }
     public void signup(View v){
         Intent i3 = new Intent(MainActivity.this,RegistrationActivity.class);
         startActivity(i3);

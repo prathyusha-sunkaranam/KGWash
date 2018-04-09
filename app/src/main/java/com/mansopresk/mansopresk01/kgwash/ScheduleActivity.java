@@ -68,6 +68,28 @@ public class ScheduleActivity extends Activity {
                 finish();
             }
         });
+        sharedpreferences = getSharedPreferences("userdetails", MODE_PRIVATE);
+
+        String uname = sharedpreferences.getString("username", null);
+        String mobilenum = sharedpreferences.getString("mobile", null);
+        String alernum = sharedpreferences.getString("alternatenum", null);
+        String emailid = sharedpreferences.getString("emailregister", null);
+        String adreesdetails = sharedpreferences.getString("address", null);
+        String landmarkdetails = sharedpreferences.getString("landmark", null);
+
+        editor=getSharedPreferences("userdetails", MODE_PRIVATE).edit();
+        String ordername =  name_sch.getText().toString();
+
+        editor.putString("oname",ordername);
+
+
+        name_sch.setText(uname);
+        mobile_sch.setText(mobilenum);
+        alternatenum_sch.setText(alernum);
+        emailregister_sch.setText(emailid);
+        address_sch.setText(adreesdetails);
+        landmark_sch.setText(landmarkdetails);
+
     }
 
     public void showSnackbar(View view, String message, int duration) {
@@ -104,9 +126,6 @@ public class ScheduleActivity extends Activity {
                 emailregister_sch.requestFocus();
                 emailregister_sch.setError("");
         }
-//        else if (emailid.contains("@") && emailid.contains(".com")){
-//            showSnackbar(emailregister_sch, "Please enter 10 digit mobile number", 4000);
-//        }
         else if (address_sch.getText().toString().isEmpty())
         {
             address_sch.requestFocus();
@@ -122,39 +141,37 @@ public class ScheduleActivity extends Activity {
 
         else {
 
-                sharedpreferences = getSharedPreferences("userdetails", MODE_PRIVATE);
 
-                String uname = sharedpreferences.getString("username", null);
-                String mobilenum = sharedpreferences.getString("mobile", null);
-                String alernum = sharedpreferences.getString("alternatenum", null);
-                String emailid = sharedpreferences.getString("emailregister", null);
-                String adreesdetails = sharedpreferences.getString("address", null);
-                String landmarkdetails = sharedpreferences.getString("landmark", null);
+//
+//                sharedpreferences = getSharedPreferences("userdetails", MODE_PRIVATE);
+//
+//                String uname = sharedpreferences.getString("username", null);
+//                String mobilenum = sharedpreferences.getString("mobile", null);
+//                String alernum = sharedpreferences.getString("alternatenum", null);
+//                String emailid = sharedpreferences.getString("emailregister", null);
+//                String adreesdetails = sharedpreferences.getString("address", null);
+//                String landmarkdetails = sharedpreferences.getString("landmark", null);
+//
 
-                editor=getSharedPreferences("userdetails", MODE_PRIVATE).edit();
-                String ordername =  name_sch.getText().toString();
-
-                editor.putString("oname",ordername);
-
-
-                name_sch.setText(uname);
-                mobile_sch.setText(mobilenum);
-                alternatenum_sch.setText(alernum);
-                emailregister_sch.setText(emailid);
-                address_sch.setText(adreesdetails);
-                landmark_sch.setText(landmarkdetails);
-
+//
+//                name_sch.setText(uname);
+//                mobile_sch.setText(mobilenum);
+//                alternatenum_sch.setText(alernum);
+//                emailregister_sch.setText(emailid);
+//                address_sch.setText(adreesdetails);
+//                landmark_sch.setText(landmarkdetails);
+//            String ordername =  name_sch.getText().toString();
+//            editor=getSharedPreferences("userdetails", MODE_PRIVATE).edit();
+//            editor.putString("oname",ordername);
                 Intent i = new Intent(ScheduleActivity.this, YourOrdersActivity.class);
                 startActivity(i);
-
-
-
+//            editor=getSharedPreferences("userdetails", MODE_PRIVATE).edit();
+//            String ordername =  name_sch.getText().toString();
+//
+//            editor.putString("oname",ordername);
 
 
         }
-
-
-
     }
 
 

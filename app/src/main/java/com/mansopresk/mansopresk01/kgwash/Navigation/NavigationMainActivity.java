@@ -14,6 +14,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -34,6 +35,7 @@ public class NavigationMainActivity extends AppCompatActivity
     Button odernow;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,6 +45,7 @@ public class NavigationMainActivity extends AppCompatActivity
         setSupportActionBar(toolbar);
         odernow = (Button) findViewById(R.id.ordernow);
         textView = (TextView) findViewById(R.id.toolbartext);
+
 
         textView.setText("KG Wash");
 
@@ -64,6 +67,7 @@ public class NavigationMainActivity extends AppCompatActivity
         nav_signin1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 Intent it = new Intent(NavigationMainActivity.this,MainActivity.class);
                 startActivity(it);
 

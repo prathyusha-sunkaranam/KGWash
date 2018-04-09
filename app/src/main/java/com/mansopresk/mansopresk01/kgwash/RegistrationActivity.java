@@ -105,11 +105,13 @@ public class RegistrationActivity extends Activity {
 //            String mobile = emailregister.getText().toString().trim();
 //            String password = address.getText().toString().trim();
 //            String cnfrmpasword = landmark.getText().toString().trim();
+
                 Intent i = new Intent(RegistrationActivity.this, MainActivity.class);
                 startActivity(i);
 
-
-
+            }
+            else{
+                showSnackbar(emailregister, "provide proper email id", 4000);
             }
 
         }
