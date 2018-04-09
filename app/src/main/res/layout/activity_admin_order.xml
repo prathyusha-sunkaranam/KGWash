@@ -151,7 +151,7 @@
                     android:alpha="0.7"
                     android:scaleType="centerCrop"
 
-                    android:src="@drawable/useremail" />
+                    android:src="@drawable/mailuser" />
 
 
             </LinearLayout>
@@ -362,7 +362,7 @@
                     android:alpha="0.7"
                     android:layout_weight="0.2"
 
-                    android:src="@drawable/useremail"/>
+                    android:src="@drawable/mailuser"/>
 
 
 
