@@ -39,14 +39,7 @@
             android:layout_marginTop="5dp"
             android:textColor="#fff"/>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="place your order before one day"
-            android:gravity="center"
-            android:textColor="#fff"
-            android:textSize="16sp"
-            android:layout_marginTop="10dp" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
