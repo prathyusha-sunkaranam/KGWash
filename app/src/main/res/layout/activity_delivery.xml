@@ -238,7 +238,7 @@
                             android:layout_weight="0.5"
                             android:inputType="text"
                             android:layout_marginTop="10dp"
-                            android:text="TimeSlot" />
+                            android:text="TimeSlot :" />
 
 
                     </LinearLayout>
@@ -444,7 +444,7 @@
                             android:inputType="text" />
 
                         <TextView
-                            android:text="TimeSlot"
+                            android:text="TimeSlot :"
                             android:layout_weight="0.5"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"

@@ -49,20 +49,6 @@ public class AdminOrder extends AppCompatActivity {
         oname = findViewById(R.id.oname);
 
         setTitle("Admin Profile");
-//        mobile=findViewById(R.id.mobile_admin);
-//        //Performing action on button click
-//        phcall.setOnClickListener(new View.OnClickListener(){
-//
-//            @Override
-//            public void onClick(View arg0) {
-//                String number=mobile.getText().toString();
-//                Intent callIntent = new Intent(Intent.ACTION_CALL);
-//                callIntent.setData(Uri.parse("tel:"+number));
-//                startActivity(callIntent);
-//
-//            }
-//
-//        });
          usermail.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View view) {
@@ -110,7 +96,6 @@ public class AdminOrder extends AppCompatActivity {
 
         int id = item.getItemId();
 
-
             getApplicationContext().getSharedPreferences("userdetails", 0).edit().clear().commit();
             Intent i2 = new Intent(AdminOrder.this, MainActivity.class);
             startActivity(i2);
@@ -151,6 +136,13 @@ public class AdminOrder extends AppCompatActivity {
         startActivity(chooser);
 
 
+    }
+
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent it=new Intent(AdminOrder.this, NavigationMainActivity.class);
+        startActivity(it);
+        //Toast.makeText(this, "back key is pressed", Toast.LENGTH_SHORT).show();
     }
 }
 
