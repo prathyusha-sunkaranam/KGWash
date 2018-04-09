@@ -43,6 +43,7 @@ public class NavigationMainActivity extends AppCompatActivity
 
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -79,7 +80,11 @@ public class NavigationMainActivity extends AppCompatActivity
             public void onClick(View view) {
 
                 Intent it = new Intent(NavigationMainActivity.this,MainActivity.class);
+
+
+
                 startActivity(it);
+
 
             }
         });
@@ -170,7 +175,9 @@ public class NavigationMainActivity extends AppCompatActivity
             drawer.closeDrawer(GravityCompat.START);
         } else {
             super.onBackPressed();
+
         }
+
     }
 
     @Override
@@ -264,5 +271,7 @@ public class NavigationMainActivity extends AppCompatActivity
 //        return super.onOptionsItemSelected(item);
 //
 //    }
+
+
 
 }

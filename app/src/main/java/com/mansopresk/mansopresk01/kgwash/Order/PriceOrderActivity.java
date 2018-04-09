@@ -2,6 +2,7 @@ package com.mansopresk.mansopresk01.kgwash.Order;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ExpandableListView;
 import android.widget.Toast;
@@ -11,7 +12,7 @@ import com.mansopresk.mansopresk01.kgwash.R;
 
 import java.util.ArrayList;
 
-public class PriceOrderActivity extends Activity {
+public class PriceOrderActivity extends AppCompatActivity {
     private ExpandListAdapter ExpAdapter;
     private ArrayList<Group> ExpListItems;
     private ExpandableListView ExpandList;

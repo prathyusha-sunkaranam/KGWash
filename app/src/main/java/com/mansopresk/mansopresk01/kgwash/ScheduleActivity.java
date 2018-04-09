@@ -18,6 +18,7 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.mansopresk.mansopresk01.kgwash.Navigation.AboutUsActivity;
 import com.mansopresk.mansopresk01.kgwash.Navigation.NavigationMainActivity;
@@ -228,6 +229,9 @@ protected Dialog onCreateDialog(int id) {
             etcalendar.setText(selectedDay + "/" + (selectedMonth + 1) + "/" + selectedYear);
         }
     };
-
+    public void onBackPressed() {
+        super.onBackPressed();
+        //Toast.makeText(this, "back key is pressed", Toast.LENGTH_SHORT).show();
+    }
 
 }

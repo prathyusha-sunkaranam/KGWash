@@ -23,7 +23,10 @@ import android.widget.TextView;
 import pl.droidsonroids.gif.GifImageView;
 
 public class AdminOrder extends AppCompatActivity {
-    GifImageView usercall1,usercall2,usermail,userlocation;
+    GifImageView usercall1,usercall2,
+
+
+    usermail,userlocation;
     EditText mobile;
     SharedPreferences sharedpreferences;
     TextView oname;

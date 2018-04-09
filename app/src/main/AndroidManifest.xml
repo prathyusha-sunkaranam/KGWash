@@ -57,7 +57,8 @@
         <activity
             android:name=".DeliveryActivity"
             android:theme="@style/AppTheme.ActionBar" />
-        <activity android:name=".Order.PriceOrderActivity"></activity>
+        <activity android:name=".Order.PriceOrderActivity"
+            android:theme="@style/AppTheme.ActionBar"></activity>
     </application>
 
 </manifest>

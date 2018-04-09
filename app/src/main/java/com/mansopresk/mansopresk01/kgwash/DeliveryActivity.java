@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.mansopresk.mansopresk01.kgwash.Navigation.NavigationMainActivity;
 import com.mansopresk.mansopresk01.kgwash.Order.PriceOrderActivity;
 
 public class DeliveryActivity extends AppCompatActivity {
@@ -49,5 +50,12 @@ public class DeliveryActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent it=new Intent(DeliveryActivity.this, NavigationMainActivity.class);
+        startActivity(it);
+        //Toast.makeText(this, "back key is pressed", Toast.LENGTH_SHORT).show();
+    }
+
 
 }
