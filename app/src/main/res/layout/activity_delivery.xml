@@ -12,16 +12,12 @@
             android:id="@+id/toolbartextprofile"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="User Orders"
-            android:textColor="#fff"
-            android:textSize="20sp"/>
-        <!---->
-        <!--<ImageView-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:src="@drawable/dots"-->
-        <!--/>-->
+            android:text="User Orders:"
+            android:textColor="#000"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:textSize="26sp"/>
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -228,20 +224,20 @@
 
                             android:id="@+id/date_admin"
                             android:layout_width="0dp"
-
                             android:layout_height="wrap_content"
                             android:layout_weight="0.5"
                             android:inputType="text"
                             android:text="Date :"
+                            android:layout_marginTop="10dp"
                             android:textSize="15dp" />
 
                         <TextView
                             android:id="@+id/timeslot_admin"
-
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="0.5"
                             android:inputType="text"
+                            android:layout_marginTop="10dp"
                             android:text="TimeSlot" />
 
 
@@ -440,21 +436,19 @@
                         <TextView
 
                             android:layout_weight="0.5"
-
-
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:textSize="15dp"
                             android:text="Date :"
+                            android:layout_marginTop="10dp"
                             android:inputType="text" />
 
                         <TextView
                             android:text="TimeSlot"
-
                             android:layout_weight="0.5"
-
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
                             android:inputType="text" />
 
 

@@ -41,6 +41,10 @@ public class DeliveryActivity extends AppCompatActivity {
 
         else if (id == R.id.itemlog){
 
+            Intent i2 = new Intent(DeliveryActivity.this, MainActivity.class);
+            startActivity(i2);
+
+
             getApplicationContext().getSharedPreferences("userdetails", 0).edit().clear().commit();
 
         }
