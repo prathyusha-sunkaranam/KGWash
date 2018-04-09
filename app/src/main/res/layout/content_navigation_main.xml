@@ -66,9 +66,10 @@
             android:textColor="#fff"
             android:layout_marginLeft="250dp"/>
         <TextView
+            android:id="@+id/johnno"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Call  9843256181"
+            android:text="Call  9000379005"
             android:textSize="22sp"
             android:textColor="#fff"
             android:drawableLeft="@drawable/call"

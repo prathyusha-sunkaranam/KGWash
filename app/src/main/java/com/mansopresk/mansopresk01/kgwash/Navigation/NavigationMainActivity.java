@@ -1,9 +1,16 @@
 package com.mansopresk.mansopresk01.kgwash.Navigation;
 
+import android.Manifest;
+import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
+import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.design.internal.NavigationMenu;
+import android.support.v4.app.ActivityCompat;
+import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -30,7 +37,7 @@ import com.mansopresk.mansopresk01.kgwash.YourOrdersActivity;
 public class NavigationMainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    TextView nav_signin1,nav_signup, textView,nav_email;
+    TextView nav_signin1,nav_signup, textView,nav_email,jhonno;
     SharedPreferences sharedPreferences;
     Button odernow;
 
@@ -40,11 +47,14 @@ public class NavigationMainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_navigation_main);
+
         setTitle("KG Wash");
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         odernow = (Button) findViewById(R.id.ordernow);
         textView = (TextView) findViewById(R.id.toolbartext);
+        jhonno=findViewById(R.id.johnno);
+
 
 
         textView.setText("KG Wash");
@@ -105,7 +115,46 @@ public class NavigationMainActivity extends AppCompatActivity
                     startActivity(i);
 
                 }
+        jhonno.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (isPermissionGranted()) {
+                    call_action();
+                }
             }
+        });
+        }
+    public void call_action() {
+        Intent intent = new Intent(Intent.ACTION_DIAL);
+        intent.setData(Uri.parse("tel:9000379005"));
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        Intent chooser = Intent.createChooser(intent, "Complete Action using..");
+        startActivity(chooser);
+
+
+    }
+
+    public  boolean isPermissionGranted() {
+        if (Build.VERSION.SDK_INT >= 23) {
+            if (checkSelfPermission(android.Manifest.permission.CALL_PHONE)
+                    == PackageManager.PERMISSION_GRANTED) {
+                Log.v("TAG","Permission is granted");
+                return true;
+            } else {
+
+                Log.v("TAG","Permission is revoked");
+                ActivityCompat.requestPermissions((Activity) this, new String[]{Manifest.permission.CALL_PHONE}, 1);
+                return false;
+            }
+        }
+        else { //permission is automatically granted on sdk<23 upon installation
+            Log.v("TAG","Permission is granted");
+            return true;
+        }
+    }
+
+
+
 
 
 
