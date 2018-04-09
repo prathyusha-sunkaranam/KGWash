@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.mansopresk.mansopresk01.kgwash.Order.PriceOrderActivity;
+
 public class DeliveryActivity extends AppCompatActivity {
 
     @Override
@@ -30,6 +32,8 @@ public class DeliveryActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.itemorder) {
+            Intent i = new Intent(DeliveryActivity.this, PriceOrderActivity.class);
+            startActivity(i);
 
 
             return true;
