@@ -155,7 +155,7 @@
                             android:layout_weight="0.2"
                             android:alpha="0.7"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/mail" />
+                            android:src="@drawable/mailuser" />
         </LinearLayout>
 
                     <LinearLayout
@@ -391,7 +391,7 @@
                             android:alpha="0.7"
                             android:layout_weight="0.2"
 
-                            android:src="@drawable/mail"/>
+                            android:src="@drawable/mailuser"/>
 
 
 
