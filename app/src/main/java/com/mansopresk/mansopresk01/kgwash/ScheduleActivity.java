@@ -50,7 +50,7 @@ public class ScheduleActivity extends AppCompatActivity {
         emailregister_sch = findViewById(R.id.email_register);
         address_sch = findViewById(R.id.address_register);
         landmark_sch = findViewById(R.id.landmark_register);
-        spinner = (Spinner) findViewById(R.id.spinner);
+        spinner = (Spinner) findViewById(R.id.spinner1);
         etcalendar = findViewById(R.id.etcalender);
         calendarbtn = findViewById(R.id.calendarbtn);
         textViewsch = (TextView) findViewById(R.id.toolbartextsch);
@@ -81,10 +81,6 @@ public class ScheduleActivity extends AppCompatActivity {
         String adreesdetails = sharedpreferences.getString("address", null);
         String landmarkdetails = sharedpreferences.getString("landmark", null);
 
-        editor=getSharedPreferences("userdetails", MODE_PRIVATE).edit();
-        String ordername =  name_sch.getText().toString();
-
-        editor.putString("oname",ordername);
 
 
         name_sch.setText(uname);
@@ -93,6 +89,11 @@ public class ScheduleActivity extends AppCompatActivity {
         emailregister_sch.setText(emailid);
         address_sch.setText(adreesdetails);
         landmark_sch.setText(landmarkdetails);
+
+
+
+
+
 
     }
 
@@ -144,21 +145,69 @@ public class ScheduleActivity extends AppCompatActivity {
         }
 
         else {
-            Intent i = new Intent(ScheduleActivity.this, YourOrdersActivity.class);
+
+
+//
+//                sharedpreferences = getSharedPreferences("userdetails", MODE_PRIVATE);
+//
+//                String uname = sharedpreferences.getString("username", null);
+//                String mobilenum = sharedpreferences.getString("mobile", null);
+//                String alernum = sharedpreferences.getString("alternatenum", null);
+//                String emailid = sharedpreferences.getString("emailregister", null);
+//                String adreesdetails = sharedpreferences.getString("address", null);
+//                String landmarkdetails = sharedpreferences.getString("landmark", null);
+//
+
+//
+//                name_sch.setText(uname);
+//                mobile_sch.setText(mobilenum);
+//                alternatenum_sch.setText(alernum);
+//                emailregister_sch.setText(emailid);
+//                address_sch.setText(adreesdetails);
+//                landmark_sch.setText(landmarkdetails);
+//            String ordername =  name_sch.getText().toString();
+//            editor=getSharedPreferences("userdetails", MODE_PRIVATE).edit();
+//            editor.putString("oname",ordername);
+                Intent i = new Intent(ScheduleActivity.this, YourOrdersActivity.class);
+            editor=getSharedPreferences("userdetails", MODE_PRIVATE).edit();
+            //String ordername =  name_sch.getText().toString();
+            String custdate =  etcalendar.getText().toString();
+             String custname =   name_sch.getText().toString();
+             editor.putString("custname",custname);
+             editor.putString("userdate",custdate);
+
+
+            editor.putString("usertime", spinner.getSelectedItem().toString());
+            editor.commit();
+
             startActivity(i);
+//            editor=getSharedPreferences("userdetails", MODE_PRIVATE).edit();
+//            String ordername =  name_sch.getText().toString();
+//
+//            editor.putString("oname",ordername);
+
 
         }
     }
+
+
+
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
 
         getMenuInflater().inflate(R.menu.home, menu);
         return true;
     }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         Intent i = new Intent(ScheduleActivity.this,NavigationMainActivity.class);
         startActivity(i);
+//            return true;
+
+//        }
+
         return super.onOptionsItemSelected(item);
     }
 
@@ -167,11 +216,17 @@ public class ScheduleActivity extends AppCompatActivity {
                 day = calendar.get(Calendar.DAY_OF_MONTH);
                 month = calendar.get(Calendar.MONTH);
                 year = calendar.get(Calendar.YEAR);
-                showDialog(DATE_PICKER_ID);}
+                showDialog(DATE_PICKER_ID);
+
+    }
+
+
 @Override
 protected Dialog onCreateDialog(int id) {
     switch (id) {
         case DATE_PICKER_ID:
+            // create a new DatePickerDialog with values you want to show
+
             DatePickerDialog datePickerDialog = new DatePickerDialog(this, datePickerListener, year, month, day);
             calendar = Calendar.getInstance();
             calendar.add(Calendar.DATE, 0); // Add 0 days to Calendar
@@ -182,11 +237,16 @@ protected Dialog onCreateDialog(int id) {
     return null;
 }
     private DatePickerDialog.OnDateSetListener datePickerListener = new DatePickerDialog.OnDateSetListener() {
-
+        // the callback received when the user "sets" the Date in the
+        // DatePickerDialog
         public void onDateSet(DatePicker view, int selectedYear, int selectedMonth, int selectedDay) {
 
             etcalendar.setText(selectedDay + "/" + (selectedMonth + 1) + "/" + selectedYear);
-        }};
+        }
+    };
     public void onBackPressed() {
         super.onBackPressed();
-    }}
+        //Toast.makeText(this, "back key is pressed", Toast.LENGTH_SHORT).show();
+    }
+
+}
