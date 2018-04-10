@@ -81,9 +81,6 @@ public class RegistrationActivity extends Activity {
 
         else {
 
-
-
-
             String username = name.getText().toString();
             String mobilenum = mobile.getText().toString();
             String alternatenumregister = alternatenum.getText().toString();

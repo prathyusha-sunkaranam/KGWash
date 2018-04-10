@@ -67,8 +67,9 @@ public class ScheduleActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
-                Intent i2 = new Intent(ScheduleActivity.this, BookNowActivity.class);
-                startActivity(i2);
+                onBackPressed();
+//                Intent i2 = new Intent(ScheduleActivity.this, BookNowActivity.class);
+//                startActivity(i2);
                 finish();
             }
         });
