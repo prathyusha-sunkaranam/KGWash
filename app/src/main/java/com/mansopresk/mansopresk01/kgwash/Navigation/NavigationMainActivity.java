@@ -110,10 +110,7 @@ public class NavigationMainActivity extends AppCompatActivity
         sharedPreferences = getSharedPreferences("userdetails", MODE_PRIVATE);
         uname = sharedPreferences.getString("email", null);
 
-
-
                 if (uname == null || uname == "") {
-//                 nav_signin1.setText(uname);
                     loginsignup =(LinearLayout)header.findViewById(R.id.nav_loginll);
                     loginsignup.setVisibility(View.VISIBLE);
                     Menu menuNav=navigationView.getMenu();
@@ -128,7 +125,10 @@ public class NavigationMainActivity extends AppCompatActivity
 
 
                 }
+
+               // }
                 else {
+
                 loginsignup =(LinearLayout)header.findViewById(R.id.nav_loginll);
                 loginsignup.setVisibility(View.GONE);
                 Menu menuNav=navigationView.getMenu();
@@ -173,7 +173,7 @@ public class NavigationMainActivity extends AppCompatActivity
                 return false;
             }
         }
-        else { //permission is automatically granted on sdk<23 upon installation
+        else {
             Log.v("TAG","Permission is granted");
             return true;
         }
@@ -183,25 +183,6 @@ public class NavigationMainActivity extends AppCompatActivity
     Intent ip = new Intent(this, BookNowActivity.class);
     startActivity(ip);
 }
-
-    public void basic(View v) {
-        Intent ipr = new Intent(this, ScheduleActivity.class);
-        startActivity(ipr);
-    }
-    public void silver(View v) {
-        Intent ipr1 = new Intent(this, ScheduleActivity.class);
-        startActivity(ipr1);
-    }
-    public void gold(View v) {
-        Intent ipr2 = new Intent(this, ScheduleActivity.class);
-        startActivity(ipr2);
-    }
-    public void diamond(View v) {
-        Intent ipr3 = new Intent(this, ScheduleActivity.class);
-        startActivity(ipr3);
-    }
-
-
 
     @Override
     public void onBackPressed() {
@@ -219,6 +200,7 @@ public class NavigationMainActivity extends AppCompatActivity
 
         }
     }
+
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
@@ -261,6 +243,7 @@ public class NavigationMainActivity extends AppCompatActivity
         else if (id == R.id.nav_profile){
             Intent i3 = new Intent(NavigationMainActivity.this,ViewProfileActivity.class);
             startActivity(i3);
+
         }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

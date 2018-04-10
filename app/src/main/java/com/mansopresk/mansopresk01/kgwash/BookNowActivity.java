@@ -40,9 +40,6 @@ public class BookNowActivity extends AppCompatActivity {
         washfold = (RadioButton) findViewById(R.id.washfold_button);
         washiron = (RadioButton) findViewById(R.id.washiron_button);
         iron = (RadioButton) findViewById(R.id.iron_button);
-//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-//        getSupportActionBar().setDisplayShowHomeEnabled(true);
-        //getSupportActionBar().setMinimumHeight(0);
         Toolbar mToolbar = (Toolbar) findViewById(R.id.toolbarbook);
         setSupportActionBar(mToolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -99,14 +96,9 @@ public class BookNowActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-//        int id = item.getItemId();
-//        if (id == R.id.action_home) {
+
         Intent i = new Intent(BookNowActivity.this,NavigationMainActivity.class);
         startActivity(i);
-//            return true;
-
-//        }
-
         return super.onOptionsItemSelected(item);
     }
     @Override

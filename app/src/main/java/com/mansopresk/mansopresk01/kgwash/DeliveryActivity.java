@@ -23,11 +23,6 @@ public class DeliveryActivity extends AppCompatActivity {
 
         if(sharedpreferences!=null){
             if(uname1!=null||uname1==""){
-//                Intent it = new Intent(AdminOrder.this, MainActivity.class);
-//                startActivity(it);
-
-//                nav_email.setText(uname);
-
             }
             else {
                 Intent it = new Intent(DeliveryActivity.this, MainActivity.class);
@@ -40,10 +35,7 @@ public class DeliveryActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.delivery, menu);
-
-
         return true;
     }
 
@@ -51,8 +43,6 @@ public class DeliveryActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
 
         int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
         if (id == R.id.itemorder) {
             Intent i = new Intent(DeliveryActivity.this, PriceOrderActivity.class);
             startActivity(i);
@@ -73,7 +63,6 @@ public class DeliveryActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
     public void onBackPressed() {
-        // super.onBackPressed();
         Intent intent = new Intent(Intent.ACTION_MAIN);
         intent.addCategory(Intent.CATEGORY_HOME);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);//***Change Here***
@@ -81,7 +70,7 @@ public class DeliveryActivity extends AppCompatActivity {
         finish();
         System.exit(0);
 
-        //Toast.makeText(this, "back key is pressed", Toast.LENGTH_SHORT).show();
+
     }
 
 

@@ -36,16 +36,12 @@ public class WelcomeActivity extends Activity
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-
-        // Checking for first time launch - before calling setContentView()
         prefManager = new PrefManager(this);
         if (!prefManager.isFirstTimeLaunch())
         {
             launchHomeScreen();
             finish();
         }
-
-        // Making notification bar transparent
         if (Build.VERSION.SDK_INT >= 21)
         {
             getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
@@ -57,52 +53,36 @@ public class WelcomeActivity extends Activity
         dotsLayout = (LinearLayout) findViewById(R.id.layoutDots);
         btnSkip = (Button) findViewById(R.id.btn_skip);
         btnNext = (Button) findViewById(R.id.btn_next);
-
-
-        // layouts of all welcome sliders
-        // add few more layouts if you want
         layouts = new int[]{
                 R.layout.welcome_slide1,
                 R.layout.welcome_slide2,
                 R.layout.welcome_slide3,
                 R.layout.welcome_slide4};
-
-        // adding bottom dots
         addBottomDots(0);
-
-        // making notification bar transparent
         changeStatusBarColor();
 
         myViewPagerAdapter = new MyViewPagerAdapter();
         viewPager.setAdapter(myViewPagerAdapter);
         viewPager.addOnPageChangeListener(viewPagerPageChangeListener);
-
         btnSkip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 launchHomeScreen();
             }
         });
-
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // checking for last page
-                // if last page home screen will be launched
                 int current = getItem(+1);
                 if (current < layouts.length)
-                {
-                    // move to next screen
-                    viewPager.setCurrentItem(current);
+                {viewPager.setCurrentItem(current);
                 }
                 else
-                {
-                    launchHomeScreen();
+                {launchHomeScreen();
                 }
             }
         });
     }
-
     private void addBottomDots(int currentPage) {
         dots = new TextView[layouts.length];
 
@@ -132,22 +112,16 @@ public class WelcomeActivity extends Activity
         startActivity(new Intent(WelcomeActivity.this,SplashActivity.class));
         finish();
     }
-
-    //	viewpager change listener
     ViewPager.OnPageChangeListener viewPagerPageChangeListener = new ViewPager.OnPageChangeListener() {
 
         @Override
         public void onPageSelected(int position) {
             addBottomDots(position);
-
-            // changing the next button text 'NEXT' / 'GOT IT'
             if (position == layouts.length - 1) {
-                // last page. make button text to GOT IT
                 btnNext.setText("FINISH");
                 btnSkip.setVisibility(View.GONE);
 
             } else {
-                // still pages are left
                 btnNext.setText("NEXT");
                 btnSkip.setVisibility(View.VISIBLE);
             }
@@ -163,10 +137,6 @@ public class WelcomeActivity extends Activity
 
         }
     };
-
-    /**
-     * Making notification bar transparent
-     */
     private void changeStatusBarColor() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             Window window = getWindow();
@@ -174,10 +144,6 @@ public class WelcomeActivity extends Activity
             window.setStatusBarColor(Color.TRANSPARENT);
         }
     }
-
-    /**
-     * View pager adapter
-     */
     public class MyViewPagerAdapter extends PagerAdapter {
         private LayoutInflater layoutInflater;
 

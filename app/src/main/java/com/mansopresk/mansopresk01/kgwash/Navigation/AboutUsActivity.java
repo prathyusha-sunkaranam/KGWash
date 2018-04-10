@@ -57,14 +57,9 @@ public class AboutUsActivity extends AppCompatActivity implements View.OnClickLi
         text1 = (TextView) findViewById(R.id.text1);
         text2 = (TextView) findViewById(R.id.text2);
         text3 = (TextView) findViewById(R.id.text3);
-
-
 //        text1.setOnClickListener(this);
         text2.setOnClickListener(this);
         text3.setOnClickListener(this);
-
-
-
         amail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -102,15 +97,12 @@ public class AboutUsActivity extends AppCompatActivity implements View.OnClickLi
 
 
     }
-
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
 
         getMenuInflater().inflate(R.menu.home, menu);
         return true;
     }
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 //        int id = item.getItemId();
@@ -255,12 +247,6 @@ public class AboutUsActivity extends AppCompatActivity implements View.OnClickLi
         }
     }
 
-//    @Override
-//    public boolean onSupportNavigateUp() {
-//        onBackPressed();
-//        return true;
-//    }
-
     public  boolean isPermissionGranted() {
         if (Build.VERSION.SDK_INT >= 23) {
             if (checkSelfPermission(android.Manifest.permission.CALL_PHONE)
@@ -274,7 +260,7 @@ public class AboutUsActivity extends AppCompatActivity implements View.OnClickLi
                 return false;
             }
         }
-        else { //permission is automatically granted on sdk<23 upon installation
+        else {
             Log.v("TAG","Permission is granted");
             return true;
         }

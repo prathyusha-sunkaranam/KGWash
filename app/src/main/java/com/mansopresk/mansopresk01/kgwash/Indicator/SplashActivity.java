@@ -14,14 +14,8 @@ public class SplashActivity extends Activity {
 
     SharedPreferences pref;
     SharedPreferences.Editor editor;
-
-
-    // shared pref mode
     int PRIVATE_MODE = 0;
-
-    // Shared preferences file name
     private static final String PREF_NAME = "indicator";
-
     private static final String IS_FIRST_TIME_LAUNCH = "IsFirstTimeLaunch";
 
     @Override
@@ -49,14 +43,8 @@ public class SplashActivity extends Activity {
             {
                 @Override
                 public void run() {
-
-                    // This method will be executed once the timer is over
-                    // Start your app main activity
-
                     Intent i = new Intent(SplashActivity.this, NavigationMainActivity.class);
                     startActivity(i);
-
-                    // close this activity
                     finish();
                 }
             }, SPLASH_TIME_OUT);

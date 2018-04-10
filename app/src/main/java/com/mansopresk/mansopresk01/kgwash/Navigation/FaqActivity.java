@@ -129,8 +129,7 @@ public class FaqActivity extends AppCompatActivity implements View.OnClickListen
                     Log.v("CZ", "height..." + panel1.getHeight());
                 }
 
-                //panel1.setVisibility(View.GONE);
-                //Log.v("CZ","again height..." + panel1.getHeight());
+
                 hideThemAll();
                 if (v != View.VISIBLE) {
                     panel1.startAnimation(new FaqActivity.ScaleAnimToShow(1.0f, 1.0f, 1.0f, 0.0f, 500, panel1, true));

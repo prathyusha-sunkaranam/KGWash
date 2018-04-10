@@ -15,8 +15,6 @@ public class RegistrationActivity extends Activity {
     
     EditText name,mobile,alternatenum,emailregister,address,landmark;
     Button register;
-
-    SharedPreferences sharedpreferences;
     SharedPreferences.Editor editor;
 
     @Override
@@ -81,7 +79,6 @@ public class RegistrationActivity extends Activity {
 
         else {
 
-            // String usrname = name.getText().toString();
             String username = name.getText().toString();
             String mobilenum = mobile.getText().toString();
             String alternatenumregister = alternatenum.getText().toString();
@@ -99,12 +96,6 @@ public class RegistrationActivity extends Activity {
                 editor.putString("address", addressregister);
                 editor.putString("landmark", landmarkregister);
                 editor.commit();
-//            String uname = name.getText().toString().trim();
-//            String lastname = mobile.getText().toString().trim();
-//            String mail = alternatenum.getText().toString().trim();
-//            String mobile = emailregister.getText().toString().trim();
-//            String password = address.getText().toString().trim();
-//            String cnfrmpasword = landmark.getText().toString().trim();
 
                 Intent i = new Intent(RegistrationActivity.this, MainActivity.class);
                 startActivity(i);

@@ -18,18 +18,13 @@ import com.mansopresk.mansopresk01.kgwash.Navigation.NavigationMainActivity;
 public class MainActivity extends Activity {
     EditText email,password,dateview;
     Button signin,signup;
-
-
-
-
     public static final String MyPREFERENCES = "MyPrefs" ;
     public static final String Name = "nameKey";
     public static final String pswrd = "pswrdKey";
     SharedPreferences sharedpreferences;
     SharedPreferences.Editor editor;
 
-    LinearLayout linearLayout;
-   Menu menu;
+
 
 
     @Override
@@ -41,16 +36,6 @@ public class MainActivity extends Activity {
         signin = (Button)findViewById(R.id.signin);
         email = (EditText)findViewById(R.id.emailid);
         password = (EditText)findViewById(R.id.password);
-//        sharedpreferences = getSharedPreferences("admindetails",MODE_PRIVATE);
-//        String uname = sharedpreferences.getString("aemail",null);
-//
-//        if(uname!=null){
-//            Intent i=new Intent(this,AdminOrder.class);
-//            startActivity(i);
-//        }
-
-
-
     }
     public void valid(View v) {
         if (email.getText().toString().trim().isEmpty()) {
@@ -76,11 +61,7 @@ public class MainActivity extends Activity {
                  editor.commit();
              }
 
-//            if (sharedpreferences != null) {
-//                onCreateOptionsMenu(menu);
-//
-//
-//            }
+
             if (usrname.equals("admin") && pswrd.equals("admin")) {
                 Toast.makeText(this, "Login Success", Toast.LENGTH_SHORT).show();
                 editor = getSharedPreferences("admindetails", MODE_PRIVATE).edit();

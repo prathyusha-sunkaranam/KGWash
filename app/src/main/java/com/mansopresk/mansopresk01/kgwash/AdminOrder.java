@@ -47,16 +47,11 @@ public class AdminOrder extends AppCompatActivity {
         setTitle("Admin Profile");
         nav_email=(TextView)findViewById(R.id.nav_mail);
 
-
         sharedpreferences = getSharedPreferences("admindetails",MODE_PRIVATE);
         String uname = sharedpreferences.getString("aemail",null);
 
         if(sharedpreferences!=null){
             if(uname!=null||uname==""){
-//                Intent it = new Intent(AdminOrder.this, MainActivity.class);
-//                startActivity(it);
-
-//                nav_email.setText(uname);
 
             }
             else {
@@ -93,29 +88,25 @@ public class AdminOrder extends AppCompatActivity {
 }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
+
         getMenuInflater().inflate(R.menu.navigation_main, menu);
         return true;
     }
+
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         switch (id) {
             case R.id.action_settings:
-                Intent intent = new Intent(getApplicationContext(), NavigationMainActivity.class);
                 getApplicationContext().getSharedPreferences("admindetails", 0).edit().clear().apply();
-                startActivity(intent);
+                Intent i2 = new Intent(AdminOrder.this, NavigationMainActivity.class);
+                startActivity(i2);
         }
         return true;
     }
-//
-//        sharedpreferences = getSharedPreferences("userdetails", MODE_PRIVATE);
-//        String ordername = sharedpreferences.getString("oname",null);
-//
-//        oname.setText(ordername);
-//
-//    }
+
     public  boolean isPermissionGranted() {
         if (Build.VERSION.SDK_INT >= 23) {
             if (checkSelfPermission(android.Manifest.permission.CALL_PHONE)
@@ -129,7 +120,7 @@ public class AdminOrder extends AppCompatActivity {
                 return false;
             }
         }
-        else { //permission is automatically granted on sdk<23 upon installation
+        else {
             Log.v("TAG","Permission is granted");
             return true;
         }
@@ -145,8 +136,7 @@ public class AdminOrder extends AppCompatActivity {
 
 @Override
 public void onBackPressed() {
-        // super.onBackPressed();
-        Intent intent = new Intent(Intent.ACTION_MAIN);
+    Intent intent = new Intent(Intent.ACTION_MAIN);
         intent.addCategory(Intent.CATEGORY_HOME);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);//***Change Here***
         startActivity(intent);
