@@ -12,10 +12,11 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class RegistrationActivity extends Activity {
-    
-    EditText name,mobile,alternatenum,emailregister,address,landmark;
+
+    EditText name, mobile, alternatenum, emailregister, address, landmark, pass, repass;
     Button register;
     SharedPreferences.Editor editor;
+    String spass, srepass;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +29,9 @@ public class RegistrationActivity extends Activity {
         address = findViewById(R.id.address_et);
         landmark = findViewById(R.id.landmark_et);
         register = findViewById(R.id.register);
+        pass = findViewById(R.id.pass_et);
+        repass = findViewById(R.id.repass_et);
+
     }
 
     public void showSnackbar(View view, String message, int duration) {
@@ -35,79 +39,66 @@ public class RegistrationActivity extends Activity {
     }
 
 
-    public void register(View v)
-    {
+    public void register(View v) {
 
-        if (name.getText().toString().isEmpty())
-        {
+        if (name.getText().toString().isEmpty()) {
             name.requestFocus();
             name.setError("");
-        }
-
-        else if (mobile.getText().toString().isEmpty())
-        {
+        } else if (mobile.getText().toString().isEmpty()) {
             mobile.requestFocus();
             mobile.setError("");
-        }else if (mobile.length() != 10) {
+        } else if (mobile.length() != 10) {
             showSnackbar(mobile, "Please enter 10 digit mobile number", 4000);
 
-        }
-        else if( alternatenum.getText().toString().isEmpty())
-        {
+        } else if (alternatenum.getText().toString().isEmpty()) {
             alternatenum.requestFocus();
             alternatenum.setError("");
 
-        }
-        else if (emailregister.getText().toString().isEmpty())
-        {
+        } else if (emailregister.getText().toString().isEmpty()) {
             emailregister.requestFocus();
             emailregister.setError("");
 
-        }
-
-
-        else if (address.getText().toString().isEmpty())
-        {
+        } else if (address.getText().toString().isEmpty()) {
             address.requestFocus();
             address.setError("");
 
-        }
-        else if (landmark.getText().toString().isEmpty())
-        {
+        } else if (landmark.getText().toString().isEmpty()) {
             landmark.requestFocus();
             landmark.setError("");
 
-        }
+        } else {
 
-        else {
 
-            String username = name.getText().toString();
-            String mobilenum = mobile.getText().toString();
-            String alternatenumregister = alternatenum.getText().toString();
-            String email = emailregister.getText().toString();
-            String addressregister = address.getText().toString();
-            String landmarkregister = landmark.getText().toString();
+                String username = name.getText().toString();
+                String mobilenum = mobile.getText().toString();
+                String alternatenumregister = alternatenum.getText().toString();
+                String email = emailregister.getText().toString();
+                String addressregister = address.getText().toString();
+                String landmarkregister = landmark.getText().toString();
 
-            if (email.contains("@") && email.contains(".com")) {
+                if (email.contains("@") && email.contains(".com")) {
 
-                editor = getSharedPreferences("userdetails", MODE_PRIVATE).edit();
-                editor.putString("username", username);
-                editor.putString("mobile", mobilenum);
-                editor.putString("alternatenum", alternatenumregister);
-                editor.putString("emailregister", email);
-                editor.putString("address", addressregister);
-                editor.putString("landmark", landmarkregister);
-                editor.commit();
 
-                Intent i = new Intent(RegistrationActivity.this, MainActivity.class);
-                startActivity(i);
+
+                        editor = getSharedPreferences("userdetails", MODE_PRIVATE).edit();
+                        editor.putString("username", username);
+                        editor.putString("mobile", mobilenum);
+                        editor.putString("alternatenum", alternatenumregister);
+                        editor.putString("emailregister", email);
+                        editor.putString("address", addressregister);
+                        editor.putString("landmark", landmarkregister);
+                        editor.commit();
+
+                        Intent i = new Intent(RegistrationActivity.this, BookNowActivity.class);
+                        startActivity(i);
+                    }
+                    else{
+                        showSnackbar(emailregister, "provide proper email id", 4000);
+
+                }
 
             }
-            else{
-                showSnackbar(emailregister, "provide proper email id", 4000);
-            }
-
         }
-}
-}
+    }
+
 
