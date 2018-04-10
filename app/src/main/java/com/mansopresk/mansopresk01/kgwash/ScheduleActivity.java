@@ -102,6 +102,7 @@ public class ScheduleActivity extends AppCompatActivity {
     }
 
 
+
     public void schedule(View v)
     {
 
@@ -144,7 +145,12 @@ public class ScheduleActivity extends AppCompatActivity {
 
         }
 
+
         else {
+            String email = emailregister_sch.getText().toString();
+
+
+            if (email.contains("@") && email.contains(".com")) {
 
 
 //
@@ -169,24 +175,29 @@ public class ScheduleActivity extends AppCompatActivity {
 //            editor=getSharedPreferences("userdetails", MODE_PRIVATE).edit();
 //            editor.putString("oname",ordername);
                 Intent i = new Intent(ScheduleActivity.this, YourOrdersActivity.class);
-            editor=getSharedPreferences("userdetails", MODE_PRIVATE).edit();
-            //String ordername =  name_sch.getText().toString();
-            String custdate =  etcalendar.getText().toString();
-             String custname =   name_sch.getText().toString();
-             editor.putString("custname",custname);
-             editor.putString("userdate",custdate);
+                editor = getSharedPreferences("userdetails", MODE_PRIVATE).edit();
+                //String ordername =  name_sch.getText().toString();
+                String custdate = etcalendar.getText().toString();
+                String custname = name_sch.getText().toString();
+                editor.putString("custname", custname);
+                editor.putString("userdate", custdate);
 
 
-            editor.putString("usertime", spinner.getSelectedItem().toString());
-            editor.commit();
+                editor.putString("usertime", spinner.getSelectedItem().toString());
+                editor.commit();
 
-            startActivity(i);
+                startActivity(i);
 //            editor=getSharedPreferences("userdetails", MODE_PRIVATE).edit();
 //            String ordername =  name_sch.getText().toString();
 //
 //            editor.putString("oname",ordername);
 
 
+            }
+            else
+            {
+                Toast.makeText(this, " Enter proper mail id ", Toast.LENGTH_SHORT).show();
+            }
         }
     }
 
