@@ -25,6 +25,7 @@
         android:layout_weight="0.4"
         android:entries="@array/spinner_item"
         android:layout_width="0dp"
+        android:minHeight="48dp"
         android:layout_height="30dp">
     </Spinner>
 
