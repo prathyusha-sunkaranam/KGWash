@@ -13,7 +13,7 @@ import android.widget.Toast;
 
 public class RegistrationActivity extends Activity {
     
-    EditText name,mobile,alternatenum,emailregister,address,landmark;
+    EditText name,mobile,alternatenum,emailregister,address,landmark,password,repassword;
     Button register;
     SharedPreferences.Editor editor;
 
@@ -28,6 +28,8 @@ public class RegistrationActivity extends Activity {
         address = findViewById(R.id.address_et);
         landmark = findViewById(R.id.landmark_et);
         register = findViewById(R.id.register);
+        password = findViewById(R.id.password);
+        repassword = findViewById(R.id.repass_et);
     }
 
     public void showSnackbar(View view, String message, int duration) {
@@ -64,6 +66,20 @@ public class RegistrationActivity extends Activity {
             emailregister.setError("");
 
         }
+
+        else if (password.getText().toString().isEmpty())
+        {
+            password.requestFocus();
+            password.setError("");
+
+        }
+        else if (repassword.getText().toString().isEmpty())
+        {
+            repassword.requestFocus();
+            repassword.setError("");
+
+        }
+
         else if (address.getText().toString().isEmpty())
         {
             address.requestFocus();
@@ -78,6 +94,9 @@ public class RegistrationActivity extends Activity {
         }
 
         else {
+
+
+
 
             String username = name.getText().toString();
             String mobilenum = mobile.getText().toString();

@@ -24,9 +24,6 @@ public class MainActivity extends Activity {
     SharedPreferences sharedPreferences;
     SharedPreferences.Editor editor;
 
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
