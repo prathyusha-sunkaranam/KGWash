@@ -14,7 +14,7 @@ import com.mansopresk.mansopresk01.kgwash.Navigation.NavigationMainActivity;
 public class ViewProfileActivity extends AppCompatActivity {
 
 
-    EditText name,mobile,altermobile,landmark,date,timeslot,adress;
+    EditText name,mobile,altermobile,landmark,adress;
     TextView email;
     String sname,smobile,saltermobile,semail,slandmark,sdate,stimeslot,sadress;
 
@@ -27,8 +27,6 @@ public class ViewProfileActivity extends AppCompatActivity {
         altermobile=findViewById(R.id.alter_place);
         email=findViewById(R.id.email_place);
         landmark=findViewById(R.id.landmarl_place);
-        date=findViewById(R.id.date_place);
-        timeslot=findViewById(R.id.timeslote_place);
         adress=findViewById(R.id.adress_place);
         SharedPreferences sharedPreferences=getSharedPreferences("userdetails", MODE_PRIVATE);
         sname=sharedPreferences.getString("username",null);
@@ -44,8 +42,6 @@ public class ViewProfileActivity extends AppCompatActivity {
         altermobile.setText(saltermobile);
         email.setText(semail);
         landmark.setText(slandmark);
-        date.setText(sdate);
-        timeslot.setText(stimeslot);
         adress.setText(sadress);
 
         Toolbar mToolbar = (Toolbar) findViewById(R.id.toolbarprofile);

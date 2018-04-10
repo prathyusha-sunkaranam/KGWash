@@ -46,14 +46,6 @@ public class AdminOrder extends AppCompatActivity {
         oname = findViewById(R.id.oname);
         setTitle("Admin Profile");
         nav_email=(TextView)findViewById(R.id.nav_mail);
-//        sharedPreferences = getSharedPreferences("admindetails",MODE_PRIVATE);
-//        String adminuname = sharedPreferences.getString("aemail",null);
-//        if(sharedPreferences==null){
-//            if(adminuname==null|adminuname=="") {
-//                Intent i = new Intent(this,NavigationMainActivity.class );
-//                startActivity(i);
-//            }
-//        }
 
 
         sharedpreferences = getSharedPreferences("admindetails",MODE_PRIVATE);
@@ -106,23 +98,14 @@ public class AdminOrder extends AppCompatActivity {
         return true;
     }
 
-
-//    @Override
-//    public boolean onOptionsItemSelected(MenuItem item) {
-//        int id = item.getItemId();
-//        Intent i2 = new Intent(AdminOrder.this, NavigationMainActivity.class);
-//        getApplicationContext().getSharedPreferences("admindetails", 0).edit().clear().commit();
-//        startActivity(i2);
-//        return true;
-//    }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         switch (id) {
             case R.id.action_settings:
+                Intent intent = new Intent(getApplicationContext(), NavigationMainActivity.class);
                 getApplicationContext().getSharedPreferences("admindetails", 0).edit().clear().apply();
-                Intent i2 = new Intent(AdminOrder.this, NavigationMainActivity.class);
-                startActivity(i2);
+                startActivity(intent);
         }
         return true;
     }

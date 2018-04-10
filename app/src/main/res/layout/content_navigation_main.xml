@@ -84,13 +84,13 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="150dp"
-        android:orientation="vertical"
-       >
+        android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            android:baselineAligned="false"
             android:weightSum="1">
 
     <LinearLayout
@@ -98,18 +98,20 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:gravity="center"
-
         android:layout_weight="0.5">
         <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/circularImagewashf"
+            android:id="@+id/Basic"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_marginTop="20dp"
+            android:onClick="basic"
             android:src="@drawable/washfold" />
         <TextView
             android:layout_width="90dp"
             android:layout_height="wrap_content"
-            android:text="wash and fold"/>
+            android:onClick="basic"
+            android:gravity="center"
+            android:text="Basic"/>
 
     </LinearLayout>
         <LinearLayout
@@ -120,42 +122,75 @@
 
             android:layout_weight="0.5">
             <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/washiron"
+                android:id="@+id/silver"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_marginTop="20dp"
+                android:onClick="silver"
                 android:src="@drawable/washiron" />
             <TextView
                 android:layout_width="90dp"
                 android:layout_height="wrap_content"
-                android:text="wash and iron"/>
+                android:onClick="silver"
+                android:text="Silver"
+                android:gravity="center"/>
 
         </LinearLayout>
         </LinearLayout>
 
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:orientation="vertical"
-        android:gravity="center"
-        android:layout_weight="0.5">
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/circularImageId"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:baselineAligned="false"
+                android:weightSum="1">
 
-            android:src="@drawable/iron" />
-        <TextView
-            android:layout_width="90dp"
-            android:layout_height="40dp"
-            android:text="iron"
-            android:gravity="center"/>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
 
-    </LinearLayout>
+                    android:layout_weight="0.5">
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/gold"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="20dp"
+                        android:onClick="gold"
+                        android:src="@drawable/iron" />
+                    <TextView
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:onClick="gold"
+                        android:text="Gold"
+                        android:gravity="center"/>
 
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_weight="0.5">
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/diamond"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="20dp"
+                        android:onClick="diamond"
+                        android:src="@drawable/washiron" />
+                    <TextView
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:onClick="diamond"
+                        android:text="Diamond"
+                        android:gravity="center"/>
+                </LinearLayout>
+            </LinearLayout>
 
-</LinearLayout>
+        </LinearLayout>
     </ScrollView>
 </LinearLayout>

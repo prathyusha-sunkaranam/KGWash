@@ -109,31 +109,9 @@ public class NavigationMainActivity extends AppCompatActivity
         });
         sharedPreferences = getSharedPreferences("userdetails", MODE_PRIVATE);
         uname = sharedPreferences.getString("email", null);
-       // String mname = sharedPreferences.getString("username", null);
-       // nav_email.setText(mname);
 
-//            if (sharedPreferences != null) {
-//                sharedPreferences = getSharedPreferences("admindetails", MODE_PRIVATE);
-//                String adminuname = sharedPreferences.getString("aemail", null);
-//                if (adminuname == null || adminuname == "") {
-//                    Intent i = new Intent(this, NavigationMainActivity.class);
-//                    startActivity(i);
-//                } else {
-//                    Intent i = new Intent(this, AdminOrder.class);
-//                    startActivity(i);
-//                }
-//            }
-//        sharedPreferences = getSharedPreferences("admindetails",MODE_PRIVATE);
-//        String adminuname = sharedPreferences.getString("aemail",null);
-//        if(sharedPreferences==null){
-//            if(adminuname==null|adminuname=="") {
-//                Intent i = new Intent(this,NavigationMainActivity.class );
-//                startActivity(i);
-//            }else {
-//                    Intent i = new Intent(this, AdminOrder.class);
-//                    startActivity(i);
-//                }
-//        }
+
+
                 if (uname == null || uname == "") {
 //                 nav_signin1.setText(uname);
                     loginsignup =(LinearLayout)header.findViewById(R.id.nav_loginll);
@@ -150,12 +128,7 @@ public class NavigationMainActivity extends AppCompatActivity
 
 
                 }
-
-               // }
                 else {
-//                    Intent i = new Intent(this, MainActivity.class);
-//                    Toast.makeText(this, "Logout completely", Toast.LENGTH_SHORT).show();
-//                    startActivity(i);
                 loginsignup =(LinearLayout)header.findViewById(R.id.nav_loginll);
                 loginsignup.setVisibility(View.GONE);
                 Menu menuNav=navigationView.getMenu();
@@ -211,6 +184,25 @@ public class NavigationMainActivity extends AppCompatActivity
     startActivity(ip);
 }
 
+    public void basic(View v) {
+        Intent ipr = new Intent(this, ScheduleActivity.class);
+        startActivity(ipr);
+    }
+    public void silver(View v) {
+        Intent ipr1 = new Intent(this, ScheduleActivity.class);
+        startActivity(ipr1);
+    }
+    public void gold(View v) {
+        Intent ipr2 = new Intent(this, ScheduleActivity.class);
+        startActivity(ipr2);
+    }
+    public void diamond(View v) {
+        Intent ipr3 = new Intent(this, ScheduleActivity.class);
+        startActivity(ipr3);
+    }
+
+
+
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -227,27 +219,6 @@ public class NavigationMainActivity extends AppCompatActivity
 
         }
     }
-
-//    @Override
-//    public boolean onCreateOptionsMenu(Menu menu) {
-//        // Inflate the menu; this adds items to the action bar if it is present.
-//        getMenuInflater().inflate(R.menu.navigation_main, menu);
-//        return true;
-//    }
-
-//    @Override
-//    public boolean onOptionsItemSelected(MenuItem item) {
-//
-//        int id = item.getItemId();
-//        //noinspection SimplifiableIfStatement
-//        if (id == R.id.action_settings) {
-//          //  getApplicationContext().getSharedPreferences("userdetails", 0).edit().clear().commit();
-//
-//            return true;
-//        }
-//        return super.onOptionsItemSelected(item);
-//    }
-
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
@@ -286,14 +257,10 @@ public class NavigationMainActivity extends AppCompatActivity
             Intent intent = new Intent(getApplicationContext(), NavigationMainActivity.class);
            getApplicationContext().getSharedPreferences("userdetails", 0).edit().clear().commit();
             startActivity(intent);
-
-
-
         }
         else if (id == R.id.nav_profile){
             Intent i3 = new Intent(NavigationMainActivity.this,ViewProfileActivity.class);
             startActivity(i3);
-
         }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
