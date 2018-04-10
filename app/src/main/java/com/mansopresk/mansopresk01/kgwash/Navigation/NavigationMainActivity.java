@@ -126,6 +126,8 @@ public class NavigationMainActivity extends AppCompatActivity
                     nav_logout.setVisible(false);
                     MenuItem nav_profile = menuNav.findItem(R.id.nav_profile);
                     nav_profile.setVisible(false);
+                    MenuItem nav_orders = menuNav.findItem(R.id.nav_orders);
+                    nav_orders.setVisible(false);
                     nav_email=(TextView)header.findViewById(R.id.nav_mail);
                     nav_email.setVisibility(View.GONE);
 
@@ -144,6 +146,8 @@ public class NavigationMainActivity extends AppCompatActivity
                 nav_logout.setVisible(true);
                 MenuItem nav_profile = menuNav.findItem(R.id.nav_profile);
                 nav_profile.setVisible(true);
+                MenuItem nav_orders = menuNav.findItem(R.id.nav_orders);
+                    nav_orders.setVisible(true);
                 nav_email=(TextView)header.findViewById(R.id.nav_mail);
                     nav_email.setVisibility(View.VISIBLE);
                 nav_email.setText(uname);
