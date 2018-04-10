@@ -43,6 +43,7 @@ public class NavigationMainActivity extends AppCompatActivity
     Button odernow;
     String uname;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -69,6 +70,14 @@ public class NavigationMainActivity extends AppCompatActivity
 
         nav_signin1 =header.findViewById(R.id.nav_signin1);
         nav_signup=header.findViewById(R.id.nav_signup);
+        sharedPreferences = getSharedPreferences("admindetails",MODE_PRIVATE);
+        String uname = sharedPreferences.getString("aemail",null);
+
+        if(uname!=null){
+            Intent i=new Intent(this,AdminOrder.class);
+            startActivity(i);
+        }
+
 
 
 
@@ -267,7 +276,7 @@ public class NavigationMainActivity extends AppCompatActivity
 
          else if (id == R.id.nav_logout) {
             Intent intent = new Intent(getApplicationContext(), NavigationMainActivity.class);
-            getApplicationContext().getSharedPreferences("userdetails", 0).edit().clear().commit();
+           getApplicationContext().getSharedPreferences("userdetails", 0).edit().clear().commit();
             startActivity(intent);
 
 

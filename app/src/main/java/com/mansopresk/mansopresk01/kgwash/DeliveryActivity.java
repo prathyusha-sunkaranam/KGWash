@@ -43,8 +43,9 @@ public class DeliveryActivity extends AppCompatActivity {
 
         else if (id == R.id.itemlog){
 
+
+            Intent i2 = new Intent(DeliveryActivity.this, NavigationMainActivity.class);
             getApplicationContext().getSharedPreferences("userdetails", 0).edit().clear().commit();
-            Intent i2 = new Intent(DeliveryActivity.this, MainActivity.class);
             startActivity(i2);
 
         }
@@ -52,9 +53,14 @@ public class DeliveryActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
     public void onBackPressed() {
-        super.onBackPressed();
-        Intent it=new Intent(DeliveryActivity.this, NavigationMainActivity.class);
-        startActivity(it);
+        // super.onBackPressed();
+        Intent intent = new Intent(Intent.ACTION_MAIN);
+        intent.addCategory(Intent.CATEGORY_HOME);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);//***Change Here***
+        startActivity(intent);
+        finish();
+        System.exit(0);
+
         //Toast.makeText(this, "back key is pressed", Toast.LENGTH_SHORT).show();
     }
 

@@ -2,6 +2,7 @@ package com.mansopresk.mansopresk01.kgwash;
 
 import android.Manifest;
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
@@ -33,6 +34,7 @@ public class AdminOrder extends AppCompatActivity {
     SharedPreferences sharedpreferences;
     TextView oname;
     SharedPreferences sharedPreferences;
+    TextView nav_email;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +45,7 @@ public class AdminOrder extends AppCompatActivity {
         userlocation=findViewById(R.id.userlocation);
         oname = findViewById(R.id.oname);
         setTitle("Admin Profile");
+        nav_email=(TextView)findViewById(R.id.nav_mail);
 //        sharedPreferences = getSharedPreferences("admindetails",MODE_PRIVATE);
 //        String adminuname = sharedPreferences.getString("aemail",null);
 //        if(sharedPreferences==null){
@@ -51,6 +54,25 @@ public class AdminOrder extends AppCompatActivity {
 //                startActivity(i);
 //            }
 //        }
+
+
+        sharedpreferences = getSharedPreferences("admindetails",MODE_PRIVATE);
+        String uname = sharedpreferences.getString("aemail",null);
+
+        if(sharedpreferences!=null){
+            if(uname!=null||uname==""){
+//                Intent it = new Intent(AdminOrder.this, MainActivity.class);
+//                startActivity(it);
+
+//                nav_email.setText(uname);
+
+            }
+            else {
+                Intent it = new Intent(AdminOrder.this, MainActivity.class);
+                startActivity(it);
+
+            }
+        }
          usermail.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View view) {
@@ -98,10 +120,9 @@ public class AdminOrder extends AppCompatActivity {
         int id = item.getItemId();
         switch (id) {
             case R.id.action_settings:
-                Intent logout = new Intent(getApplicationContext(), NavigationMainActivity.class);
-                getApplicationContext().getSharedPreferences("admindetails", 0).edit().clear().commit();
-                startActivity(logout);
-
+                getApplicationContext().getSharedPreferences("admindetails", 0).edit().clear().apply();
+                Intent i2 = new Intent(AdminOrder.this, NavigationMainActivity.class);
+                startActivity(i2);
         }
         return true;
     }
