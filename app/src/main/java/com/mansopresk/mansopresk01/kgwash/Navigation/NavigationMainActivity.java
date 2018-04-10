@@ -184,6 +184,23 @@ public class NavigationMainActivity extends AppCompatActivity
     startActivity(ip);
 }
 
+    public void basic(View v) {
+        Intent ipr = new Intent(this, ScheduleActivity.class);
+        startActivity(ipr);
+    }
+    public void silver(View v) {
+        Intent ipr1 = new Intent(this, ScheduleActivity.class);
+        startActivity(ipr1);
+    }
+    public void gold(View v) {
+        Intent ipr2 = new Intent(this, ScheduleActivity.class);
+        startActivity(ipr2);
+    }
+    public void diamond(View v) {
+        Intent ipr3 = new Intent(this, ScheduleActivity.class);
+        startActivity(ipr3);
+    }
+
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
