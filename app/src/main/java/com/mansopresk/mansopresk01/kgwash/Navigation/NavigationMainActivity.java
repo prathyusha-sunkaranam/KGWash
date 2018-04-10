@@ -26,6 +26,7 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.mansopresk.mansopresk01.kgwash.AdminOrder;
 import com.mansopresk.mansopresk01.kgwash.BookNowActivity;
 import com.mansopresk.mansopresk01.kgwash.MainActivity;
 import com.mansopresk.mansopresk01.kgwash.R;
@@ -36,13 +37,11 @@ import com.mansopresk.mansopresk01.kgwash.YourOrdersActivity;
 
 public class NavigationMainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-
     TextView nav_signin1,nav_signup, textView,nav_email,jhonno;
     SharedPreferences sharedPreferences;
+    LinearLayout loginsignup;
     Button odernow;
-
-
-
+    String uname;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,10 +55,7 @@ public class NavigationMainActivity extends AppCompatActivity
         textView = (TextView) findViewById(R.id.toolbartext);
         jhonno=findViewById(R.id.johnno);
 
-
-
         textView.setText("KG Wash");
-
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -73,15 +69,13 @@ public class NavigationMainActivity extends AppCompatActivity
 
         nav_signin1 =header.findViewById(R.id.nav_signin1);
         nav_signup=header.findViewById(R.id.nav_signup);
-        nav_email=header.findViewById(R.id.nav_email);
+
+
 
         nav_signin1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent it = new Intent(NavigationMainActivity.this,MainActivity.class);
-
-
-
                 startActivity(it);
 
 
@@ -96,27 +90,63 @@ public class NavigationMainActivity extends AppCompatActivity
 
             }
         });
-
-
-
-
         sharedPreferences = getSharedPreferences("userdetails", MODE_PRIVATE);
+        uname = sharedPreferences.getString("email", null);
+       // String mname = sharedPreferences.getString("username", null);
+       // nav_email.setText(mname);
 
-        String uname = sharedPreferences.getString("email", null);
-
-       String mname = sharedPreferences.getString("username", null);
-        nav_email.setText(mname);
-
-            if (sharedPreferences != null) {
-                if (uname != null || uname != "") {
+//            if (sharedPreferences != null) {
+//                sharedPreferences = getSharedPreferences("admindetails", MODE_PRIVATE);
+//                String adminuname = sharedPreferences.getString("aemail", null);
+//                if (adminuname == null || adminuname == "") {
+//                    Intent i = new Intent(this, NavigationMainActivity.class);
+//                    startActivity(i);
+//                } else {
+//                    Intent i = new Intent(this, AdminOrder.class);
+//                    startActivity(i);
+//                }
+//            }
+//        sharedPreferences = getSharedPreferences("admindetails",MODE_PRIVATE);
+//        String adminuname = sharedPreferences.getString("aemail",null);
+//        if(sharedPreferences==null){
+//            if(adminuname==null|adminuname=="") {
+//                Intent i = new Intent(this,NavigationMainActivity.class );
+//                startActivity(i);
+//            }else {
+//                    Intent i = new Intent(this, AdminOrder.class);
+//                    startActivity(i);
+//                }
+//        }
+                if (uname == null || uname == "") {
 //                 nav_signin1.setText(uname);
+                    loginsignup =(LinearLayout)header.findViewById(R.id.nav_loginll);
+                    loginsignup.setVisibility(View.VISIBLE);
+                    Menu menuNav=navigationView.getMenu();
+                    MenuItem nav_logout = menuNav.findItem(R.id.nav_logout);
+                    nav_logout.setVisible(false);
+                    MenuItem nav_profile = menuNav.findItem(R.id.nav_profile);
+                    nav_profile.setVisible(false);
+                    nav_email=(TextView)header.findViewById(R.id.nav_mail);
+                    nav_email.setVisibility(View.GONE);
+
+
                 }
 
-
-                } else {
-                    Intent i = new Intent(this, MainActivity.class);
-                    Toast.makeText(this, "Logout completely", Toast.LENGTH_SHORT).show();
-                    startActivity(i);
+               // }
+                else {
+//                    Intent i = new Intent(this, MainActivity.class);
+//                    Toast.makeText(this, "Logout completely", Toast.LENGTH_SHORT).show();
+//                    startActivity(i);
+                loginsignup =(LinearLayout)header.findViewById(R.id.nav_loginll);
+                loginsignup.setVisibility(View.GONE);
+                Menu menuNav=navigationView.getMenu();
+                MenuItem nav_logout = menuNav.findItem(R.id.nav_logout);
+                nav_logout.setVisible(true);
+                MenuItem nav_profile = menuNav.findItem(R.id.nav_profile);
+                nav_profile.setVisible(true);
+                nav_email=(TextView)header.findViewById(R.id.nav_mail);
+                    nav_email.setVisibility(View.VISIBLE);
+                nav_email.setText(uname);
 
                 }
         jhonno.setOnClickListener(new View.OnClickListener() {
@@ -134,8 +164,6 @@ public class NavigationMainActivity extends AppCompatActivity
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         Intent chooser = Intent.createChooser(intent, "Complete Action using..");
         startActivity(chooser);
-
-
     }
 
     public  boolean isPermissionGranted() {
@@ -157,11 +185,6 @@ public class NavigationMainActivity extends AppCompatActivity
         }
     }
 
-
-
-
-
-
    public void ordernow(View v){
     Intent ip = new Intent(this, BookNowActivity.class);
     startActivity(ip);
@@ -182,32 +205,27 @@ public class NavigationMainActivity extends AppCompatActivity
             System.exit(0);
 
         }
-
-
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.navigation_main, menu);
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        // Inflate the menu; this adds items to the action bar if it is present.
+//        getMenuInflater().inflate(R.menu.navigation_main, menu);
+//        return true;
+//    }
 
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            getApplicationContext().getSharedPreferences("userdetails", 0).edit().clear().commit();
-
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
+//    @Override
+//    public boolean onOptionsItemSelected(MenuItem item) {
+//
+//        int id = item.getItemId();
+//        //noinspection SimplifiableIfStatement
+//        if (id == R.id.action_settings) {
+//          //  getApplicationContext().getSharedPreferences("userdetails", 0).edit().clear().commit();
+//
+//            return true;
+//        }
+//        return super.onOptionsItemSelected(item);
+//    }
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
@@ -244,6 +262,11 @@ public class NavigationMainActivity extends AppCompatActivity
             }
 
          else if (id == R.id.nav_logout) {
+            Intent intent = new Intent(getApplicationContext(), NavigationMainActivity.class);
+            getApplicationContext().getSharedPreferences("userdetails", 0).edit().clear().commit();
+            startActivity(intent);
+
+
 
         }
         else if (id == R.id.nav_profile){
@@ -251,13 +274,8 @@ public class NavigationMainActivity extends AppCompatActivity
             startActivity(i3);
 
         }
-
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
-
-
-
 }

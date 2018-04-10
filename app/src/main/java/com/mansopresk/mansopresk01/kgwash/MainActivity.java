@@ -41,10 +41,6 @@ public class MainActivity extends Activity {
         signin = (Button)findViewById(R.id.signin);
         email = (EditText)findViewById(R.id.emailid);
         password = (EditText)findViewById(R.id.password);
-
-
-
-
         sharedpreferences = getSharedPreferences("userdetails",MODE_PRIVATE);
         String uname = sharedpreferences.getString("email",null);
 
@@ -55,10 +51,6 @@ public class MainActivity extends Activity {
 
 
     }
-
-
-
-
     public void valid(View v) {
         if (email.getText().toString().trim().isEmpty()) {
             email.requestFocus();
@@ -77,20 +69,21 @@ public class MainActivity extends Activity {
             editor.putString("password", pswrd);
             editor.commit();
 
-            if (sharedpreferences != null) {
-                onCreateOptionsMenu(menu);
-
-
-            }
+//            if (sharedpreferences != null) {
+//                onCreateOptionsMenu(menu);
+//
+//
+//            }
             if (usrname.equals("admin") && pswrd.equals("admin")) {
-
-
-
-
                 Toast.makeText(this, "Login Success", Toast.LENGTH_SHORT).show();
                 Intent i = new Intent(this, AdminOrder.class);
 //                    email.setText("");
 //                    password.setText("");
+                editor = getSharedPreferences("admindetails", MODE_PRIVATE).edit();
+                editor.putString("aemail", usrname);
+                editor.putString("apassword", pswrd);
+                editor.commit();
+
                 startActivity(i);
             }
 
