@@ -21,7 +21,7 @@ public class MainActivity extends Activity {
     public static final String MyPREFERENCES = "MyPrefs" ;
     public static final String Name = "nameKey";
     public static final String pswrd = "pswrdKey";
-    SharedPreferences sharedpreferences;
+    SharedPreferences sharedPreferences;
     SharedPreferences.Editor editor;
 
 
@@ -36,6 +36,22 @@ public class MainActivity extends Activity {
         signin = (Button)findViewById(R.id.signin);
         email = (EditText)findViewById(R.id.emailid);
         password = (EditText)findViewById(R.id.password);
+
+        sharedPreferences = getSharedPreferences("admindetails",MODE_PRIVATE);
+        String uname = sharedPreferences.getString("aemail",null);
+
+        if(uname!=null){
+            Intent i=new Intent(this,AdminOrder.class);
+            startActivity(i);
+        }
+
+        String uname1 = sharedPreferences.getString("deliveryemail",null);
+        if(uname1!=null){
+            Intent i2=new Intent(this,DeliveryActivity.class);
+            startActivity(i2);
+        }
+
+
     }
     public void valid(View v) {
         if (email.getText().toString().trim().isEmpty()) {
