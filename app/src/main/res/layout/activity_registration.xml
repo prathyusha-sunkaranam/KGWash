@@ -94,7 +94,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Password *"
-                    android:inputType="textEmailAddress" />
+                     />
             </android.support.design.widget.TextInputLayout>
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
@@ -106,7 +106,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint=" RePassword *"
-                    android:inputType="textEmailAddress" />
+                    />
             </android.support.design.widget.TextInputLayout>
 
 

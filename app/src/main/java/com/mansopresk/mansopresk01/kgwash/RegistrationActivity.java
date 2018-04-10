@@ -6,6 +6,8 @@ import android.content.SharedPreferences;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -29,8 +31,10 @@ public class RegistrationActivity extends Activity {
         address = findViewById(R.id.address_et);
         landmark = findViewById(R.id.landmark_et);
         register = findViewById(R.id.register);
+
         pass = findViewById(R.id.pass_et);
         repass = findViewById(R.id.repass_et);
+
 
     }
 
@@ -66,7 +70,21 @@ public class RegistrationActivity extends Activity {
             landmark.requestFocus();
             landmark.setError("");
 
-        } else {
+
+
+        } else if(pass.getText().toString().isEmpty()) {
+            pass.requestFocus();
+            pass.setError("");
+
+
+        }else if (repass.getText().toString().isEmpty()) {
+            repass.requestFocus();
+            repass.setError("");
+
+
+
+    }else {
+
 
 
                 String username = name.getText().toString();
@@ -89,6 +107,7 @@ public class RegistrationActivity extends Activity {
                         editor.putString("landmark", landmarkregister);
                         editor.commit();
 
+
                         Intent i = new Intent(RegistrationActivity.this, BookNowActivity.class);
                         startActivity(i);
                     }
@@ -96,6 +115,7 @@ public class RegistrationActivity extends Activity {
                         showSnackbar(emailregister, "provide proper email id", 4000);
 
                 }
+
 
             }
         }
