@@ -1,6 +1,7 @@
 package com.mansopresk.mansopresk01.kgwash;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -10,11 +11,30 @@ import com.mansopresk.mansopresk01.kgwash.Navigation.NavigationMainActivity;
 import com.mansopresk.mansopresk01.kgwash.Order.PriceOrderActivity;
 
 public class DeliveryActivity extends AppCompatActivity {
+    SharedPreferences sharedpreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_delivery);
+
+        sharedpreferences = getSharedPreferences("admindetails",MODE_PRIVATE);
+        String uname1 = sharedpreferences.getString("deliveryemail",null);
+
+        if(sharedpreferences!=null){
+            if(uname1!=null||uname1==""){
+//                Intent it = new Intent(AdminOrder.this, MainActivity.class);
+//                startActivity(it);
+
+//                nav_email.setText(uname);
+
+            }
+            else {
+                Intent it = new Intent(DeliveryActivity.this, MainActivity.class);
+                startActivity(it);
+
+            }
+        }
 
     }
 
@@ -44,9 +64,9 @@ public class DeliveryActivity extends AppCompatActivity {
         else if (id == R.id.itemlog){
 
 
-            Intent i2 = new Intent(DeliveryActivity.this, NavigationMainActivity.class);
-            getApplicationContext().getSharedPreferences("userdetails", 0).edit().clear().commit();
-            startActivity(i2);
+            Intent it = new Intent(DeliveryActivity.this, NavigationMainActivity.class);
+            getApplicationContext().getSharedPreferences("admindetails", 0).edit().clear().apply();
+            startActivity(it);
 
         }
 

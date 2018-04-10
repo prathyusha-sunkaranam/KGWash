@@ -64,11 +64,17 @@ public class MainActivity extends Activity {
             String pswrd = password.getText().toString();
 
 //            sharedpreferences = getSharedPreferences("email",MODE_PRIVATE);
+             if((usrname.equals("admin")&& pswrd.equals("admin") )||(usrname.equals("delivery")&& pswrd.equals("delivery"))){
+                 getApplicationContext().getSharedPreferences("admindetails", 0).edit().clear().apply();
+             }
 
-            editor = getSharedPreferences("userdetails", MODE_PRIVATE).edit();
-            editor.putString("email", usrname);
-            editor.putString("password", pswrd);
-            editor.commit();
+              else{
+
+                 editor = getSharedPreferences("userdetails", MODE_PRIVATE).edit();
+                 editor.putString("email", usrname);
+                 editor.putString("password", pswrd);
+                 editor.commit();
+             }
 
 //            if (sharedpreferences != null) {
 //                onCreateOptionsMenu(menu);
@@ -89,6 +95,10 @@ public class MainActivity extends Activity {
             else if (usrname.equals("delivery") && pswrd.equals("delivery")){
 
                 Toast.makeText(this, "Login Success", Toast.LENGTH_SHORT).show();
+                editor = getSharedPreferences("admindetails", MODE_PRIVATE).edit();
+                editor.putString("deliveryemail", usrname);
+                editor.putString("deliverypassword", pswrd);
+                editor.commit();
                 Intent i2 = new Intent(this, DeliveryActivity.class);
 
                 startActivity(i2);

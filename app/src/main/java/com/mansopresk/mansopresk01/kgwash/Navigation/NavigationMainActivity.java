@@ -28,6 +28,7 @@ import android.widget.Toast;
 
 import com.mansopresk.mansopresk01.kgwash.AdminOrder;
 import com.mansopresk.mansopresk01.kgwash.BookNowActivity;
+import com.mansopresk.mansopresk01.kgwash.DeliveryActivity;
 import com.mansopresk.mansopresk01.kgwash.MainActivity;
 import com.mansopresk.mansopresk01.kgwash.R;
 import com.mansopresk.mansopresk01.kgwash.RegistrationActivity;
@@ -77,6 +78,13 @@ public class NavigationMainActivity extends AppCompatActivity
             Intent i=new Intent(this,AdminOrder.class);
             startActivity(i);
         }
+
+        String uname1 = sharedPreferences.getString("deliveryemail",null);
+        if(uname1!=null){
+            Intent i2=new Intent(this,DeliveryActivity.class);
+            startActivity(i2);
+        }
+
 
 
 
