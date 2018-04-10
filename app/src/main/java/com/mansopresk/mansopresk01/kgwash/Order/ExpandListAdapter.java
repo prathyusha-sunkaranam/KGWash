@@ -5,11 +5,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 
 import com.mansopresk.mansopresk01.kgwash.R;
 
+import java.lang.reflect.Field;
 import java.util.ArrayList;
 
 /**
@@ -48,6 +50,20 @@ public class ExpandListAdapter extends BaseExpandableListAdapter {
             LayoutInflater infalInflater = (LayoutInflater) context
                     .getSystemService(context.LAYOUT_INFLATER_SERVICE);
             convertView = infalInflater.inflate(R.layout.child_item, null);
+        }
+        Spinner spinner = (Spinner) convertView.findViewById(R.id.spinner);
+        try {
+            Field popup = Spinner.class.getDeclaredField("mPopup");
+            popup.setAccessible(true);
+
+            // Get private mPopup member variable and try cast to ListPopupWindow
+            android.widget.ListPopupWindow popupWindow = (android.widget.ListPopupWindow) popup.get(spinner);
+
+            // Set popupWindow height to 500px
+            popupWindow.setHeight(500);
+        }
+        catch (NoClassDefFoundError | ClassCastException | NoSuchFieldException | IllegalAccessException e) {
+            // silently fail...
         }
         TextView tv = (TextView) convertView.findViewById(R.id.country_name);
         tv.setText(child.getName().toString());
@@ -88,6 +104,9 @@ public class ExpandListAdapter extends BaseExpandableListAdapter {
                     .getSystemService(context.LAYOUT_INFLATER_SERVICE);
             convertView = inf.inflate(R.layout.group_item, null);
         }
+
+
+
         TextView tv = (TextView) convertView.findViewById(R.id.group_name);
         tv.setText(group.getName());
         return convertView;

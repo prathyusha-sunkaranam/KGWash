@@ -5,17 +5,21 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ExpandableListView;
+import android.widget.Spinner;
 import android.widget.Toast;
+
 
 
 import com.mansopresk.mansopresk01.kgwash.R;
 
+import java.lang.reflect.Field;
 import java.util.ArrayList;
 
 public class PriceOrderActivity extends AppCompatActivity {
     private ExpandListAdapter ExpAdapter;
     private ArrayList<Group> ExpListItems;
     private ExpandableListView ExpandList;
+    Spinner spinner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +30,22 @@ public class PriceOrderActivity extends AppCompatActivity {
         ExpListItems = SetStandardGroups();
         ExpAdapter = new ExpandListAdapter(PriceOrderActivity.this, ExpListItems);
         ExpandList.setAdapter(ExpAdapter);
+
+        spinner=findViewById(R.id.spinner);
+
+//        try {
+//            Field popup = Spinner.class.getDeclaredField("mPopup");
+//            popup.setAccessible(true);
+//
+//            // Get private mPopup member variable and try cast to ListPopupWindow
+//            android.widget.ListPopupWindow popupWindow = (android.widget.ListPopupWindow) popup.get(spinner);
+//
+//            // Set popupWindow height to 500px
+//            popupWindow.setHeight(500);
+//        }
+//        catch (NoClassDefFoundError | ClassCastException | NoSuchFieldException | IllegalAccessException e) {
+//            // silently fail...
+//        }
 
         ExpandList.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
 

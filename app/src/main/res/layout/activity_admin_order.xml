@@ -45,7 +45,7 @@
                         android:orientation="vertical">
 
                         <TextView
-                            android:id="@+id/oname"
+                            android:id="@+id/username"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Name" />
@@ -248,7 +248,7 @@
                 android:layout_gravity="center"
                 android:layout_marginRight="20dp"
                 android:layout_marginLeft="20dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="3dp"
                 card_view:cardCornerRadius="4dp"
                 card_view:cardElevation="5dp"
                 card_view:cardUseCompatPadding="true">
