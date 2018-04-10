@@ -56,7 +56,8 @@
               android:id="@+id/name_register"
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
-               android:hint="Name *"
+              android:hint="Name *"
+              android:maxLength="25"
                  android:inputType="text" />
 
             </android.support.design.widget.TextInputLayout>
