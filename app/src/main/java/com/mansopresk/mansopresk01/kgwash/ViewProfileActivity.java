@@ -29,6 +29,7 @@ public class ViewProfileActivity extends AppCompatActivity {
         landmark=findViewById(R.id.landmarl_place);
         adress=findViewById(R.id.adress_place);
         SharedPreferences sharedPreferences=getSharedPreferences("userdetails", MODE_PRIVATE);
+
         sname=sharedPreferences.getString("username",null);
         smobile=sharedPreferences.getString("mobile",null);
         saltermobile=sharedPreferences.getString("alternatenum",null);
@@ -37,12 +38,14 @@ public class ViewProfileActivity extends AppCompatActivity {
         sdate=sharedPreferences.getString("username",null);
         stimeslot=sharedPreferences.getString("username",null);
         sadress=sharedPreferences.getString("address",null);
+
         name.setText(sname);
         mobile.setText(smobile);
         altermobile.setText(saltermobile);
         email.setText(semail);
         landmark.setText(slandmark);
         adress.setText(sadress);
+
 
         Toolbar mToolbar = (Toolbar) findViewById(R.id.toolbarprofile);
         setSupportActionBar(mToolbar);

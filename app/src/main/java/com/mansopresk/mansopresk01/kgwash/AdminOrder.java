@@ -32,7 +32,7 @@ public class AdminOrder extends AppCompatActivity {
     GifImageView usercall1,usercall2,usermail,userlocation;
     EditText mobile;
     SharedPreferences sharedpreferences;
-    TextView oname;
+    TextView ousername;
     SharedPreferences sharedPreferences;
     TextView nav_email;
 
@@ -40,12 +40,15 @@ public class AdminOrder extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_order);
+
         usercall1 = findViewById(R.id.phcall1);
         usermail=findViewById(R.id.useremail);
         userlocation=findViewById(R.id.userlocation);
-        oname = findViewById(R.id.oname);
+        ousername= findViewById(R.id.username);
         setTitle("Admin Profile");
         nav_email=(TextView)findViewById(R.id.nav_mail);
+
+
 
         sharedpreferences = getSharedPreferences("admindetails",MODE_PRIVATE);
         String uname = sharedpreferences.getString("aemail",null);
@@ -85,7 +88,13 @@ public class AdminOrder extends AppCompatActivity {
 
             }
         });
-}
+
+        sharedpreferences = getSharedPreferences("userdetails", MODE_PRIVATE);
+
+        String username =sharedpreferences.getString("custname", null);
+      ousername.setText(username);
+
+    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
 
@@ -102,6 +111,7 @@ public class AdminOrder extends AppCompatActivity {
             case R.id.action_settings:
                 getApplicationContext().getSharedPreferences("admindetails", 0).edit().clear().apply();
                 Intent i2 = new Intent(AdminOrder.this, NavigationMainActivity.class);
+
                 startActivity(i2);
         }
         return true;

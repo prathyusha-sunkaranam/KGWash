@@ -103,7 +103,6 @@ public class ScheduleActivity extends AppCompatActivity {
     }
 
 
-
     public void schedule(View v)
     {
 
@@ -146,12 +145,7 @@ public class ScheduleActivity extends AppCompatActivity {
 
         }
 
-
         else {
-            String email = emailregister_sch.getText().toString();
-
-
-            if (email.contains("@") && email.contains(".com")) {
 
 
 //
@@ -176,29 +170,36 @@ public class ScheduleActivity extends AppCompatActivity {
 //            editor=getSharedPreferences("userdetails", MODE_PRIVATE).edit();
 //            editor.putString("oname",ordername);
                 Intent i = new Intent(ScheduleActivity.this, YourOrdersActivity.class);
-                editor = getSharedPreferences("userdetails", MODE_PRIVATE).edit();
-                //String ordername =  name_sch.getText().toString();
-                String custdate = etcalendar.getText().toString();
-                String custname = name_sch.getText().toString();
-                editor.putString("custname", custname);
-                editor.putString("userdate", custdate);
+            editor=getSharedPreferences("userdetails", MODE_PRIVATE).edit();
+            //String ordername =  name_sch.getText().toString();
+            String custlandmark=landmark_sch.getText().toString();
+            String custaddress=address_sch.getText().toString();
+            String custemail=emailregister_sch.getText().toString();
+            String custno =mobile_sch.getText().toString();
+            String custdate =  etcalendar.getText().toString();
+             String custname =   name_sch.getText().toString();
 
 
-                editor.putString("usertime", spinner.getSelectedItem().toString());
-                editor.commit();
+             editor.putString("custname",custname);
+             editor.putString("userdate",custdate);
+            editor.putString("usermno",custno);
+            editor.putString("useremail", custemail);
 
-                startActivity(i);
+            editor.putString("useraddress",custaddress);
+            editor.putString("userlandmark",custlandmark);
+
+
+
+            editor.putString("usertime", spinner.getSelectedItem().toString());
+            editor.commit();
+
+            startActivity(i);
 //            editor=getSharedPreferences("userdetails", MODE_PRIVATE).edit();
 //            String ordername =  name_sch.getText().toString();
 //
 //            editor.putString("oname",ordername);
 
 
-            }
-            else
-            {
-                Toast.makeText(this, " Enter proper mail id ", Toast.LENGTH_SHORT).show();
-            }
         }
     }
 
