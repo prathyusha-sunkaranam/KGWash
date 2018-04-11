@@ -103,13 +103,14 @@ public class MainActivity extends Activity {
                 Intent it=new Intent(MainActivity.this,MainActivity.class);
 
 
-                Toast.makeText(MainActivity.this, " you clicked cancel", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(MainActivity.this, " you clicked cancel", Toast.LENGTH_SHORT).show();
                 startActivity(it);
             }
         });
 
         AlertDialog dialog = alert.create();
         dialog.show();
+
     }
 
 
@@ -177,6 +178,13 @@ public class MainActivity extends Activity {
     public void signup(View v){
         Intent i3 = new Intent(MainActivity.this,RegistrationActivity.class);
         startActivity(i3);
+    }
+    public void onBackPressed() {
+        super.onBackPressed();
+        //Toast.makeText(this, "back key is pressed", Toast.LENGTH_SHORT).show();
+        Intent i3 = new Intent(MainActivity.this,NavigationMainActivity.class);
+        startActivity(i3);
+
     }
 
 
