@@ -106,7 +106,7 @@ public class RegistrationActivity extends Activity {
                         startActivity(i);
                     }
                     else{
-                        showSnackbar(emailregister, "provide proper email id", 2000);
+                        showSnackbar(emailregister, "provide proper mail id", 2000);
 
                 }
 

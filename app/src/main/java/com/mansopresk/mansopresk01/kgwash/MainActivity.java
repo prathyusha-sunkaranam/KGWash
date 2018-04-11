@@ -1,9 +1,12 @@
 package com.mansopresk.mansopresk01.kgwash;
 
 import android.app.Activity;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -11,12 +14,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.mansopresk.mansopresk01.kgwash.Navigation.NavigationMainActivity;
 
 public class MainActivity extends Activity {
     EditText email,password,dateview;
+    TextView pass;
     Button signin,signup;
     public static final String MyPREFERENCES = "MyPrefs" ;
     public static final String Name = "nameKey";
@@ -33,6 +38,7 @@ public class MainActivity extends Activity {
         signin = (Button)findViewById(R.id.signin);
         email = (EditText)findViewById(R.id.emailid);
         password = (EditText)findViewById(R.id.password);
+        pass=findViewById(R.id.forgotpass);
 
         sharedPreferences = getSharedPreferences("admindetails",MODE_PRIVATE);
         String uname = sharedPreferences.getString("aemail",null);
@@ -50,6 +56,68 @@ public class MainActivity extends Activity {
 
 
     }
+
+
+    public  void forget(View v){
+        LayoutInflater inflater = getLayoutInflater();
+        View alertLayout = inflater.inflate(R.layout.layout_custom_dialog, null);
+        final EditText mail = alertLayout.findViewById(R.id.fmail);
+        final Button ok=alertLayout.findViewById(R.id.fok);
+        final Button cancel=alertLayout.findViewById(R.id.fcancel);
+
+
+
+
+        AlertDialog.Builder alert = new AlertDialog.Builder(this);
+        alert.setTitle("Forgot Password");
+        // this is set the view from XML inside AlertDialog
+        alert.setView(alertLayout);
+        // disallow cancel of AlertDialog on click of back button and outside touch
+        alert.setCancelable(false);
+        ok.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final String smail=mail.getText().toString().trim();
+                if (smail.contains("@") && smail.contains(".com")) {
+                    Intent it = new Intent(MainActivity.this, MainActivity.class);
+                    startActivity(it);
+                }
+                 else if (mail.getText().toString().trim().isEmpty()) {
+                    mail.requestFocus();
+                    mail.setError("");
+                }
+
+                    else {
+                        Toast.makeText(MainActivity.this, " enter proper mail id ", Toast.LENGTH_SHORT).show();
+                    }
+
+
+
+
+
+            }
+        });
+        cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent it=new Intent(MainActivity.this,MainActivity.class);
+
+
+                Toast.makeText(MainActivity.this, " you clicked cancel", Toast.LENGTH_SHORT).show();
+                startActivity(it);
+            }
+        });
+
+        AlertDialog dialog = alert.create();
+        dialog.show();
+    }
+
+
+
+
+
+
+
     public void valid(View v) {
         if (email.getText().toString().trim().isEmpty()) {
             email.requestFocus();
