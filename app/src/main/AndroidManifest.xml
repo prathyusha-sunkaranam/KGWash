@@ -31,7 +31,7 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".YourOrdersActivity"
-            android:theme="@style/AppTheme.NoActionBar"  />
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".RegistrationActivity"
             android:theme="@style/AppTheme.ActionBar" />
@@ -53,12 +53,15 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".AdminOrder"
-            android:theme="@style/AppTheme.ActionBar"  />
+            android:theme="@style/AppTheme.ActionBar" />
         <activity
             android:name=".DeliveryActivity"
             android:theme="@style/AppTheme.ActionBar" />
-        <activity android:name=".Order.PriceOrderActivity"
-            android:theme="@style/AppTheme.ActionBar"></activity>
+        <activity
+            android:name=".Order.PriceOrderActivity"
+            android:theme="@style/AppTheme.ActionBar" />
+        <activity android:name=".AdminOrderViewActivity"
+            android:theme="@style/AppTheme.ActionBar" ></activity>
     </application>
 
 </manifest>

@@ -32,7 +32,7 @@ public class ScheduleActivity extends AppCompatActivity {
     Spinner spinner;
     Calendar calendar;
     private int year, month, day;
-    EditText  name_sch,mobile_sch,alternatenum_sch,emailregister_sch,address_sch,landmark_sch,dateview,etcalendar;
+    EditText  name_sch,mobile_sch,alternatenum_sch,emailregister_sch,address_sch,landmark_sch,etcalendar;
     Button Schedule,calendarbtn;
     SharedPreferences sharedpreferences;
     SharedPreferences.Editor editor;
@@ -109,66 +109,39 @@ public class ScheduleActivity extends AppCompatActivity {
         if (name_sch.getText().toString().isEmpty())
         {
             name_sch.requestFocus();
-            name_sch.setError("");
+            name_sch.setError("please provide name");
         }
 
         else if (mobile_sch.getText().toString().isEmpty())
         {
             mobile_sch.requestFocus();
-            mobile_sch.setError("");
+            mobile_sch.setError("please provide mobile number");
         }else if (mobile_sch.length() != 10) {
             showSnackbar(mobile_sch, "Please enter 10 digit mobile number", 4000);
 
         }
-        else if( alternatenum_sch.getText().toString().isEmpty())
-        {
-            alternatenum_sch.requestFocus();
-            alternatenum_sch.setError("");
-        } else if (alternatenum_sch.length() != 10) {
-            showSnackbar(alternatenum_sch, "Please enter 10 digit mobile number", 4000);
-        }
         else if (emailregister_sch.getText().toString().isEmpty())
         {
                 emailregister_sch.requestFocus();
-                emailregister_sch.setError("");
+                emailregister_sch.setError("please provide email id");
         }
         else if (address_sch.getText().toString().isEmpty())
         {
             address_sch.requestFocus();
-            address_sch.setError("");
+            address_sch.setError("please provide address");
 
         }
-        else if (landmark_sch.getText().toString().isEmpty())
+        else if (etcalendar.getText().toString().isEmpty())
         {
-            landmark_sch.requestFocus();
-            landmark_sch.setError("");
-
+            showSnackbar(etcalendar, "Please select the date", 4000);
         }
+        else if (spinner.getSelectedItemPosition() == 0)
+        {
+            showSnackbar(spinner, "Please select time slot", 4000);
+        }
+
 
         else {
-
-
-//
-//                sharedpreferences = getSharedPreferences("userdetails", MODE_PRIVATE);
-//
-//                String uname = sharedpreferences.getString("username", null);
-//                String mobilenum = sharedpreferences.getString("mobile", null);
-//                String alernum = sharedpreferences.getString("alternatenum", null);
-//                String emailid = sharedpreferences.getString("emailregister", null);
-//                String adreesdetails = sharedpreferences.getString("address", null);
-//                String landmarkdetails = sharedpreferences.getString("landmark", null);
-//
-
-//
-//                name_sch.setText(uname);
-//                mobile_sch.setText(mobilenum);
-//                alternatenum_sch.setText(alernum);
-//                emailregister_sch.setText(emailid);
-//                address_sch.setText(adreesdetails);
-//                landmark_sch.setText(landmarkdetails);
-//            String ordername =  name_sch.getText().toString();
-//            editor=getSharedPreferences("userdetails", MODE_PRIVATE).edit();
-//            editor.putString("oname",ordername);
                 Intent i = new Intent(ScheduleActivity.this, YourOrdersActivity.class);
             editor=getSharedPreferences("userdetails", MODE_PRIVATE).edit();
             //String ordername =  name_sch.getText().toString();
@@ -194,12 +167,6 @@ public class ScheduleActivity extends AppCompatActivity {
             editor.commit();
 
             startActivity(i);
-//            editor=getSharedPreferences("userdetails", MODE_PRIVATE).edit();
-//            String ordername =  name_sch.getText().toString();
-//
-//            editor.putString("oname",ordername);
-
-
         }
     }
 
