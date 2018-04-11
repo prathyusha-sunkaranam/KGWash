@@ -95,6 +95,16 @@ public class AdminOrder extends AppCompatActivity {
       ousername.setText(username);
 
     }
+
+
+    public void details(View v){
+        Intent i2 = new Intent(AdminOrder.this,AdminOrderViewActivity.class);
+        startActivity(i2);
+    }
+    public void odetails(View v){
+        Intent i3 = new Intent(AdminOrder.this,AdminOrderViewActivity.class);
+        startActivity(i3);
+    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
 

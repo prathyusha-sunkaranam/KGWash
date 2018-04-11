@@ -43,12 +43,6 @@ public class YourOrdersActivity extends AppCompatActivity {
         dateplace.setText(udate);
 
         timesloteplace.setText(sharedpreferences.getString("usertime", ""));
-
-
-
-
-
-
     }
     @Override
     public boolean onSupportNavigateUp() {
