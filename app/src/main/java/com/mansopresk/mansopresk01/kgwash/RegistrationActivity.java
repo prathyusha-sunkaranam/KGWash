@@ -15,10 +15,10 @@ import android.widget.Toast;
 
 public class RegistrationActivity extends Activity {
 
-    EditText name, mobile, alternatenum, emailregister, address, landmark, pass, repass;
+    EditText name, mobile, alternatenum, emailregister, address, landmark, pass;
     Button register;
     SharedPreferences.Editor editor;
-    String spass, srepass;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,9 +31,7 @@ public class RegistrationActivity extends Activity {
         address = findViewById(R.id.address_et);
         landmark = findViewById(R.id.landmark_et);
         register = findViewById(R.id.register);
-
         pass = findViewById(R.id.pass_et);
-        repass = findViewById(R.id.repass_et);
 
 
     }
@@ -45,14 +43,15 @@ public class RegistrationActivity extends Activity {
 
     public void register(View v) {
 
-        if (name.getText().toString().isEmpty()) {
+
+       if (name.getText().toString().isEmpty()) {
             name.requestFocus();
             name.setError("");
         } else if (mobile.getText().toString().isEmpty()) {
             mobile.requestFocus();
             mobile.setError("");
         } else if (mobile.length() != 10) {
-            showSnackbar(mobile, "Please enter 10 digit mobile number", 4000);
+            showSnackbar(mobile, "Please enter 10 digit mobile number", 2000);
 
         } else if (alternatenum.getText().toString().isEmpty()) {
             alternatenum.requestFocus();
@@ -62,29 +61,23 @@ public class RegistrationActivity extends Activity {
             emailregister.requestFocus();
             emailregister.setError("");
 
-        } else if (address.getText().toString().isEmpty()) {
+        }
+       else if (pass.getText().toString().isEmpty()) {
+           pass.requestFocus();
+           pass.setError("");
+
+
+       }
+        else if (address.getText().toString().isEmpty()) {
             address.requestFocus();
             address.setError("");
+
 
         } else if (landmark.getText().toString().isEmpty()) {
             landmark.requestFocus();
             landmark.setError("");
 
-
-
-        } else if(pass.getText().toString().isEmpty()) {
-            pass.requestFocus();
-            pass.setError("");
-
-
-        }else if (repass.getText().toString().isEmpty()) {
-            repass.requestFocus();
-            repass.setError("");
-
-
-
-    }else {
-
+        } else {
 
 
                 String username = name.getText().toString();
@@ -93,6 +86,7 @@ public class RegistrationActivity extends Activity {
                 String email = emailregister.getText().toString();
                 String addressregister = address.getText().toString();
                 String landmarkregister = landmark.getText().toString();
+                String spass=pass.getText().toString();
 
                 if (email.contains("@") && email.contains(".com")) {
 
@@ -105,17 +99,16 @@ public class RegistrationActivity extends Activity {
                         editor.putString("emailregister", email);
                         editor.putString("address", addressregister);
                         editor.putString("landmark", landmarkregister);
+                        editor.putString("pasword",spass);
                         editor.commit();
 
-
-                        Intent i = new Intent(RegistrationActivity.this, BookNowActivity.class);
+                        Intent i = new Intent(RegistrationActivity.this, MainActivity.class);
                         startActivity(i);
                     }
                     else{
-                        showSnackbar(emailregister, "provide proper email id", 4000);
+                        showSnackbar(emailregister, "provide proper email id", 2000);
 
                 }
-
 
             }
         }

@@ -96,21 +96,6 @@
                     android:hint="Password *"
                      />
             </android.support.design.widget.TextInputLayout>
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp">
-
-                <EditText
-                    android:id="@+id/repass_et"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint=" RePassword *"
-                    />
-            </android.support.design.widget.TextInputLayout>
-
-
-
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
