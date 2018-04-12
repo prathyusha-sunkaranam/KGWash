@@ -11,16 +11,29 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+import com.mansopresk.mansopresk01.kgwash.Maps.MapsActivity;
 import com.mansopresk.mansopresk01.kgwash.Navigation.NavigationMainActivity;
 import com.mansopresk.mansopresk01.kgwash.Order.PriceOrderActivity;
 
+import pl.droidsonroids.gif.GifImageView;
+
 public class DeliveryActivity extends AppCompatActivity {
     SharedPreferences sharedpreferences;
+    GifImageView maps;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_delivery);
+
+        maps.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent it = new Intent(DeliveryActivity.this, MapsActivity.class);
+                startActivity(it);
+
+            }
+        });
 
         sharedpreferences = getSharedPreferences("admindetails",MODE_PRIVATE);
         String uname1 = sharedpreferences.getString("deliveryemail",null);
