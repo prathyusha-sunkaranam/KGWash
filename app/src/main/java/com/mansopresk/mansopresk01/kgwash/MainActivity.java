@@ -70,10 +70,9 @@ public class MainActivity extends Activity {
 
         AlertDialog.Builder alert = new AlertDialog.Builder(this);
         alert.setTitle("Forgot Password");
-        // this is set the view from XML inside AlertDialog
+
         alert.setView(alertLayout);
-        // disallow cancel of AlertDialog on click of back button and outside touch
-        alert.setCancelable(false);
+         alert.setCancelable(false);
         ok.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -174,7 +173,7 @@ public class MainActivity extends Activity {
             }
         }
     }
-    //    }
+
     public void signup(View v){
         Intent i3 = new Intent(MainActivity.this,RegistrationActivity.class);
         startActivity(i3);

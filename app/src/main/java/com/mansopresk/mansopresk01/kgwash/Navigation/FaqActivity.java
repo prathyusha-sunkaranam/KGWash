@@ -255,8 +255,6 @@ public class FaqActivity extends AppCompatActivity implements View.OnClickListen
             mLayoutParams = (LinearLayout.LayoutParams) view.getLayoutParams();
             mView.setVisibility(View.VISIBLE);
             int height = mView.getHeight();
-            //mMarginBottomFromY = (int) (height * fromY) + mLayoutParams.bottomMargin + height;
-            //mMarginBottomToY = (int) (0 - ((height * toY) + mLayoutParams.bottomMargin)) + height;
 
             mMarginBottomFromY = 0;
             mMarginBottomToY = height;
@@ -271,7 +269,7 @@ public class FaqActivity extends AppCompatActivity implements View.OnClickListen
                 int newMarginBottom = (int) ((mMarginBottomToY - mMarginBottomFromY) * interpolatedTime) - mMarginBottomToY;
                 mLayoutParams.setMargins(mLayoutParams.leftMargin, mLayoutParams.topMargin, mLayoutParams.rightMargin, newMarginBottom);
                 mView.getParent().requestLayout();
-                //Log.v("CZ","newMarginBottom..." + newMarginBottom + " , mLayoutParams.topMargin..." + mLayoutParams.topMargin);
+
             }
         }
     }
@@ -291,7 +289,7 @@ public class FaqActivity extends AppCompatActivity implements View.OnClickListen
                 ActivityCompat.requestPermissions((Activity) this, new String[]{Manifest.permission.CALL_PHONE}, 1);
                 return false;
             }
-        } else { //permission is automatically granted on sdk<23 upon installation
+        } else {
             Log.v("TAG", "Permission is granted");
             return true;
         }

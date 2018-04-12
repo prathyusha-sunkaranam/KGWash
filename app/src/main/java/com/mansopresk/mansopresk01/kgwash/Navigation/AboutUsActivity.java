@@ -105,13 +105,8 @@ public class AboutUsActivity extends AppCompatActivity implements View.OnClickLi
     }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-//        int id = item.getItemId();
-//        if (id == R.id.action_home) {
-            Intent i = new Intent(AboutUsActivity.this,NavigationMainActivity.class);
+        Intent i = new Intent(AboutUsActivity.this,NavigationMainActivity.class);
             startActivity(i);
-//            return true;
-
-//        }
 
         return super.onOptionsItemSelected(item);
     }
@@ -140,9 +135,6 @@ public class AboutUsActivity extends AppCompatActivity implements View.OnClickLi
                     panel1.setVisibility(View.VISIBLE);
                     Log.v("CZ", "height..." + panel1.getHeight());
                 }
-
-                //panel1.setVisibility(View.GONE);
-                //Log.v("CZ","again height..." + panel1.getHeight());
                 hideThemAll();
                 if (v != View.VISIBLE) {
                     panel1.startAnimation(new ScaleAnimToShow(1.0f, 1.0f, 1.0f, 0.0f, 500, panel1, true));
@@ -198,7 +190,7 @@ public class AboutUsActivity extends AppCompatActivity implements View.OnClickLi
                 int newMarginBottom = mMarginBottomFromY + (int) ((mMarginBottomToY - mMarginBottomFromY) * interpolatedTime);
                 mLayoutParams.setMargins(mLayoutParams.leftMargin, mLayoutParams.topMargin,mLayoutParams.rightMargin, newMarginBottom);
                 mView.getParent().requestLayout();
-                //Log.v("CZ","newMarginBottom..." + newMarginBottom + " , mLayoutParams.topMargin..." + mLayoutParams.topMargin);
+
             }
             else if (mVanishAfter)
             {
@@ -225,9 +217,6 @@ public class AboutUsActivity extends AppCompatActivity implements View.OnClickLi
             mLayoutParams = (LinearLayout.LayoutParams) view.getLayoutParams();
             mView.setVisibility(View.VISIBLE);
             int height = mView.getHeight();
-            //mMarginBottomFromY = (int) (height * fromY) + mLayoutParams.bottomMargin + height;
-            //mMarginBottomToY = (int) (0 - ((height * toY) + mLayoutParams.bottomMargin)) + height;
-
             mMarginBottomFromY = 0;
             mMarginBottomToY = height;
 
@@ -242,7 +231,7 @@ public class AboutUsActivity extends AppCompatActivity implements View.OnClickLi
                 int newMarginBottom = (int) ((mMarginBottomToY - mMarginBottomFromY) * interpolatedTime) - mMarginBottomToY;
                 mLayoutParams.setMargins(mLayoutParams.leftMargin, mLayoutParams.topMargin,mLayoutParams.rightMargin, newMarginBottom);
                 mView.getParent().requestLayout();
-                //Log.v("CZ","newMarginBottom..." + newMarginBottom + " , mLayoutParams.topMargin..." + mLayoutParams.topMargin);
+
             }
         }
     }

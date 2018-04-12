@@ -33,19 +33,6 @@ public class PriceOrderActivity extends AppCompatActivity {
 
         spinner=findViewById(R.id.spinner);
 
-//        try {
-//            Field popup = Spinner.class.getDeclaredField("mPopup");
-//            popup.setAccessible(true);
-//
-//            // Get private mPopup member variable and try cast to ListPopupWindow
-//            android.widget.ListPopupWindow popupWindow = (android.widget.ListPopupWindow) popup.get(spinner);
-//
-//            // Set popupWindow height to 500px
-//            popupWindow.setHeight(500);
-//        }
-//        catch (NoClassDefFoundError | ClassCastException | NoSuchFieldException | IllegalAccessException e) {
-//            // silently fail...
-//        }
 
         ExpandList.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
 
@@ -93,7 +80,7 @@ public class PriceOrderActivity extends AppCompatActivity {
         ArrayList<Group> group_list = new ArrayList<Group>();
         ArrayList<Child> child_list;
 
-        // Setting Group 1
+
         child_list = new ArrayList<Child>();
         Group gru1 = new Group();
         gru1.setName("Men");
@@ -153,7 +140,7 @@ public class PriceOrderActivity extends AppCompatActivity {
 
         gru3.setItems(child_list);
 
-        //listing all groups
+
         group_list.add(gru1);
         group_list.add(gru2);
         group_list.add(gru3);

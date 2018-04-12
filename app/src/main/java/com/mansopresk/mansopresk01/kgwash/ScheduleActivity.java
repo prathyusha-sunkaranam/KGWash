@@ -68,8 +68,7 @@ public class ScheduleActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 onBackPressed();
-//                Intent i2 = new Intent(ScheduleActivity.this, BookNowActivity.class);
-//                startActivity(i2);
+
                 finish();
             }
         });
@@ -205,7 +204,6 @@ public class ScheduleActivity extends AppCompatActivity {
 protected Dialog onCreateDialog(int id) {
     switch (id) {
         case DATE_PICKER_ID:
-            // create a new DatePickerDialog with values you want to show
 
             DatePickerDialog datePickerDialog = new DatePickerDialog(this, datePickerListener, year, month, day);
             calendar = Calendar.getInstance();
@@ -226,7 +224,7 @@ protected Dialog onCreateDialog(int id) {
     };
     public void onBackPressed() {
         super.onBackPressed();
-        //Toast.makeText(this, "back key is pressed", Toast.LENGTH_SHORT).show();
+
     }
 
 }

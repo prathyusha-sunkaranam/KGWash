@@ -55,15 +55,11 @@ public class ExpandListAdapter extends BaseExpandableListAdapter {
         try {
             Field popup = Spinner.class.getDeclaredField("mPopup");
             popup.setAccessible(true);
-
-            // Get private mPopup member variable and try cast to ListPopupWindow
             android.widget.ListPopupWindow popupWindow = (android.widget.ListPopupWindow) popup.get(spinner);
-
-            // Set popupWindow height to 500px
-            popupWindow.setHeight(500);
+             popupWindow.setHeight(500);
         }
         catch (NoClassDefFoundError | ClassCastException | NoSuchFieldException | IllegalAccessException e) {
-            // silently fail...
+
         }
         TextView tv = (TextView) convertView.findViewById(R.id.country_name);
         tv.setText(child.getName().toString());
