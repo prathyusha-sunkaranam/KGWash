@@ -82,6 +82,7 @@ public class AdminOrder extends AppCompatActivity {
             }
         }
         sharedpreferences = getSharedPreferences("userdetails",MODE_PRIVATE);
+        //sharedpreferences = getSharedPreferences("userdetails",MODE_PRIVATE);
 
 
         String admname = sharedpreferences.getString("custname",null);
