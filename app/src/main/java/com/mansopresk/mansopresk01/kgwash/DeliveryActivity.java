@@ -23,6 +23,8 @@ public class DeliveryActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_delivery);
 
+        maps = findViewById(R.id.userlocation1);
+
         maps.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
