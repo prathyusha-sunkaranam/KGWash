@@ -30,22 +30,30 @@ import com.mansopresk.mansopresk01.kgwash.Order.PriceOrderActivity;
 import pl.droidsonroids.gif.GifImageView;
 
 public class AdminOrder extends AppCompatActivity {
-    GifImageView usercall1,usercall2,usermail,userlocation;
-    EditText mobile;
+    GifImageView call,usercall2,usermail,userlocation;
+
     SharedPreferences sharedpreferences;
-    TextView ousername;
-    SharedPreferences sharedPreferences;
     TextView nav_email;
+    TextView ousername,useraddress,usermobile,username,useremail,usrlandmark,userdate,usertime;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_order);
+         useraddress = findViewById(R.id.admin_address);
 
-        usercall1 = findViewById(R.id.phcall1);
+        call = findViewById(R.id.admincal);
         usermail=findViewById(R.id.useremail);
         userlocation=findViewById(R.id.userlocation);
         ousername= findViewById(R.id.username);
+        usertime=findViewById(R.id.admin_time);
+        userdate=findViewById(R.id.admin_date);
+
+        usermobile = findViewById(R.id.admin_mobile);
+        username =findViewById(R.id.admin_name);
+        useremail =findViewById(R.id.admin_email);
+         usrlandmark=findViewById(R.id.admin_landmark);
+
         setTitle("Admin Profile");
         nav_email=(TextView)findViewById(R.id.nav_mail);
 
@@ -53,6 +61,8 @@ public class AdminOrder extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i=new Intent(getApplicationContext(), MapsActivity.class);
+                String adress=useraddress.getText().toString();
+                i.putExtra("addr",adress);
                 startActivity(i);
             }
         });
@@ -71,6 +81,28 @@ public class AdminOrder extends AppCompatActivity {
 
             }
         }
+        sharedpreferences = getSharedPreferences("userdetails",MODE_PRIVATE);
+
+
+        String admname = sharedpreferences.getString("custname",null);
+        String admmobile = sharedpreferences.getString("usermno",null);
+        String admemail = sharedpreferences.getString("useremail",null);
+        String admaddress = sharedpreferences.getString("useraddress",null);
+        String admlandmark = sharedpreferences.getString("userlandmark",null);
+        String admdate = sharedpreferences.getString("userdate",null);
+       // String admtime = sharedpreferences.getString("usertime",null);
+//
+        useraddress.setText(admaddress);
+        username.setText(admname);
+        usermobile.setText(admmobile);
+        useremail.setText(admemail);
+        usrlandmark.setText(admlandmark);
+        userdate.setText(admdate);
+//        usermobile.setText(admtime);
+        usertime.setText(sharedpreferences.getString("usertime", ""));
+
+
+
          usermail.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View view) {
@@ -87,21 +119,20 @@ public class AdminOrder extends AppCompatActivity {
                  }
              }
          });
-        usercall1.setOnClickListener(new View.OnClickListener() {
+        call.setOnClickListener(   new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (isPermissionGranted()) {
-                    call_action();
-                }
+//                if (isPermissionGranted()) {
+//                    call_action();
+//                }
+                String number=usermobile.getText().toString();
+                Intent callIntent = new Intent(Intent.ACTION_CALL);
+                callIntent.setData(Uri.parse("tel:"+number));
+                startActivity(callIntent);
+
 
             }
         });
-
-        sharedpreferences = getSharedPreferences("userdetails", MODE_PRIVATE);
-
-        String username =sharedpreferences.getString("custname", null);
-      ousername.setText(username);
-
     }
 
 

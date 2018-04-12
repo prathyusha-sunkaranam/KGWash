@@ -1,7 +1,9 @@
 package com.mansopresk.mansopresk01.kgwash;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -17,6 +19,7 @@ import pl.droidsonroids.gif.GifImageView;
 public class DeliveryActivity extends AppCompatActivity {
     SharedPreferences sharedpreferences;
     GifImageView maps;
+    Context context;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

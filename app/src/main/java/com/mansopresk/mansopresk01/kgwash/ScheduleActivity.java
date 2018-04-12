@@ -160,8 +160,6 @@ public class ScheduleActivity extends AppCompatActivity {
             editor.putString("useraddress",custaddress);
             editor.putString("userlandmark",custlandmark);
 
-
-
             editor.putString("usertime", spinner.getSelectedItem().toString());
             editor.commit();
 
