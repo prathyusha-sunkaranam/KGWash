@@ -23,6 +23,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.mansopresk.mansopresk01.kgwash.Maps.MapsActivity;
 import com.mansopresk.mansopresk01.kgwash.Navigation.NavigationMainActivity;
 import com.mansopresk.mansopresk01.kgwash.Order.PriceOrderActivity;
 
@@ -48,6 +49,13 @@ public class AdminOrder extends AppCompatActivity {
         setTitle("Admin Profile");
         nav_email=(TextView)findViewById(R.id.nav_mail);
 
+        userlocation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(getApplicationContext(), MapsActivity.class);
+                startActivity(i);
+            }
+        });
 
 
         sharedpreferences = getSharedPreferences("admindetails",MODE_PRIVATE);

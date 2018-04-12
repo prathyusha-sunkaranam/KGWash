@@ -172,7 +172,7 @@
                             android:inputType="text" />
 
                         <pl.droidsonroids.gif.GifImageView
-                            android:id="@+id/userlocation"
+                            android:id="@+id/userlocation1"
                             android:layout_width="2dp"
                             android:layout_height="50dp"
                             android:layout_weight="0.2"
