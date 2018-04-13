@@ -34,6 +34,7 @@ public class YourOrdersActivity extends AppCompatActivity {
         String uname =sharedpreferences.getString("custname", null);
         customername.setText(uname);
 
+
         String udate = sharedpreferences.getString("userdate", null);
         dateplace.setText(udate);
         timesloteplace.setText(sharedpreferences.getString("usertime", ""));
