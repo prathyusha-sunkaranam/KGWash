@@ -30,68 +30,67 @@ import com.mansopresk.mansopresk01.kgwash.Order.PriceOrderActivity;
 import pl.droidsonroids.gif.GifImageView;
 
 public class AdminOrder extends AppCompatActivity {
-    GifImageView call,usercall2,usermail,userlocation;
+    GifImageView call,  usermail, userlocation;
 
     SharedPreferences sharedpreferences;
     TextView nav_email;
-    TextView ousername,useraddress,usermobile,username,useremail,usrlandmark,userdate,usertime;
+    TextView ousername, useraddress, usermobile, username, useremail, usrlandmark, userdate, usertime;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_order);
-         useraddress = findViewById(R.id.admin_address);
+        useraddress = findViewById(R.id.admin_address);
 
         call = findViewById(R.id.admincal);
-        usermail=findViewById(R.id.useremail);
-        userlocation=findViewById(R.id.userlocation);
-        ousername= findViewById(R.id.username);
-        usertime=findViewById(R.id.admin_time);
-        userdate=findViewById(R.id.admin_date);
+        usermail = findViewById(R.id.useremail);
+        userlocation = findViewById(R.id.userlocation);
+        ousername = findViewById(R.id.username);
+        usertime = findViewById(R.id.admin_time);
+        userdate = findViewById(R.id.admin_date);
 
         usermobile = findViewById(R.id.admin_mobile);
-        username =findViewById(R.id.admin_name);
-        useremail =findViewById(R.id.admin_email);
-         usrlandmark=findViewById(R.id.admin_landmark);
+        username = findViewById(R.id.admin_name);
+        useremail = findViewById(R.id.admin_email);
+        usrlandmark = findViewById(R.id.admin_landmark);
 
         setTitle("Admin Profile");
-        nav_email=(TextView)findViewById(R.id.nav_mail);
+        nav_email = (TextView) findViewById(R.id.nav_mail);
 
         userlocation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i=new Intent(getApplicationContext(), MapsActivity.class);
-                String adress=useraddress.getText().toString();
-                i.putExtra("addr",adress);
+                Intent i = new Intent(getApplicationContext(), MapsActivity.class);
+                String adress = useraddress.getText().toString();
+                i.putExtra("addr", adress);
                 startActivity(i);
             }
         });
 
 
-        sharedpreferences = getSharedPreferences("admindetails",MODE_PRIVATE);
-        String uname = sharedpreferences.getString("aemail",null);
+        sharedpreferences = getSharedPreferences("admindetails", MODE_PRIVATE);
+        String uname = sharedpreferences.getString("aemail", null);
 
-        if(sharedpreferences!=null){
-            if(uname!=null||uname==""){
+        if (sharedpreferences != null) {
+            if (uname != null || uname == "") {
 
-            }
-            else {
+            } else {
                 Intent it = new Intent(AdminOrder.this, MainActivity.class);
                 startActivity(it);
 
             }
         }
-        sharedpreferences = getSharedPreferences("userdetails",MODE_PRIVATE);
+        sharedpreferences = getSharedPreferences("userdetails", MODE_PRIVATE);
         //sharedpreferences = getSharedPreferences("userdetails",MODE_PRIVATE);
 
 
-        String admname = sharedpreferences.getString("custname",null);
-        String admmobile = sharedpreferences.getString("usermno",null);
-        String admemail = sharedpreferences.getString("useremail",null);
-        String admaddress = sharedpreferences.getString("useraddress",null);
-        String admlandmark = sharedpreferences.getString("userlandmark",null);
-        String admdate = sharedpreferences.getString("userdate",null);
-       // String admtime = sharedpreferences.getString("usertime",null);
+        String admname = sharedpreferences.getString("custname", null);
+        String admmobile = sharedpreferences.getString("usermno", null);
+        String admemail = sharedpreferences.getString("useremail", null);
+        String admaddress = sharedpreferences.getString("useraddress", null);
+        String admlandmark = sharedpreferences.getString("userlandmark", null);
+        String admdate = sharedpreferences.getString("userdate", null);
+        // String admtime = sharedpreferences.getString("usertime",null);
 //
         useraddress.setText(admaddress);
         username.setText(admname);
@@ -103,32 +102,41 @@ public class AdminOrder extends AppCompatActivity {
         usertime.setText(sharedpreferences.getString("usertime", ""));
 
 
-
-         usermail.setOnClickListener(new View.OnClickListener() {
-             @Override
-             public void onClick(View view) {
-                 try {
-                     Intent i = new Intent(Intent.ACTION_SENDTO);
-                     i.setType("message/rfc822");
-                     i.setData(Uri.parse("mailto:sateesh.itech@gmail.com"));
-                     i.putExtra(Intent.EXTRA_SUBJECT, "subject of email");
-                     i.putExtra(Intent.EXTRA_TEXT   , "body of email");
-                     i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                     startActivity(Intent.createChooser(i, "Send mail..."));
-                 } catch (android.content.ActivityNotFoundException ex) {
-                     Log.d("exception", "There are no email clients installed.");
-                 }
-             }
-         });
-        call.setOnClickListener(   new View.OnClickListener() {
+        usermail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                try {
+                    Intent i = new Intent(Intent.ACTION_SENDTO);
+                    i.setType("message/rfc822");
+                    i.setData(Uri.parse("mailto:sateesh.itech@gmail.com"));
+                    i.putExtra(Intent.EXTRA_SUBJECT, "subject of email");
+                    i.putExtra(Intent.EXTRA_TEXT, "body of email");
+                    i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    startActivity(Intent.createChooser(i, "Send mail..."));
+                } catch (android.content.ActivityNotFoundException ex) {
+                    Log.d("exception", "There are no email clients installed.");
+                }
+            }
+        });
+        call.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 //                if (isPermissionGranted()) {
 //                    call_action();
 //                }
-                String number=usermobile.getText().toString();
+                String number = usermobile.getText().toString();
                 Intent callIntent = new Intent(Intent.ACTION_CALL);
-                callIntent.setData(Uri.parse("tel:"+number));
+                callIntent.setData(Uri.parse("tel:" + number));
+                if (ActivityCompat.checkSelfPermission(AdminOrder.this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+                    // TODO: Consider calling
+                    //    ActivityCompat#requestPermissions
+                    // here to request the missing permissions, and then overriding
+                    //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+                    //                                          int[] grantResults)
+                    // to handle the case where the user grants the permission. See the documentation
+                    // for ActivityCompat#requestPermissions for more details.
+                    return;
+                }
                 startActivity(callIntent);
 
 
