@@ -12,7 +12,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/ironbg"
+        android:background="@drawable/ironviewer"
         android:orientation="vertical">
 
         <TextView

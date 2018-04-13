@@ -14,7 +14,7 @@
 
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/washfoldbg"
+    android:background="@drawable/wfviewer"
     android:orientation="vertical">
 
     <TextView
