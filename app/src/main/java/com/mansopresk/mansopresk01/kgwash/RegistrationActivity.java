@@ -34,8 +34,6 @@ public class RegistrationActivity extends Activity {
 
         pass = findViewById(R.id.pass_et);
 
-
-
     }
 
     public void showSnackbar(View view, String message, int duration) {
