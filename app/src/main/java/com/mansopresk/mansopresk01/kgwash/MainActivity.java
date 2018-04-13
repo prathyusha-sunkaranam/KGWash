@@ -33,7 +33,6 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         signup = (Button)findViewById(R.id.signup);
         signin = (Button)findViewById(R.id.signin);
         email = (EditText)findViewById(R.id.emailid);
@@ -42,22 +41,16 @@ public class MainActivity extends Activity {
 
         sharedPreferences = getSharedPreferences("admindetails",MODE_PRIVATE);
         String uname = sharedPreferences.getString("aemail",null);
-
         if(uname!=null){
             Intent i=new Intent(this,AdminOrder.class);
             startActivity(i);
         }
-
         String uname1 = sharedPreferences.getString("deliveryemail",null);
         if(uname1!=null){
             Intent i2=new Intent(this,DeliveryActivity.class);
             startActivity(i2);
         }
-
-
     }
-
-
     public  void forget(View v){
         LayoutInflater inflater = getLayoutInflater();
         View alertLayout = inflater.inflate(R.layout.layout_custom_dialog, null);
@@ -65,12 +58,8 @@ public class MainActivity extends Activity {
         final Button ok=alertLayout.findViewById(R.id.fok);
         final Button cancel=alertLayout.findViewById(R.id.fcancel);
 
-
-
-
         AlertDialog.Builder alert = new AlertDialog.Builder(this);
         alert.setTitle("Forgot Password");
-
         alert.setView(alertLayout);
          alert.setCancelable(false);
         ok.setOnClickListener(new View.OnClickListener() {
@@ -85,39 +74,21 @@ public class MainActivity extends Activity {
                     mail.requestFocus();
                     mail.setError("");
                 }
-
-                    else {
+                else {
                         Toast.makeText(MainActivity.this, " enter proper mail id ", Toast.LENGTH_SHORT).show();
                     }
-
-
-
-
-
             }
         });
         cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent it=new Intent(MainActivity.this,MainActivity.class);
-
-
-                //Toast.makeText(MainActivity.this, " you clicked cancel", Toast.LENGTH_SHORT).show();
                 startActivity(it);
             }
         });
-
         AlertDialog dialog = alert.create();
         dialog.show();
-
     }
-
-
-
-
-
-
-
     public void valid(View v) {
         if (email.getText().toString().trim().isEmpty()) {
             email.requestFocus();
@@ -129,20 +100,15 @@ public class MainActivity extends Activity {
             String usrname = email.getText().toString();
             String pswrd = password.getText().toString();
 
-//            sharedpreferences = getSharedPreferences("email",MODE_PRIVATE);
              if((usrname.equals("admin")&& pswrd.equals("admin") )||(usrname.equals("delivery")&& pswrd.equals("delivery"))){
                  getApplicationContext().getSharedPreferences("admindetails", 0).edit().clear().apply();
              }
-
-              else{
-
+             else{
                  editor = getSharedPreferences("userdetails", MODE_PRIVATE).edit();
                  editor.putString("email", usrname);
                  editor.putString("password", pswrd);
                  editor.commit();
              }
-
-
             if (usrname.equals("admin") && pswrd.equals("admin")) {
                 Toast.makeText(this, "Login Success", Toast.LENGTH_SHORT).show();
                 editor = getSharedPreferences("admindetails", MODE_PRIVATE).edit();
@@ -150,30 +116,22 @@ public class MainActivity extends Activity {
                 editor.putString("apassword", pswrd);
                 editor.commit();
                 Intent i = new Intent(this, AdminOrder.class);
-
                 startActivity(i);
             }
-
             else if (usrname.equals("delivery") && pswrd.equals("delivery")){
-
                 Toast.makeText(this, "Login Success", Toast.LENGTH_SHORT).show();
                 editor = getSharedPreferences("admindetails", MODE_PRIVATE).edit();
                 editor.putString("deliveryemail", usrname);
                 editor.putString("deliverypassword", pswrd);
                 editor.commit();
                 Intent i2 = new Intent(this, DeliveryActivity.class);
-
                 startActivity(i2);
-
-
             }else {
-
                 Intent i = new Intent(MainActivity.this, NavigationMainActivity.class);
                 startActivity(i);
             }
         }
     }
-
     public void signup(View v){
         Intent i3 = new Intent(MainActivity.this,RegistrationActivity.class);
         startActivity(i3);
@@ -183,8 +141,5 @@ public class MainActivity extends Activity {
         //Toast.makeText(this, "back key is pressed", Toast.LENGTH_SHORT).show();
         Intent i3 = new Intent(MainActivity.this,NavigationMainActivity.class);
         startActivity(i3);
-
     }
-
-
 }

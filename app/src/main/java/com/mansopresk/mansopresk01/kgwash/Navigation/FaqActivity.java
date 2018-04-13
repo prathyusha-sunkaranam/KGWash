@@ -31,7 +31,6 @@ public class FaqActivity extends AppCompatActivity implements View.OnClickListen
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_faq);
-
         amail = (ImageView) findViewById(R.id.aemail);
         acall = (ImageView) findViewById(R.id.acall);
         aweb = (ImageView) findViewById(R.id.awebsite);
@@ -57,7 +56,6 @@ public class FaqActivity extends AppCompatActivity implements View.OnClickListen
         text9 = (TextView) findViewById(R.id.text9);
         text10 = (TextView) findViewById(R.id.text10);
         text11 = (TextView) findViewById(R.id.text11);
-
         text1.setOnClickListener(this);
         text2.setOnClickListener(this);
         text3.setOnClickListener(this);
@@ -70,13 +68,11 @@ public class FaqActivity extends AppCompatActivity implements View.OnClickListen
         text10.setOnClickListener(this);
         text11.setOnClickListener(this);
 
-
         Toolbar mToolbar = (Toolbar) findViewById(R.id.toolbarfaq);
         setSupportActionBar(mToolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 }
-
     @Override
     public boolean onSupportNavigateUp() {
         onBackPressed();
@@ -88,7 +84,6 @@ public class FaqActivity extends AppCompatActivity implements View.OnClickListen
     public void onClick(View v) {
         hideOthers(v);
     }
-
     private void hideThemAll() {
         if (openLayout == null) return;
         if (openLayout == panel1)
@@ -116,9 +111,7 @@ public class FaqActivity extends AppCompatActivity implements View.OnClickListen
         if (openLayout == panel11)
             panel11.startAnimation(new FaqActivity.ScaleAnimToHide(1.0f, 1.0f, 1.0f, 0.0f, 500, panel11, true));
 
-
     }
-
     private void hideOthers(View layoutView) {
         {
             int v;
@@ -128,9 +121,7 @@ public class FaqActivity extends AppCompatActivity implements View.OnClickListen
                     panel1.setVisibility(View.VISIBLE);
                     Log.v("CZ", "height..." + panel1.getHeight());
                 }
-
-
-                hideThemAll();
+                 hideThemAll();
                 if (v != View.VISIBLE) {
                     panel1.startAnimation(new FaqActivity.ScaleAnimToShow(1.0f, 1.0f, 1.0f, 0.0f, 500, panel1, true));
                 }
@@ -199,15 +190,10 @@ public class FaqActivity extends AppCompatActivity implements View.OnClickListen
     }
 
     public class ScaleAnimToHide extends ScaleAnimation {
-
         private View mView;
-
         private LinearLayout.LayoutParams mLayoutParams;
-
         private int mMarginBottomFromY, mMarginBottomToY;
-
         private boolean mVanishAfter = false;
-
         public ScaleAnimToHide(float fromX, float toX, float fromY, float toY, int duration, View view, boolean vanishAfter) {
             super(fromX, toX, fromY, toY);
             setDuration(duration);
@@ -237,13 +223,9 @@ public class FaqActivity extends AppCompatActivity implements View.OnClickListen
     }
 
     public class ScaleAnimToShow extends ScaleAnimation {
-
         private View mView;
-
         private LinearLayout.LayoutParams mLayoutParams;
-
         private int mMarginBottomFromY, mMarginBottomToY;
-
         private boolean mVanishAfter = false;
 
         public ScaleAnimToShow(float toX, float fromX, float toY, float fromY, int duration, View view, boolean vanishAfter) {
@@ -255,10 +237,8 @@ public class FaqActivity extends AppCompatActivity implements View.OnClickListen
             mLayoutParams = (LinearLayout.LayoutParams) view.getLayoutParams();
             mView.setVisibility(View.VISIBLE);
             int height = mView.getHeight();
-
             mMarginBottomFromY = 0;
             mMarginBottomToY = height;
-
             Log.v("CZ", ".................height..." + height + " , mMarginBottomFromY...." + mMarginBottomFromY + " , mMarginBottomToY.." + mMarginBottomToY);
         }
 
@@ -269,14 +249,9 @@ public class FaqActivity extends AppCompatActivity implements View.OnClickListen
                 int newMarginBottom = (int) ((mMarginBottomToY - mMarginBottomFromY) * interpolatedTime) - mMarginBottomToY;
                 mLayoutParams.setMargins(mLayoutParams.leftMargin, mLayoutParams.topMargin, mLayoutParams.rightMargin, newMarginBottom);
                 mView.getParent().requestLayout();
-
             }
         }
     }
-
-
-
-
     public boolean isPermissionGranted() {
         if (Build.VERSION.SDK_INT >= 23) {
             if (checkSelfPermission(android.Manifest.permission.CALL_PHONE)
@@ -284,7 +259,6 @@ public class FaqActivity extends AppCompatActivity implements View.OnClickListen
                 Log.v("TAG", "Permission is granted");
                 return true;
             } else {
-
                 Log.v("TAG", "Permission is revoked");
                 ActivityCompat.requestPermissions((Activity) this, new String[]{Manifest.permission.CALL_PHONE}, 1);
                 return false;
@@ -294,7 +268,6 @@ public class FaqActivity extends AppCompatActivity implements View.OnClickListen
             return true;
         }
     }
-
     public void call_action() {
         Intent intent = new Intent(Intent.ACTION_DIAL);
         intent.setData(Uri.parse("tel:9010990285"));

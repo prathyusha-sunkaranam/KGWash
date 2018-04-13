@@ -46,12 +46,10 @@ public class ViewProfileActivity extends AppCompatActivity {
         landmark.setText(slandmark);
         adress.setText(sadress);
 
-
         Toolbar mToolbar = (Toolbar) findViewById(R.id.toolbarprofile);
         setSupportActionBar(mToolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
-
     }
     @Override
     public boolean onSupportNavigateUp() {

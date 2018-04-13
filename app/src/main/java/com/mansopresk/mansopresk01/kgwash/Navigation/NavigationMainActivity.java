@@ -49,14 +49,12 @@ public class NavigationMainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_navigation_main);
-
         setTitle("KG Wash");
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         odernow = (Button) findViewById(R.id.ordernow);
         textView = (TextView) findViewById(R.id.toolbartext);
         jhonno=findViewById(R.id.johnno);
-
         textView.setText("KG Wash");
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -68,49 +66,36 @@ public class NavigationMainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
         View header = navigationView.getHeaderView(0);
-
         nav_signin1 =header.findViewById(R.id.nav_signin1);
         nav_signup=header.findViewById(R.id.nav_signup);
         sharedPreferences = getSharedPreferences("admindetails",MODE_PRIVATE);
         String uname = sharedPreferences.getString("aemail",null);
-
         if(uname!=null){
             Intent i=new Intent(this,AdminOrder.class);
             startActivity(i);
         }
-
         String uname1 = sharedPreferences.getString("deliveryemail",null);
         if(uname1!=null){
             Intent i2=new Intent(this,DeliveryActivity.class);
             startActivity(i2);
         }
-
-
-
-
-
         nav_signin1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent it = new Intent(NavigationMainActivity.this,MainActivity.class);
                 startActivity(it);
-
-
             }
         });
-
         nav_signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent it = new Intent(NavigationMainActivity.this,RegistrationActivity.class);
                 startActivity(it);
-
             }
         });
         sharedPreferences = getSharedPreferences("userdetails", MODE_PRIVATE);
         uname = sharedPreferences.getString("email", null);
-
-                if (uname == null || uname == "") {
+        if (uname == null || uname == "") {
                     loginsignup =(LinearLayout)header.findViewById(R.id.nav_loginll);
                     loginsignup.setVisibility(View.VISIBLE);
                     Menu menuNav=navigationView.getMenu();
@@ -122,13 +107,8 @@ public class NavigationMainActivity extends AppCompatActivity
                     nav_orders.setVisible(false);
                     nav_email=(TextView)header.findViewById(R.id.nav_mail);
                     nav_email.setVisibility(View.GONE);
-
-
                 }
-
-               // }
                 else {
-
                 loginsignup =(LinearLayout)header.findViewById(R.id.nav_loginll);
                 loginsignup.setVisibility(View.GONE);
                 Menu menuNav=navigationView.getMenu();
@@ -137,12 +117,11 @@ public class NavigationMainActivity extends AppCompatActivity
                 MenuItem nav_profile = menuNav.findItem(R.id.nav_profile);
                 nav_profile.setVisible(true);
                 MenuItem nav_orders = menuNav.findItem(R.id.nav_orders);
-                    nav_orders.setVisible(true);
+                nav_orders.setVisible(true);
                 nav_email=(TextView)header.findViewById(R.id.nav_mail);
-                    nav_email.setVisibility(View.VISIBLE);
+                nav_email.setVisibility(View.VISIBLE);
                 nav_email.setText(uname);
-
-                }
+        }
         jhonno.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -159,7 +138,6 @@ public class NavigationMainActivity extends AppCompatActivity
         Intent chooser = Intent.createChooser(intent, "Complete Action using..");
         startActivity(chooser);
     }
-
     public  boolean isPermissionGranted() {
         if (Build.VERSION.SDK_INT >= 23) {
             if (checkSelfPermission(android.Manifest.permission.CALL_PHONE)
@@ -167,7 +145,6 @@ public class NavigationMainActivity extends AppCompatActivity
                 Log.v("TAG","Permission is granted");
                 return true;
             } else {
-
                 Log.v("TAG","Permission is revoked");
                 ActivityCompat.requestPermissions((Activity) this, new String[]{Manifest.permission.CALL_PHONE}, 1);
                 return false;
@@ -178,12 +155,10 @@ public class NavigationMainActivity extends AppCompatActivity
             return true;
         }
     }
-
-   public void ordernow(View v){
+    public void ordernow(View v){
     Intent ip = new Intent(this, BookNowActivity.class);
     startActivity(ip);
 }
-
     public void basic(View v) {
         Intent ipr = new Intent(this, ScheduleActivity.class);
         startActivity(ipr);
@@ -200,7 +175,6 @@ public class NavigationMainActivity extends AppCompatActivity
         Intent ipr3 = new Intent(this, ScheduleActivity.class);
         startActivity(ipr3);
     }
-
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -214,7 +188,6 @@ public class NavigationMainActivity extends AppCompatActivity
             startActivity(intent);
             finish();
             System.exit(0);
-
         }
     }
 
@@ -249,10 +222,8 @@ public class NavigationMainActivity extends AppCompatActivity
             sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, shareSub);
             sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
             startActivity(Intent.createChooser(sharingIntent, "Share using"));
-
-            }
-
-         else if (id == R.id.nav_logout) {
+        }
+        else if (id == R.id.nav_logout) {
             Intent intent = new Intent(getApplicationContext(), NavigationMainActivity.class);
            getApplicationContext().getSharedPreferences("userdetails", 0).edit().clear().commit();
             startActivity(intent);
@@ -260,7 +231,6 @@ public class NavigationMainActivity extends AppCompatActivity
         else if (id == R.id.nav_profile){
             Intent i3 = new Intent(NavigationMainActivity.this,ViewProfileActivity.class);
             startActivity(i3);
-
         }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

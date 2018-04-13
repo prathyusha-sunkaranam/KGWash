@@ -11,7 +11,6 @@ import com.mansopresk.mansopresk01.kgwash.R;
 
 public class TermsConditionsActivity extends AppCompatActivity {
     ImageView imageView;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,10 +19,7 @@ public class TermsConditionsActivity extends AppCompatActivity {
         setSupportActionBar(mToolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
-
-
     }
-
     @Override
     public boolean onSupportNavigateUp() {
         onBackPressed();

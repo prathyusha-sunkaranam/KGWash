@@ -25,61 +25,44 @@ public class DeliveryActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_delivery);
-
         maps = findViewById(R.id.userlocation1);
-
         maps.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent it = new Intent(DeliveryActivity.this, MapsActivity.class);
                 startActivity(it);
-
             }
         });
 
-        sharedpreferences = getSharedPreferences("admindetails",MODE_PRIVATE);
-        String uname1 = sharedpreferences.getString("deliveryemail",null);
-
-        if(sharedpreferences!=null){
-            if(uname1!=null||uname1==""){
-            }
-            else {
+        sharedpreferences = getSharedPreferences("admindetails", MODE_PRIVATE);
+        String uname1 = sharedpreferences.getString("deliveryemail", null);
+        if (sharedpreferences != null) {
+            if (uname1 != null || uname1 == "") {
+            } else {
                 Intent it = new Intent(DeliveryActivity.this, MainActivity.class);
                 startActivity(it);
-
             }
         }
-
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.delivery, menu);
         return true;
     }
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-
         int id = item.getItemId();
         if (id == R.id.itemorder) {
             Intent i = new Intent(DeliveryActivity.this, PriceOrderActivity.class);
             startActivity(i);
-
-
             return true;
         }
-
-        else if (id == R.id.itemlog){
-
-
+        else if (id == R.id.itemlog) {
             Intent it = new Intent(DeliveryActivity.this, NavigationMainActivity.class);
             getApplicationContext().getSharedPreferences("admindetails", 0).edit().clear().apply();
             startActivity(it);
-
         }
-
         return super.onOptionsItemSelected(item);
     }
     public void onBackPressed() {
@@ -89,9 +72,5 @@ public class DeliveryActivity extends AppCompatActivity {
         startActivity(intent);
         finish();
         System.exit(0);
-
-
     }
-
-
 }

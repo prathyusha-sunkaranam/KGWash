@@ -73,30 +73,22 @@ public class BookNowActivity extends AppCompatActivity {
         };
         timer = new Timer();
         timer.schedule(timerTask, 3000, 3000);
-
-       findViewById(R.id.placeorder).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.placeorder).setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {
                Intent i = new Intent(BookNowActivity.this,ScheduleActivity.class);
          startActivity(i);
            }
        });
-
-
-
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-
         getMenuInflater().inflate(R.menu.home, menu);
         return true;
     }
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-
         Intent i = new Intent(BookNowActivity.this,NavigationMainActivity.class);
         startActivity(i);
         return super.onOptionsItemSelected(item);
@@ -108,20 +100,15 @@ public class BookNowActivity extends AppCompatActivity {
     }
     public class BookPageAdapter extends PagerAdapter {
         private LayoutInflater layoutInflater;
-
         public BookPageAdapter() {
         }
-
         @Override
         public Object instantiateItem(ViewGroup container, int position) {
             layoutInflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-
             View view = layoutInflater.inflate(layouts[position], container, false);
             container.addView(view);
-
             return view;
         }
-
         @Override
         public int getCount() {
             return layouts.length;
@@ -131,7 +118,6 @@ public class BookNowActivity extends AppCompatActivity {
         public boolean isViewFromObject(View view, Object obj) {
             return view == obj;
         }
-
 
         @Override
         public void destroyItem(ViewGroup container, int position, Object object) {

@@ -34,11 +34,9 @@ public class AboutUsActivity extends AppCompatActivity implements View.OnClickLi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about_us);
-
         Toolbar mToolbar = (Toolbar) findViewById(R.id.toolbarabt);
         mToolbar.setNavigationIcon(R.drawable.ic_arrow_back_black_24dp);
         mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View view) {
 
@@ -50,14 +48,12 @@ public class AboutUsActivity extends AppCompatActivity implements View.OnClickLi
         amail=(ImageView)findViewById(R.id.aemail);
         acall=(ImageView)findViewById(R.id.acall);
         aweb=(ImageView)findViewById(R.id.awebsite);
-
         panel1 = (LinearLayout) findViewById(R.id.panel1);
         panel2 = (LinearLayout) findViewById(R.id.panel2);
         panel3 = (LinearLayout) findViewById(R.id.panel3);
         text1 = (TextView) findViewById(R.id.text1);
         text2 = (TextView) findViewById(R.id.text2);
         text3 = (TextView) findViewById(R.id.text3);
-//        text1.setOnClickListener(this);
         text2.setOnClickListener(this);
         text3.setOnClickListener(this);
         amail.setOnClickListener(new View.OnClickListener() {
@@ -85,7 +81,6 @@ public class AboutUsActivity extends AppCompatActivity implements View.OnClickLi
                 }
             }
         });
-
         aweb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -94,23 +89,18 @@ public class AboutUsActivity extends AppCompatActivity implements View.OnClickLi
                 startActivity(viewIntent);
             }
         });
-
-
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-
         getMenuInflater().inflate(R.menu.home, menu);
         return true;
     }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         Intent i = new Intent(AboutUsActivity.this,NavigationMainActivity.class);
-            startActivity(i);
-
+        startActivity(i);
         return super.onOptionsItemSelected(item);
     }
-
     @Override
     public void onClick(View v)
     {
@@ -125,7 +115,6 @@ public class AboutUsActivity extends AppCompatActivity implements View.OnClickLi
         if (openLayout == panel3)
             panel3.startAnimation(new ScaleAnimToHide(1.0f, 1.0f, 1.0f, 0.0f, 500, panel3, true));
     }
-
     private void hideOthers(View layoutView) {
         {
             int v;
@@ -157,15 +146,10 @@ public class AboutUsActivity extends AppCompatActivity implements View.OnClickLi
 
     public class ScaleAnimToHide extends ScaleAnimation
     {
-
         private View mView;
-
         private LinearLayout.LayoutParams mLayoutParams;
-
         private int mMarginBottomFromY, mMarginBottomToY;
-
         private boolean mVanishAfter = false;
-
         public ScaleAnimToHide(float fromX, float toX, float fromY, float toY, int duration, View view,boolean vanishAfter)
         {
             super(fromX, toX, fromY, toY);
@@ -177,7 +161,6 @@ public class AboutUsActivity extends AppCompatActivity implements View.OnClickLi
             int height = mView.getHeight();
             mMarginBottomFromY = (int) (height * fromY) + mLayoutParams.bottomMargin - height;
             mMarginBottomToY = (int) (0 - ((height * toY) + mLayoutParams.bottomMargin)) - height;
-
             Log.v("CZ","height..." + height + " , mMarginBottomFromY...." + mMarginBottomFromY  + " , mMarginBottomToY.." +mMarginBottomToY);
         }
 
@@ -190,7 +173,6 @@ public class AboutUsActivity extends AppCompatActivity implements View.OnClickLi
                 int newMarginBottom = mMarginBottomFromY + (int) ((mMarginBottomToY - mMarginBottomFromY) * interpolatedTime);
                 mLayoutParams.setMargins(mLayoutParams.leftMargin, mLayoutParams.topMargin,mLayoutParams.rightMargin, newMarginBottom);
                 mView.getParent().requestLayout();
-
             }
             else if (mVanishAfter)
             {
@@ -201,13 +183,9 @@ public class AboutUsActivity extends AppCompatActivity implements View.OnClickLi
     public class ScaleAnimToShow extends ScaleAnimation {
 
         private View mView;
-
         private LinearLayout.LayoutParams mLayoutParams;
-
         private int mMarginBottomFromY, mMarginBottomToY;
-
         private boolean mVanishAfter = false;
-
         public ScaleAnimToShow(float toX, float fromX, float toY, float fromY, int duration, View view, boolean vanishAfter) {
             super(fromX, toX, fromY, toY);
             openLayout = view;
@@ -231,7 +209,6 @@ public class AboutUsActivity extends AppCompatActivity implements View.OnClickLi
                 int newMarginBottom = (int) ((mMarginBottomToY - mMarginBottomFromY) * interpolatedTime) - mMarginBottomToY;
                 mLayoutParams.setMargins(mLayoutParams.leftMargin, mLayoutParams.topMargin,mLayoutParams.rightMargin, newMarginBottom);
                 mView.getParent().requestLayout();
-
             }
         }
     }
@@ -243,7 +220,6 @@ public class AboutUsActivity extends AppCompatActivity implements View.OnClickLi
                 Log.v("TAG","Permission is granted");
                 return true;
             } else {
-
                 Log.v("TAG","Permission is revoked");
                 ActivityCompat.requestPermissions((Activity) this, new String[]{Manifest.permission.CALL_PHONE}, 1);
                 return false;
