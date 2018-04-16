@@ -10,7 +10,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/headerimg"
+        android:background="@drawable/hdrbg"
         android:orientation="vertical"
         >
 
@@ -28,6 +28,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
+            android:layout_marginTop="14dp"
             android:orientation="horizontal">
 
 

@@ -54,8 +54,8 @@ public class BookNowActivity extends AppCompatActivity {
         });
 
         layouts = new int[]{
-                R.layout.wash_fold,
                 R.layout.wash_iron,
+                R.layout.wash_fold,
                 R.layout.iron};
         myViewPagerAdapter = new BookPageAdapter();
         viewPager.setAdapter(myViewPagerAdapter);
