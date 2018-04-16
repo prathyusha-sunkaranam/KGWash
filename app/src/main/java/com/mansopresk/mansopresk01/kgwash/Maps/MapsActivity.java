@@ -1,6 +1,8 @@
 package com.mansopresk.mansopresk01.kgwash.Maps;
 
 import android.Manifest;
+import android.app.ActionBar;
+import android.content.Context;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.location.Address;
@@ -10,6 +12,7 @@ import android.os.AsyncTask;
 import android.os.Build;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.multidex.MultiDex;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
@@ -17,6 +20,7 @@ import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.widget.TextView;
 import android.widget.Toast;
+
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
@@ -54,6 +58,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
 
     private GoogleMap mMap;
+    Context context;
     double latitude;
     double longitude;
     private int PROXIMITY_RADIUS = 10000;
@@ -70,7 +75,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
-        distancetv=(TextView)findViewById(R.id.distancetv);
+        distancetv = (TextView) findViewById(R.id.distancetv);
         location2 = getIntent().getStringExtra("addr");
         //Toast.makeText(getApplicationContext(),location2,Toast.LENGTH_LONG).show();
         if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
@@ -81,6 +86,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 .findFragmentById(R.id.bloodbanksmap);
         mapFragment.getMapAsync(this);
     }
+//    private void setUpActionBar() {
+//        // Make sure we're running on Honeycomb or higher to use ActionBar APIs
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+//            ActionBar actionBar = getActionBar();
+//            actionBar.setDisplayHomeAsUpEnabled(true);
+//        }
+//    }
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
@@ -110,6 +122,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 .build();
         mGoogleApiClient.connect();
     }
+
 
     @Override
     public void onConnected(Bundle bundle) {
@@ -212,6 +225,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void onConnectionFailed(ConnectionResult connectionResult) {
 
     }
+
 
     public static final int MY_PERMISSIONS_REQUEST_LOCATION = 99;
     public boolean checkLocationPermission(){
@@ -431,7 +445,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     Toast.makeText(this, "permission denied", Toast.LENGTH_LONG).show();
                 }
                 return;
-            }
-        }
+            }        }
     }
+
+
+
 }
