@@ -101,6 +101,7 @@ public class NavigationMainActivity extends AppCompatActivity
                     Menu menuNav=navigationView.getMenu();
                     MenuItem nav_logout = menuNav.findItem(R.id.nav_logout);
                     nav_logout.setVisible(false);
+
                     MenuItem nav_profile = menuNav.findItem(R.id.nav_profile);
                     nav_profile.setVisible(false);
                     MenuItem nav_orders = menuNav.findItem(R.id.nav_orders);
