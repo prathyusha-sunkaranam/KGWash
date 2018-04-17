@@ -13,7 +13,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/wiviewer"
+        android:background="@drawable/wiviewpager"
         android:orientation="vertical">
 
         <TextView
@@ -25,7 +25,7 @@
             android:text="@string/washiron"
             android:fontFamily="cursive"
             android:textStyle="bold"
-            android:textColor="#f26703"
+            android:textColor="#de5f05"
             android:textSize="40dp" />
 
         <TextView
@@ -36,7 +36,7 @@
             android:gravity="center"
             android:text="@string/wiron_desc"
             android:fontFamily="cursive"
-            android:textColor="#d76918"
+            android:textColor="#ec7118"
             android:textSize="24dp"/>
 
     </LinearLayout>

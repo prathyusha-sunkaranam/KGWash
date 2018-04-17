@@ -78,21 +78,19 @@
     </LinearLayout>
 
 
-    <LinearLayout android:layout_marginTop="5dip"
+    <LinearLayout
+        android:layout_marginTop="5dip"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_gravity="center">
 
-
-        <TextView
+         <TextView
             android:id="@+id/text2"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:background="#4b9ac9"
-
             android:drawablePadding="10dp"
-
             android:padding="5dip"
             android:text="@string/second"
             android:textColor="#ffffff"
