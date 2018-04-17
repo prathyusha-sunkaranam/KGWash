@@ -1,7 +1,5 @@
 <resources>
     <string name="app_name">KG Wash</string>
-
-
     <string name="washiron">Wash + Iron</string>
     <string name="wiron_desc">25 Rs per piece </string>
 
@@ -84,10 +82,10 @@
 
 
     <string name="start">How do I get started?</string>
-    <string name="start1">Once you complete our online sign-up form, your local area Laundry Care Provider will contact you via phone to schedule your first laundry pick-up. Click here to get started now!</string>
+    <string name="start1">Initially you can directly Schedule for pickup.With in 10hours our boys pick-up your order for Laundry.They get all the info about cloths and acknoledge you about it. Click here to get started now!</string>
 
     <string name="second">When will I get my clothes back?</string>
-    <string name="second1">Turnaround time is 48 Hours from pick-up to drop off (except weekends).</string>
+    <string name="second1">Turnaround time is 36 Hours from pick-up to drop off (except weekends).</string>
     <string name="third">What if I need my laundry done faster?</string>
     <string name="third1">24 Hour Rush Service is available in most locations for an extra charge.  Ask your local Laundry Care Provider for details or call 800-429-4332 to confirm rush service is available for your order.</string>
     <string name="fourth">What if I can’t be home for my scheduled pick-up or drop off?</string>

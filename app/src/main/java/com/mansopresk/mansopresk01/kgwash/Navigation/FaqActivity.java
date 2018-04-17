@@ -26,15 +26,16 @@ public class FaqActivity extends AppCompatActivity implements View.OnClickListen
     TextView text1, text2, text3, text4, text5, text6, text7, text8, text9,text10,text11;
     View openLayout;
 
-
-    @Override
+@Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_faq);
         amail = (ImageView) findViewById(R.id.aemail);
         acall = (ImageView) findViewById(R.id.acall);
         aweb = (ImageView) findViewById(R.id.awebsite);
         panel1 = (LinearLayout) findViewById(R.id.panel1);
+
         panel2 = (LinearLayout) findViewById(R.id.panel2);
         panel3 = (LinearLayout) findViewById(R.id.panel3);
         panel4 = (LinearLayout) findViewById(R.id.panel4);
