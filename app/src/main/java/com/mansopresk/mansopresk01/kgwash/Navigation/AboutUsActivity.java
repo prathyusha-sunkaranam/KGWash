@@ -35,7 +35,7 @@ public class AboutUsActivity extends AppCompatActivity implements View.OnClickLi
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about_us);
         Toolbar mToolbar = (Toolbar) findViewById(R.id.toolbarabt);
-        mToolbar.setNavigationIcon(R.drawable.ic_arrow_back_black_24dp);
+        mToolbar.setNavigationIcon(R.drawable.ic_arrow_back_black);
         mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -45,15 +45,15 @@ public class AboutUsActivity extends AppCompatActivity implements View.OnClickLi
                 finish();
             }
         });
-        amail=(ImageView)findViewById(R.id.aemail);
-        acall=(ImageView)findViewById(R.id.acall);
-        aweb=(ImageView)findViewById(R.id.awebsite);
-        panel1 = (LinearLayout) findViewById(R.id.panel1);
-        panel2 = (LinearLayout) findViewById(R.id.panel2);
-        panel3 = (LinearLayout) findViewById(R.id.panel3);
-        text1 = (TextView) findViewById(R.id.text1);
-        text2 = (TextView) findViewById(R.id.text2);
-        text3 = (TextView) findViewById(R.id.text3);
+        amail=findViewById(R.id.aemail);
+        acall=findViewById(R.id.acall);
+        aweb = findViewById(R.id.awebsite);
+        panel1 = findViewById(R.id.panel1);
+        panel2 = findViewById(R.id.panel2);
+        panel3 = findViewById(R.id.panel3);
+        text1 = findViewById(R.id.text1);
+        text2 = findViewById(R.id.text2);
+        text3 = findViewById(R.id.text3);
         text2.setOnClickListener(this);
         text3.setOnClickListener(this);
         amail.setOnClickListener(new View.OnClickListener() {
@@ -236,6 +236,5 @@ public class AboutUsActivity extends AppCompatActivity implements View.OnClickLi
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         Intent chooser  = Intent.createChooser(intent, "Complete Action using..");
         startActivity(chooser);
-
     }
 }

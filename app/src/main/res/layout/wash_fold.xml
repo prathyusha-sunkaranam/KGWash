@@ -38,7 +38,7 @@
         android:textStyle="bold"
         android:text="@string/wfold_descrp"
        android:fontFamily="cursive"
-        android:textColor="#d76918"
+        android:textColor="#de6b17"
         android:textSize="24dp" />
 
 

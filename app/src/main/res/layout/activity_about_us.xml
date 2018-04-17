@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -22,11 +23,6 @@
         android:text="Kg Wash"
         android:textSize="18sp"
         android:textColor="#fff"/>
-    <ImageView
-        android:id="@+id/toolbarimage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/home"/>
 </android.support.v7.widget.Toolbar>
     <ScrollView
         android:layout_width="match_parent"
@@ -113,15 +109,14 @@
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:background="#3c7fa7"
-
                         android:drawablePadding="10dp"
-
                         android:padding="5dip"
                         android:text="How It Works "
                         android:textColor="#ffffff"
                         android:textSize="18dp"
                         android:textStyle="bold" />
-                    <LinearLayout android:id="@+id/panel2"
+                    <LinearLayout
+                        android:id="@+id/panel2"
                         android:visibility="gone"
                         android:orientation="vertical"
                         android:layout_width="fill_parent"
