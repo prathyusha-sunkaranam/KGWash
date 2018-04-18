@@ -177,8 +177,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         markerOptions1.title("Current Location ");
         markerOptions1.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_MAGENTA));
         mCurrLocationMarker = mMap.addMarker(markerOptions1);
-
         LatLng latLng =  new LatLng(location.getLatitude(), location.getLongitude());
+
+        mMap.getUiSettings().setZoomControlsEnabled(true);
+
+
         //place the target location
         if(location1!=null) {
             latLng = new LatLng(location1.getLatitude(), location1.getLongitude());
