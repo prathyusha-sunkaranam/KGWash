@@ -461,7 +461,7 @@
                     android:layout_height="wrap_content">
                     <TextView
                         android:layout_margin="2dip"
-                        android:text=" To find out if Laundry Care service is available in your area, use our zip code locator.
+                        android:text=" To find out  Laundry Care service is available in your area,refer our website.
 "
                         android:padding="5dip"
                         android:background="#fff"

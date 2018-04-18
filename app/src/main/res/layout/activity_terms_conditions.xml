@@ -25,58 +25,95 @@
             android:layout_height="wrap_content"
             android:text="KG Wash"
             android:textColor="#fff"
-            android:textSize="18sp"/>
+            android:textSize="16sp"/>
 
     </android.support.v7.widget.Toolbar>
 
-    <LinearLayout
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal">
+
     <TextView
         android:padding="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Terms and Conditions"
-        android:textColor="#000"
-        android:textSize="16sp"
+        android:textColor="#4b9ac9"
+        android:textSize="25sp"
         android:textStyle="bold"/>
-</LinearLayout>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="10dp">
 
     <TextView
     android:padding="10dp"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:text="@string/terms1"
-        android:textColor="#4b9ac9"/>
+        android:textColor="#000"
+        android:textSize="16dp"/>
 
     <TextView
         android:padding="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/terms2"
-        android:textColor="#4b9ac9"/>
+        android:textColor="#000"
+        android:textSize="16dp"/>
     <TextView
         android:padding="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/terms3"
-        android:textColor="#4b9ac9"/>
+        android:textColor="#000"
+        android:textSize="16dp"/>
     <TextView
         android:padding="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/terms4"
-        android:textColor="#4b9ac9"/>
+        android:textColor="#000"
+        android:textSize="16dp"/>
     <TextView
+        android:padding="10dp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="@string/terms5"
+        android:textColor="#000"
+        android:textSize="16dp"/>
     <TextView
+        android:padding="10dp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="@string/terms6"
+        android:textColor="#000"
+        android:textSize="16dp"/>
     <TextView
+        android:padding="10dp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
+        android:layout_height="wrap_content"
+        android:text="@string/terms7"
+        android:textColor="#000"
+        android:textSize="16dp"/>
+    <TextView
+        android:padding="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/terms8"
+        android:textColor="#000"
+        android:textSize="16dp"/>
+    <TextView
+        android:padding="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/terms9"
+        android:textColor="#000"
+        android:textSize="16dp"/>
+    </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>

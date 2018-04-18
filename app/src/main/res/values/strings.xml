@@ -86,15 +86,15 @@
 
     <string name="second">When will I get my clothes back?</string>
     <string name="second1">Turnaround time is 36 Hours from pick-up to drop off (except weekends).</string>
-    <string name="third">What if I need my laundry done faster?</string>
-    <string name="third1">24 Hour Rush Service is available in most locations for an extra charge.  Ask your local Laundry Care Provider for details or call 800-429-4332 to confirm rush service is available for your order.</string>
+    <string name="third"> Are there things that you will not wash?</string>
+    <string name="third1">Not Much!!. If our laundry specialist discovers that it would not be sensible to wash a certain textile, we will contact you and agree on how to continue.</string>
     <string name="fourth">What if I can’t be home for my scheduled pick-up or drop off?</string>
     <string name="fourth1">You can leave your bag in secure location outside your home (doorstep, porch, patio, reception desk etc.) or reschedule a day/time with your Provider.</string>
 
     <string name="fifth1">Along with your laundry bag, your Provider can take your dry clean only items to our preferred dry cleaner and pick them back up. They’ll be delivered right to your door with your wash and fold laundry.</string>
-    <string name="six1"> All scheduling is handled by your local Laundry Care Provider. Refer to your sign-up confirmation email email for your Provider’s contact information.  You can also contact Laundry Care Home Office via email at info@laundrycare.biz or by calling 800-429-4332, OPT 1</string>
+    <string name="six1"> All scheduling is handled by your local Laundry Care Provider.sign-up confirmation phone for your Provider’s contact information.  You can also contact Laundry Care Home Office via  calling 900-037-9005</string>
     <string name="seven1">Absolutely not! Each bag is processed by itself. We will never clean your clothes with another customer’s clothing.</string>
-    <string name="eight1">If you miss your pick-up or drop off timeframe, a missed pick-up or missed drop off fee may be assessed.  Avoid these additional fees by notifying and rescheduling your pick-up/ drop off directly with your local Laundry Care Provider.</string>
+    <string name="eight1">  Avoid these by notifying and rescheduling your pick-up/ drop off directly with your local Laundry Care Provider.</string>
     <string name="nine1">We ask that you ensure all items have been removed from your pockets prior to pick-up. In the event that we do find items in your pockets, we’ll return them inside a sealed bag along with your laundry.</string>
     <string name="ten1">Recurring clients are provided with a reusable nylon Laundry Care bag at a charge of $3.92/bag. This charge will appear on your initial service invoice or at any time you request a new/replacement bag</string>
     <string name="main"> we try to connect the people with Laundry Care Provider through this app.\n\n      The main motive of our app is to provide Laundry Services at your door step at reasonable cost with user friendly enviornment through our app.</string>
@@ -135,14 +135,20 @@ Neat and Wrinkle Free Packaging\n
     <string name="contact"> Address :\n\n Flat No.401, Plot No 545B, 2nd street,\n Sri Ramnagar Block B,\n Kondapur,\n Hyderabad, Telangana 500084.\n\n Phone: +91-9000379005.\n"</string>
     <string name="terms1">* Your items will ONLY be given with a designated person or dropped off in a predetermined place with your prior approval.  Please refer to our Terms of Service for more information.
 </string>
-    <string name="terms2">* A courier fee will apply. Ask your Laundry Care Provider for details.
+    <string name="terms2">*  All garments/linen/fabrics are handled with greatest care but owing to the conditions of the articles or non apparent/non-visible defects in its material there is a POSSIBILITY OF DISCOLOURING OR SHRINKAGE. Such garments are accepted for cleaning at OWNER'S RISK and company will not accept any responsibility for it.
 </string>
-    <string name="terms3">* if you’ve pre-paid for service, you will not be refunded for missed pick-ups.
+    <string name="terms3">*  Laundry Care will use reasonable efforts to try to ensure that washing, drying and folding services are maintained at a high level of quality.
 </string>
-    <string name="terms4">* Laundry Care bag at a charge of $3.92/bag. This fee only applies to accounts with as-needed or recurring frequency and does NOT apply to one-time service clients. If you are needing service only one or two times you will place your items in 13 gallon sized trash bags.
+    <string name="terms4">*Laundry Care is not responsible for any article which is left beyond 30 days. After this storage fees will be charged @12% per month on the total invoice amount. Article not claimed within three months shall be handled appropriately by Company and be sold to recover the billed charges.
  </string>
+    <string name="terms5">*Laundry Care reserves the right to refuse cleaning any garment.
+</string>
+    <string name="terms6">* Removal of stain is a part of the process but, complete removal of stains can not be guaranteed and will be processed at customer's risk.*</string>
     <string name="title_activity_mainfg2">Mainfg2Activity</string>
+    <string name="terms7">Laundry Care is not responsible for loss of or damage to any personal or non-cleanable items left in the article such as money, jewelry, or anything else.</string>
+<string name="terms8">Customers are requested to count the articles at the time of delivery and inform the delivery man in case of missing articles. Company will not be responsible for any such claims after the articles delivery has been accepted and signed by the customer.</string>
 
+   <string name="terms9">Customer has to pay the entire amount after successful delivery of order.</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_maps">Map</string>
