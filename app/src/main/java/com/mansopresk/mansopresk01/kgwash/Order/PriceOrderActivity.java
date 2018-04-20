@@ -163,15 +163,15 @@ public class PriceOrderActivity extends AppCompatActivity {
 
         Child ch3_1 = new Child();
         ch3_1.setName("Uniform");
-        child_list.add(ch1_1);
+        child_list.add(ch3_1);
 
         Child ch3_2 = new Child();
         ch3_2.setName("Kids Wear");
-        child_list.add(ch1_2);
+        child_list.add(ch3_2);
 
         Child ch3_3 = new Child();
         ch3_3.setName("Night Wear");
-        child_list.add(ch1_3);
+        child_list.add(ch3_3);
 
         gru3.setItems(child_list);
 
