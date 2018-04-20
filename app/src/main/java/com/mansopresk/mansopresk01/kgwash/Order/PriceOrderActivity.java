@@ -97,16 +97,29 @@ public class PriceOrderActivity extends AppCompatActivity {
         gru1.setName("Men");
 
         Child ch1_1 = new Child();
-        ch1_1.setName("shirt");
+        ch1_1.setName("Shirts");
         child_list.add(ch1_1);
 
         Child ch1_2 = new Child();
-        ch1_2.setName("Phant");
+        ch1_2.setName("Phants");
         child_list.add(ch1_2);
 
         Child ch1_3 = new Child();
-        ch1_3.setName("T-shitrs");
+        ch1_3.setName("T-shirts");
         child_list.add(ch1_3);
+
+        Child ch1_4 = new Child();
+        ch1_4.setName("Night Wear");
+        child_list.add(ch1_4);
+
+        Child ch1_5 = new Child();
+        ch1_5.setName("Trousers");
+        child_list.add(ch1_5);
+
+        Child ch1_6 = new Child();
+        ch1_6.setName("Others");
+
+        child_list.add(ch1_6);
 
         gru1.setItems(child_list);
 
@@ -116,21 +129,32 @@ public class PriceOrderActivity extends AppCompatActivity {
         gru2.setName("Women");
 
         Child ch2_1 = new Child();
-        ch2_1.setName("dress");
+        ch2_1.setName("Dress");
         child_list.add(ch2_1);
 
         Child ch2_2 = new Child();
-        ch2_2.setName("night dress ");
+        ch2_2.setName("Tops");
         child_list.add(ch2_2);
 
         Child ch2_3 = new Child();
-        ch2_3.setName("tops");
+        ch2_3.setName("Leggings");
         child_list.add(ch2_3);
 
         Child ch2_4 = new Child();
-        ch2_4.setName("phants");
+        ch2_4.setName("Shirt/t-shirt");
         child_list.add(ch2_4);
 
+        Child ch2_5 = new Child();
+        ch2_5.setName("Dupatta/scarf/stole");
+        child_list.add(ch2_5);
+
+        Child ch2_6 = new Child();
+        ch2_6.setName("Night-Wear");
+        child_list.add(ch2_6);
+
+        Child ch2_7 = new Child();
+        ch2_7.setName("Others");
+        child_list.add(ch2_7);
         gru2.setItems(child_list);
 
         child_list = new ArrayList<Child>();
@@ -138,15 +162,15 @@ public class PriceOrderActivity extends AppCompatActivity {
         gru3.setName("kid");
 
         Child ch3_1 = new Child();
-        ch3_1.setName("shirt");
+        ch3_1.setName("Uniform");
         child_list.add(ch1_1);
 
         Child ch3_2 = new Child();
-        ch3_2.setName("Phant");
+        ch3_2.setName("Kids Wear");
         child_list.add(ch1_2);
 
         Child ch3_3 = new Child();
-        ch3_3.setName("T-shitrs");
+        ch3_3.setName("Night Wear");
         child_list.add(ch1_3);
 
         gru3.setItems(child_list);

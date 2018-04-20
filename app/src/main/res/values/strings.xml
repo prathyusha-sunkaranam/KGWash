@@ -17,6 +17,15 @@
     <string name="TCapply">Terms and Conditions</string>
 
 
+    <string-array name="SelectArea">
+        <item>-- Select Area--</item>
+        <item> Gachibowli </item>
+        <item> Hi-Tech City </item>
+        <item> Hafeezpet </item>
+        <item> Kondapur </item>
+        <item> Madhapur </item>
+
+    </string-array>
     <string-array name="TimeSlots">
         <item>-- Time Slote --</item>
         <item> 6Am to 11Am</item>

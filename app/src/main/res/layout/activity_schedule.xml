@@ -109,20 +109,20 @@
 
         </android.support.design.widget.TextInputLayout>
 
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp">
-
-            <EditText
-                android:singleLine="true"
-                android:id="@+id/address_register"
+            <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Address *"
-                android:inputType="text" />
+                android:layout_marginTop="10dp">
 
-        </android.support.design.widget.TextInputLayout>
+                <EditText
+                    android:id="@+id/address_register"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Address *"
+                    android:inputType="text"
+                    android:singleLine="true" />
+
+            </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
@@ -137,6 +137,17 @@
                 android:hint="Landmark"/>
 
         </android.support.design.widget.TextInputLayout>
+
+            <Spinner
+                android:singleLine="true"
+                android:id="@+id/spinner_area"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:entries="@array/SelectArea"
+                android:layout_weight="0.5"
+                android:background="@drawable/borders"
+                android:layout_marginTop="20dp"/>
+
 
             <LinearLayout
                 android:id="@+id/datetime"

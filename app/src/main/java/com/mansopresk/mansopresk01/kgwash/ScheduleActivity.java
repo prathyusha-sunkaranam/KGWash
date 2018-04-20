@@ -30,7 +30,7 @@ import java.util.Date;
 public class ScheduleActivity extends AppCompatActivity {
     String emailid;
     TextView textViewsch;
-    Spinner spinner;
+    Spinner spinnertime,spinnerarea;
     Calendar calendar;
     private int year, month, day;
     EditText name_sch, mobile_sch, alternatenum_sch, emailregister_sch, address_sch, landmark_sch, etcalendar;
@@ -50,7 +50,8 @@ public class ScheduleActivity extends AppCompatActivity {
         emailregister_sch = findViewById(R.id.email_register);
         address_sch = findViewById(R.id.address_register);
         landmark_sch = findViewById(R.id.landmark_register);
-        spinner = (Spinner) findViewById(R.id.spinner1);
+        spinnertime = (Spinner) findViewById(R.id.spinner1);
+        spinnerarea = (Spinner) findViewById(R.id.spinner_area);
         etcalendar = findViewById(R.id.etcalender);
         calendarbtn = findViewById(R.id.calendarbtn);
         textViewsch = (TextView) findViewById(R.id.toolbartextsch);
@@ -112,8 +113,10 @@ public class ScheduleActivity extends AppCompatActivity {
 
         } else if (etcalendar.getText().toString().isEmpty()) {
             showSnackbar(etcalendar, "Please select the date", 4000);
-        } else if (spinner.getSelectedItemPosition() == 0) {
-            showSnackbar(spinner, "Please select time slot", 4000);
+        } else if (spinnertime.getSelectedItemPosition() == 0) {
+            showSnackbar(spinnertime, "Please select time slot", 4000);
+        }else if (spinnerarea.getSelectedItemPosition() == 0) {
+            showSnackbar(spinnerarea, "Please select area", 4000);
         } else {
             Intent i = new Intent(ScheduleActivity.this, PriceOrderActivity.class);
             editor = getSharedPreferences("userdetails", MODE_PRIVATE).edit();
@@ -130,7 +133,8 @@ public class ScheduleActivity extends AppCompatActivity {
             editor.putString("useremail", custemail);
             editor.putString("useraddress", custaddress);
             editor.putString("userlandmark", custlandmark);
-            editor.putString("usertime", spinner.getSelectedItem().toString());
+            editor.putString("usertime", spinnertime.getSelectedItem().toString());
+          //  editor.putString("userarea", spinnerarea.getSelectedItem().toString());
             editor.commit();
             startActivity(i);
         }

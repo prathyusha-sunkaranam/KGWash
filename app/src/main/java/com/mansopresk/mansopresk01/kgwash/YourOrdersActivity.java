@@ -14,7 +14,7 @@ import com.mansopresk.mansopresk01.kgwash.Navigation.TermsConditionsActivity;
 
 public class YourOrdersActivity extends AppCompatActivity {
     SharedPreferences sharedpreferences;
-    TextView dateplace,timesloteplace,customername;
+    TextView dateplace,timesloteplace,customername,areaspinnertext;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +28,7 @@ public class YourOrdersActivity extends AppCompatActivity {
 
         dateplace = (TextView)findViewById(R.id.date_place);
         timesloteplace=findViewById(R.id.timeslote_place);
+        areaspinnertext = findViewById(R.id.areaspinr);
         customername=findViewById(R.id.customername);
         sharedpreferences = getSharedPreferences("userdetails", MODE_PRIVATE);
 
@@ -38,6 +39,7 @@ public class YourOrdersActivity extends AppCompatActivity {
         String udate = sharedpreferences.getString("userdate", null);
         dateplace.setText(udate);
         timesloteplace.setText(sharedpreferences.getString("usertime", ""));
+       // areaspinnertext.setText(sharedpreferences.getString("userarea", ""));
     }
     @Override
     public boolean onSupportNavigateUp() {

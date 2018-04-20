@@ -71,7 +71,7 @@ card_view:cardUseCompatPadding="true">
             android:layout_height="wrap_content"
             android:text="Time Slote :"/>
         <TextView
-            android:id="@+id/timeslote_place"
+            android:id="@+id/timeslote_placeadmin"
             android:layout_weight="0.5"
             android:layout_width="0dp"
             android:textSize="18dp"
