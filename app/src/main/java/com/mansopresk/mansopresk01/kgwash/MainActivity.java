@@ -72,7 +72,7 @@ public class MainActivity extends Activity {
                 }
                  else if (mail.getText().toString().trim().isEmpty()) {
                     mail.requestFocus();
-                    mail.setError("");
+                    mail.setError("Enter valid Email");
                 }
                 else {
                         Toast.makeText(MainActivity.this, " enter proper mail id ", Toast.LENGTH_SHORT).show();

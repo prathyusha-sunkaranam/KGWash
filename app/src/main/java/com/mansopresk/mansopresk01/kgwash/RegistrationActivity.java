@@ -13,6 +13,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.mansopresk.mansopresk01.kgwash.Indicator.WelcomeActivity;
+import com.mansopresk.mansopresk01.kgwash.Navigation.NavigationMainActivity;
+
 public class RegistrationActivity extends Activity {
 
     EditText name, mobile, alternatenum, emailregister, address, landmark, pass;
@@ -80,12 +83,19 @@ public class RegistrationActivity extends Activity {
                 editor.putString("landmark", landmarkregister);
                 editor.commit();
 
-                Intent i = new Intent(RegistrationActivity.this, BookNowActivity.class);
+                Intent i = new Intent(RegistrationActivity.this, MainActivity.class);
                 startActivity(i);
             } else {
                 showSnackbar(emailregister, "provide proper email id", 4000);
             }
         }
+    }
+    public void onBackPressed() {
+        super.onBackPressed();
+        //Toast.makeText(this, "back key is pressed", Toast.LENGTH_SHORT).show();
+        Intent i3 = new Intent(RegistrationActivity.this,MainActivity.class);
+        startActivity(i3);
+        finish();
     }
 }
 

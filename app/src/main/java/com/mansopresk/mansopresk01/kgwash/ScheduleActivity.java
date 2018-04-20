@@ -22,6 +22,7 @@ import android.widget.Toast;
 
 import com.mansopresk.mansopresk01.kgwash.Navigation.AboutUsActivity;
 import com.mansopresk.mansopresk01.kgwash.Navigation.NavigationMainActivity;
+import com.mansopresk.mansopresk01.kgwash.Order.PriceOrderActivity;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -114,7 +115,7 @@ public class ScheduleActivity extends AppCompatActivity {
         } else if (spinner.getSelectedItemPosition() == 0) {
             showSnackbar(spinner, "Please select time slot", 4000);
         } else {
-            Intent i = new Intent(ScheduleActivity.this, YourOrdersActivity.class);
+            Intent i = new Intent(ScheduleActivity.this, PriceOrderActivity.class);
             editor = getSharedPreferences("userdetails", MODE_PRIVATE).edit();
             String custlandmark = landmark_sch.getText().toString();
             String custaddress = address_sch.getText().toString();

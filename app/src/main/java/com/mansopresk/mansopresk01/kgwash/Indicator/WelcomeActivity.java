@@ -18,6 +18,8 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.mansopresk.mansopresk01.kgwash.MainActivity;
+import com.mansopresk.mansopresk01.kgwash.Navigation.NavigationMainActivity;
 import com.mansopresk.mansopresk01.kgwash.R;
 
 
@@ -164,5 +166,11 @@ public class WelcomeActivity extends Activity
             View view = (View) object;
             container.removeView(view);
         }
+    }
+    public void onBackPressed() {
+        super.onBackPressed();
+        //Toast.makeText(this, "back key is pressed", Toast.LENGTH_SHORT).show();
+        Intent i3 = new Intent(WelcomeActivity.this,NavigationMainActivity.class);
+        startActivity(i3);
     }
 }

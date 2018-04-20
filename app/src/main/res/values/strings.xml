@@ -26,6 +26,7 @@
 
 
     <string-array name="spinner_item">
+        <item>0</item>
         <item>1</item>
         <item>2</item>
         <item>3</item>
@@ -146,11 +147,12 @@ Neat and Wrinkle Free Packaging\n
     <string name="terms6">* Removal of stain is a part of the process but, complete removal of stains can not be guaranteed and will be processed at customer's risk.*</string>
     <string name="title_activity_mainfg2">Mainfg2Activity</string>
     <string name="terms7">Laundry Care is not responsible for loss of or damage to any personal or non-cleanable items left in the article such as money, jewelry, or anything else.</string>
-<string name="terms8">Customers are requested to count the articles at the time of delivery and inform the delivery man in case of missing articles. Company will not be responsible for any such claims after the articles delivery has been accepted and signed by the customer.</string>
+    <string name="terms8">Customers are requested to count the articles at the time of delivery and inform the delivery man in case of missing articles. Company will not be responsible for any such claims after the articles delivery has been accepted and signed by the customer.</string>
 
-   <string name="terms9">Customer has to pay the entire amount after successful delivery of order.</string>
+    <string name="terms9">Customer has to pay the entire amount after successful delivery of order.</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_maps">Map</string>
     <string name="title_activity_kg_maps">Map</string>
+    <string name="title_activity_type_of_payment">TypeOfPaymentActivity</string>
 </resources>

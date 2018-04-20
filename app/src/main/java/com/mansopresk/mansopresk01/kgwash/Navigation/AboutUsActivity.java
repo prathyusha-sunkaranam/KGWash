@@ -62,7 +62,7 @@ public class AboutUsActivity extends AppCompatActivity implements View.OnClickLi
                 try {
                     Intent i = new Intent(Intent.ACTION_SENDTO);
                     i.setType("message/rfc822");
-                    i.setData(Uri.parse("mailto:sateesh.itech@gmail.com"));
+                    i.setData(Uri.parse("mailto:info@mansopresk.com"));
                     i.putExtra(Intent.EXTRA_SUBJECT, "subject of email");
                     i.putExtra(Intent.EXTRA_TEXT   , "body of email");
                     i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -85,7 +85,7 @@ public class AboutUsActivity extends AppCompatActivity implements View.OnClickLi
             @Override
             public void onClick(View view) {
                 Intent viewIntent =
-                        new Intent("android.intent.action.VIEW",Uri.parse("http://www.fratelloinnotech.com/"));
+                        new Intent("android.intent.action.VIEW",Uri.parse("http://mansopresk.com/"));
                 startActivity(viewIntent);
             }
         });

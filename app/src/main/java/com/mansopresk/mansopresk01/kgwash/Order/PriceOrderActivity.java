@@ -1,9 +1,11 @@
 package com.mansopresk.mansopresk01.kgwash.Order;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ExpandableListView;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -20,6 +22,7 @@ public class PriceOrderActivity extends AppCompatActivity {
     private ArrayList<Group> ExpListItems;
     private ExpandableListView ExpandList;
     Spinner spinner;
+    Button saveorder;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +33,14 @@ public class PriceOrderActivity extends AppCompatActivity {
         ExpListItems = SetStandardGroups();
         ExpAdapter = new ExpandListAdapter(PriceOrderActivity.this, ExpListItems);
         ExpandList.setAdapter(ExpAdapter);
+        saveorder=findViewById(R.id.ordersave);
+        saveorder.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(PriceOrderActivity.this,TypeOfPaymentActivity.class);
+                startActivity(i);
+            }
+        });
 
         spinner=findViewById(R.id.spinner);
 

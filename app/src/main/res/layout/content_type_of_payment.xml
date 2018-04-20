@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="30dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.mansopresk.mansopresk01.kgwash.Order.TypeOfPaymentActivity"
+    tools:showIn="@layout/activity_type_of_payment">
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textColor="#000"
+    android:padding="20dp"
+    android:textSize="30dp"
+    android:text="Type Of Payment"/>
+    <RadioGroup
+        android:id="@+id/radiogroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/service_text">
+        <RadioButton
+            android:id="@+id/paynow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingEnd="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingStart="5dp"
+            android:checked="true"
+            android:text="Online payment"/>
+
+        <RadioButton
+            android:id="@+id/codbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingEnd="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingStart="5dp"
+            android:text="Cash On Delivery"/>
+    </RadioGroup>
+    <Button
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Proceed"
+        android:layout_gravity="center"
+        android:textSize="20dp"
+        android:background="@drawable/buttonbg"/>
+</LinearLayout>

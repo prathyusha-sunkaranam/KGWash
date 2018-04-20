@@ -175,6 +175,7 @@
                         android:layout_weight="0.8"
                         android:paddingLeft="10dp"
                         android:hint="mm/dd/yyyy"
+                        android:editable="false"
                         android:onClick="calender"
                         android:textAppearance="?android:attr/textAppearanceMedium" />
 
