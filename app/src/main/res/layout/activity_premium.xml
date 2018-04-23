@@ -91,6 +91,7 @@
             android:layout_height="wrap_content"
             android:src="@drawable/premiumtwo"/>
         <Button
+            android:id="@+id/basicbook"
             android:layout_gravity="center"
             android:layout_marginTop="50dp"
             android:layout_width="wrap_content"
@@ -154,13 +155,13 @@
                     android:textSize="20dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="750"
+                    android:text="1500"
                     android:id="@+id/silvercost"/>
                 <TextView
                     android:textSize="20dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="525"/>
+                    android:text="640"/>
             </LinearLayout>
         </LinearLayout>
         <ImageView
@@ -182,6 +183,7 @@
             android:layout_height="wrap_content"
             android:src="@drawable/premiumpic"/>
         <Button
+            android:id="@+id/silverbook"
             android:layout_gravity="center"
             android:layout_marginTop="50dp"
             android:layout_width="wrap_content"
@@ -239,13 +241,13 @@
                 android:textSize="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="750"
+                android:text="2250"
                 android:id="@+id/goldcost"/>
             <TextView
                 android:textSize="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="525"/>
+                android:text="1050"/>
         </LinearLayout>
         </LinearLayout>
         <ImageView
@@ -267,6 +269,7 @@
             android:layout_height="wrap_content"
             android:src="@drawable/premiumtwo"/>
         <Button
+            android:id="@+id/goldbook"
             android:layout_gravity="center"
             android:layout_marginTop="50dp"
             android:layout_width="wrap_content"
@@ -321,13 +324,13 @@
                 android:textSize="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="750"
+                android:text="3000"
                 android:id="@+id/platinacost"/>
             <TextView
                 android:textSize="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="525"/>
+                android:text="1200"/>
         </LinearLayout>
         </LinearLayout>
         <ImageView
@@ -349,6 +352,7 @@
             android:layout_height="wrap_content"
             android:src="@drawable/premiumthree"/>
         <Button
+            android:id="@+id/platinabook"
             android:layout_gravity="center"
             android:layout_marginTop="50dp"
             android:layout_width="wrap_content"
