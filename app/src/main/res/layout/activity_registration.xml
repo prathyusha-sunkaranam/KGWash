@@ -6,18 +6,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="20dp"
+    android:background="@drawable/loginbg"
     tools:context="com.mansopresk.mansopresk01.kgwash.RegistrationActivity">
-
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+    <RelativeLayout
+        android:id="@+id/registerll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="20dp">
+
 
         <LinearLayout
+            android:id="@+id/linearlayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:background="@drawable/loginbackg">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="20dp">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -132,22 +145,30 @@
                     android:hint="Landmark"/>
 
             </android.support.design.widget.TextInputLayout>
-
-            <Button
-                android:id="@+id/register"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:layout_marginTop="30dp"
-                android:onClick="register"
-                android:text="Register"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:textColor="#000"
-                android:background="@drawable/buttonbg"
-                android:textStyle="bold" />
+            </LinearLayout>
 
         </LinearLayout>
 
-    </ScrollView>
+
+        <Button
+            android:id="@+id/register"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="bottom"
+            android:onClick="register"
+            android:text="Register"
+            android:layout_below="@id/linearlayout"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#000"
+            android:background="#4b9ac9"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="30dp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+</ScrollView>
+
 
 </RelativeLayout>

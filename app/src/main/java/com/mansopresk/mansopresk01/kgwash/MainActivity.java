@@ -92,10 +92,10 @@ public class MainActivity extends Activity {
     public void valid(View v) {
         if (email.getText().toString().trim().isEmpty()) {
             email.requestFocus();
-            email.setError("");
+            email.setError("please provide email id");
         } else if (password.getText().toString().isEmpty()) {
             password.requestFocus();
-            password.setError("");
+            password.setError("please provide password");
         } else {
             String usrname = email.getText().toString();
             String pswrd = password.getText().toString();

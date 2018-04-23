@@ -114,11 +114,10 @@ public class NavigationMainActivity extends AppCompatActivity
                     Menu menuNav=navigationView.getMenu();
                     MenuItem nav_logout = menuNav.findItem(R.id.nav_logout);
                     nav_logout.setVisible(false);
-
                     MenuItem nav_profile = menuNav.findItem(R.id.nav_profile);
                     nav_profile.setVisible(false);
                     MenuItem nav_orders = menuNav.findItem(R.id.nav_orders);
-                    nav_orders.setVisible(false);
+                    nav_orders.setVisible(true);
                     nav_email=(TextView)header.findViewById(R.id.nav_mail);
                     nav_email.setVisibility(View.GONE);
                 }
@@ -130,8 +129,6 @@ public class NavigationMainActivity extends AppCompatActivity
                 nav_logout.setVisible(true);
                 MenuItem nav_profile = menuNav.findItem(R.id.nav_profile);
                 nav_profile.setVisible(true);
-                MenuItem nav_orders = menuNav.findItem(R.id.nav_orders);
-                nav_orders.setVisible(true);
                 nav_email=(TextView)header.findViewById(R.id.nav_mail);
                 nav_email.setVisibility(View.VISIBLE);
                 nav_email.setText(uname);
@@ -235,8 +232,22 @@ public class NavigationMainActivity extends AppCompatActivity
         }
 
         else if (id == R.id.nav_credits) {
-            Intent i2 = new Intent(NavigationMainActivity.this,Credits.class);
-            startActivity(i2);
+            DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+            drawer.openDrawer(GravityCompat.START);
+            return true;
+
+        }
+
+        else if (id == R.id.crediteone) {
+            DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+            drawer.openDrawer(GravityCompat.START);
+            return true;
+
+        }
+        else if (id == R.id.credittwo) {
+            DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+            drawer.openDrawer(GravityCompat.START);
+            return true;
 
         }else if (id == R.id.nav_share) {
             Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);

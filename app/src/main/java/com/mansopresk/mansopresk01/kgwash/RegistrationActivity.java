@@ -33,7 +33,7 @@ public class RegistrationActivity extends Activity {
         emailregister = findViewById(R.id.email_et);
         address = findViewById(R.id.address_et);
         landmark = findViewById(R.id.landmark_et);
-        register = findViewById(R.id.register);
+        //register = findViewById(R.id.register);
         pass = findViewById(R.id.pass_et);
     }
 
