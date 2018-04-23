@@ -11,6 +11,7 @@
     <string name="washfoldxml">Wash and Fold</string>
     <string name="washironxml">Wash and Iron</string>
     <string name="ironxml">Iron</string>
+    <string name="credits">Credits To : \n Prathyusha\n Kishore</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
