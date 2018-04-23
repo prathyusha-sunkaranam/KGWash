@@ -9,9 +9,9 @@
 
 
 
-    <color name="button_pressed">#92e068</color>
-    <color name="button_focused">#92e068</color>
-    <color name="button_default">#4b9ac9</color>
+    <color name="button_pressed">#4b9ac9</color>
+    <color name="button_focused">#4b9ac9</color>
+    <color name="button_default">#c19961</color>
 
 
     <!-- Screens background color-->

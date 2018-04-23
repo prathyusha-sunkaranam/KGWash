@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.graphics.Paint;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -19,6 +20,10 @@ public class Premium extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_premium);
+        Toolbar mToolbar = (Toolbar) findViewById(R.id.toolbartc);
+        setSupportActionBar(mToolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         basiccost=(TextView)findViewById(R.id.basiccost);
         silvercost=(TextView)findViewById(R.id.silvercost);
@@ -62,5 +67,13 @@ public class Premium extends AppCompatActivity {
                 startActivity(it);
             }
         });
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        Intent i = new Intent(Premium.this,NavigationMainActivity.class);
+        startActivity(i);
+        return true;
     }
 }

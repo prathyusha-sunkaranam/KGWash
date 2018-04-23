@@ -96,8 +96,10 @@
         <activity
             android:name=".Order.TypeOfPaymentActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Navigation.Premium" />
-        <activity android:name=".Navigation.Credits"></activity>
+        <activity android:name=".Navigation.Premium"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".Navigation.Credits"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
