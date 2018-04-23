@@ -78,7 +78,7 @@
         android:text="Why To Choose KG Wash"
         android:gravity="center"
         android:textSize="24sp"
-        android:textColor="#5c5959"
+        android:textColor="#c19961"
         android:layout_marginBottom="5dp"
         android:textStyle="bold"/>
 
@@ -164,7 +164,7 @@
                 android:text="Our Services"
                 android:gravity="center"
                 android:textSize="24sp"
-                android:textColor="#5c5959"
+                android:textColor="#c19961"
                 android:textStyle="bold"/>
 
 

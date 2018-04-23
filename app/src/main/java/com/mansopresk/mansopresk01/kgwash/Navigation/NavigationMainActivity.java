@@ -20,6 +20,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
@@ -43,6 +45,7 @@ public class NavigationMainActivity extends AppCompatActivity
     LinearLayout loginsignup;
     Button odernow;
     String uname;
+    Animation animZoomIn;
 
 
     @Override
@@ -56,6 +59,8 @@ public class NavigationMainActivity extends AppCompatActivity
         textView = (TextView) findViewById(R.id.toolbartext);
         jhonno=findViewById(R.id.johnno);
         textView.setText("KG Wash");
+        animZoomIn = AnimationUtils.loadAnimation(getApplicationContext(),
+                R.anim.zoom_in);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -157,6 +162,7 @@ public class NavigationMainActivity extends AppCompatActivity
         }
     }
     public void ordernow(View v){
+        //odernow.startAnimation(animZoomIn);
     Intent ip = new Intent(this, BookNowActivity.class);
     startActivity(ip);
 }
@@ -185,7 +191,7 @@ public class NavigationMainActivity extends AppCompatActivity
            // super.onBackPressed();
             Intent intent = new Intent(Intent.ACTION_MAIN);
             intent.addCategory(Intent.CATEGORY_HOME);
-            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);//***Change Here***
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent);
             finish();
             System.exit(0);
