@@ -82,82 +82,6 @@
         android:layout_marginBottom="5dp"
         android:textStyle="bold"/>
 
-       <LinearLayout
-           android:layout_width="match_parent"
-           android:layout_height="150dp"
-           android:orientation="vertical"
-           android:layout_margin="10dp"
-           android:weightSum="1">
-
-           <LinearLayout
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:orientation="horizontal"
-               android:weightSum="1">
-               <TextView
-                   android:layout_width="0dp"
-                   android:layout_height="wrap_content"
-                   android:text="Door Step pick up and Delivery"
-                   android:layout_marginTop="10dp"
-                   android:layout_marginLeft="10dp"
-                   android:textColor="#155a83"
-                   android:layout_weight="0.4"/>
-               <ImageView
-                   android:layout_width="wrap_content"
-                   android:layout_height="30dp"
-                   android:layout_margin="10dp"
-                   android:layout_marginTop="10dp"
-                   android:src="@drawable/verticaldotted"
-                   android:layout_weight="0.2"
-                   android:layerType="software" />
-               <TextView
-                   android:layout_width="0dp"
-                   android:layout_height="wrap_content"
-                   android:layout_marginTop="10dp"
-                   android:text="Eco-Friendly Wash"
-                   android:textColor="#155a83"
-                   android:layout_weight="0.4"/>
-           </LinearLayout>
-
-           <ImageView
-               android:layout_width="match_parent"
-               android:layout_height="5dp"
-               android:layout_margin="10dp"
-               android:src="@drawable/dottedborder"
-               android:layerType="software" />
-
-           <LinearLayout
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:orientation="horizontal"
-               android:weightSum="1">
-               <TextView
-                   android:layout_width="0dp"
-                   android:layout_height="wrap_content"
-                   android:text="Affordable Price"
-                   android:layout_marginTop="10dp"
-                   android:layout_marginLeft="10dp"
-                   android:textColor="#155a83"
-                   android:layout_weight="0.4"/>
-               <ImageView
-                   android:layout_width="wrap_content"
-                   android:layout_height="30dp"
-                   android:layout_margin="10dp"
-                   android:layout_marginTop="10dp"
-                   android:src="@drawable/verticaldotted"
-                   android:layout_weight="0.2"
-                   android:layerType="software" />
-               <TextView
-                   android:layout_width="0dp"
-                   android:layout_height="wrap_content"
-                   android:layout_marginTop="10dp"
-                   android:text="Premium Plans"
-                   android:textColor="#155a83"
-                   android:layout_weight="0.4"/>
-           </LinearLayout>
-
-       </LinearLayout>
-
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -168,7 +92,92 @@
                 android:textStyle="bold"/>
 
 
-    <LinearLayout
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_margin="10dp"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="0.4"
+                        android:drawableLeft="@drawable/pricetag"
+                        android:drawablePadding="8dp"
+                        android:text="Door Step pick up and Delivery"
+                        android:textColor="#155a83" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="0.2"
+                        android:layerType="software"
+                        android:src="@drawable/verticaldotted" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="0.4"
+                        android:drawableLeft="@drawable/eco"
+                        android:drawablePadding="8dp"
+                        android:text="Eco-Friendly Wash"
+                        android:textColor="#155a83" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_margin="10dp"
+                    android:layerType="software"
+                    android:src="@drawable/dottedborder" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="0.4"
+                        android:text="Affordable Price"
+                        android:drawableLeft="@drawable/pricetag"
+                        android:drawablePadding="8dp"
+                        android:textColor="#155a83" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="0.2"
+                        android:layerType="software"
+                        android:src="@drawable/verticaldotted" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="0.4"
+                        android:text="Premium Plans"
+                        android:textColor="#155a83" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="300dp"
         android:orientation="vertical"
@@ -194,7 +203,6 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_marginTop="20dp"
-            android:onClick="basic"
             android:src="@drawable/washfold" />
         <TextView
             android:layout_width="100dp"
@@ -216,7 +224,6 @@
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_marginTop="20dp"
-                android:onClick="silver"
                 android:src="@drawable/washiron" />
             <TextView
                 android:layout_width="100dp"
@@ -248,12 +255,10 @@
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:layout_marginTop="20dp"
-                        android:onClick="gold"
                         android:src="@drawable/iron" />
                     <TextView
                         android:layout_width="90dp"
                         android:layout_height="wrap_content"
-                        android:onClick="gold"
                         android:text="@string/ironxml"
                         android:gravity="center"/>
 
