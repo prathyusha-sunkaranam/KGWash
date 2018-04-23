@@ -171,6 +171,7 @@
                         android:drawableLeft="@drawable/premium"
                         android:drawablePadding="8dp"
                         android:text="Premium Plans"
+                        android:background="@drawable/button_background"
                         android:textColor="#155a83" />
                 </LinearLayout>
 
