@@ -30,10 +30,9 @@
     <string name="pieces4">
    \n120pieces\n\n 30days \n\n 6pickups
 </string>
-    <string name="cost1">RS-540</string>
-    <string name="cost2"></string>
-    <string name="cost3"></string>
-    <string name="cost4"></string>
+
+    <string name="cost1">Rs.</string>
+
     <string-array name="SelectArea">
         <item>-- Select Area--</item>
         <item> Gachibowli </item>
