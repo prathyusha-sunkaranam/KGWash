@@ -16,6 +16,12 @@
     <string name="ScheduleNow">Schedule Now</string>
     <string name="TCapply">Terms and Conditions</string>
 
+    <string name="washfoldxml">Wash and Fold</string>
+    <string name="washironxml">Wash and Iron</string>
+
+    <string name="ironxml">Iron</string>
+
+
 
     <string-array name="SelectArea">
         <item>-- Select Area--</item>

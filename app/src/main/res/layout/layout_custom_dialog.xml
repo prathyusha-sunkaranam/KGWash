@@ -15,7 +15,6 @@
         android:hint="Email id"
         android:backgroundTint="@color/colorPrimary"
         android:layout_height="wrap_content" />
-
         <LinearLayout
             android:weightSum="1"
             android:layout_width="match_parent"
@@ -29,10 +28,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/buttonbg"
-                android:text="ok"
-                />
+                android:text="ok" />
             <Button
-
                 android:id="@+id/fcancel"
                 android:layout_weight="0.5"
                 android:layout_width="match_parent"
@@ -40,11 +37,6 @@
                 android:background="@drawable/buttonbg"
                 android:paddingLeft="10dp"
                 android:text="cancel"/>
-
-
-
         </LinearLayout>
     </LinearLayout>
-
-
 </LinearLayout>

@@ -5,8 +5,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/loginbg"
     android:orientation="vertical">
-
+<RelativeLayout
+    android:id="@+id/loginll"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/loginbackg"
+    android:layout_margin="20dp">
     <LinearLayout
         android:id="@+id/first"
         android:layout_width="match_parent"
@@ -52,10 +59,8 @@
             android:layout_height="wrap_content"
             android:hint="Email Id"
             android:inputType="textEmailAddress"
-            android:layout_marginTop="20dp"
             />
         </android.support.design.widget.TextInputLayout>
-
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
@@ -65,10 +70,8 @@
             android:id="@+id/password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
             android:inputType="textPassword"
             android:hint="Password" />
-
         </android.support.design.widget.TextInputLayout>
 
         <LinearLayout
@@ -79,46 +82,45 @@
             android:layout_marginTop="20dp"
             android:weightSum="1">
 
-        <Button
-            android:id="@+id/signin"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="sign in"
-            android:onClick="valid"
-            android:background="@drawable/buttonbg"
-            android:layout_weight="0.5"
-            android:layout_marginTop="30dp"/>
-
             <Button
-                android:id="@+id/signup"
-                android:layout_width="0dp"
+                android:id="@+id/signin"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="sign up"
-                android:onClick="signup"
-                android:layout_weight="0.5"
+                android:text="sign in"
+                android:onClick="valid"
+                android:gravity="center"
+                android:layout_marginLeft="60dp"
                 android:background="@drawable/buttonbg"
-                android:layout_marginTop="30dp"
-                android:layout_marginLeft="10dp"/>
+                android:layout_weight="0.5" />
 
         </LinearLayout>
 
-        <TextView
-            android:onClick="forget"
-            android:id="@+id/forgotpass"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Forgot password?"
-            android:layout_gravity="center"
-            android:layout_marginTop="30dp"
-            android:textSize="16sp"
-            android:textColor="#000"/>
     </LinearLayout>
 
 
+</RelativeLayout>
+    <TextView
 
-
-
-
-
+        android:onClick="forget"
+        android:id="@+id/forgotpass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Forgot password?"
+        android:layout_marginTop="30dp"
+        android:textSize="20sp"
+        android:layout_marginLeft="100dp"
+        android:layout_below="@+id/loginll"
+        android:textColor="#fff"/>
+    <Button
+        android:id="@+id/signup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="sign up"
+        android:onClick="signup"
+        android:layout_below="@+id/forgotpass"
+        android:background="#4b9ac9"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" />
 
 </RelativeLayout>
