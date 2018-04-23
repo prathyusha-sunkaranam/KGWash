@@ -16,7 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="250dp"
         android:orientation="vertical"
-        android:background="@drawable/kgmain"
+        android:background="@drawable/wfviewer"
         android:layout_marginTop="46dp">
 
         <TextView
