@@ -40,7 +40,7 @@ import com.mansopresk.mansopresk01.kgwash.YourOrdersActivity;
 
 public class NavigationMainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-    TextView nav_signin1,nav_signup, textView,nav_email,jhonno;
+    TextView nav_signin1,nav_signup, textView,nav_email,jhonno,premium;
     SharedPreferences sharedPreferences;
     LinearLayout loginsignup;
     Button odernow;
@@ -55,6 +55,7 @@ public class NavigationMainActivity extends AppCompatActivity
         setTitle("KG Wash");
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        premium = findViewById(R.id.premium);
         odernow = (Button) findViewById(R.id.ordernow);
         textView = (TextView) findViewById(R.id.toolbartext);
         jhonno=findViewById(R.id.johnno);
@@ -67,6 +68,13 @@ public class NavigationMainActivity extends AppCompatActivity
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
+        premium.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent ip=new Intent(NavigationMainActivity.this,Premium.class);
+                startActivity(ip);
+            }
+        });
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
