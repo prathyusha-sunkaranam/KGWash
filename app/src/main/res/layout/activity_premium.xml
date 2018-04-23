@@ -203,7 +203,7 @@
             android:layout_marginTop="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/premiumpic"/>
+            android:src="@drawable/silverlogo"/>
         <Button
             android:id="@+id/silverbook"
             android:layout_gravity="center"
@@ -291,7 +291,7 @@
             android:layout_marginTop="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/premiumtwo"/>
+            android:src="@drawable/premiumthree"/>
         <Button
             android:id="@+id/goldbook"
             android:layout_gravity="center"
@@ -375,13 +375,13 @@
             android:layout_marginTop="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/premiumthree"/>
+            android:src="@drawable/premiumpic"/>
         <Button
             android:id="@+id/platinabook"
             android:layout_gravity="center"
             android:layout_marginTop="50dp"
             android:layout_width="wrap_content"
-            android:layout_height="30dp"
+            android:layout_height="wrap_content"
             android:background="@drawable/buttonbg"
             android:text="Book Now"/>
 
