@@ -7,24 +7,20 @@
     tools:context="com.mansopresk.mansopresk01.kgwash.Navigation.Credits">
 
     <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbartc"
+        android:id="@+id/toolbarcredits"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="#4b9ac9"
         android:gravity="top"
         android:minHeight="50dp"
-        app:theme="@style/ToolbarStyle"
         app:titleMarginTop="@dimen/margin_to_center"
-        xmlns:android="http://schemas.android.com/apk/res/android" >
-
+        android:background="#4b9ac9">
         <TextView
-            android:id="@+id/toolbartexttc"
+            android:id="@+id/tooltextabt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="KG Wash"
-            android:textColor="#fff"
-            android:textSize="16sp"/>
-
+            android:textSize="18sp"
+            android:textColor="#fff"/>
     </android.support.v7.widget.Toolbar>
 
 
