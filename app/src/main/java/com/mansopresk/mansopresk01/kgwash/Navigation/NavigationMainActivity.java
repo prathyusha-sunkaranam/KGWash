@@ -59,8 +59,8 @@ public class NavigationMainActivity extends AppCompatActivity
         textView = (TextView) findViewById(R.id.toolbartext);
         jhonno=findViewById(R.id.johnno);
         textView.setText("KG Wash");
-        animZoomIn = AnimationUtils.loadAnimation(getApplicationContext(),
-                R.anim.zoom_in);
+//        animZoomIn = AnimationUtils.loadAnimation(getApplicationContext(),
+//                R.anim.zoom_in);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(

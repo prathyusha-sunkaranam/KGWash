@@ -5,96 +5,92 @@
     android:orientation="vertical"
     android:gravity="center"
     xmlns:android="http://schemas.android.com/apk/res/android">
-    <ScrollView android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:orientation="vertical"
-        android:background="@drawable/wfviewer"
-        android:layout_marginTop="46dp">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="KG Wash"
-            android:textSize="35sp"
-            android:gravity="center"
-            android:textColor="#e1dbdb"
-            android:textStyle="bold"
-            android:layout_marginTop="20dp" />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="wash with free hands"
-            android:gravity="center"
-            android:textSize="20sp"
-            android:textStyle="italic"
-            android:layout_marginTop="5dp"
-            android:textColor="#e1dbdb"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginTop="46dp"
+                android:background="@drawable/wfviewer"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:text="KG Wash"
+                    android:textColor="#e1dbdb"
+                    android:textSize="35sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="wash with free hands"
+                    android:textColor="#e1dbdb"
+                    android:textSize="20sp"
+                    android:textStyle="italic" />
 
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="minimum order Rs.200"
-            android:gravity="center"
-            android:textColor="#e1dbdb"
-            android:layout_marginTop="10dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="minimum order Rs.200"
+                    android:textColor="#e1dbdb" />
 
-        <Button
-            android:id="@+id/ordernow"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Order Now"
-            android:onClick="ordernow"
-            android:background="@drawable/bordersxm"
-            android:layout_marginTop="8dp"
-            android:textColor="#e1dbdb"
-            android:layout_marginLeft="250dp"/>
-        <TextView
-            android:id="@+id/johnno"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Call  9000379005"
-            android:textSize="22sp"
-            android:textColor="#e1dbdb"
-            android:drawableLeft="@drawable/call"
-            android:drawablePadding="14dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="80sp"/>
+                <Button
+                    android:id="@+id/ordernow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="250dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bordersxm"
+                    android:onClick="ordernow"
+                    android:text="Order Now"
+                    android:textColor="#e1dbdb" />
 
-    </LinearLayout>
+                <TextView
+                    android:id="@+id/johnno"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="80sp"
+                    android:layout_marginTop="10dp"
+                    android:drawableLeft="@drawable/call"
+                    android:drawablePadding="14dp"
+                    android:text="Call  9000379005"
+                    android:textColor="#e1dbdb"
+                    android:textSize="22sp" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:text="Why To Choose KG Wash"
-        android:gravity="center"
-        android:textSize="24sp"
-        android:textColor="#c19961"
-        android:layout_marginBottom="5dp"
-        android:textStyle="bold"/>
+            </LinearLayout>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Our Services"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="15dp"
                 android:gravity="center"
-                android:textSize="24sp"
+                android:text="Why To Choose KG Wash"
                 android:textColor="#c19961"
-                android:textStyle="bold"/>
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:orientation="vertical"
                 android:weightSum="1">
@@ -110,7 +106,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:layout_weight="0.4"
-                        android:drawableLeft="@drawable/pricetag"
+                        android:drawableLeft="@drawable/pickup"
                         android:drawablePadding="8dp"
                         android:text="Door Step pick up and Delivery"
                         android:textColor="#155a83" />
@@ -150,12 +146,12 @@
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
+
                         android:layout_marginTop="10dp"
                         android:layout_weight="0.4"
-                        android:text="Affordable Price"
-                        android:drawableLeft="@drawable/pricetag"
+                        android:drawableLeft="@drawable/pricetags"
                         android:drawablePadding="8dp"
+                        android:text="Affordable Price"
                         android:textColor="#155a83" />
 
                     <ImageView
@@ -171,6 +167,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:layout_weight="0.4"
+                        android:drawableLeft="@drawable/premium"
+                        android:drawablePadding="8dp"
                         android:text="Premium Plans"
                         android:textColor="#155a83" />
                 </LinearLayout>
@@ -178,93 +176,107 @@
             </LinearLayout>
 
             <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:orientation="vertical"
-        android:layout_margin="10dp"
-        android:layout_marginBottom="15dp">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:baselineAligned="false"
-            android:weightSum="1">
-
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center"
-        android:layout_weight="0.5">
-
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/Basic"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginTop="20dp"
-            android:src="@drawable/washfold" />
-        <TextView
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:onClick="basic"
-            android:gravity="center"
-            android:text="@string/washfoldxml"/>
-
-    </LinearLayout>
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center"
-
-            android:layout_weight="0.5">
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/silver"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_marginTop="20dp"
-                android:src="@drawable/washiron" />
-            <TextView
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:onClick="silver"
-                android:text="@string/washironxml"
-                android:gravity="center"/>
-
-        </LinearLayout>
-        </LinearLayout>
-
-
-
-            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:baselineAligned="false">
+                android:layout_margin="10dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Our Services"
+                    android:textColor="#c19961"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
 
                 <LinearLayout
-                    android:layout_width="0dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:gravity="center"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
 
-                    android:layout_weight="0.5">
-                    <de.hdodenhof.circleimageview.CircleImageView
-                        android:id="@+id/gold"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:layout_marginTop="20dp"
-                        android:src="@drawable/iron" />
-                    <TextView
-                        android:layout_width="90dp"
+                    <LinearLayout
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="@string/ironxml"
-                        android:gravity="center"/>
+                        android:layout_weight="0.5"
+                        android:gravity="center"
+                        android:orientation="vertical">
 
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/Basic"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_marginTop="20dp"
+                            android:src="@drawable/washfold" />
+
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textColor="#155a83"
+                            android:text="@string/washfoldxml" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:gravity="center"
+
+                        android:orientation="vertical">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/silver"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_marginTop="20dp"
+                            android:src="@drawable/washiron" />
+
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textColor="#155a83"
+                            android:text="@string/washironxml" />
+
+                    </LinearLayout>
                 </LinearLayout>
 
-            </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/gold"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_marginTop="20dp"
+                            android:src="@drawable/iron" />
+
+                        <TextView
+                            android:layout_width="90dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textColor="#155a83"
+                            android:text="@string/ironxml" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
 
             </LinearLayout>
 

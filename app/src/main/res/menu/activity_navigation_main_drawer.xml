@@ -36,11 +36,11 @@
             android:title="Share" />
         <item
             android:id="@+id/nav_credits"
-            android:icon="@drawable/ic_menu_share"
+            android:icon="@drawable/ic_brush_black_24dp"
             android:title="Credits" />
         <item
             android:id="@+id/nav_tcapply"
-            android:icon="@drawable/ic_brush_black_24dp"
+            android:icon="@drawable/ic_filter_terms_shift_black_"
             android:title="@string/TCapply" />
         <item
             android:id="@+id/nav_logout"
