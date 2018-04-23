@@ -224,7 +224,13 @@ public class NavigationMainActivity extends AppCompatActivity
             Intent i2 = new Intent(NavigationMainActivity.this,FaqActivity.class);
             startActivity(i2);
 
-        } else if (id == R.id.nav_share) {
+        }
+
+        else if (id == R.id.nav_credits) {
+            Intent i2 = new Intent(NavigationMainActivity.this,Credits.class);
+            startActivity(i2);
+
+        }else if (id == R.id.nav_share) {
             Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
             sharingIntent.setType("text/plain");
             String shareBody = "Your App is here";
