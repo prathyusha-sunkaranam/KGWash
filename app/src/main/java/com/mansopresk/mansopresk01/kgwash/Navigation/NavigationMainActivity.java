@@ -216,6 +216,9 @@ public class NavigationMainActivity extends AppCompatActivity
         } else if (id == R.id.nav_tcapply) {
                 Intent i = new Intent(NavigationMainActivity.this,TermsConditionsActivity.class);
                 startActivity(i);
+        } else if (id == R.id.nav_basic) {
+            Intent i = new Intent(NavigationMainActivity.this,Premium.class);
+            startActivity(i);
 
         } else if (id == R.id.nav_faq) {
             Intent i2 = new Intent(NavigationMainActivity.this,FaqActivity.class);

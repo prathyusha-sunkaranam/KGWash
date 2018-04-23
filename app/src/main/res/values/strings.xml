@@ -12,17 +12,25 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
-    <string name="action_settings">Logout</string>
+    <striig name="action_settings">Logout</striig>
     <string name="ScheduleNow">Schedule Now</string>
     <string name="TCapply">Terms and Conditions</string>
-
-    <string name="washfoldxml">Wash and Fold</string>
-    <string name="washironxml">Wash and Iron</string>
-
-    <string name="ironxml">Iron</string>
-
-
-
+<string name="pieces1">
+   \n 30pieces\n\n 30days \n\n 3pickups
+</string>
+    <string name="pieces2">
+   \n 60pieces\n\n 30days \n\n 4pickups
+</string>
+    <string name="pieces3">
+   \n 90pieces\n\n 30days \n\n 5pickups
+</string>
+    <string name="pieces4">
+   \n120pieces\n\n 30days \n\n 6pickups
+</string>
+    <string name="cost1">RS-540</string>
+    <string name="cost2"></string>
+    <string name="cost3"></string>
+    <string name="cost4"></string>
     <string-array name="SelectArea">
         <item>-- Select Area--</item>
         <item> Gachibowli </item>

@@ -35,7 +35,6 @@ public class FaqActivity extends AppCompatActivity implements View.OnClickListen
         acall = (ImageView) findViewById(R.id.acall);
         aweb = (ImageView) findViewById(R.id.awebsite);
         panel1 = (LinearLayout) findViewById(R.id.panel1);
-
         panel2 = (LinearLayout) findViewById(R.id.panel2);
         panel3 = (LinearLayout) findViewById(R.id.panel3);
         panel4 = (LinearLayout) findViewById(R.id.panel4);

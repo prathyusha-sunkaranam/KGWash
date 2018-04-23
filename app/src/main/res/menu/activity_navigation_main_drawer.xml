@@ -17,6 +17,11 @@
             android:icon="@drawable/ic_format_list_bulleted_black"
             android:title="Your Orders" />
         <item
+            android:id="@+id/nav_basic"
+            android:icon="@drawable/ic_format_list_bulleted_black"
+            android:title="Premium" />
+
+        <item
             android:id="@+id/nav_aboutus"
             android:icon="@drawable/ic_forum_black"
             android:title="About Us" />

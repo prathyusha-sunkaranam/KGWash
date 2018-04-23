@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#e4dfdf"
+    tools:context="com.mansopresk.mansopresk01.kgwash.Navigation.Premium">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+    <android.support.v7.widget.CardView
+       android:layout_margin="20dp"
+        app:cardCornerRadius="20dp"
+
+        app:cardBackgroundColor="#faf9f9"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="@string/pieces1"/>
+        <ImageView
+           android:layout_marginRight="140dp"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/flowerbracket"/>
+        <TextView
+            android:layout_marginLeft="255dp"
+            android:layout_marginTop="85dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Basic"/>
+        <ImageView
+            android:layout_marginLeft="240dp"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/star"/>
+        <Button
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Book Now"/>
+
+</android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        app:cardCornerRadius="20dp"
+        android:layout_margin="20dp"
+        app:cardBackgroundColor="#f7f9f7"
+        android:layout_width="match_parent"
+        android:layout_height="150dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="@string/pieces2"/>
+        <ImageView
+            android:layout_marginRight="140dp"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/flowerbracket"/>
+        <TextView
+            android:layout_marginLeft="255dp"
+            android:layout_marginTop="85dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Silver"/>
+        <ImageView
+            android:layout_marginLeft="240dp"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/premiumpic"/>
+        <Button
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Book Now"/>
+
+
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:layout_margin="20dp"
+        app:cardCornerRadius="20dp"
+        app:cardBackgroundColor="#f8f9f4"
+        android:layout_width="match_parent"
+        android:layout_height="150dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="@string/pieces3"/>
+        <ImageView
+            android:layout_marginRight="140dp"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/flowerbracket"/>
+        <TextView
+            android:layout_marginLeft="255dp"
+            android:layout_marginTop="85dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gold"/>
+        <ImageView
+            android:layout_marginLeft="240dp"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/premiumtwo"/>
+        <Button
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Book Now"/>
+
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:layout_margin="20dp"
+        app:cardCornerRadius="20dp"
+        app:cardBackgroundColor="#f9f7f9"
+        android:layout_width="match_parent"
+        android:layout_height="150dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="@string/pieces4"/>
+        <ImageView
+            android:layout_marginRight="140dp"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/flowerbracket"/>
+        <TextView
+            android:layout_marginLeft="250dp"
+            android:layout_marginTop="85dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Platina"/>
+        <ImageView
+            android:layout_marginLeft="240dp"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/premiumthree"/>
+        <Button
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Book Now"/>
+
+
+    </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -15,11 +15,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.RadioButton;
-
-import com.mansopresk.mansopresk01.kgwash.Indicator.WelcomeActivity;
-import com.mansopresk.mansopresk01.kgwash.Navigation.AboutUsActivity;
 import com.mansopresk.mansopresk01.kgwash.Navigation.NavigationMainActivity;
-
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -45,14 +41,12 @@ public class BookNowActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         mToolbar.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View view) {
                 Intent i=new Intent(BookNowActivity.this, NavigationMainActivity.class);
                 startActivity(i);
             }
         });
-
         layouts = new int[]{
                 R.layout.wash_iron,
                 R.layout.wash_fold,
@@ -63,7 +57,6 @@ public class BookNowActivity extends AppCompatActivity {
             @Override
             public void run() {
                 viewPager.post(new Runnable(){
-
                     @Override
                     public void run() {
                         viewPager.setCurrentItem((viewPager.getCurrentItem()+1)%layouts.length);
@@ -81,8 +74,7 @@ public class BookNowActivity extends AppCompatActivity {
            }
        });
     }
-
-    @Override
+       @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.home, menu);
         return true;

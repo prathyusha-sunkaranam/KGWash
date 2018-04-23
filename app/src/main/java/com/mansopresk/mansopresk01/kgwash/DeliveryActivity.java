@@ -33,7 +33,6 @@ public class DeliveryActivity extends AppCompatActivity {
                 startActivity(it);
             }
         });
-
         sharedpreferences = getSharedPreferences("admindetails", MODE_PRIVATE);
         String uname1 = sharedpreferences.getString("deliveryemail", null);
         if (sharedpreferences != null) {
@@ -50,6 +49,7 @@ public class DeliveryActivity extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.delivery, menu);
         return true;
     }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
@@ -57,14 +57,14 @@ public class DeliveryActivity extends AppCompatActivity {
             Intent i = new Intent(DeliveryActivity.this, PriceOrderActivity.class);
             startActivity(i);
             return true;
-        }
-        else if (id == R.id.itemlog) {
+        } else if (id == R.id.itemlog) {
             Intent it = new Intent(DeliveryActivity.this, NavigationMainActivity.class);
             getApplicationContext().getSharedPreferences("admindetails", 0).edit().clear().apply();
             startActivity(it);
         }
         return super.onOptionsItemSelected(item);
     }
+
     public void onBackPressed() {
         Intent intent = new Intent(Intent.ACTION_MAIN);
         intent.addCategory(Intent.CATEGORY_HOME);
