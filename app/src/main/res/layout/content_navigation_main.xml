@@ -83,7 +83,7 @@
                 android:layout_marginTop="15dp"
                 android:gravity="center"
                 android:text="Why To Choose KG Wash"
-                android:textColor="#c19961"
+                android:textColor="#de5f05"
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
@@ -106,7 +106,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:layout_weight="0.4"
-                        android:drawableLeft="@drawable/pickup"
+                        android:drawableLeft="@drawable/pickuporg"
                         android:drawablePadding="8dp"
                         android:text="Door Step pick up and Delivery"
                         android:textColor="#155a83" />
@@ -124,7 +124,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:layout_weight="0.4"
-                        android:drawableLeft="@drawable/eco"
+                        android:drawableLeft="@drawable/ecoorg"
                         android:drawablePadding="8dp"
                         android:text="Eco-Friendly Wash"
                         android:textColor="#155a83" />
@@ -149,7 +149,7 @@
 
                         android:layout_marginTop="10dp"
                         android:layout_weight="0.4"
-                        android:drawableLeft="@drawable/pricetags"
+                        android:drawableLeft="@drawable/pricetagorg"
                         android:drawablePadding="8dp"
                         android:text="Affordable Price"
                         android:textColor="#155a83" />
@@ -168,12 +168,43 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:layout_weight="0.4"
-                        android:drawableLeft="@drawable/premium"
+                        android:drawableLeft="@drawable/premiumorg"
                         android:drawablePadding="8dp"
                         android:text="Premium Plans"
                         android:background="@drawable/button_background"
                         android:textColor="#155a83" />
                 </LinearLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="How It Works"
+                        android:textColor="#de5f05"
+                        android:gravity="center"
+                        android:textSize="24sp"
+                        android:textStyle="bold"/>
+
+                    <VideoView
+                        android:id="@+id/videoView"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="80dp"
+                        android:layout_centerHorizontal="true" />
+                    <Button
+                        android:id="@+id/button_click"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true"
+                        android:background="@android:color/transparent" />
+                </RelativeLayout>
 
             </LinearLayout>
             <LinearLayout
@@ -188,7 +219,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="Our Services"
-                    android:textColor="#c19961"
+                    android:textColor="#de5f05"
                     android:textSize="24sp"
                     android:textStyle="bold" />
 

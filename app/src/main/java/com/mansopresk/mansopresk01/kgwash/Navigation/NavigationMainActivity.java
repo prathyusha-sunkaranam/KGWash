@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.graphics.PixelFormat;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -27,6 +28,7 @@ import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.VideoView;
 
 import com.mansopresk.mansopresk01.kgwash.AdminOrder;
 import com.mansopresk.mansopresk01.kgwash.BookNowActivity;
@@ -48,6 +50,7 @@ public class NavigationMainActivity extends AppCompatActivity
     Animation animZoomIn;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,15 +63,40 @@ public class NavigationMainActivity extends AppCompatActivity
         textView = (TextView) findViewById(R.id.toolbartext);
         jhonno=findViewById(R.id.johnno);
         textView.setText("KG Wash");
-//        animZoomIn = AnimationUtils.loadAnimation(getApplicationContext(),
-//                R.anim.zoom_in);
 
+        Button buttonPlayVideo2 = (Button)findViewById(R.id.button_click);
+
+        getWindow().setFormat(PixelFormat.UNKNOWN);
+
+        //displays a video file
+        VideoView mVideoView2 = (VideoView)findViewById(R.id.videoView);
+
+
+
+        String uriPath2 = "android.resource://com.mansopresk.mansopresk01.kgwash/"+R.raw.kgvideo;
+        Uri uri2 = Uri.parse(uriPath2);
+        mVideoView2.setVideoURI(uri2);
+        mVideoView2.requestFocus();
+        mVideoView2.start();
+
+        buttonPlayVideo2.setOnClickListener(new Button.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                VideoView mVideoView2 = (VideoView) findViewById(R.id.videoView);
+                // VideoView mVideoView = new VideoView(this);
+                String uriPath = "android.resource://com.mansopresk.mansopresk01.kgwash/" + R.raw.kgvideo;
+                Uri uri2 = Uri.parse(uriPath);
+                mVideoView2.setVideoURI(uri2);
+                mVideoView2.requestFocus();
+                mVideoView2.start();
+            }
+        });
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
-        premium.setOnClickListener(new View.OnClickListener() {
+        premium.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent ip=new Intent(NavigationMainActivity.this,Premium.class);
