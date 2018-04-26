@@ -83,7 +83,7 @@ public class NavigationMainActivity extends AppCompatActivity
             @Override
             public void onClick(View v) {
                 VideoView mVideoView2 = (VideoView) findViewById(R.id.videoView);
-                // VideoView mVideoView = new VideoView(this);
+
                 String uriPath = "android.resource://com.mansopresk.mansopresk01.kgwash/" + R.raw.kgvideos;
 //                Uri uri2 = Uri.parse(uriPath);
 //                mVideoView2.setVideoURI(uri2);
