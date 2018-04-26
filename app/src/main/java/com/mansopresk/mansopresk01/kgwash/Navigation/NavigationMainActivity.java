@@ -64,7 +64,7 @@ public class NavigationMainActivity extends AppCompatActivity
         jhonno=findViewById(R.id.johnno);
         textView.setText("KG Wash");
 
-        Button buttonPlayVideo2 = (Button)findViewById(R.id.button_click);
+        final Button buttonPlayVideo2 = (Button)findViewById(R.id.button_click);
 
         getWindow().setFormat(PixelFormat.UNKNOWN);
 
@@ -73,22 +73,30 @@ public class NavigationMainActivity extends AppCompatActivity
 
 
 
-        String uriPath2 = "android.resource://com.mansopresk.mansopresk01.kgwash/"+R.raw.kgvideo;
+        String uriPath2 = "android.resource://com.mansopresk.mansopresk01.kgwash/"+R.raw.kgvideos;
         Uri uri2 = Uri.parse(uriPath2);
         mVideoView2.setVideoURI(uri2);
         mVideoView2.requestFocus();
-        mVideoView2.start();
+
 
         buttonPlayVideo2.setOnClickListener(new Button.OnClickListener() {
             @Override
             public void onClick(View v) {
                 VideoView mVideoView2 = (VideoView) findViewById(R.id.videoView);
                 // VideoView mVideoView = new VideoView(this);
-                String uriPath = "android.resource://com.mansopresk.mansopresk01.kgwash/" + R.raw.kgvideo;
-                Uri uri2 = Uri.parse(uriPath);
-                mVideoView2.setVideoURI(uri2);
-                mVideoView2.requestFocus();
-                mVideoView2.start();
+                String uriPath = "android.resource://com.mansopresk.mansopresk01.kgwash/" + R.raw.kgvideos;
+//                Uri uri2 = Uri.parse(uriPath);
+//                mVideoView2.setVideoURI(uri2);
+               // mVideoView2.requestFocus();
+               // mVideoView2.start();
+
+                if(mVideoView2.isPlaying()){
+                    mVideoView2.pause();
+                    buttonPlayVideo2.setBackgroundResource(R.drawable.playbutton);
+                } else {
+                    mVideoView2.start();
+                    buttonPlayVideo2.setBackgroundResource(R.drawable.pbtn);
+                }
             }
         });
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
