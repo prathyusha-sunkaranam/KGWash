@@ -40,7 +40,7 @@
                     android:text="wash with free hands"
                     android:textColor="#fff"
                     android:textSize="24sp"
-                    android:textStyle="bold"
+
                   />
 
 
@@ -52,7 +52,7 @@
                     android:text="minimum order Rs.200"
                     android:textColor="#fff"
                     android:textSize="20sp"
-                    android:textStyle="bold"
+
                   />
 
                 <Button
@@ -62,7 +62,7 @@
                     android:layout_marginLeft="250dp"
                     android:layout_marginTop="8dp"
                     android:background="@drawable/bordersxm"
-                    android:textStyle="bold"
+
                     android:onClick="ordernow"
                     android:text="Order Now"
                     android:textColor="#fff" />
@@ -76,7 +76,7 @@
                     android:drawableLeft="@drawable/call"
                     android:drawablePadding="14dp"
                     android:text="Call  9000379005"
-                    android:textStyle="bold"
+
                     android:textColor="#fff"
                     android:textSize="22sp" />
 
@@ -115,7 +115,7 @@
                         android:layout_weight="0.4"
                         android:drawableLeft="@drawable/pickup"
                         android:drawablePadding="8dp"
-                        android:textStyle="bold"
+
                         android:textSize="14sp"
                         android:text="Door Step pick up and Delivery"
                         android:textColor="#155a83" />
@@ -136,7 +136,7 @@
                         android:drawableLeft="@drawable/eco"
                         android:drawablePadding="8dp"
                         android:text="Eco-Friendly Wash"
-                        android:textStyle="bold"
+
                         android:textSize="14sp"
 
                         android:textColor="#155a83" />
@@ -165,7 +165,7 @@
                         android:drawablePadding="8dp"
                         android:text="Affordable Price"
                         android:textColor="#155a83"
-                        android:textStyle="bold"
+
                         android:textSize="14sp"
                        />
 
@@ -188,7 +188,7 @@
                         android:drawablePadding="8dp"
                         android:text="Premium Plans"
                         android:textColor="#155a83"
-                        android:textStyle="bold"
+
                         android:textSize="14sp"
                        />
                 </LinearLayout>
@@ -238,7 +238,7 @@
                 android:textColor="#c19961"
                 android:textSize="24sp"
 
-                android:textStyle="bold" />
+               />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -273,7 +273,7 @@
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:text="@string/washfoldxml"
-                            android:textStyle="bold"
+
                             android:textSize="14sp"
                             android:layout_marginTop="5dp"
 
@@ -302,7 +302,7 @@
                             android:gravity="center"
                             android:text="@string/washironxml"
                             android:textColor="#155a83"
-                            android:textStyle="bold"
+
                             android:textSize="14sp"
                             android:layout_marginTop="5dp"
                           />
@@ -337,7 +337,7 @@
                             android:gravity="center"
                             android:text="@string/ironxml"
                             android:textColor="#155a83"
-                            android:textStyle="bold"
+
                             android:layout_marginTop="5dp"
                             android:textSize="14sp"
                            />
