@@ -44,7 +44,7 @@
            android:layout_height="wrap_content"
            android:text="Schedule Details"
            android:textSize="24sp"
-           android:textStyle="bold"
+
            android:inputType="text"
 
               android:textColor="#4b9ac9"/>
@@ -198,13 +198,10 @@
                         android:hint="mm/dd/yyyy"
                         android:editable="false"
                         android:onClick="calender"
-                        android:textStyle="bold"
 
                         android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 </LinearLayout>
-
-
                 <Spinner
                     android:singleLine="true"
                 android:id="@+id/spinner1"
@@ -225,16 +222,10 @@
                 android:layout_marginBottom="50dp"
                 android:onClick="schedule"
                 android:background="@drawable/buttonbg"
-
-                android:textSize="20sp"
+                android:textSize="16sp"
                 android:layout_marginTop="20dp"/>
 
         </LinearLayout>
 
-
     </ScrollView>
-
-
-
-
 </LinearLayout>
