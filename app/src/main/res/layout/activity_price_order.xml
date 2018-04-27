@@ -37,7 +37,6 @@
           android:background="@drawable/buttonbg"
           android:text="Next"/>
         </LinearLayout>
-
     </LinearLayout>
 
 

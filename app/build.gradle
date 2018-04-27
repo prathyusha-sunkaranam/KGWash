@@ -18,6 +18,10 @@ android {
         }
     }
 }
+repositories {
+    jcenter()
+}
+
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
@@ -35,8 +39,10 @@ dependencies {
     //compile 'de.hdodenhof:circleimageview:2.2.0'
     compile 'de.hdodenhof:circleimageview:2.2.0'
     compile 'pl.droidsonroids.gif:android-gif-drawable:1.2.8'
+    compile 'uk.co.samuelwall:material-tap-target-prompt:2.0.1'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+    compile 'com.getkeepsafe.taptargetview:taptargetview:1.11.0'
 
 }

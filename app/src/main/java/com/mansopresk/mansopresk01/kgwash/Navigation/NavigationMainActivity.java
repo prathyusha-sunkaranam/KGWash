@@ -35,6 +35,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.VideoView;
 
+import com.getkeepsafe.taptargetview.TapTarget;
+import com.getkeepsafe.taptargetview.TapTargetView;
 import com.mansopresk.mansopresk01.kgwash.AdminOrder;
 import com.mansopresk.mansopresk01.kgwash.BookNowActivity;
 import com.mansopresk.mansopresk01.kgwash.DeliveryActivity;
@@ -156,6 +158,9 @@ public class NavigationMainActivity extends AppCompatActivity
         nav_signup=header.findViewById(R.id.nav_signup);
         sharedPreferences = getSharedPreferences("admindetails",MODE_PRIVATE);
         String uname = sharedPreferences.getString("aemail",null);
+        TapTargetView.showFor(this,TapTarget.forView(findViewById(R.id.ordernow), "This is Shedule Now", "Click to schedule the pick up")
+        .tintTarget(false)
+        .outerCircleColor(R.color.bg_screen1));
         if(uname!=null){
             Intent i=new Intent(this,AdminOrder.class);
             startActivity(i);
