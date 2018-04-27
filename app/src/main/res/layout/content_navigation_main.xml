@@ -39,7 +39,7 @@
                     android:gravity="center"
                     android:text="wash with free hands"
                     android:textColor="#fff"
-                    android:textSize="24sp"
+                    android:textSize="22sp"
 
                   />
 
@@ -51,7 +51,7 @@
                     android:gravity="center"
                     android:text="minimum order Rs.200"
                     android:textColor="#fff"
-                    android:textSize="20sp"
+                    android:textSize="18sp"
 
                   />
 
