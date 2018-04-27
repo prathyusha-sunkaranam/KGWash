@@ -28,9 +28,10 @@
                     android:layout_marginTop="20dp"
                     android:gravity="center"
                     android:text="KG Wash"
-                    android:textColor="#e1dbdb"
-                    android:textSize="35sp"
-                    android:textStyle="bold" />
+                    android:textColor="#fff"
+                    android:textSize="40sp"
+
+                    android:fontFamily="@font/flamenco_light"                    android:textStyle="bold"/>
 
                 <TextView
                     android:layout_width="match_parent"
@@ -38,9 +39,10 @@
                     android:layout_marginTop="5dp"
                     android:gravity="center"
                     android:text="wash with free hands"
-                    android:textColor="#e1dbdb"
-                    android:textSize="20sp"
-                    android:textStyle="italic" />
+                    android:textColor="#fff"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/flamenco_light"/>
 
 
                 <TextView
@@ -49,7 +51,10 @@
                     android:layout_marginTop="10dp"
                     android:gravity="center"
                     android:text="minimum order Rs.200"
-                    android:textColor="#e1dbdb" />
+                    android:textColor="#fff"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/flamenco_light"/>
 
                 <Button
                     android:id="@+id/ordernow"
@@ -58,9 +63,11 @@
                     android:layout_marginLeft="250dp"
                     android:layout_marginTop="8dp"
                     android:background="@drawable/bordersxm"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/flamenco_light"
                     android:onClick="ordernow"
                     android:text="Order Now"
-                    android:textColor="#e1dbdb" />
+                    android:textColor="#fff" />
 
                 <TextView
                     android:id="@+id/johnno"
@@ -71,7 +78,8 @@
                     android:drawableLeft="@drawable/call"
                     android:drawablePadding="14dp"
                     android:text="Call  9000379005"
-                    android:textColor="#e1dbdb"
+                    android:textStyle="bold"
+                    android:textColor="#fff"
                     android:textSize="22sp" />
 
             </LinearLayout>
@@ -84,7 +92,8 @@
                 android:gravity="center"
                 android:text="Why To Choose KG Wash"
                 android:textColor="#c19961"
-                android:textSize="24sp"
+                android:textSize="30sp"
+                android:fontFamily="@font/flamenco_light"
                 android:textStyle="bold" />
 
 
@@ -108,6 +117,9 @@
                         android:layout_weight="0.4"
                         android:drawableLeft="@drawable/pickup"
                         android:drawablePadding="8dp"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/flamenco_light"
                         android:text="Door Step pick up and Delivery"
                         android:textColor="#155a83" />
 
@@ -127,6 +139,9 @@
                         android:drawableLeft="@drawable/eco"
                         android:drawablePadding="8dp"
                         android:text="Eco-Friendly Wash"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/flamenco_light"
                         android:textColor="#155a83" />
                 </LinearLayout>
 
@@ -152,7 +167,10 @@
                         android:drawableLeft="@drawable/pricetag"
                         android:drawablePadding="8dp"
                         android:text="Affordable Price"
-                        android:textColor="#155a83" />
+                        android:textColor="#155a83"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/flamenco_light"/>
 
                     <ImageView
                         android:layout_width="wrap_content"
@@ -172,14 +190,18 @@
                         android:drawableLeft="@drawable/premium"
                         android:drawablePadding="8dp"
                         android:text="Premium Plans"
-                        android:textColor="#155a83" />
+                        android:textColor="#155a83"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/flamenco_light"/>
                 </LinearLayout>
 
 
-                <RelativeLayout
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:layout_marginTop="20dp">
 
                     <TextView
                         android:id="@+id/howid"
@@ -188,45 +210,46 @@
                         android:gravity="center"
                         android:text="How It Works"
                         android:textColor="#c19961"
-                        android:textSize="24sp"
+                        android:textSize="30sp"
                         android:textStyle="bold" />
 
-                    <VideoView
-                        android:id="@+id/videoView"
-                        android:layout_width="match_parent"
-                        android:layout_height="200dp"
-                        android:layout_centerHorizontal="true"
-                        android:layout_centerVertical="true"
-                        android:layout_marginTop="80dp"/>
 
-                    <Button
-                        android:id="@+id/button_click"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:layout_alignBottom="@+id/videoView"
-                        android:layout_marginBottom="50dp"
-                        android:layout_marginLeft="150dp"
-                        android:background="@drawable/playbutton" />
-                </RelativeLayout>
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/content_viewer"
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp"
+                        android:layout_marginTop="30dp" />
+
+
+                    <!--<Button-->
+                        <!--android:id="@+id/button_click"-->
+                        <!--android:layout_width="40dp"-->
+                        <!--android:layout_height="40dp"-->
+                        <!--android:layout_marginLeft="150dp"-->
+                        <!--android:layout_marginTop="150dp"-->
+                        <!--android:background= />-->
+
+                </LinearLayout>
 
             </LinearLayout>
 
-            <LinearLayout
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Our Services"
+                android:textColor="#c19961"
+                android:textSize="30sp"
+                android:fontFamily="@font/flamenco_light"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
                 android:layout_margin="10dp"
-                android:layout_marginBottom="20dp"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="Our Services"
-                    android:textColor="#c19961"
-                    android:textSize="24sp"
-                    android:textStyle="bold" />
-
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical"
+              >
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -253,6 +276,10 @@
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:text="@string/washfoldxml"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/flamenco_light"
                             android:textColor="#155a83" />
 
                     </LinearLayout>
@@ -277,7 +304,11 @@
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:text="@string/washironxml"
-                            android:textColor="#155a83" />
+                            android:textColor="#155a83"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/flamenco_light"/>
 
                     </LinearLayout>
                 </LinearLayout>
@@ -308,7 +339,11 @@
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:text="@string/ironxml"
-                            android:textColor="#155a83" />
+                            android:textColor="#155a83"
+                            android:textStyle="bold"
+                            android:layout_marginTop="5dp"
+                            android:textSize="16sp"
+                            android:fontFamily="@font/flamenco_light"/>
 
                     </LinearLayout>
 

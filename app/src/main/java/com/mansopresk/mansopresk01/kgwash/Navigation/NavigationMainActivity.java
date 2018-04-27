@@ -2,6 +2,7 @@ package com.mansopresk.mansopresk01.kgwash.Navigation;
 
 import android.Manifest;
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
@@ -11,7 +12,10 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.design.internal.NavigationMenu;
 import android.support.v4.app.ActivityCompat;
+import android.support.v4.view.PagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -21,6 +25,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
@@ -40,11 +45,18 @@ import com.mansopresk.mansopresk01.kgwash.ScheduleActivity;
 import com.mansopresk.mansopresk01.kgwash.ViewProfileActivity;
 import com.mansopresk.mansopresk01.kgwash.YourOrdersActivity;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 public class NavigationMainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     TextView nav_signin1,nav_signup, textView,nav_email,jhonno,premium;
     SharedPreferences sharedPreferences;
     LinearLayout loginsignup;
+    ViewPager viewPager;
+    private BookPageAdapter myViewPagerAdapters;
+    private int[] layouts;
+    Timer timer;
     Button odernow;
     String uname;
     Animation animZoomIn;
@@ -61,44 +73,68 @@ public class NavigationMainActivity extends AppCompatActivity
         premium = findViewById(R.id.premium);
         odernow = (Button) findViewById(R.id.ordernow);
         textView = (TextView) findViewById(R.id.toolbartext);
+        viewPager = (ViewPager) findViewById(R.id.content_viewer);
         jhonno=findViewById(R.id.johnno);
         textView.setText("KG Wash");
 
-        final Button buttonPlayVideo2 = (Button)findViewById(R.id.button_click);
+       // final Button buttonPlayVideo2 = (Button)findViewById(R.id.button_click);
 
         getWindow().setFormat(PixelFormat.UNKNOWN);
 
         //displays a video file
-        VideoView mVideoView2 = (VideoView)findViewById(R.id.videoView);
+    //   VideoView mVideoView2 = (VideoView)findViewById(R.id.videoView);
 
 
 
-        String uriPath2 = "android.resource://com.mansopresk.mansopresk01.kgwash/"+R.raw.kgvideos;
-        Uri uri2 = Uri.parse(uriPath2);
-        mVideoView2.setVideoURI(uri2);
-        mVideoView2.requestFocus();
+//        String uriPath2 = "android.resource://com.mansopresk.mansopresk01.kgwash/"+R.raw.kgvideos;
+//        Uri uri2 = Uri.parse(uriPath2);
+//        mVideoView2.setVideoURI(uri2);
+//        mVideoView2.requestFocus();
 
+//
+//        buttonPlayVideo2.setOnClickListener(new Button.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                VideoView mVideoView2 = (VideoView) findViewById(R.id.videoView);
+//
+//                String uriPath = "android.resource://com.mansopresk.mansopresk01.kgwash/" + R.raw.kgvideos;
+////                Uri uri2 = Uri.parse(uriPath);
+////                mVideoView2.setVideoURI(uri2);
+//               // mVideoView2.requestFocus();
+//               // mVideoView2.start();
+//
+//                if(mVideoView2.isPlaying()){
+//                    mVideoView2.pause();
+//                    buttonPlayVideo2.setBackgroundResource(R.drawable.platbtn);
+//                } else {
+//                    mVideoView2.start();
+//                    buttonPlayVideo2.setBackgroundResource(R.drawable.pbtn);
+//                }
+//            }
+//        });
 
-        buttonPlayVideo2.setOnClickListener(new Button.OnClickListener() {
+        int images[] = {R.drawable.booking, R.drawable.washinggirl, R.drawable.washingview, R.drawable.payment};
+
+        layouts = new int[]{
+                R.layout.booking,
+                R.layout.washinggirl,
+                R.layout.washingview,
+                R.layout.payment};
+        myViewPagerAdapters = new BookPageAdapter();
+        viewPager.setAdapter(myViewPagerAdapters);
+        TimerTask timerTask = new TimerTask() {
             @Override
-            public void onClick(View v) {
-                VideoView mVideoView2 = (VideoView) findViewById(R.id.videoView);
-
-                String uriPath = "android.resource://com.mansopresk.mansopresk01.kgwash/" + R.raw.kgvideos;
-//                Uri uri2 = Uri.parse(uriPath);
-//                mVideoView2.setVideoURI(uri2);
-               // mVideoView2.requestFocus();
-               // mVideoView2.start();
-
-                if(mVideoView2.isPlaying()){
-                    mVideoView2.pause();
-                    buttonPlayVideo2.setBackgroundResource(R.drawable.playbutton);
-                } else {
-                    mVideoView2.start();
-                    buttonPlayVideo2.setBackgroundResource(R.drawable.pbtn);
-                }
+            public void run() {
+                viewPager.post(new Runnable(){
+                    @Override
+                    public void run() {
+                        viewPager.setCurrentItem((viewPager.getCurrentItem()+1)%layouts.length);
+                    }
+                });
             }
-        });
+        };
+        timer = new Timer();
+        timer.schedule(timerTask, 3000, 3000);
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -111,6 +147,7 @@ public class NavigationMainActivity extends AppCompatActivity
                 startActivity(ip);
             }
         });
+
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
@@ -306,5 +343,34 @@ public class NavigationMainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+
+    public class BookPageAdapter extends PagerAdapter {
+        private LayoutInflater layoutInflater;
+        public BookPageAdapter() {
+        }
+        @Override
+        public Object instantiateItem(ViewGroup container, int position) {
+            layoutInflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            View view = layoutInflater.inflate(layouts[position], container, false);
+            container.addView(view);
+            return view;
+        }
+        @Override
+        public int getCount() {
+            return layouts.length;
+        }
+
+        @Override
+        public boolean isViewFromObject(View view, Object obj) {
+            return view == obj;
+        }
+
+        @Override
+        public void destroyItem(ViewGroup container, int position, Object object) {
+            View view = (View) object;
+            container.removeView(view);
+        }
     }
 }

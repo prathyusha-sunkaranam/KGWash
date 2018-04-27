@@ -39,202 +39,231 @@
                 android:layout_gravity="center"
                 android:src="@drawable/aboutimage" />
 
-<LinearLayout
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:padding="10dp">
-            <TextView
-                android:id="@+id/textView14"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:gravity="center"
-                android:text="Welcome to Kg Wash App"
-                android:textColor="#4b9ac9"
-                android:textSize="20dp"
-                android:fontFamily="sans-serif"
-                android:textStyle="bold" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="About us :"
-        android:textColor="#000"
-        android:textStyle="bold"
-        android:textSize="20dp"
-        android:layout_marginTop="10dp"/>
-
-            <TextView
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:textSize="16dp"
+                android:orientation="vertical"
+                android:padding="10dp">
 
-                android:textColor="#292929"
-                android:text="@string/aboutus"/>
-    <TextView
-        android:layout_marginTop="10dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="About Company :"
-        android:textColor="#000"
-        android:textStyle="bold"
-        android:textSize="20dp"/>
-    <TextView
+                <TextView
+                    android:id="@+id/textView14"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="cursive"
+                    android:gravity="center"
+                    android:text="Welcome to Kg Wash App"
+                    android:textColor="#4b9ac9"
+                    android:textSize="30dp"
+                    android:textStyle="bold"
 
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:textSize="16dp"
-        android:textColor="#292929"
-        android:text="@string/aboutmansopresk"/>
+                    />
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/flamenco_light"
+                    android:text="About us :"
+                    android:textColor="#4b9ac9"
+                    android:textSize="26dp"
+                    android:textStyle="bold" />
 
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/flamenco_light"
+                    android:text="@string/aboutus"
+                    android:textColor="#292929"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/flamenco_light"
+                    android:text="About Company :"
+                    android:textColor="#4b9ac9"
+                    android:textSize="26dp"
+                    android:textStyle="bold" />
 
+                <TextView
 
-                    <LinearLayout
-                        android:layout_marginTop="5dip"
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:layout_gravity="center">
-                    <TextView
-                        android:id="@+id/text2"
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:background="#3c7fa7"
-                        android:drawablePadding="10dp"
-                        android:padding="5dip"
-                        android:text="How It Works "
-                        android:textColor="#ffffff"
-                        android:textSize="18dp"
-                        android:textStyle="bold" />
-                    <LinearLayout
-                        android:id="@+id/panel2"
-                        android:visibility="gone"
-                        android:orientation="vertical"
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content">
-                        <TextView
-                            android:layout_margin="2dip"
-                            android:text="@string/how"
-                            android:padding="5dip"
-                            android:background="#fff"
-                            android:textSize="15dp"
-                            android:textColor="#000"
-                            android:layout_width="fill_parent"
-                            android:layout_height="wrap_content" />
-                    </LinearLayout>
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/flamenco_light"
+                    android:text="@string/aboutmansopresk"
+                    android:textColor="#292929"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
 
-
-                </LinearLayout>
 
                 <LinearLayout
-                    android:layout_marginTop="5dip"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_gravity="center">
-                    <TextView
-                        android:text="Contact Us"
-                        android:drawablePadding="10dp"
-                        android:id="@+id/text3"
-                        android:padding="5dip"
-                        android:background="#3c7fa7"
-                        android:textColor="#ffffff"
-                        android:textStyle="bold"
-                        android:textSize="18dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
                         android:layout_width="fill_parent"
-                        android:layout_height="wrap_content" />
-                    <LinearLayout android:id="@+id/panel3"
-                        android:visibility="gone"
-                        android:orientation="vertical"
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dip"
+                        android:orientation="vertical">
+
                         <TextView
-                            android:layout_margin="2dip"
-                            android:text="@string/contact"
-                            android:padding="5dip"
-                            android:background="#fff"
-                            android:textSize="16dp"
-                            android:textColor="#000"
+                            android:id="@+id/text2"
                             android:layout_width="fill_parent"
-                            android:layout_height="wrap_content" />
+                            android:layout_height="wrap_content"
+                            android:background="#3c7fa7"
+                            android:drawablePadding="10dp"
+                            android:fontFamily="@font/flamenco_light"
+                            android:padding="5dip"
+                            android:text="How It Works "
+                            android:textColor="#ffffff"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:id="@+id/panel2"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="2dip"
+                                android:background="#fff"
+                                android:fontFamily="@font/flamenco_light"
+                                android:padding="5dip"
+                                android:text="@string/how"
+                                android:textColor="#000"
+                                android:textSize="18dp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
 
 
                     </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dip"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/text3"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#3c7fa7"
+                            android:drawablePadding="10dp"
+                            android:fontFamily="@font/flamenco_light"
+                            android:padding="5dip"
+                            android:text="Contact Us"
+                            android:textColor="#ffffff"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:id="@+id/panel3"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="2dip"
+                                android:background="#fff"
+                                android:fontFamily="@font/flamenco_light"
+                                android:padding="5dip"
+                                android:text="@string/contact"
+                                android:textColor="#000"
+                                android:textSize="18dp"
+                                android:textStyle="bold" />
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+
                 </LinearLayout>
 
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/flamenco_light"
+                    android:gravity="end"
+                    android:text="Regards"
+                    android:textSize="18sp"
+                    android:textColor="#000"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/flamenco_light"
+                    android:gravity="end"
+                    android:text="Mansopresk"
+                    android:textColor="#0e9bef"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/flamenco_light"
+                    android:gravity="end"
+                    android:text="+91-9000379005"
+                    android:textColor="#000"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="50dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <ImageView
+                        android:id="@+id/acall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:src="@drawable/phonecontact" />
+
+                    <ImageView
+                        android:id="@+id/aemail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:src="@drawable/email" />
+
+                    <ImageView
+                        android:id="@+id/awebsite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:src="@drawable/www" />
+
+                </LinearLayout>
             </LinearLayout>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:gravity="end"
-                android:text="Regards"
-                android:textColor="#000"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:gravity="end"
-                android:textSize="14dp"
-                android:textStyle="bold"
-                android:text="Mansopresk"
-                android:textColor="#0e9bef" />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:gravity="end"
-                android:textStyle="bold"
-                android:textSize="14dp"
-                android:text="+91-9000379005"
-                android:textColor="#000" />
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="50dp"
-                android:orientation="horizontal"
-                android:weightSum="3">
-
-                <ImageView
-                    android:id="@+id/acall"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:src="@drawable/phonecontact"
-                    android:gravity="center" />
-
-                <ImageView
-                    android:id="@+id/aemail"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:src="@drawable/email"
-                    android:gravity="center" />
-
-                <ImageView
-                    android:id="@+id/awebsite"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:src="@drawable/www"
-                    android:gravity="center" />
-
-            </LinearLayout>
-        </LinearLayout>
 </LinearLayout>
        </ScrollView>
 

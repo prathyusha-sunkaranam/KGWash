@@ -37,13 +37,15 @@
         android:orientation="vertical"
         android:layout_margin="10dp">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="KG Wash Services"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:layout_marginTop="50dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:fontFamily="cursive"
+            android:text="KG Wash Services"
+            android:textColor="#4b9ac9"
+            android:textSize="30sp"
+            android:textStyle="bold" />
 
     <android.support.v4.view.ViewPager
         android:id="@+id/indicator_image"
@@ -57,8 +59,10 @@
         android:layout_height="wrap_content"
         android:text="Select below Services:"
         android:layout_below="@id/indicator_image"
-        android:textSize="20sp"
+        android:textSize="30sp"
         android:textStyle="bold"
+        android:fontFamily="cursive"
+        android:textColor="#4b9ac9"
         android:layout_marginTop="20dp"/>
     <LinearLayout
         android:layout_width="match_parent"
@@ -81,7 +85,10 @@
                 android:paddingRight="5dp"
                 android:paddingStart="5dp"
                 android:checked="true"
-                android:text="Wash and Iron"/>
+                android:text="Wash and Iron"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:fontFamily="@font/flamenco_light"/>
             <RadioButton
                 android:id="@+id/washfold_button"
                 android:layout_width="wrap_content"
@@ -90,7 +97,10 @@
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp"
                 android:paddingStart="5dp"
-                android:text="Wash and Fold" />
+                android:text="Wash and Fold"
+                android:textStyle="bold"
+                android:fontFamily="@font/flamenco_light"
+                android:textSize="16sp"/>
 
 
 
@@ -102,7 +112,10 @@
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp"
                 android:paddingStart="5dp"
-                android:text="Iron"/>
+                android:text="Iron"
+                android:textStyle="bold"
+                android:fontFamily="@font/flamenco_light"
+                android:textSize="16sp"/>
         </RadioGroup>
 
 
@@ -113,7 +126,10 @@
             android:layout_height="wrap_content"
             android:text="Place Order"
             android:background="@drawable/buttonbg"
-            android:layout_marginTop="30dp"/>
+            android:layout_marginTop="30dp"
+            android:textStyle="bold"
+            android:fontFamily="@font/flamenco_light"
+            android:textSize="18sp"/>
     </LinearLayout>
 
     </LinearLayout>
