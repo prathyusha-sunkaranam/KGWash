@@ -29,9 +29,8 @@
                     android:gravity="center"
                     android:text="KG Wash"
                     android:textColor="#fff"
-                    android:textSize="40sp"
-
-                    android:fontFamily="@font/flamenco_light"                    android:textStyle="bold"/>
+                    android:textSize="30sp"
+                    android:textStyle="bold"/>
 
                 <TextView
                     android:layout_width="match_parent"
@@ -42,7 +41,7 @@
                     android:textColor="#fff"
                     android:textSize="24sp"
                     android:textStyle="bold"
-                    android:fontFamily="@font/flamenco_light"/>
+                  />
 
 
                 <TextView
@@ -54,7 +53,7 @@
                     android:textColor="#fff"
                     android:textSize="20sp"
                     android:textStyle="bold"
-                    android:fontFamily="@font/flamenco_light"/>
+                  />
 
                 <Button
                     android:id="@+id/ordernow"
@@ -64,7 +63,6 @@
                     android:layout_marginTop="8dp"
                     android:background="@drawable/bordersxm"
                     android:textStyle="bold"
-                    android:fontFamily="@font/flamenco_light"
                     android:onClick="ordernow"
                     android:text="Order Now"
                     android:textColor="#fff" />
@@ -92,8 +90,8 @@
                 android:gravity="center"
                 android:text="Why To Choose KG Wash"
                 android:textColor="#c19961"
-                android:textSize="30sp"
-                android:fontFamily="@font/flamenco_light"
+                android:textSize="24sp"
+
                 android:textStyle="bold" />
 
 
@@ -118,8 +116,7 @@
                         android:drawableLeft="@drawable/pickup"
                         android:drawablePadding="8dp"
                         android:textStyle="bold"
-                        android:textSize="16sp"
-                        android:fontFamily="@font/flamenco_light"
+                        android:textSize="14sp"
                         android:text="Door Step pick up and Delivery"
                         android:textColor="#155a83" />
 
@@ -140,8 +137,8 @@
                         android:drawablePadding="8dp"
                         android:text="Eco-Friendly Wash"
                         android:textStyle="bold"
-                        android:textSize="16sp"
-                        android:fontFamily="@font/flamenco_light"
+                        android:textSize="14sp"
+
                         android:textColor="#155a83" />
                 </LinearLayout>
 
@@ -169,8 +166,8 @@
                         android:text="Affordable Price"
                         android:textColor="#155a83"
                         android:textStyle="bold"
-                        android:textSize="16sp"
-                        android:fontFamily="@font/flamenco_light"/>
+                        android:textSize="14sp"
+                       />
 
                     <ImageView
                         android:layout_width="wrap_content"
@@ -192,8 +189,8 @@
                         android:text="Premium Plans"
                         android:textColor="#155a83"
                         android:textStyle="bold"
-                        android:textSize="16sp"
-                        android:fontFamily="@font/flamenco_light"/>
+                        android:textSize="14sp"
+                       />
                 </LinearLayout>
 
 
@@ -210,7 +207,7 @@
                         android:gravity="center"
                         android:text="How It Works"
                         android:textColor="#c19961"
-                        android:textSize="30sp"
+                        android:textSize="24sp"
                         android:textStyle="bold" />
 
 
@@ -239,8 +236,8 @@
                 android:gravity="center"
                 android:text="Our Services"
                 android:textColor="#c19961"
-                android:textSize="30sp"
-                android:fontFamily="@font/flamenco_light"
+                android:textSize="24sp"
+
                 android:textStyle="bold" />
 
             <LinearLayout
@@ -277,9 +274,9 @@
                             android:gravity="center"
                             android:text="@string/washfoldxml"
                             android:textStyle="bold"
-                            android:textSize="16sp"
+                            android:textSize="14sp"
                             android:layout_marginTop="5dp"
-                            android:fontFamily="@font/flamenco_light"
+
                             android:textColor="#155a83" />
 
                     </LinearLayout>
@@ -306,9 +303,9 @@
                             android:text="@string/washironxml"
                             android:textColor="#155a83"
                             android:textStyle="bold"
-                            android:textSize="16sp"
+                            android:textSize="14sp"
                             android:layout_marginTop="5dp"
-                            android:fontFamily="@font/flamenco_light"/>
+                          />
 
                     </LinearLayout>
                 </LinearLayout>
@@ -342,8 +339,8 @@
                             android:textColor="#155a83"
                             android:textStyle="bold"
                             android:layout_marginTop="5dp"
-                            android:textSize="16sp"
-                            android:fontFamily="@font/flamenco_light"/>
+                            android:textSize="14sp"
+                           />
 
                     </LinearLayout>
 

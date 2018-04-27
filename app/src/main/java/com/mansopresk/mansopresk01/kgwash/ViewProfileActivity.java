@@ -19,7 +19,7 @@ public class ViewProfileActivity extends AppCompatActivity {
     String sname,smobile,saltermobile,semail,slandmark,sdate,stimeslot,sadress;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+      protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_profile);
         name=findViewById(R.id.name_place);

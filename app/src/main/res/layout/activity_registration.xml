@@ -36,9 +36,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Enter Your Details"
-                android:textSize="30sp"
+                android:textSize="24sp"
                 android:textStyle="bold"
-                android:fontFamily="cursive"
+
                 android:textColor="#4b9ac9"
                 android:inputType="text"/>
 
@@ -55,8 +55,7 @@
                     android:hint="Name *"
                     android:maxLength="25"
                     android:inputType="text"
-                    android:textStyle="bold"
-                    android:fontFamily="@font/flamenco_light"
+
                    />
 
             </android.support.design.widget.TextInputLayout>
@@ -74,8 +73,7 @@
                     android:layout_height="wrap_content"
                     android:hint="Mobile *"
                     android:inputType="number"
-                    android:textStyle="bold"
-                    android:fontFamily="@font/flamenco_light"/>
+                  />
 
             </android.support.design.widget.TextInputLayout>
 
@@ -92,8 +90,7 @@
                     android:layout_height="wrap_content"
                     android:hint="Alternate mobile"
                     android:inputType="number"
-                    android:textStyle="bold"
-                    android:fontFamily="@font/flamenco_light"/>
+                  />
 
             </android.support.design.widget.TextInputLayout>
 
@@ -109,8 +106,7 @@
                     android:layout_height="wrap_content"
                     android:hint="Email *"
                     android:inputType="textEmailAddress"
-                    android:textStyle="bold"
-                    android:fontFamily="@font/flamenco_light"/>
+                    />
             </android.support.design.widget.TextInputLayout>
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
@@ -141,8 +137,7 @@
                     android:layout_height="wrap_content"
                     android:hint="Address *"
                     android:inputType="text"
-                    android:textStyle="bold"
-                    android:fontFamily="@font/flamenco_light"/>
+                  />
 
             </android.support.design.widget.TextInputLayout>
 
@@ -157,8 +152,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Landmark"
-                    android:textStyle="bold"
-                    android:fontFamily="@font/flamenco_light"/>
+                 />
 
             </android.support.design.widget.TextInputLayout>
             </LinearLayout>
@@ -179,8 +173,7 @@
             android:background="#4b9ac9"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="30dp"
-            android:textStyle="bold"
-            android:fontFamily="@font/flamenco_light"/>
+            />
 
 
     </RelativeLayout>

@@ -25,10 +25,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Welcome to KG Wash !"
-        android:textStyle="bold"
-        android:textSize="30sp"
+        android:textSize="25sp"
         android:gravity="center"
-        android:fontFamily="cursive"
         android:layout_marginTop="70dp"
         android:textColor="#4b9ac9"/>
     <TextView
@@ -40,8 +38,8 @@
         android:text="Wash With Free Hands."
         android:layout_below="@+id/welcome_label"
         android:textColor="#4b9ac9"
-        android:textStyle="bold"
-        android:fontFamily="@font/flamenco_light"/>
+        android:textSize="14sp"
+     />
     </LinearLayout>
 
     <LinearLayout
@@ -62,8 +60,7 @@
             android:layout_height="wrap_content"
             android:hint="Email Id"
             android:inputType="textEmailAddress"
-            android:textStyle="bold"
-            android:fontFamily="@font/flamenco_light"/>
+          />
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
@@ -76,8 +73,7 @@
             android:layout_height="wrap_content"
             android:inputType="textPassword"
             android:hint="Password"
-            android:textStyle="bold"
-            android:fontFamily="@font/flamenco_light"/>
+            />
         </android.support.design.widget.TextInputLayout>
 
         <LinearLayout
@@ -97,10 +93,7 @@
                 android:gravity="center"
                 android:layout_marginLeft="60dp"
                 android:background="@drawable/buttonbg"
-                android:layout_weight="0.5"
-                android:textStyle="bold"
-                android:fontFamily="@font/flamenco_light"
-                />
+                android:layout_weight="0.5" />
 
         </LinearLayout>
 
@@ -119,9 +112,7 @@
         android:textSize="20sp"
         android:layout_marginLeft="100dp"
         android:layout_below="@+id/loginll"
-        android:textColor="#fff"
-        android:textStyle="bold"
-        android:fontFamily="@font/flamenco_light"/>
+        android:textColor="#fff" />
     <Button
         android:id="@+id/signup"
         android:layout_width="match_parent"
@@ -132,8 +123,6 @@
         android:background="#4b9ac9"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:textStyle="bold"
-        android:fontFamily="@font/flamenco_light"/>
+        android:layout_marginRight="10dp" />
 
 </RelativeLayout>

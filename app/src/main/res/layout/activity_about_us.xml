@@ -50,11 +50,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:fontFamily="cursive"
+
                     android:gravity="center"
                     android:text="Welcome to Kg Wash App"
                     android:textColor="#4b9ac9"
-                    android:textSize="30dp"
+                    android:textSize="20dp"
                     android:textStyle="bold"
 
                     />
@@ -63,30 +63,29 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:fontFamily="@font/flamenco_light"
                     android:text="About us :"
                     android:textColor="#4b9ac9"
-                    android:textSize="26dp"
+                    android:textSize="20dp"
                     android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:fontFamily="@font/flamenco_light"
+
                     android:text="@string/aboutus"
                     android:textColor="#292929"
-                    android:textSize="18dp"
-                    android:textStyle="bold" />
+                    android:textSize="16dp"
+                   />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:fontFamily="@font/flamenco_light"
+
                     android:text="About Company :"
                     android:textColor="#4b9ac9"
-                    android:textSize="26dp"
+                    android:textSize="20dp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -94,11 +93,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:fontFamily="@font/flamenco_light"
                     android:text="@string/aboutmansopresk"
                     android:textColor="#292929"
-                    android:textSize="18dp"
-                    android:textStyle="bold" />
+                    android:textSize="16dp"
+                   />
 
 
                 <LinearLayout
@@ -121,11 +119,10 @@
                             android:layout_height="wrap_content"
                             android:background="#3c7fa7"
                             android:drawablePadding="10dp"
-                            android:fontFamily="@font/flamenco_light"
                             android:padding="5dip"
                             android:text="How It Works "
                             android:textColor="#ffffff"
-                            android:textSize="20dp"
+                            android:textSize="18dp"
                             android:textStyle="bold" />
 
                         <LinearLayout
@@ -140,12 +137,12 @@
                                 android:layout_height="wrap_content"
                                 android:layout_margin="2dip"
                                 android:background="#fff"
-                                android:fontFamily="@font/flamenco_light"
+
                                 android:padding="5dip"
                                 android:text="@string/how"
                                 android:textColor="#000"
-                                android:textSize="18dp"
-                                android:textStyle="bold" />
+                                android:textSize="14dp"
+                               />
                         </LinearLayout>
 
 
@@ -164,11 +161,10 @@
                             android:layout_height="wrap_content"
                             android:background="#3c7fa7"
                             android:drawablePadding="10dp"
-                            android:fontFamily="@font/flamenco_light"
                             android:padding="5dip"
                             android:text="Contact Us"
                             android:textColor="#ffffff"
-                            android:textSize="20dp"
+                            android:textSize="18dp"
                             android:textStyle="bold" />
 
                         <LinearLayout
@@ -183,12 +179,11 @@
                                 android:layout_height="wrap_content"
                                 android:layout_margin="2dip"
                                 android:background="#fff"
-                                android:fontFamily="@font/flamenco_light"
                                 android:padding="5dip"
                                 android:text="@string/contact"
                                 android:textColor="#000"
-                                android:textSize="18dp"
-                                android:textStyle="bold" />
+                                android:textSize="14dp"
+                               />
 
 
                         </LinearLayout>
@@ -200,10 +195,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:fontFamily="@font/flamenco_light"
                     android:gravity="end"
                     android:text="Regards"
-                    android:textSize="18sp"
+                    android:textSize="14sp"
                     android:textColor="#000"
                     android:textStyle="bold" />
 
@@ -211,22 +205,20 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
-                    android:fontFamily="@font/flamenco_light"
                     android:gravity="end"
                     android:text="Mansopresk"
                     android:textColor="#0e9bef"
-                    android:textSize="18sp"
+                    android:textSize="14sp"
                     android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
-                    android:fontFamily="@font/flamenco_light"
                     android:gravity="end"
                     android:text="+91-9000379005"
                     android:textColor="#000"
-                    android:textSize="18dp"
+                    android:textSize="14dp"
                     android:textStyle="bold" />
 
 

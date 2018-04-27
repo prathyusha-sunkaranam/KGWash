@@ -41,10 +41,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
-            android:fontFamily="cursive"
+
             android:text="KG Wash Services"
             android:textColor="#4b9ac9"
-            android:textSize="30sp"
+            android:textSize="25sp"
             android:textStyle="bold" />
 
     <android.support.v4.view.ViewPager
@@ -59,9 +59,8 @@
         android:layout_height="wrap_content"
         android:text="Select below Services:"
         android:layout_below="@id/indicator_image"
-        android:textSize="30sp"
+        android:textSize="25sp"
         android:textStyle="bold"
-        android:fontFamily="cursive"
         android:textColor="#4b9ac9"
         android:layout_marginTop="20dp"/>
     <LinearLayout
@@ -86,9 +85,9 @@
                 android:paddingStart="5dp"
                 android:checked="true"
                 android:text="Wash and Iron"
-                android:textStyle="bold"
-                android:textSize="16sp"
-                android:fontFamily="@font/flamenco_light"/>
+
+                android:textSize="14sp"
+               />
             <RadioButton
                 android:id="@+id/washfold_button"
                 android:layout_width="wrap_content"
@@ -98,9 +97,7 @@
                 android:paddingRight="5dp"
                 android:paddingStart="5dp"
                 android:text="Wash and Fold"
-                android:textStyle="bold"
-                android:fontFamily="@font/flamenco_light"
-                android:textSize="16sp"/>
+                android:textSize="14sp"/>
 
 
 
@@ -113,9 +110,7 @@
                 android:paddingRight="5dp"
                 android:paddingStart="5dp"
                 android:text="Iron"
-                android:textStyle="bold"
-                android:fontFamily="@font/flamenco_light"
-                android:textSize="16sp"/>
+                android:textSize="14sp"/>
         </RadioGroup>
 
 
@@ -127,9 +122,7 @@
             android:text="Place Order"
             android:background="@drawable/buttonbg"
             android:layout_marginTop="30dp"
-            android:textStyle="bold"
-            android:fontFamily="@font/flamenco_light"
-            android:textSize="18sp"/>
+            android:textSize="16sp"/>
     </LinearLayout>
 
     </LinearLayout>

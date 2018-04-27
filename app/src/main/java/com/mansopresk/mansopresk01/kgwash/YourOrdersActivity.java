@@ -39,8 +39,7 @@ public class YourOrdersActivity extends AppCompatActivity {
         String udate = sharedpreferences.getString("userdate", null);
         dateplace.setText(udate);
         timesloteplace.setText(sharedpreferences.getString("usertime", ""));
-       // areaspinnertext.setText(sharedpreferences.getString("userarea", ""));
-    }
+      }
     @Override
     public boolean onSupportNavigateUp() {
         onBackPressed();
