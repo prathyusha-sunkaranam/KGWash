@@ -32,7 +32,7 @@ public class SplashActivity extends Activity {
         if(isFirstTimeLaunch())
         {
             Intent i=new Intent(SplashActivity.this,WelcomeActivity.class);
-           setFirstTimeLaunch(true);
+            setFirstTimeLaunch(true);
             startActivity(i);
         }
         else {

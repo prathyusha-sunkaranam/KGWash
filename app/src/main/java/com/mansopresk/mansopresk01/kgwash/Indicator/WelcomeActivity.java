@@ -105,6 +105,7 @@ public class WelcomeActivity extends Activity
     private int getItem(int i) {
         return viewPager.getCurrentItem() + i;
     }
+
     private void launchHomeScreen()
     {
         prefManager.setFirstTimeLaunch(false);

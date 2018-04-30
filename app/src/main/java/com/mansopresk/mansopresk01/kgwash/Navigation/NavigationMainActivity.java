@@ -3,6 +3,7 @@ package com.mansopresk.mansopresk01.kgwash.Navigation;
 import android.Manifest;
 import android.app.Activity;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
@@ -14,6 +15,7 @@ import android.support.design.internal.NavigationMenu;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.AlertDialog;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -29,6 +31,7 @@ import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.TextView;
@@ -36,10 +39,13 @@ import android.widget.Toast;
 import android.widget.VideoView;
 
 import com.getkeepsafe.taptargetview.TapTarget;
+import com.getkeepsafe.taptargetview.TapTargetSequence;
 import com.getkeepsafe.taptargetview.TapTargetView;
 import com.mansopresk.mansopresk01.kgwash.AdminOrder;
 import com.mansopresk.mansopresk01.kgwash.BookNowActivity;
 import com.mansopresk.mansopresk01.kgwash.DeliveryActivity;
+import com.mansopresk.mansopresk01.kgwash.Indicator.PrefManager;
+import com.mansopresk.mansopresk01.kgwash.Indicator.TapTargetManger;
 import com.mansopresk.mansopresk01.kgwash.MainActivity;
 import com.mansopresk.mansopresk01.kgwash.R;
 import com.mansopresk.mansopresk01.kgwash.RegistrationActivity;
@@ -53,16 +59,20 @@ import java.util.TimerTask;
 public class NavigationMainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     TextView nav_signin1,nav_signup, textView,nav_email,jhonno,premium;
-    SharedPreferences sharedPreferences;
+    SharedPreferences sharedPreferences, prefs;
     LinearLayout loginsignup;
     ViewPager viewPager;
     private BookPageAdapter myViewPagerAdapters;
     private int[] layouts;
     Timer timer;
+    SharedPreferences.Editor editors;
     Button odernow;
     String uname;
-    Animation animZoomIn;
+    private TapTargetManger tapTargetManger;
 
+    Animation animZoomIn;
+     private static final String PREF_NAME = "taptarget";
+        private static final String IS_FIRST_TIME_LAUNCH = "IsFirstTimeLaunch";
 
 
     @Override
@@ -78,8 +88,12 @@ public class NavigationMainActivity extends AppCompatActivity
         viewPager = (ViewPager) findViewById(R.id.content_viewer);
         jhonno=findViewById(R.id.johnno);
         textView.setText("KG Wash");
+        tapTargetManger = new TapTargetManger(this);
 
-       // final Button buttonPlayVideo2 = (Button)findViewById(R.id.button_click);
+         prefs = getSharedPreferences(PREF_NAME, MODE_PRIVATE);
+              editors = prefs.edit();
+
+              // final Button buttonPlayVideo2 = (Button)findViewById(R.id.button_click);
 
         getWindow().setFormat(PixelFormat.UNKNOWN);
 
@@ -115,14 +129,14 @@ public class NavigationMainActivity extends AppCompatActivity
 //            }
 //        });
 
-        int images[] = {R.drawable.booking, R.drawable.washinggirl, R.drawable.washingview, R.drawable.payment};
+        final int images[] = {R.drawable.booking, R.drawable.washinggirl, R.drawable.ironboyy, R.drawable.payment,R.drawable.delivery};
 
-        layouts = new int[]{
-                R.layout.booking,
-                R.layout.washinggirl,
-                R.layout.washingview,
-                R.layout.payment};
-        myViewPagerAdapters = new BookPageAdapter();
+//        layouts = new int[]{
+//                R.layout.booking,
+//                R.layout.washinggirl,
+//                R.layout.washingview,
+//                R.layout.payment};
+        myViewPagerAdapters = new BookPageAdapter(NavigationMainActivity.this, images);
         viewPager.setAdapter(myViewPagerAdapters);
         TimerTask timerTask = new TimerTask() {
             @Override
@@ -130,7 +144,7 @@ public class NavigationMainActivity extends AppCompatActivity
                 viewPager.post(new Runnable(){
                     @Override
                     public void run() {
-                        viewPager.setCurrentItem((viewPager.getCurrentItem()+1)%layouts.length);
+                        viewPager.setCurrentItem((viewPager.getCurrentItem()+1)%images.length);
                     }
                 });
             }
@@ -156,11 +170,122 @@ public class NavigationMainActivity extends AppCompatActivity
         View header = navigationView.getHeaderView(0);
         nav_signin1 =header.findViewById(R.id.nav_signin1);
         nav_signup=header.findViewById(R.id.nav_signup);
+
         sharedPreferences = getSharedPreferences("admindetails",MODE_PRIVATE);
         String uname = sharedPreferences.getString("aemail",null);
-        TapTargetView.showFor(this,TapTarget.forView(findViewById(R.id.ordernow), "This is Shedule Now", "Click to schedule the pick up")
-        .tintTarget(false)
-        .outerCircleColor(R.color.bg_screen1));
+
+         if(tapTargetManger.isFirstTimeLaunch())
+         {
+
+//             TapTargetView.showFor(this, TapTarget.forView(findViewById(R.id.ordernow), "This is Shedule Now", "Click to schedule the pick up")
+//                 .tintTarget(false)
+//                 .outerCircleColor(R.color.bg_screen1));
+//
+//             TapTargetView.showFor(this, TapTarget.forView(findViewById(R.id.premium), "This is Shedule Now", "Click to schedule the pick up")
+//                     .tintTarget(false)
+//                     .outerCircleColor(R.color.bg_screen1));
+
+
+             new TapTargetSequence(this)
+                     .targets(
+                             TapTarget.forView(findViewById(R.id.ordernow), "Gonna")
+                                    // .tintTarget(false)
+
+                                     .outerCircleColor(R.color.bg_screen1),
+
+                             TapTarget.forView(findViewById(R.id.premium), "You", "Up")
+
+                                     //.tintTarget(false)
+                                     .outerCircleColor(R.color.bg_screen1))
+
+//                             TapTarget.forBounds(rickTarget, "Down", ":^)")
+//                                     .cancelable(false)
+//                                     .icon(rick))
+                     .listener(new TapTargetSequence.Listener() {
+                         // This listener will tell us when interesting(tm) events happen in regards
+                         // to the sequence
+                         @Override
+                         public void onSequenceFinish() {
+                             // Yay
+                            // ((TextView) findViewById(R.id.educated)).setText("Congratulations! You're educated now!");
+                         }
+
+                         @Override
+                         public void onSequenceStep(TapTarget lastTarget, boolean targetClicked) {
+
+                         }
+
+
+                         @Override
+                         public void onSequenceCanceled(TapTarget lastTarget) {
+                             // Boo
+                         }
+                     });
+             setFirstTimeLaunch(true);
+             tapTargetManger.setFirstTimeLaunch(false);
+
+//             final TapTargetSequence sequence = new TapTargetSequence(this)
+//                     .targets(
+//                             // This tap target will target the back button, we just need to pass its containing toolbar
+//                           //  TapTarget.forToolbarNavigationIcon(toolbar, "This is the Navigation button", "Check it").id(1),
+//                             // Likewise, this tap target will target the search button
+////                             TapTarget.forToolbarMenuItem(toolbar, R.id.ic_, "This is a search icon", "As you can see, it has gotten pretty dark around here...")
+////                                     .dimColor(android.R.color.black)
+////                                     .outerCircleColor(R.color.colorAccent)
+////                                     .targetCircleColor(android.R.color.black)
+////                                     .transparentTarget(true)
+////                                     .textColor(android.R.color.black)
+////                                     .id(2),
+//                             // You can also target the overflow button in your toolbar
+//                            // TapTarget.forToolbarOverflow(toolbar, "This will show more options", "But they're not useful :(").id(3),
+//                             // This tap target will target our droid buddy at the given target rect
+//                             TapTarget.forView(findViewById(R.id.ordernow), "Oh look!", "You can point to any part of the screen. You also can't cancel this one!")
+//                                     .cancelable(false)
+//                                    // .icon(findViewById(R.id.ordernow)
+//                                     .id(1),
+//                             TapTarget.forView(findViewById(R.id.premium), "Oh look!", "You can point to any part of the screen. You also can't cancel this one!")
+//                                     .cancelable(false).id(2)
+//                     )
+//
+//                     .listener(new TapTargetSequence.Listener() {
+//                         // This listener will tell us when interesting(tm) events happen in regards
+//                         // to the sequence
+//                         @Override
+//                         public void onSequenceFinish() {
+//                             ((TextView) findViewById(R.id.premium)).setText("Congratulations! You're educated now!");
+//                         }
+//
+//                         @Override
+//                         public void onSequenceStep(TapTarget lastTarget, boolean targetClicked) {
+//                             Log.d("TapTargetView", "Clicked on " + lastTarget.id());
+//                         }
+//
+//                         @Override
+//                         public void onSequenceCanceled(TapTarget lastTarget) {
+//                             final AlertDialog dialog = new AlertDialog.Builder(NavigationMainActivity.this)
+//                                     .setTitle("Uh oh")
+//                                     .setMessage("You canceled the sequence")
+//                                     .setPositiveButton("Oops", null).show();
+//                             TapTargetView.showFor(dialog,
+//                                     TapTarget.forView(dialog.getButton(DialogInterface.BUTTON_POSITIVE), "Uh oh!", "You canceled the sequence at step " + lastTarget.id())
+//                                             .cancelable(false)
+//                                             .tintTarget(false), new TapTargetView.Listener() {
+//                                         @Override
+//                                         public void onTargetClick(TapTargetView view) {
+//                                             super.onTargetClick(view);
+//                                             dialog.dismiss();
+//                                         }
+//                                     });
+//                         }
+//                     });
+//             setFirstTimeLaunch(true);
+//            tapTargetManger.setFirstTimeLaunch(false);
+         }
+
+
+
+
+
         if(uname!=null){
             Intent i=new Intent(this,AdminOrder.class);
             startActivity(i);
@@ -220,6 +345,9 @@ public class NavigationMainActivity extends AppCompatActivity
             }
         });
         }
+
+
+
     public void call_action() {
         Intent intent = new Intent(Intent.ACTION_DIAL);
         intent.setData(Uri.parse("tel:9000379005"));
@@ -245,6 +373,7 @@ public class NavigationMainActivity extends AppCompatActivity
         }
     }
     public void ordernow(View v){
+        tapTargetManger.setFirstTimeLaunch(false);
         //odernow.startAnimation(animZoomIn);
     Intent ip = new Intent(this, BookNowActivity.class);
     startActivity(ip);
@@ -352,30 +481,53 @@ public class NavigationMainActivity extends AppCompatActivity
 
 
     public class BookPageAdapter extends PagerAdapter {
-        private LayoutInflater layoutInflater;
-        public BookPageAdapter() {
-        }
-        @Override
-        public Object instantiateItem(ViewGroup container, int position) {
-            layoutInflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            View view = layoutInflater.inflate(layouts[position], container, false);
-            container.addView(view);
-            return view;
-        }
-        @Override
-        public int getCount() {
-            return layouts.length;
+        Context context;
+        int images[];
+        LayoutInflater layoutInflater;
+
+
+        public BookPageAdapter(Context context, int images[]) {
+            this.context = context;
+            this.images = images;
+            layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         }
 
         @Override
-        public boolean isViewFromObject(View view, Object obj) {
-            return view == obj;
+        public int getCount() {
+            return images.length;
+        }
+
+        @Override
+        public boolean isViewFromObject(View view, Object object) {
+            return view == ((LinearLayout) object);
+        }
+
+        @Override
+        public Object instantiateItem(ViewGroup container, final int position) {
+            View itemView = layoutInflater.inflate(R.layout.booking, container, false);
+
+            ImageView imageView = (ImageView) itemView.findViewById(R.id.imageViewpager);
+            imageView.setImageResource(images[position]);
+
+            container.addView(itemView);
+
+            return itemView;
         }
 
         @Override
         public void destroyItem(ViewGroup container, int position, Object object) {
-            View view = (View) object;
-            container.removeView(view);
+            container.removeView((LinearLayout) object);
         }
     }
+    public boolean isFirstTimeLaunch()
+    {
+        return prefs.getBoolean(IS_FIRST_TIME_LAUNCH, true);
+    }
+
+    public void setFirstTimeLaunch(boolean isFirstTime)
+    {
+        editors.putBoolean(IS_FIRST_TIME_LAUNCH, isFirstTime);
+        editors.commit();
+    }
+
 }
